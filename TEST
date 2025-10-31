@@ -1,0 +1,656 @@
+mixed-port: 7890
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:60000
+# ——————————————————————————————————————
+# ——————————————————————————————————————
+# ——————————————————————————————————————
+dns:
+  default-nameserver:
+    - 180.76.76.76
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+# ——————————————————————————————————————
+# ——————————————————————————————————————
+# ——————————————————————————————————————
+proxies:
+proxy-groups:
+  - name: 規則以外
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png"
+    type: select
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    proxies:
+      - 中國直連
+      - 國際互聯
+      # ——————————————————————————————
+  - name: 中國直連
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png"
+    type: select
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    proxies:
+      - DIRECT
+      - 國際互聯
+      # ——————————————————————————————
+  - name: 國際互聯
+    icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Global.png"
+    type: select
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    proxies:
+      - OKZ香港
+      - LHY香港0.25x
+      - LHY香港
+      - LHY美國
+      - OKZ美國
+      - LHY日本0.25x
+      - LHY日本
+      - OKZ日本
+      - FNY
+    lazy: true
+  - name: 國際媒體
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"
+    type: select
+    proxies:
+      - LHY香港0.25x
+      - LHY香港
+      - OKZ香港
+      - FNY
+    lazy: true
+  - name: 飛機電報
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png"
+    type: select
+    proxies:
+      - LHY香港0.25x
+      - LHY香港
+      - OKZ香港
+      - FNY
+    lazy: true
+  - name: 國際抖音
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"
+    type: select
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    proxies:
+      - LHY日本0.25x
+      - LHY日本
+      - LHY美國
+      - OKZ日本
+      - OKZ美國
+    lazy: true
+  - # 谷歌油管
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
+    lazy: true
+    name: 谷歌油管
+    proxies:
+      - LHY香港0.25x
+      - LHY香港
+      - LHY日本0.25x
+      - LHY日本
+      - LHY美國
+      - OKZ香港
+      - OKZ美國
+      - OKZ日本
+      - FNY
+    type: url-test
+  - name: 嗶哩嗶哩
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili_3.png"
+    type: select
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    proxies:
+      - 中國直連
+      - LHY日本
+      - LHY美國
+      - OKZ日本
+      - OKZ美國
+    lazy: true
+  - name: 外媒下載
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Download.png"
+    type: select
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    proxies:
+      - LHY香港0.25x
+      - LHY香港
+      - OKZ香港
+      - FNY
+    lazy: true
+  - name: 微軟服務
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png"
+    type: select
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    proxies:
+      - DIRECT
+      - LHY香港0.25x
+      - LHY香港
+      - OKZ香港
+      - FNY
+    lazy: true
+  - name: 人工智能
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"
+    type: select
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    proxies:
+      - LHY美國
+      - LHY日本
+      - OKZ美國
+      - OKZ日本
+      - FNY
+    lazy: true
+  - name: 廣告過濾
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AdBlack.png"
+    type: select
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    proxies:
+      - DIRECT
+      - REJECT
+      # ——————————————————————————————
+  - name: OKZ香港
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use:
+      - OKZ香港
+    hidden: true
+  - name: OKZ美國
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use:
+      - OKZ美國
+      # ——————————————————————————————
+  - name: OKZ日本
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use:
+      - OKZ日本
+      # ——————————————————————————————
+  - name: LHY香港
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use:
+      - LHY香港
+      # ——————————————————————————————
+  - name: LHY香港0.25x
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use:
+      - LHY香港0.25x
+      # ——————————————————————————————
+  - name: LHY日本
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use:
+      - LHY日本
+      # ——————————————————————————————
+  - name: LHY日本0.25x
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use:
+      - LHY日本0.25x
+      # ——————————————————————————————
+  - name: LHY美國
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use:
+      - LHY美國
+      # ——————————————————————————————
+  - name: FNY
+    icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use:
+      - FNY
+# ——————————————————————————————————————
+# ——————————————————————————————————————
+# ——————————————————————————————————————
+proxy-providers:
+  "FNY":
+    type: http
+    path: ./provide/FNY.yml
+    url: https://x3.344211.cc/api/v1/client/subscribe?token=0e79462ce42ab0413ed58d454329934e
+    interval: 3600
+    filter: '香港|台湾'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+      # ——————————————————————————————
+  "OKZ香港":
+    type: http
+    path: ./provide/OKZ香港.yml
+    url: http://47.107.66.153:65533/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
+    interval: 3600
+    filter: '香港'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+      # ——————————————————————————————
+  "OKZ美國":
+    type: http
+    path: ./provide/OKZ美國.yml
+    url: http://47.107.66.153:65533/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
+    interval: 3600
+    filter: '美國'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+      # ——————————————————————————————
+  "OKZ日本":
+    type: http
+    path: ./provide/OKZ日本.yml
+    url: http://47.107.66.153:65533/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
+    interval: 3600
+    filter: 日本'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+      # ——————————————————————————————
+  "LHY香港":
+    type: http
+    path: ./provide/LHY香港.yml
+    url: https://submit.mylac.cn:21443/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
+    interval: 3600
+    filter: '香港-'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+      # ——————————————————————————————
+  "LHY香港0.25x":
+    type: http
+    path: ./provide/LHY香港0.25x.yml
+    url: https://submit.mylac.cn:21443/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
+    interval: 3600
+    filter: '香港.*低倍率|低倍率.*香港'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+      # ——————————————————————————————
+  "LHY美國":
+    type: http
+    path: ./provide/LHY美國.yml
+    url: https://submit.mylac.cn:21443/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
+    interval: 3600
+    filter: '美國-'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+      # ——————————————————————————————
+  "LHY日本":
+    type: http
+    path: ./provide/LHY日本.yml
+    url: https://submit.mylac.cn:21443/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
+    interval: 3600
+    filter: '日本-'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+      # ——————————————————————————————
+  "LHY日本0.25x":
+    type: http
+    path: ./provide/LHY日本低倍率.yml
+    url: https://submit.mylac.cn:21443/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
+    interval: 3600
+    filter: '日本.*低倍率|低倍率.*日本'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+# ——————————————————————————————————————
+# ——————————————————————————————————————
+# ——————————————————————————————————————
+rule-providers:
+  LAN:
+    type: http
+    behavior: domain
+    path: ./ruleset/LAN.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  直连APP:
+    type: http
+    behavior: domain
+    path: ./ruleset/直连APP.yaml
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
+    interval: 21600
+    # ——————————————————————————————
+  Proxy:
+    type: http
+    behavior: classical
+    path: ./ruleset/Proxy.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy_Classical.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  CNIP:
+    type: http
+    behavior: ipcidr
+    path: ./ruleset/中國IP.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaIPs/ChinaIPs_IP.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  CN:
+    type: http
+    behavior: classical
+    path: ./ruleset/中國域名.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMaxNoIP/ChinaMaxNoIP_Classical.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  ASN:
+    type: http
+    behavior: classical
+    path: ./ruleset/ASN.China.yaml
+    url: "https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  非CN:
+    type: http
+    behavior: domain
+    path: ./ruleset/非中國域名.yaml
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
+    interval: 21600
+    # ——————————————————————————————
+  GFWList:
+    type: http
+    behavior: domain
+    path: ./ruleset/GFWList.yaml
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+    interval: 21600
+    # ——————————————————————————————
+  AD-Block:
+    type: http
+    behavior: domain
+    path: ./ruleset/AD-Block.yaml
+    url: "https://anti-ad.net/clash.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  TikTok:
+    type: http
+    behavior: classical
+    path: ./ruleset/TikTok.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/TikTok/TikTok.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  GPT:
+    type: http
+    behavior: classical
+    path: ./ruleset/OpenAI.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  微軟:
+    type: http
+    behavior: classical
+    path: ./ruleset/Microsoft.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  GitHub:
+    type: http
+    behavior: classical
+    path: ./ruleset/GitHub.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  Copilot:
+    type: http
+    behavior: classical
+    path: ./ruleset/Copilot.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Copilot/Copilot.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  蘋果:
+    type: http
+    behavior: classical
+    path: ./ruleset/Apple_Classical.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple_Classical.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  推特:
+    type: http
+    behavior: classical
+    path: ./ruleset/Twitter.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Twitter/Twitter.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  電報:
+    type: http
+    behavior: classical
+    path: ./ruleset/Telegram.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  外國流媒體:
+    type: http
+    behavior: classical
+    path: ./ruleset/GlobalMedia_Classical.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  谷歌:
+    type: http
+    behavior: classical
+    path: ./ruleset/Google.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  Gemini:
+    type: http
+    behavior: classical
+    path: ./ruleset/Gemini.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Gemini/Gemini.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  HBO:
+    type: http
+    behavior: classical
+    path: ./ruleset/HBOMAX.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/HBO/HBO.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  迅雷:
+    type: http
+    behavior: classical
+    path: ./ruleset/Thunder.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Xunlei/Xunlei.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  百度:
+    type: http
+    behavior: classical
+    path: ./ruleset/Baidu.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Baidu/Baidu.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  群暉:
+    type: http
+    behavior: classical
+    path: ./ruleset/Synology.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Synology/Synology.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  IG:
+    type: http
+    behavior: classical
+    path: ./ruleset/Instagram.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Instagram/Instagram.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  Reddit:
+    type: http
+    behavior: classical
+    path: ./ruleset/Reddit.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Reddit/Reddit.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  臉書:
+    type: http
+    behavior: classical
+    path: ./ruleset/Facebook.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Facebook/Facebook.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  香港電臺:
+    type: http
+    behavior: classical
+    path: ./ruleset/香港電臺.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/RTHK/RTHK.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  微信:
+    type: http
+    behavior: classical
+    path: ./ruleset/微信.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/WeChat/WeChat.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  騰訊:
+    type: http
+    behavior: classical
+    path: ./ruleset/Tencent_Classical.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Tencent/Tencent_Classical.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  美團:
+    type: http
+    behavior: classical
+    path: ./ruleset/美團.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/MeiTuan/MeiTuan.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  網易:
+    type: http
+    behavior: classical
+    path: ./ruleset/網易.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/NetEase/NetEase.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  抖音:
+    type: http
+    behavior: classical
+    path: ./ruleset/抖音.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/DouYin/DouYin.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  嗶哩嗶哩Intl:
+    type: http
+    behavior: classical
+    path: ./ruleset/BiliBiliIntl.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBiliIntl/BiliBiliIntl.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  嗶哩嗶哩:
+    type: http
+    behavior: classical
+    path: ./ruleset/BiliBil.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml"
+    interval: 21600
+    # ——————————————————————————————
+  Tmdb:
+    type: http
+    behavior: classical
+    path: ./ruleset/Tmdb.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Tmdb/Tmdb.yaml"
+    interval: 21600
+# ——————————————————————————————————————
+# ——————————————————————————————————————
+# ——————————————————————————————————————
+
+rules:
+  - DOMAIN-KEYWORD,ads2301,DIRECT
+  - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT
+  - RULE-SET,AD-Block,廣告過濾
+  - DOMAIN-KEYWORD,xn--ngstr-lra8j,中國直連
+  - DOMAIN-KEYWORD,googleapis.cn,中國直連
+  - DOMAIN-KEYWORD,deainx,中國直連
+  - DOMAIN-KEYWORD,dranime,中國直連
+  - DOMAIN-KEYWORD,gomicx,中國直連
+  - DOMAIN-KEYWORD,dotmu,中國直連
+  - DOMAIN-KEYWORD,apple,中國直連
+  - DOMAIN-KEYWORD,icould,中國直連
+  - DOMAIN-KEYWORD,itunes,中國直連
+  - RULE-SET,蘋果,中國直連
+  - RULE-SET,直连APP,中國直連
+  - RULE-SET,群暉,中國直連
+  - RULE-SET,百度,中國直連
+  - RULE-SET,迅雷,中國直連
+  - RULE-SET,美團,中國直連
+  - RULE-SET,網易,中國直連
+  - RULE-SET,抖音,中國直連
+  - RULE-SET,微信,中國直連
+  - RULE-SET,騰訊,中國直連
+  - RULE-SET,CN,中國直連
+  - RULE-SET,ASN,中國直連
+  - RULE-SET,CNIP,中國直連
+  - RULE-SET,Copilot,人工智能,no-resolve
+  - RULE-SET,微軟,微軟服務
+  - RULE-SET,GitHub,國際互聯,no-resolve
+  - DOMAIN-KEYWORD,raw.githubusercontent.com,國際互聯,no-resolve
+  - DOMAIN-KEYWORD,cdn.jsdelivr.net,中國直連,no-resolve
+  - DOMAIN-KEYWORD,linghunyun.com,國際互聯,no-resolve
+  - DOMAIN-KEYWORD,okztwo.com,國際互聯,no-resolve
+  - DOMAIN-KEYWORD,feiniaoyun.xyz,國際互聯,no-resolve
+  - DOMAIN-KEYWORD,www.bilibili.com,嗶哩嗶哩,no-resolve
+  - RULE-SET,嗶哩嗶哩Intl,嗶哩嗶哩,no-resolve
+  - RULE-SET,嗶哩嗶哩,嗶哩嗶哩,no-resolve
+  - DOMAIN-KEYWORD,discomax.com,外媒下載,no-resolve
+  - DOMAIN-KEYWORD,media.max.com,外媒下載,no-resolve
+  - DOMAIN-KEYWORD,max.com,外媒下載,no-resolve
+  - RULE-SET,HBO,外媒下載,no-resolve
+  - RULE-SET,香港電臺,外媒下載,no-resolve
+  - DOMAIN-KEYWORD,akamaized,外媒下載
+  - DOMAIN-SUFFIX,themoviedb.org,外媒下載,no-resolve
+  - DOMAIN-SUFFIX,tmdb.org,外媒下載,no-resolve
+  - DOMAIN-SUFFIX,image.tmdb.org,外媒下載,no-resolve
+  - DOMAIN-KEYWORD,xvideos,國際媒體,no-resolve
+  - DOMAIN-KEYWORD,xnxx,國際媒體,no-resolve
+  - DOMAIN-KEYWORD,pornhub,國際媒體,no-resolve
+  - DOMAIN-KEYWORD,xhamster,國際媒體,no-resolve
+  - DOMAIN-KEYWORD,stripchat,國際媒體,no-resolve
+  - RULE-SET,TikTok,國際抖音,no-resolve
+  - RULE-SET,電報,飛機電報,no-resolve
+  - RULE-SET,Reddit,國際媒體,no-resolve
+  - DOMAIN-KEYWORD,redd,國際媒體,no-resolve
+  - RULE-SET,推特,國際媒體,no-resolve
+  - RULE-SET,IG,國際媒體,no-resolve
+  - RULE-SET,臉書,國際媒體,no-resolve
+  - RULE-SET,Gemini,人工智能,no-resolve
+  - RULE-SET,GPT,人工智能,no-resolve
+  - RULE-SET,外國流媒體,國際媒體,no-resolve
+  - DOMAIN-KEYWORD,mtalk.google.com,國際互聯,no-resolve
+  - RULE-SET,谷歌,國際互聯,no-resolve
+  - RULE-SET,GFWList,國際互聯,no-resolve
+  - RULE-SET,非CN,國際互聯,no-resolve
+  - RULE-SET,Proxy,國際互聯,no-resolve
+  - RULE-SET,LAN,中國直連
+  - MATCH,規則以外
