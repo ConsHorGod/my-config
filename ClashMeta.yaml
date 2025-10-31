@@ -84,7 +84,7 @@ proxy-groups:
       - OKZ美國
     lazy: true
   - name: 谷歌油管
-    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"
     type: select
     url: https://www.gstatic.com/generate_204
     interval: 600
@@ -98,7 +98,7 @@ proxy-groups:
       - OKZ美國
       - OKZ日本
       - FNY
-    type: select
+    type: url-test
   - name: 嗶哩嗶哩
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili_3.png"
     type: select
@@ -170,7 +170,7 @@ proxy-groups:
     interval: 600
     use:
       - OKZ美國
-    hidden: true
+      # ——————————————————————————————
   - name: OKZ日本
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"
     type: url-test
@@ -178,7 +178,7 @@ proxy-groups:
     interval: 600
     use:
       - OKZ日本
-    hidden: true
+      # ——————————————————————————————
   - name: LHY香港
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"
     type: url-test
@@ -186,7 +186,7 @@ proxy-groups:
     interval: 600
     use:
       - LHY香港
-    hidden: true
+      # ——————————————————————————————
   - name: LHY香港0.25x
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"
     type: url-test
@@ -194,7 +194,7 @@ proxy-groups:
     interval: 600
     use:
       - LHY香港0.25x
-    hidden: true
+      # ——————————————————————————————
   - name: LHY日本
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"
     type: url-test
@@ -202,7 +202,7 @@ proxy-groups:
     interval: 600
     use:
       - LHY日本
-    hidden: true
+      # ——————————————————————————————
   - name: LHY日本0.25x
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"
     type: url-test
@@ -210,7 +210,7 @@ proxy-groups:
     interval: 600
     use:
       - LHY日本0.25x
-    hidden: true
+      # ——————————————————————————————
   - name: LHY美國
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"
     type: url-test
@@ -218,7 +218,7 @@ proxy-groups:
     interval: 600
     use:
       - LHY美國
-    hidden: true
+      # ——————————————————————————————
   - name: FNY
     icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"
     type: url-test
@@ -583,20 +583,22 @@ rule-providers:
     path: ./ruleset/Tmdb.yaml
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Tmdb/Tmdb.yaml"
     interval: 21600
-    # ——————————————————————————————
+        # ——————————————————————————————
   YouTubeMusic:
     type: http
     behavior: classical
     path: ./ruleset/YouTubeMusic.yaml
-    url: "hhttps://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/YouTubeMusic.yaml"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/YouTubeMusic.yaml"
     interval: 21600
-    # ——————————————————————————————
+        # ——————————————————————————————
   YouTube:
     type: http
     behavior: classical
     path: ./ruleset/YouTube.yaml
-    interval: 21600
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml"
+    interval: 21600
+    
+    
 # ——————————————————————————————————————
 # ——————————————————————————————————————
 # ——————————————————————————————————————
