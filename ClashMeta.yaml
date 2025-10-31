@@ -8,9 +8,9 @@ external-controller: 127.0.0.1:60000
 # ——————————————————————————————————————
 dns:
   default-nameserver:
-  - system
-  - 223.6.6.6
-  - 8.8.8.8
+  - 180.76.76.76
+  - 223.5.5.5
+  - 119.29.29.29
   - 2400:3200::1
   - 2001:4860:4860::8888
   direct-nameserver: []
@@ -29,6 +29,14 @@ dns:
   - '*.msftncsi.com'
   - www.msftconnecttest.com
   - rule-set:CN
+  - rule-set:群暉
+  - rule-set:百度
+  - rule-set:迅雷
+  - rule-set:美團
+  - rule-set:網易
+  - rule-set:抖音
+  - rule-set:微信
+  - rule-set:騰訊
   fake-ip-filter-mode: blacklist
   fake-ip-range: 198.18.0.1/16
   fallback: []
