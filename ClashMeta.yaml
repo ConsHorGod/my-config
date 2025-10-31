@@ -21,10 +21,6 @@ dns:
   - '*.lan'
   - '*.local'
   - '*.arpa'
-  - ads2301.dsmynas.com
-  - ads2301.asuscomm.com
-  - jlxa.wicp.net
-  - ads2301.x3322.net
   - '=time.*.com
   - ntp.*.com
   - time.*.com
@@ -32,6 +28,10 @@ dns:
   - localhost.ptlogin2.qq.com
   - '*.msftncsi.com'
   - www.msftconnecttest.com
+  - ads2301.dsmynas.com
+  - ads2301.asuscomm.com
+  - jlxa.wicp.net
+  - ads2301.x3322.net
   - rule-set:CN
   - rule-set:群暉
   - rule-set:百度
