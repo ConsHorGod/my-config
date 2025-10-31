@@ -646,8 +646,8 @@ rules:
   - RULE-SET,Copilot,人工智能,no-resolve
   - RULE-SET,微軟,微軟服務
   - RULE-SET,GitHub,國際互聯,no-resolve
+  - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT
   - DOMAIN-KEYWORD,raw.githubusercontent.com,國際互聯,no-resolve
-  - DOMAIN-KEYWORD,cdn.jsdelivr.net,國際互聯,no-resolve
   #- DOMAIN-KEYWORD,linghunyun.com,國際互聯,no-resolve
   #- DOMAIN-KEYWORD,okztwo.com,國際互聯,no-resolve
   #- DOMAIN-KEYWORD,feiniaoyun.xyz,國際互聯,no-resolve
