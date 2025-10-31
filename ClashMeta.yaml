@@ -142,18 +142,6 @@ proxy-groups:
       - OKZ日本
       - OKZ美國
 # ——————————————————————————————
-  - name: 人工智能
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"
-    type: select
-    url: https://www.gstatic.com/generate_204
-    interval: 600
-    proxies:
-      - LHY美國
-      - LHY日本
-      - OKZ美國
-      - OKZ日本
-      - FNY
-# ——————————————————————————————
   - name: 外媒下載
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Download.png"
     type: select
@@ -177,6 +165,18 @@ proxy-groups:
       - OKZ香港
       - FNY
 # ——————————————————————————————
+  - name: 人工智能
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"
+    type: select
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    proxies:
+      - LHY美國
+      - LHY日本
+      - OKZ美國
+      - OKZ日本
+      - FNY      
+# ——————————————————————————————
   - name: 廣告過濾
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AdBlack.png"
     type: select
@@ -187,6 +187,7 @@ proxy-groups:
       - REJECT
 # ——————————————————————————————
   - name: OKZ香港
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 600
@@ -194,6 +195,7 @@ proxy-groups:
       - OKZ香港
 # ——————————————————————————————
   - name: OKZ美國
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 600
@@ -201,6 +203,7 @@ proxy-groups:
       - OKZ美國
 # ——————————————————————————————
   - name: OKZ日本
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 600
@@ -208,6 +211,7 @@ proxy-groups:
       - OKZ日本
 # ——————————————————————————————
   - name: LHY香港
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 600
@@ -215,6 +219,7 @@ proxy-groups:
       - LHY香港
 # ——————————————————————————————
   - name: LHY香港0.25x
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 600
@@ -222,6 +227,7 @@ proxy-groups:
       - LHY香港0.25x
 # ——————————————————————————————
   - name: LHY日本
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 600
@@ -229,6 +235,7 @@ proxy-groups:
       - LHY日本
 # ——————————————————————————————
   - name: LHY日本0.25x
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 600
@@ -236,6 +243,7 @@ proxy-groups:
       - LHY日本0.25x
 # ——————————————————————————————
   - name: LHY美國
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 600
