@@ -582,16 +582,18 @@ rule-providers:
     interval: 21600
     # ——————————————————————————————
   YouTubeMusic:
+    输入: http
     behavior: classical
-    format: yaml
+    path: ./ruleset/YouTubeMusic.yaml
+    url: "hhttps://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/YouTubeMusic.yaml"
     interval: 21600
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTubeMusic.list
     # ——————————————————————————————
   YouTube:
+    输入: http
     behavior: classical
-    format: yaml
+    path: ./ruleset/YouTube.yaml
     interval: 21600
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml"
 # ——————————————————————————————————————
 # ——————————————————————————————————————
 # ——————————————————————————————————————
