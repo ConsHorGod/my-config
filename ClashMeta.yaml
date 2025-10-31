@@ -21,7 +21,11 @@ dns:
   - '*.lan'
   - '*.local'
   - '*.arpa'
-  - time.*.com
+  - 'ads2301.dsmynas.com'
+  - 'ads2301.asuscomm.com'
+  - 'jlxa.wicp.net'
+  - 'ads2301.x3322.net'
+  - '=time.*.com
   - ntp.*.com
   - time.*.com
   - +.market.xiaomi.com
