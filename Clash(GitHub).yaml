@@ -648,9 +648,9 @@ rules:
   - RULE-SET,GitHub,國際互聯,no-resolve
   - DOMAIN-KEYWORD,raw.githubusercontent.com,國際互聯,no-resolve
   - DOMAIN-KEYWORD,cdn.jsdelivr.net,國際互聯,no-resolve
-  - DOMAIN-KEYWORD,linghunyun.com,國際互聯,no-resolve
-  - DOMAIN-KEYWORD,okztwo.com,國際互聯,no-resolve
-  - DOMAIN-KEYWORD,feiniaoyun.xyz,國際互聯,no-resolve
+  #- DOMAIN-KEYWORD,linghunyun.com,國際互聯,no-resolve
+  #- DOMAIN-KEYWORD,okztwo.com,國際互聯,no-resolve
+  #- DOMAIN-KEYWORD,feiniaoyun.xyz,國際互聯,no-resolve
   - DOMAIN-KEYWORD,www.bilibili.com,嗶哩嗶哩,no-resolve
   - RULE-SET,嗶哩嗶哩Intl,嗶哩嗶哩,no-resolve
   - RULE-SET,嗶哩嗶哩,嗶哩嗶哩,no-resolve
