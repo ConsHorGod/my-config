@@ -83,7 +83,7 @@ proxy-groups:
       - OKZ日本
       - OKZ美國
     lazy: true
-  - # 谷歌油管
+  -  谷歌油管
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
     lazy: true
     name: 谷歌油管
