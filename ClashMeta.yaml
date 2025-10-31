@@ -582,14 +582,14 @@ rule-providers:
     interval: 21600
     # ——————————————————————————————
   YouTubeMusic:
-    输入: http
+    type: http
     behavior: classical
     path: ./ruleset/YouTubeMusic.yaml
     url: "hhttps://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/YouTubeMusic.yaml"
     interval: 21600
     # ——————————————————————————————
   YouTube:
-    输入: http
+    type: http
     behavior: classical
     path: ./ruleset/YouTube.yaml
     interval: 21600
