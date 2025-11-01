@@ -650,9 +650,9 @@ rules:
   - RULE-SET,抖音,中國直連
   - RULE-SET,微信,中國直連
   - RULE-SET,騰訊,中國直連
-  - RULE-SET,CN,中國直連
-  - RULE-SET,ASN,中國直連
-  - RULE-SET,CNIP,中國直連
+  #- RULE-SET,CN,中國直連
+  #- RULE-SET,ASN,中國直連
+  #- RULE-SET,CNIP,中國直連
   - RULE-SET,Copilot,人工智能,no-resolve
   - RULE-SET,微軟,微軟服務
   - RULE-SET,GitHub,國際互聯,no-resolve
