@@ -149,10 +149,11 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - LHY美國
+      - LHY日本0.25x    
       - LHY日本
-      - OKZ美國
       - OKZ日本
+      - OKZ美國
+      - LHY美國
       - FNY      
 #-----------------------------------------------------------------------------------------------------------
   - name: 廣告過濾
