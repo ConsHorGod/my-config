@@ -44,6 +44,7 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
     interval: 600
     proxies:
+      - OKZ香港专线
       - OKZ香港
       - LHY香港0.25x
       - LHY香港
@@ -61,6 +62,7 @@ proxy-groups:
     proxies:
       - LHY香港0.25x
       - LHY香港
+      - OKZ香港专线
       - OKZ香港
       - FNY
 #-----------------------------------------------------------------------------------------------------------
@@ -73,6 +75,7 @@ proxy-groups:
     proxies:
       - LHY香港0.25x
       - LHY香港
+      - OKZ香港专线
       - OKZ香港
       - LHY日本0.25x
       - LHY日本
@@ -88,6 +91,7 @@ proxy-groups:
     proxies:
       - LHY香港0.25x
       - LHY香港
+      - OKZ香港专线
       - OKZ香港
       - FNY
 #-----------------------------------------------------------------------------------------------------------
@@ -113,6 +117,7 @@ proxy-groups:
     proxies:
       - LHY香港0.25x
       - LHY香港
+      - OKZ香港专线
       - OKZ香港
       - FNY      
 #-----------------------------------------------------------------------------------------------------------
@@ -139,6 +144,7 @@ proxy-groups:
       - DIRECT
       - LHY香港0.25x
       - LHY香港
+      - OKZ香港专线
       - OKZ香港
       - FNY
 #-----------------------------------------------------------------------------------------------------------
@@ -172,6 +178,15 @@ proxy-groups:
     interval: 600
     use:
       - FNY
+    #-----------------------------------------------------------------------------------------------------------
+  - name: OKZ香港专线
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"         #策略組圖標
+    hidden: true         #隱藏代理組
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use:
+      - OKZ香港专线
     #-----------------------------------------------------------------------------------------------------------
   - name: OKZ香港
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"         #策略組圖標
@@ -257,6 +272,17 @@ proxy-providers:
     url: https://x3.344211.cc/api/v1/client/subscribe?token=0e79462ce42ab0413ed58d454329934e
     interval: 3600
     filter: '香港|台湾'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+      #-----------------------------------------------------------------------------------------------------------
+  "OKZ香港专线":
+    type: http
+    path: ./provide/OKZ香港专线.yml
+    url: http://47.107.66.153:65533/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
+    interval: 3600
+    filter: '专线'
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
