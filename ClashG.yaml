@@ -1,4 +1,4 @@
-SUBSCRIBED: https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/main/ClashG.yaml
+SUBSCRIBED: https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/main/ClashG.yaml interval: 600
 mixed-port: 7890
 allow-lan: true
 mode: Rule
