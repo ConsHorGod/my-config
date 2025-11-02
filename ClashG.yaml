@@ -102,6 +102,7 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
     interval: 600
     proxies:
+      - OKZ专线
       - LHY日本0.25x
       - LHY日本
       - LHY美國
