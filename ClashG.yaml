@@ -182,10 +182,10 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: 配置更新
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png"         #策略組圖標
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    use:
+    type: select
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    proxies:
       - DIRECT
       - OKZ专线
       - OKZ香港
@@ -193,8 +193,6 @@ proxy-groups:
       - LHY香港
       - LHY日本0.25x
       - LHY日本
-      - LHY美國
-      - OKZ美國
       - OKZ日本
       - FNY
     #-----------------------------------------------------------------------------------------------------------
