@@ -179,6 +179,24 @@ proxy-groups:
     interval: 600
     use:
       - FNY
+#-----------------------------------------------------------------------------------------------------------
+  - name: 配置更新
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png"         #策略組圖標
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      - 中國直連
+      - OKZ专线
+      - OKZ香港
+      - LHY香港0.25x
+      - LHY香港
+      - LHY日本0.25x
+      - LHY日本
+      - LHY美國
+      - OKZ美國
+      - OKZ日本
+      - FNY
     #-----------------------------------------------------------------------------------------------------------
   - name: OKZ专线
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"         #策略組圖標
@@ -657,6 +675,10 @@ rule-providers:
 rules:
   - DOMAIN-SUFFIX,ads2301.dsmynas.com,DIRECT
   - DOMAIN-SUFFIX,jlxa.wicp.net,DIRECT
+  - DOMAIN-KEYWORD,ClashG,配置更新
+  - DOMAIN-KEYWORD,linghunyun.com,配置更新
+  - DOMAIN-KEYWORD,okztwo.com,配置更新
+  - DOMAIN-KEYWORD,feiniaoyun.xyz,配置更新
   - RULE-SET,AD-Block,廣告過濾
   - DOMAIN-KEYWORD,xn--ngstr-lra8j,中國直連
   - DOMAIN-KEYWORD,googleapis.cn,中國直連
@@ -685,9 +707,6 @@ rules:
   - RULE-SET,微軟,微軟服務
   - RULE-SET,GitHub,國際互聯,no-resolve
   - DOMAIN-KEYWORD,raw.githubusercontent.com,國際互聯,no-resolve
-  #- DOMAIN-KEYWORD,linghunyun.com,國際互聯,no-resolve
-  #- DOMAIN-KEYWORD,okztwo.com,國際互聯,no-resolve
-  #- DOMAIN-KEYWORD,feiniaoyun.xyz,國際互聯,no-resolve
   - DOMAIN-KEYWORD,www.bilibili.com,嗶哩嗶哩,no-resolve
   - RULE-SET,嗶哩嗶哩Intl,嗶哩嗶哩,no-resolve
   - RULE-SET,嗶哩嗶哩,嗶哩嗶哩,no-resolve
