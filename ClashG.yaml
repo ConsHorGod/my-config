@@ -186,7 +186,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     use:
-      - 中國直連
+      - DIRECT
       - OKZ专线
       - OKZ香港
       - LHY香港0.25x
