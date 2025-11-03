@@ -673,8 +673,8 @@ rule-providers:
 rules:
   - DOMAIN-SUFFIX,ads2301.dsmynas.com,DIRECT
   - DOMAIN-SUFFIX,jlxa.wicp.net,DIRECT
-  - DOMAIN-KEYWORD,SurgeG,配置更新
-  - DOMAIN-KEYWORD,ClashG,配置更新
+  - DOMAIN-SUFFIX,raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/main/SurgeG.conf,配置更新
+  - DOMAIN-SUFFIX,raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/main/ClashG.yaml,配置更新
   - DOMAIN-KEYWORD,linghunyun.com,配置更新
   - DOMAIN-KEYWORD,okztwo.com,配置更新
   - DOMAIN-KEYWORD,feiniaoyun.xyz,配置更新
