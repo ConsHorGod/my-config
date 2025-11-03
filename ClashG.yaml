@@ -182,11 +182,11 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: 配置更新
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png"         #策略組圖標
-    type: url-test
+    type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 直连
+      - DIRECT
       - OKZ专线
       - OKZ香港
       - LHY香港0.25x
@@ -682,8 +682,7 @@ rule-providers:
 rules:
   - DOMAIN-SUFFIX,ads2301.dsmynas.com,DIRECT
   - DOMAIN-SUFFIX,jlxa.wicp.net,DIRECT
-  - DOMAIN-SUFFIX,raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/main/SurgeG.conf,配置更新
-  - DOMAIN-SUFFIX,raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/main/ClashG.yaml,配置更新
+  - DOMAIN-KEYWORD,ConsHorGod,配置更新
   - DOMAIN-KEYWORD,linghunyun.com,配置更新
   - DOMAIN-KEYWORD,okztwo.com,配置更新
   - DOMAIN-KEYWORD,feiniaoyun.xyz,配置更新
