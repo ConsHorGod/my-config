@@ -186,15 +186,15 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - DIRECT
+      - LHY香港0.25x
+      - LHY日本0.25x
       - OKZ专线
       - OKZ香港
-      - LHY香港0.25x
       - LHY香港
-      - LHY日本0.25x
       - LHY日本
       - OKZ日本
       - FNY
+      - DIRECT
     #-----------------------------------------------------------------------------------------------------------
   - name: 直连
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png"         #策略組圖標
