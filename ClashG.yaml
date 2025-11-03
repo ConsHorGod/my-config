@@ -709,11 +709,11 @@ rules:
   - RULE-SET,騰訊,中國直連
   - RULE-SET,CN,中國直連
   - RULE-SET,ASN,中國直連
-  #- RULE-SET,CNIP,中國直連
+  - RULE-SET,CNIP,中國直連
   - RULE-SET,Copilot,人工智能,no-resolve
   - RULE-SET,微軟,微軟服務
+  - DOMAIN-KEYWORD,raw.githubusercontent.com,配置更新,no-resolve
   - RULE-SET,GitHub,國際互聯,no-resolve
-  - DOMAIN-KEYWORD,raw.githubusercontent.com,國際互聯,no-resolve
   - DOMAIN-KEYWORD,www.bilibili.com,嗶哩嗶哩,no-resolve
   - RULE-SET,嗶哩嗶哩Intl,嗶哩嗶哩,no-resolve
   - RULE-SET,嗶哩嗶哩,嗶哩嗶哩,no-resolve
