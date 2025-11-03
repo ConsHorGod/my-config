@@ -182,11 +182,11 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: 配置更新
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png"         #策略組圖標
-    type: select
-    url: https://www.gstatic.com/generate_204
-    interval: 600
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
     proxies:
-      - DIRECT
+      - 直连
       - OKZ专线
       - OKZ香港
       - LHY香港0.25x
@@ -195,6 +195,15 @@ proxy-groups:
       - LHY日本
       - OKZ日本
       - FNY
+    #-----------------------------------------------------------------------------------------------------------
+  - name: 直连
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png"         #策略組圖標
+    hidden: true         #隱藏代理組
+    type: select
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
     #-----------------------------------------------------------------------------------------------------------
   - name: OKZ专线
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"         #策略組圖標
