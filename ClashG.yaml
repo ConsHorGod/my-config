@@ -184,7 +184,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png"         #策略組圖標
     type: fallback
     url: http://www.gstatic.com/generate_204
-    interval: 300
+    interval: 600
     proxies:
       - LHY香港0.25x
       - LHY日本0.25x
