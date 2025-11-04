@@ -20,8 +20,9 @@ dns:
     - "*.localdomain"
     - "*.localhost"
     - "*.msftncsi.com"
-    - "ads2301.dsmynas.com"
-    - "ads2301.x3322.net"
+    - "*.dsmynas.com"
+    - "*.x3322.net"
+    - "*.asuscomm.com"
     - "jlxa.wicp.net"
     - "rule:set-美团"
     - "rule:set-网易"
@@ -707,8 +708,9 @@ rule-providers:
 #-----------------------------------------------------------------------------------------------------------
 #分流規則
 rules:
-  - DOMAIN-SUFFIX,ads2301.dsmynas.com,DIRECT
-  - DOMAIN-SUFFIX,jlxa.wicp.net,DIRECT
+  - DOMAIN-KEYWORD,dsmynas.com,DIRECT
+  - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT
+  - DOMAIN-KEYWORD,asuscomm.com,DIRECT
   - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT
   - DOMAIN-KEYWORD,raw.githubusercontent.com,配置更新,no-resolve
   - DOMAIN-KEYWORD,linghunyun.com,配置更新
