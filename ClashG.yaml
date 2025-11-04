@@ -60,64 +60,19 @@ proxy-groups:
     proxies:
       - 中國直連
       - 國際互聯
-#-----------------------------------------------------------------------------------------------------------
-  - name: 中國直連
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png"         #策略組圖標
-    type: select         #手动选择
-    url: https://www.gstatic.com/generate_204         #用于测试的链接
-    interval: 600         #测速时间间隔(秒)
-    proxies:
-      - DIRECT
-      - 國際互聯
+      - FNY
 #-----------------------------------------------------------------------------------------------------------
   - name: 國際互聯
-    icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Global.png"         #策略組圖標
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"         #策略組圖標
     lazy: true         #惰性策略組只會在使用時對代理進行延遲測試
-    type: select         #手动选择
+    type: url-test         #自动测速
     url: https://www.gstatic.com/generate_204         #用于测试的链接
     interval: 300         #测速时间间隔(秒)
     proxies:
-      - OKZ专线
-      - OKZ香港
-      - LHY香港0.25x
-      - LHY香港
-      - LHY日本0.25x
-      - LHY日本
-      - LHY美國
-      - OKZ美國
-      - OKZ日本
-      - FNY
-#-----------------------------------------------------------------------------------------------------------
-  - name: 國際媒體
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"         #策略組圖標
-    lazy: true         #惰性策略組只會在使用時對代理進行延遲測試
-    type: url-test         #手动选择
-    url: https://www.gstatic.com/generate_204         #用于测试的链接
-    interval: 600         #测速时间间隔(秒)
-    proxies:
       - LHY香港0.25x
       - LHY香港
       - OKZ专线
       - OKZ香港
-      - FNY
-#-----------------------------------------------------------------------------------------------------------
-  - name: 谷歌油管
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"         #策略組圖標
-    lazy: true         #惰性策略組只會在使用時對代理進行延遲測試
-    type: select         #手动选择
-    url: https://www.gstatic.com/generate_204         #用于测试的链接
-    interval: 600         #测速时间间隔(秒)
-    proxies:
-      - LHY香港0.25x
-      - LHY香港
-      - OKZ专线
-      - OKZ香港
-      - LHY日本0.25x
-      - LHY日本
-      - LHY美國
-      - OKZ美國
-      - OKZ日本
-      - FNY
 #-----------------------------------------------------------------------------------------------------------
   - name: 飛機電報
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png"         #策略組圖標
@@ -130,16 +85,14 @@ proxy-groups:
       - LHY香港
       - OKZ专线
       - OKZ香港
-      - FNY
 #-----------------------------------------------------------------------------------------------------------
   - name: 國際抖音
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"         #策略組圖標
     lazy: true         #惰性策略組只會在使用時對代理進行延遲測試
-    type: select         #手动选择
+    type: url-test         #自动测速
     url: https://www.gstatic.com/generate_204         #用于测试的链接
-    interval: 600         #测速时间间隔(秒)
+    interval: 300         #测速时间间隔(秒)
     proxies:
-
       - LHY日本0.25x
       - LHY日本
       - OKZ专线
@@ -155,8 +108,7 @@ proxy-groups:
       - LHY香港0.25x
       - LHY香港
       - OKZ专线
-      - OKZ香港
-      - FNY      
+      - OKZ香港   
 #-----------------------------------------------------------------------------------------------------------
   - name: 嗶哩嗶哩
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili_3.png"         #策略組圖標
@@ -178,12 +130,11 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     proxies:
-      - DIRECT
+      - 中國直連
       - LHY香港0.25x
       - LHY香港
       - OKZ专线
       - OKZ香港
-      - FNY
 #-----------------------------------------------------------------------------------------------------------
   - name: 人工智能
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"         #策略組圖標
@@ -197,7 +148,6 @@ proxy-groups:
       - OKZ日本
       - OKZ美國
       - LHY美國
-      - FNY      
 #-----------------------------------------------------------------------------------------------------------
   - name: 廣告過濾
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AdBlack.png"         #策略組圖標
@@ -205,12 +155,12 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     proxies:
-      - DIRECT
       - REJECT
+      - DIRECT
 #-----------------------------------------------------------------------------------------------------------
   - name: 配置更新
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png"         #策略組圖標
-    type: fallback         #自动回退
+    type: url-test         #自动测速
     url: http://www.gstatic.com/generate_204         #用于测试的链接
     interval: 300         #测速时间间隔(秒)
     proxies:
@@ -219,17 +169,25 @@ proxy-groups:
       - OKZ香港
       - OKZ专线
       - FNY
+#-----------------------------------------------------------------------------------------------------------
+  - name: 中國直連
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png"         #策略組圖標
+    hidden: true         #隱藏代理組
+    type: select         #手动选择
+    url: https://www.gstatic.com/generate_204         #用于测试的链接
+    interval: 600         #测速时间间隔(秒)
+    proxies:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
   - name: FNY
     icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"         #策略組圖標
+    hidden: true         #隱藏代理組
     type: url-test         #自动测速
     url: http://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600
     use:
       - FNY
 #-----------------------------------------------------------------------------------------------------------
-
   - name: OKZ专线
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"         #策略組圖標
     hidden: true         #隱藏代理組
@@ -754,25 +712,25 @@ rules:
   - DOMAIN-SUFFIX,themoviedb.org,外媒下載,no-resolve
   - DOMAIN-SUFFIX,tmdb.org,外媒下載,no-resolve
   - DOMAIN-SUFFIX,image.tmdb.org,外媒下載,no-resolve
-  - DOMAIN-KEYWORD,xvideos,國際媒體,no-resolve
-  - DOMAIN-KEYWORD,xnxx,國際媒體,no-resolve
-  - DOMAIN-KEYWORD,pornhub,國際媒體,no-resolve
-  - DOMAIN-KEYWORD,xhamster,國際媒體,no-resolve
-  - DOMAIN-KEYWORD,stripchat,國際媒體,no-resolve
+  - DOMAIN-KEYWORD,xvideos,國際互聯,no-resolve
+  - DOMAIN-KEYWORD,xnxx,國際互聯,no-resolve
+  - DOMAIN-KEYWORD,pornhub,國際互聯,no-resolve
+  - DOMAIN-KEYWORD,xhamster,國際互聯,no-resolve
+  - DOMAIN-KEYWORD,stripchat,國際互聯,no-resolve
   - RULE-SET,TikTok,國際抖音,no-resolve
   - RULE-SET,電報,飛機電報,no-resolve
-  - RULE-SET,Reddit,國際媒體,no-resolve
-  - DOMAIN-KEYWORD,redd,國際媒體,no-resolve
-  - RULE-SET,推特,國際媒體,no-resolve
-  - RULE-SET,IG,國際媒體,no-resolve
-  - RULE-SET,臉書,國際媒體,no-resolve
+  - RULE-SET,Reddit,國際互聯,no-resolve
+  - DOMAIN-KEYWORD,redd,國際互聯,no-resolve
+  - RULE-SET,推特,國際互聯,no-resolve
+  - RULE-SET,IG,國際互聯,no-resolve
+  - RULE-SET,臉書,國際互聯,no-resolve
   - RULE-SET,Gemini,人工智能,no-resolve
   - RULE-SET,GPT,人工智能,no-resolve
-  - RULE-SET,油管音樂,谷歌油管,no-resolve
-  - RULE-SET,油管,谷歌油管,no-resolve
-  - DOMAIN-KEYWORD,mtalk.google.com,谷歌油管,no-resolve
-  - RULE-SET,谷歌,谷歌油管,no-resolve
-  - RULE-SET,外國流媒體,國際媒體,no-resolve
+  - RULE-SET,油管音樂,國際互聯,no-resolve
+  - RULE-SET,油管,國際互聯,no-resolve
+  - DOMAIN-KEYWORD,mtalk.google.com,國際互聯,no-resolve
+  - RULE-SET,谷歌,國際互聯,no-resolve
+  - RULE-SET,外國流媒體,國際互聯,no-resolve
   - RULE-SET,GFWList,國際互聯,no-resolve
   - RULE-SET,非CN,國際互聯,no-resolve
   - RULE-SET,Proxy,國際互聯,no-resolve
