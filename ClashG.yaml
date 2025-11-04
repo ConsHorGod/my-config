@@ -18,12 +18,14 @@ dns:
 #-----------------------------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------------------------
+#代理節點
 proxies:
+#代理組
 proxy-groups:
   - name: 規則以外
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png"         #策略組圖標
     type: select         #手动选择
-    url: https://www.gstatic.com/generate_204
+    url: https://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     proxies:
       - 中國直連
@@ -32,7 +34,7 @@ proxy-groups:
   - name: 中國直連
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png"         #策略組圖標
     type: select         #手动选择
-    url: https://www.gstatic.com/generate_204
+    url: https://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     proxies:
       - DIRECT
@@ -42,7 +44,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Global.png"         #策略組圖標
     lazy: true         #惰性策略組只會在使用時對代理進行延遲測試
     type: select         #手动选择
-    url: https://www.gstatic.com/generate_204
+    url: https://www.gstatic.com/generate_204         #用于测试的链接
     interval: 300         #测速时间间隔(秒)
     proxies:
       - OKZ专线
@@ -60,7 +62,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"         #策略組圖標
     lazy: true         #惰性策略組只會在使用時對代理進行延遲測試
     type: select         #手动选择
-    url: https://www.gstatic.com/generate_204
+    url: https://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     proxies:
       - LHY香港0.25x
@@ -73,7 +75,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"         #策略組圖標
     lazy: true         #惰性策略組只會在使用時對代理進行延遲測試
     type: select         #手动选择
-    url: https://www.gstatic.com/generate_204
+    url: https://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     proxies:
       - LHY香港0.25x
@@ -91,7 +93,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png"         #策略組圖標
     lazy: true         #惰性策略組只會在使用時對代理進行延遲測試
     type: select         #手动选择
-    url: https://www.gstatic.com/generate_204
+    url: https://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     proxies:
       - LHY香港0.25x
@@ -104,7 +106,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"         #策略組圖標
     lazy: true         #惰性策略組只會在使用時對代理進行延遲測試
     type: select         #手动选择
-    url: https://www.gstatic.com/generate_204
+    url: https://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     proxies:
 
@@ -117,7 +119,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Download.png"         #策略組圖標
     lazy: true         #惰性策略組只會在使用時對代理進行延遲測試
     type: select         #手动选择
-    url: https://www.gstatic.com/generate_204
+    url: https://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     proxies:
       - LHY香港0.25x
@@ -130,7 +132,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili_3.png"         #策略組圖標
     lazy: true         #惰性策略組只會在使用時對代理進行延遲測試
     type: select         #手动选择
-    url: https://www.gstatic.com/generate_204
+    url: https://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     proxies:
       - 中國直連
@@ -143,7 +145,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png"         #策略組圖標
     lazy: true         #惰性策略組只會在使用時對代理進行延遲測試
     type: select         #手动选择
-    url: https://www.gstatic.com/generate_204
+    url: https://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     proxies:
       - DIRECT
@@ -157,7 +159,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"         #策略組圖標
     lazy: true         #惰性策略組只會在使用時對代理進行延遲測試
     type: select         #手动选择
-    url: https://www.gstatic.com/generate_204
+    url: https://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     proxies:
       - LHY日本0.25x    
@@ -170,41 +172,39 @@ proxy-groups:
   - name: 廣告過濾
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AdBlack.png"         #策略組圖標
     type: select         #手动选择
-    url: https://www.gstatic.com/generate_204
+    url: https://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     proxies:
       - DIRECT
       - REJECT
 #-----------------------------------------------------------------------------------------------------------
-  - name: FNY
-    icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"         #策略組圖標
-    type: url-test         #自动测速
-    url: http://www.gstatic.com/generate_204
-    interval: 600
-    use:
-      - FNY
-#-----------------------------------------------------------------------------------------------------------
   - name: 配置更新
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png"         #策略組圖標
     type: fallback         #自动回退
-    url: http://www.gstatic.com/generate_204
+    url: http://www.gstatic.com/generate_204         #用于测试的链接
     interval: 300         #测速时间间隔(秒)
     proxies:
       - LHY香港0.25x
       - LHY日本0.25x
-      - OKZ专线
       - OKZ香港
-      - LHY香港
-      - LHY日本
-      - OKZ日本
+      - OKZ专线
       - FNY
       - DIRECT
-    #-----------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------
+  - name: FNY
+    icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"         #策略組圖標
+    type: url-test         #自动测速
+    url: http://www.gstatic.com/generate_204         #用于测试的链接
+    interval: 600
+    use:
+      - FNY
+#-----------------------------------------------------------------------------------------------------------
+
   - name: OKZ专线
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"         #策略組圖標
     hidden: true         #隱藏代理組
     type: url-test         #自动测速
-    url: http://www.gstatic.com/generate_204
+    url: http://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     use:
       - OKZ专线
@@ -213,7 +213,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"         #策略組圖標
     hidden: true         #隱藏代理組
     type: url-test         #自动测速
-    url: http://www.gstatic.com/generate_204
+    url: http://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     use:
       - OKZ香港
@@ -222,7 +222,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"         #策略組圖標
     hidden: true         #隱藏代理組
     type: url-test         #自动测速
-    url: http://www.gstatic.com/generate_204
+    url: http://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     use:
       - OKZ美國
@@ -231,7 +231,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"         #策略組圖標
     hidden: true         #隱藏代理組
     type: url-test         #自动测速
-    url: http://www.gstatic.com/generate_204
+    url: http://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     use:
       - OKZ日本
@@ -240,7 +240,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"         #策略組圖標
     hidden: true         #隱藏代理組
     type: url-test         #自动测速
-    url: http://www.gstatic.com/generate_204
+    url: http://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     use:
       - LHY香港
@@ -249,7 +249,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"         #策略組圖標
     hidden: true         #隱藏代理組
     type: url-test
-    url: http://www.gstatic.com/generate_204
+    url: http://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     use:
       - LHY香港0.25x
@@ -258,7 +258,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"         #策略組圖標
     hidden: true         #隱藏代理組
     type: url-test         #自动测速
-    url: http://www.gstatic.com/generate_204
+    url: http://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     use:
       - LHY日本
@@ -267,7 +267,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"         #策略組圖標
     hidden: true         #隱藏代理組
     type: url-test         #自动测速
-    url: http://www.gstatic.com/generate_204
+    url: http://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     use:
       - LHY日本0.25x
@@ -276,7 +276,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"         #策略組圖標
     hidden: true         #隱藏代理組
     type: url-test         #自动测速
-    url: http://www.gstatic.com/generate_204
+    url: http://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     use:
       - LHY美國
@@ -286,6 +286,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------------------------
+#代理集
 proxy-providers:
   "FNY":
     type: http
@@ -402,6 +403,7 @@ proxy-providers:
 #-----------------------------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------------------------
+#規則集
 rule-providers:
   LAN:
     type: http
@@ -674,6 +676,7 @@ rule-providers:
 #-----------------------------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------------------------
+#分流規則
 rules:
   - DOMAIN-SUFFIX,ads2301.dsmynas.com,DIRECT
   - DOMAIN-SUFFIX,jlxa.wicp.net,DIRECT
