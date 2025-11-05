@@ -94,7 +94,7 @@ proxy-groups:
     proxies:
       - LHY日本0.25x
       - LHY日本
-      - OKZ专线
+      - OKZ日本
 #-----------------------------------------------------------------------------------------------------------
   - name: 外媒下載
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Download.png"         #策略組圖標
