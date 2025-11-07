@@ -670,9 +670,9 @@ rules:
   - DOMAIN-KEYWORD,asuscomm.com,DIRECT
   - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT
   - DOMAIN-KEYWORD,raw.githubusercontent.com,配置更新,no-resolve
-  - DOMAIN-KEYWORD,linghunyun.com,配置更新
-  - DOMAIN-KEYWORD,okztwo.com,配置更新
-  - DOMAIN-KEYWORD,feiniaoyun.xyz,配置更新
+  - DOMAIN-KEYWORD,linghunyun,配置更新,no-resolve
+  - DOMAIN-KEYWORD,okztwo,配置更新,no-resolve
+  - DOMAIN-KEYWORD,feiniaoyun,配置更新,no-resolve
   - RULE-SET,AD-Block,廣告過濾
   - RULE-SET,GitHub,國際互聯,no-resolve
   - DOMAIN-KEYWORD,www.bilibili.com,嗶哩嗶哩,no-resolve
