@@ -289,7 +289,7 @@ proxy-providers:
   "OKZ专线":
     type: http
     path: ./provide/OKZ专线.yml
-    url: http://47.107.66.153:65533/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
+    url: https://okztwo.com/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
     interval: 3600
     filter: '专线'
     health-check:
@@ -300,7 +300,7 @@ proxy-providers:
   "OKZ香港":
     type: http
     path: ./provide/OKZ香港.yml
-    url: http://47.107.66.153:65533/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
+    url: https://okztwo.com/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
     interval: 3600
     filter: '香港'
     health-check:
@@ -311,7 +311,7 @@ proxy-providers:
   "OKZ美國":
     type: http
     path: ./provide/OKZ美國.yml
-    url: http://47.107.66.153:65533/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
+    url: https://okztwo.com/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
     interval: 3600
     filter: '美國'
     health-check:
@@ -322,7 +322,7 @@ proxy-providers:
   "OKZ日本":
     type: http
     path: ./provide/OKZ日本.yml
-    url: http://47.107.66.153:65533/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
+    url: https://okztwo.com/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
     interval: 3600
     filter: 日本'
     health-check:
@@ -333,7 +333,7 @@ proxy-providers:
   "LHY香港":
     type: http
     path: ./provide/LHY香港.yml
-    url: https://submit.mylac.cn:21443/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
+    url: https://www.linghunyun.com/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
     interval: 3600
     filter: '香港-'
     health-check:
@@ -344,7 +344,7 @@ proxy-providers:
   "LHY香港0.25x":
     type: http
     path: ./provide/LHY香港0.25x.yml
-    url: https://submit.mylac.cn:21443/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
+    url: https://www.linghunyun.com/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
     interval: 3600
     filter: '香港.*低倍率|低倍率.*香港'
     health-check:
@@ -355,7 +355,7 @@ proxy-providers:
   "LHY美國":
     type: http
     path: ./provide/LHY美國.yml
-    url: https://submit.mylac.cn:21443/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
+    url: https://www.linghunyun.com/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
     interval: 3600
     filter: '美國-'
     health-check:
@@ -366,7 +366,7 @@ proxy-providers:
   "LHY日本":
     type: http
     path: ./provide/LHY日本.yml
-    url: https://submit.mylac.cn:21443/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
+    url: https://www.linghunyun.com/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
     interval: 3600
     filter: '日本-'
     health-check:
@@ -377,7 +377,7 @@ proxy-providers:
   "LHY日本0.25x":
     type: http
     path: ./provide/LHY日本低倍率.yml
-    url: https://submit.mylac.cn:21443/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
+    url: https://www.linghunyun.com/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
     interval: 3600
     filter: '日本.*低倍率|低倍率.*日本'
     health-check:
