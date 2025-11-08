@@ -92,7 +92,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: 國際抖音
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"         #策略組圖標
-    hidden: false         #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: true         #隱藏代理組，“true=執行”，“false=禁用”
     lazy: true         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test         #自动测速
     url: https://www.gstatic.com/generate_204         #用于测试的链接
