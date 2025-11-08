@@ -699,6 +699,29 @@ rules:
   - DOMAIN-KEYWORD,x3.344211.cc,配置更新,no-resolve
   - RULE-SET,GitHub,國際互聯,no-resolve
   - RULE-SET,AD-Block,廣告過濾
+  - DOMAIN-KEYWORD,xn--ngstr-lra8j,中國直連
+  - DOMAIN-KEYWORD,googleapis.cn,中國直連
+  - DOMAIN-KEYWORD,deainx,中國直連
+  - DOMAIN-KEYWORD,dranime,中國直連
+  - DOMAIN-KEYWORD,gomicx,中國直連
+  - DOMAIN-KEYWORD,dotmu,中國直連
+  - DOMAIN-KEYWORD,apple,中國直連
+  - DOMAIN-KEYWORD,icould,中國直連
+  - DOMAIN-KEYWORD,itunes,中國直連
+  - RULE-SET,蘋果,中國直連
+  - RULE-SET,微軟,微軟服務
+  - RULE-SET,直连APP,中國直連
+  - RULE-SET,群暉,中國直連
+  - RULE-SET,百度,中國直連
+  - RULE-SET,迅雷,中國直連
+  - RULE-SET,美團,中國直連
+  - RULE-SET,網易,中國直連
+  - RULE-SET,抖音,中國直連
+  - RULE-SET,微信,中國直連
+  - RULE-SET,騰訊,中國直連
+  - RULE-SET,CN,中國直連
+  - RULE-SET,ASN,中國直連
+  - RULE-SET,CNIP,中國直連
   - DOMAIN-KEYWORD,www.bilibili.com,嗶哩嗶哩,no-resolve
   - RULE-SET,嗶哩嗶哩Intl,嗶哩嗶哩,no-resolve
   - RULE-SET,嗶哩嗶哩,嗶哩嗶哩,no-resolve
@@ -733,29 +756,6 @@ rules:
   - RULE-SET,外國流媒體,國際互聯,no-resolve
   - RULE-SET,GFWList,國際互聯,no-resolve
   - RULE-SET,非CN,國際互聯,no-resolve
-  - RULE-SET,Proxy,國際互聯,no-resolve
-  - DOMAIN-KEYWORD,xn--ngstr-lra8j,中國直連
-  - DOMAIN-KEYWORD,googleapis.cn,中國直連
-  - DOMAIN-KEYWORD,deainx,中國直連
-  - DOMAIN-KEYWORD,dranime,中國直連
-  - DOMAIN-KEYWORD,gomicx,中國直連
-  - DOMAIN-KEYWORD,dotmu,中國直連
-  - DOMAIN-KEYWORD,apple,中國直連
-  - DOMAIN-KEYWORD,icould,中國直連
-  - DOMAIN-KEYWORD,itunes,中國直連
-  - RULE-SET,蘋果,中國直連
-  - RULE-SET,微軟,微軟服務
-  - RULE-SET,直连APP,中國直連
-  - RULE-SET,群暉,中國直連
-  - RULE-SET,百度,中國直連
-  - RULE-SET,迅雷,中國直連
-  - RULE-SET,美團,中國直連
-  - RULE-SET,網易,中國直連
-  - RULE-SET,抖音,中國直連
-  - RULE-SET,微信,中國直連
-  - RULE-SET,騰訊,中國直連
-  - RULE-SET,CN,中國直連
-  - RULE-SET,ASN,中國直連
-  - RULE-SET,CNIP,中國直連
+  - RULE-SET,Proxy,國際互聯,no-resolve  
   - RULE-SET,LAN,中國直連
   - MATCH,最終出站,dns-failed
