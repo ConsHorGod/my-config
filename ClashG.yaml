@@ -289,7 +289,7 @@ proxy-providers:
   "OKZ专线":
     type: http
     path: ./provide/OKZ专线.yml
-    url: https://okztwo.com/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
+    url: http://47.107.66.153:65533/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
     interval: 3600
     filter: '专线'
     health-check:
@@ -300,7 +300,7 @@ proxy-providers:
   "OKZ香港":
     type: http
     path: ./provide/OKZ香港.yml
-    url: https://okztwo.com/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
+    url: http://47.107.66.153:65533/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
     interval: 3600
     filter: '香港'
     health-check:
@@ -311,7 +311,7 @@ proxy-providers:
   "OKZ美國":
     type: http
     path: ./provide/OKZ美國.yml
-    url: https://okztwo.com/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
+    url: http://47.107.66.153:65533/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
     interval: 3600
     filter: '美國'
     health-check:
@@ -322,7 +322,7 @@ proxy-providers:
   "OKZ日本":
     type: http
     path: ./provide/OKZ日本.yml
-    url: https://okztwo.com/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
+    url: http://47.107.66.153:65533/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
     interval: 3600
     filter: 日本'
     health-check:
