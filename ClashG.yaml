@@ -708,11 +708,11 @@ rules:
   - DOMAIN-KEYWORD,apple,中國直連
   - DOMAIN-KEYWORD,icould,中國直連
   - DOMAIN-KEYWORD,itunes,中國直連
+  - RULE-SET,百度,中國直連
+  - RULE-SET,迅雷,中國直連
   - RULE-SET,蘋果,中國直連
   - RULE-SET,直连APP,中國直連
   - RULE-SET,群暉,中國直連
-  - RULE-SET,百度,中國直連
-  - RULE-SET,迅雷,中國直連
   - RULE-SET,美團,中國直連
   - RULE-SET,網易,中國直連
   - RULE-SET,抖音,中國直連
