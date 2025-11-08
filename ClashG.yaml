@@ -180,7 +180,7 @@ proxy-groups:
   - name: 配置更新
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png"         #策略組圖標
     hidden: true         #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: false         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“”false=禁用“”
+    lazy: true         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test         #自动测速
     url: http://www.gstatic.com/generate_204         #用于测试的链接
     interval: 300         #测速时间间隔(秒)
