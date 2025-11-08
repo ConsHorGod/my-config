@@ -694,6 +694,7 @@ rules:
   - DOMAIN-KEYWORD,raw.githubusercontent.com,配置更新,no-resolve
   - DOMAIN-KEYWORD,linghunyun,配置更新,no-resolve
   - DOMAIN-KEYWORD,okztwo,配置更新,no-resolve
+  - DOMAIN-KEYWORD,47.107.66.153:65533,配置更新,no-resolve
   - DOMAIN-KEYWORD,feiniaoyun,配置更新,no-resolve
   - DOMAIN-KEYWORD,x3.344211.cc,配置更新,no-resolve
   - RULE-SET,GitHub,國際互聯,no-resolve
