@@ -57,7 +57,7 @@ proxy-groups:
     hidden: false         #隱藏代理組，“true=執行”，“false=禁用”
     type: select         #手动选择
     url: https://www.gstatic.com/generate_204         #用于测试的链接
-    interval: 300         #测速时间间隔(秒)
+    interval: 600         #测速时间间隔(秒)
     proxies:         #代理選項
       - 中國直連
       - 國際互聯
@@ -66,10 +66,10 @@ proxy-groups:
   - name: 國際互聯
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"         #策略組圖標
     hidden: false         #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: true         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    lazy: false         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test         #自动测速
     url: https://www.gstatic.com/generate_204         #用于测试的链接
-    interval: 300         #测速时间间隔(秒)
+    interval: 600         #测速时间间隔(秒)
     proxies:         #代理選項
       - LHY香港0.25x
       - LHY香港
@@ -80,10 +80,10 @@ proxy-groups:
   - name: 飛機電報
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png"         #策略組圖標
     hidden: false         #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: true         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    lazy: false         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test         #自动测速
     url: https://www.gstatic.com/generate_204         #用于测试的链接
-    interval: 300         #测速时间间隔(秒)
+    interval: 600         #测速时间间隔(秒)
     proxies:         #代理選項
       - LHY香港0.25x
       - LHY香港
@@ -93,10 +93,10 @@ proxy-groups:
   - name: 國際抖音
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"         #策略組圖標
     hidden: true         #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: true         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    lazy: false         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test         #自动测速
     url: https://www.gstatic.com/generate_204         #用于测试的链接
-    interval: 300         #测速时间间隔(秒)
+    interval: 600         #测速时间间隔(秒)
     proxies:         #代理選項
       - LHY日本0.25x
       - LHY日本
@@ -105,10 +105,10 @@ proxy-groups:
   - name: 外媒下載
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Download.png"         #策略組圖標
     hidden: false         #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: true         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    lazy: false         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: select         #手动选择
     url: https://www.gstatic.com/generate_204         #用于测试的链接
-    interval: 300         #测速时间间隔(秒)
+    interval: 600         #测速时间间隔(秒)
     proxies:         #代理選項
       - LHY香港0.25x
       - LHY香港
@@ -118,10 +118,10 @@ proxy-groups:
   - name: YouTubeMusic
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube_Music.png"         #策略組圖標
     hidden: true         #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: true         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    lazy: false         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test         #自动测速
     url: https://www.gstatic.com/generate_204         #用于测试的链接
-    interval: 300         #测速时间间隔(秒)
+    interval: 600         #测速时间间隔(秒)
     proxies:         #代理選項
       - LHY香港0.25x
       - OKZ专线
@@ -130,10 +130,10 @@ proxy-groups:
   - name: 嗶哩嗶哩
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili_3.png"         #策略組圖標
     hidden: false         #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: true         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    lazy: false         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: select         #手动选择
     url: https://www.gstatic.com/generate_204         #用于测试的链接
-    interval: 300         #测速时间间隔(秒)
+    interval: 600         #测速时间间隔(秒)
     proxies:         #代理選項
       - 中國直連
       - LHY日本
@@ -144,10 +144,10 @@ proxy-groups:
   - name: 微軟服務
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png"         #策略組圖標
     hidden: false         #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: true         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    lazy: false         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: select         #手动选择
     url: https://www.gstatic.com/generate_204         #用于测试的链接
-    interval: 300         #测速时间间隔(秒)
+    interval: 600         #测速时间间隔(秒)
     proxies:         #代理選項
       - 中國直連
       - LHY香港0.25x
@@ -158,10 +158,10 @@ proxy-groups:
   - name: 人工智能
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"         #策略組圖標
     hidden: true         #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: true         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    lazy: false         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test         #自动测速
     url: https://www.gstatic.com/generate_204         #用于测试的链接
-    interval: 300         #测速时间间隔(秒)
+    interval: 600         #测速时间间隔(秒)
     proxies:         #代理選項
       - LHY日本0.25x    
       - LHY日本
@@ -180,10 +180,10 @@ proxy-groups:
   - name: 配置更新
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png"         #策略組圖標
     hidden: true         #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: true         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    lazy: false         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test         #自动测速
     url: http://www.gstatic.com/generate_204         #用于测试的链接
-    interval: 300         #测速时间间隔(秒)
+    interval: 600         #测速时间间隔(秒)
     proxies:         #代理選項
       - LHY香港0.25x
       - LHY日本0.25x
