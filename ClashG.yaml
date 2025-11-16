@@ -682,6 +682,7 @@ rules:
   - DOMAIN-KEYWORD,dsmynas.com,DIRECT
   - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT
   - DOMAIN-KEYWORD,asuscomm.com,DIRECT
+  - DOMAIN,msmp.abchina.com.cn,REJECT
   - DOMAIN-KEYWORD,unpkg.com,配置更新,no-resolve
   - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT
   - DOMAIN-KEYWORD,raw.githubusercontent.com,配置更新,no-resolve
