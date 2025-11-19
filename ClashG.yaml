@@ -59,7 +59,7 @@ dns:
 proxies:
 #--------↓↓↓代理組↓↓↓--------#
 proxy-groups:
-  - name: 最終出站(手動)
+  - name: 最終出站(M)
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png"         #策略組圖標
     hidden: false         #隱藏代理組，“true=執行”，“false=禁用”
     type: select         #手动选择
@@ -67,10 +67,10 @@ proxy-groups:
     interval: 600         #测速时间间隔(秒)
     proxies:         #代理選項
       - 中國直連
-      - 國際互聯(自動)
+      - 國際互聯(A)
       - FNY
 #-----------------------------------------------------------------------------------------------------------
-  - name: 國際互聯(自動)
+  - name: 國際互聯(A)
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"         #策略組圖標
     hidden: false         #隱藏代理組，“true=執行”，“false=禁用”
     lazy: false         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
@@ -83,7 +83,7 @@ proxy-groups:
       - OKZ专线
       - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
-  - name: 飛機電報(自動)
+  - name: 飛機電報(A)
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png"         #策略組圖標
     hidden: false         #隱藏代理組，“true=執行”，“false=禁用”
     lazy: false         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
@@ -96,7 +96,7 @@ proxy-groups:
       - OKZ专线
       - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
-  - name: 國際抖音(自動)
+  - name: 國際抖音(A)
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"         #策略組圖標
     hidden: false         #隱藏代理組，“true=執行”，“false=禁用”
     lazy: false         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
@@ -107,7 +107,7 @@ proxy-groups:
       - LHY日本0.25x
       - LHY日本
 #-----------------------------------------------------------------------------------------------------------
-  - name: 外媒下載(手動)
+  - name: 外媒下載(M)
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Download.png"         #策略組圖標
     hidden: false         #隱藏代理組，“true=執行”，“false=禁用”
     lazy: false         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
@@ -120,7 +120,7 @@ proxy-groups:
       - OKZ专线
       - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
-  - name: 油管音樂(自動)
+  - name: 油管音樂(A)
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube_Music.png"         #策略組圖標
     hidden: true         #隱藏代理組，“true=執行”，“false=禁用”
     lazy: false         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
@@ -132,7 +132,7 @@ proxy-groups:
       - OKZ专线
       - OKZ香港            
 #-----------------------------------------------------------------------------------------------------------
-  - name: 嗶哩嗶哩(手動)
+  - name: 嗶哩嗶哩(M)
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili_3.png"         #策略組圖標
     hidden: false         #隱藏代理組，“true=執行”，“false=禁用”
     lazy: false         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
@@ -146,7 +146,7 @@ proxy-groups:
       - OKZ日本
       - OKZ美國
 #-----------------------------------------------------------------------------------------------------------
-  - name: 微軟服務(手動)
+  - name: 微軟服務(M)
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png"         #策略組圖標
     hidden: false         #隱藏代理組，“true=執行”，“false=禁用”
     lazy: false         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
@@ -160,7 +160,7 @@ proxy-groups:
       - OKZ专线
       - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
-  - name: 人工智能(自動)
+  - name: 人工智能(A)
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"         #策略組圖標
     hidden: true         #隱藏代理組，“true=執行”，“false=禁用”
     lazy: false         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
@@ -172,7 +172,7 @@ proxy-groups:
       - LHY日本
       - OKZ日本
 #-----------------------------------------------------------------------------------------------------------
-  - name: 廣告過濾(手動)
+  - name: 廣告過濾(M)
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AdBlack.png"         #策略組圖標
     hidden: false         #隱藏代理組，“true=執行”，“false=禁用”
     type: select         #手动选择
@@ -182,7 +182,7 @@ proxy-groups:
       - REJECT
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
-  - name: 配置更新(自動)
+  - name: 配置更新(A)
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png"         #策略組圖標
     hidden:  false         #隱藏代理組，“true=執行”，“false=禁用”
     lazy: false         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
@@ -709,19 +709,19 @@ rule-providers:
 #--------↓↓↓分就規則↓↓↓--------#
 rules:
   - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT
-  - DOMAIN-KEYWORD,raw.githubusercontent.com,配置更新(自動),no-resolve
-  - DOMAIN-KEYWORD,unpkg.com,配置更新(自動),no-resolve
+  - DOMAIN-KEYWORD,raw.githubusercontent.com,配置更新(A),no-resolve
+  - DOMAIN-KEYWORD,unpkg.com,配置更新(A),no-resolve
   - DOMAIN,msmp.abchina.com.cn,REJECT
   - DOMAIN-KEYWORD,dsmynas.com,DIRECT
   - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT
   - DOMAIN-KEYWORD,asuscomm.com,DIRECT
-  - DOMAIN-KEYWORD,linghunyun,配置更新(自動),no-resolve
-  - DOMAIN-KEYWORD,okztwo,配置更新(自動),no-resolve
-  - DOMAIN-KEYWORD,47.107.66.153:65533,配置更新(自動),no-resolve
-  - DOMAIN-KEYWORD,feiniaoyun,配置更新(自動),no-resolve
-  - DOMAIN-KEYWORD,x3.344211.cc,配置更新(自動),no-resolve
-  - RULE-SET,GitHub,國際互聯(自動),no-resolve
-  - RULE-SET,AD-Block,廣告過濾(手動)
+  - DOMAIN-KEYWORD,linghunyun,配置更新(A),no-resolve
+  - DOMAIN-KEYWORD,okztwo,配置更新(A),no-resolve
+  - DOMAIN-KEYWORD,47.107.66.153:65533,配置更新(A),no-resolve
+  - DOMAIN-KEYWORD,feiniaoyun,配置更新(A),no-resolve
+  - DOMAIN-KEYWORD,x3.344211.cc,配置更新(A),no-resolve
+  - RULE-SET,GitHub,國際互聯(A),no-resolve
+  - RULE-SET,AD-Block,廣告過濾(M)
   - DOMAIN-KEYWORD,xn--ngstr-lra8j,中國直連
   - DOMAIN-KEYWORD,googleapis.cn,中國直連
   - DOMAIN-KEYWORD,deainx,中國直連
@@ -746,44 +746,44 @@ rules:
   - RULE-SET,阿里巴巴,中國直連
   - RULE-SET,京東,中國直連
   - RULE-SET,CN,中國直連
-  - DOMAIN-KEYWORD,www.bilibili.com,嗶哩嗶哩(手動),no-resolve
-  - RULE-SET,嗶哩嗶哩Intl,嗶哩嗶哩(手動),no-resolve
-  - RULE-SET,嗶哩嗶哩,嗶哩嗶哩(手動),no-resolve
-  - DOMAIN-KEYWORD,discomax.com,外媒下載(手動),no-resolve
-  - DOMAIN-KEYWORD,media.max.com,外媒下載(手動),no-resolve
-  - DOMAIN-KEYWORD,max.com,外媒下載(手動),no-resolve
-  - RULE-SET,HBO,外媒下載(手動),no-resolve
-  - RULE-SET,香港電臺,外媒下載(手動),no-resolve
-  - DOMAIN-KEYWORD,akamaized,外媒下載(手動),no-resol
-  - DOMAIN-SUFFIX,themoviedb.org,外媒下載(手動),no-resolve
-  - DOMAIN-SUFFIX,tmdb.org,外媒下載(手動),no-resolve
-  - DOMAIN-SUFFIX,image.tmdb.org,外媒下載(手動),no-resolve
-  - DOMAIN-KEYWORD,xvideos,國際互聯(自動),no-resolve
-  - DOMAIN-KEYWORD,xnxx,國際互聯(自動),no-resolve
-  - DOMAIN-KEYWORD,pornhub,國際互聯(自動),no-resolve
-  - DOMAIN-KEYWORD,xhamster,國際互聯(自動),no-resolve
-  - DOMAIN-KEYWORD,stripchat,國際互聯(自動),no-resolve
-  - RULE-SET,TikTok,國際抖音(自動),no-resolve
-  - RULE-SET,電報,飛機電報(自動),no-resolve
-  - RULE-SET,Reddit,國際互聯(自動),no-resolve
-  - DOMAIN-KEYWORD,redd,國際互聯(自動),no-resolve
-  - RULE-SET,推特,國際互聯(自動),no-resolve
-  - RULE-SET,IG,國際互聯(自動),no-resolve
-  - RULE-SET,臉書,國際互聯(自動),no-resolve
-  - RULE-SET,Copilot,人工智能(自動),no-resolve
-  - DOMAIN-KEYWORD,microsoft,微軟服務(手動),no-resolve
-  - RULE-SET,微軟,微軟服務(手動),no-resolve
-  - RULE-SET,Gemini,人工智能(自動),no-resolve
-  - RULE-SET,GPT,人工智能(自動),no-resolve
-  - RULE-SET,油管音樂,油管音樂(自動),no-resolve
-  - RULE-SET,油管,國際互聯(自動),no-resolve
-  - DOMAIN-KEYWORD,mtalk.google.com,國際互聯(自動),no-resolve
-  - RULE-SET,谷歌,國際互聯(自動),no-resolve
-  - RULE-SET,外國流媒體,國際互聯(自動),no-resolve
-  - RULE-SET,GFWList,國際互聯(自動),no-resolve
-  - RULE-SET,非CN,國際互聯(自動),no-resolve
-  - RULE-SET,Proxy,國際互聯(自動),no-resolve  
+  - DOMAIN-KEYWORD,www.bilibili.com,嗶哩嗶哩(M),no-resolve
+  - RULE-SET,嗶哩嗶哩Intl,嗶哩嗶哩(M),no-resolve
+  - RULE-SET,嗶哩嗶哩,嗶哩嗶哩(M),no-resolve
+  - DOMAIN-KEYWORD,discomax.com,外媒下載(M),no-resolve
+  - DOMAIN-KEYWORD,media.max.com,外媒下載(M),no-resolve
+  - DOMAIN-KEYWORD,max.com,外媒下載(M),no-resolve
+  - RULE-SET,HBO,外媒下載(M),no-resolve
+  - RULE-SET,香港電臺,外媒下載(M),no-resolve
+  - DOMAIN-KEYWORD,akamaized,外媒下載(M),no-resol
+  - DOMAIN-SUFFIX,themoviedb.org,外媒下載(M),no-resolve
+  - DOMAIN-SUFFIX,tmdb.org,外媒下載(M),no-resolve
+  - DOMAIN-SUFFIX,image.tmdb.org,外媒下載(M),no-resolve
+  - DOMAIN-KEYWORD,xvideos,國際互聯(A),no-resolve
+  - DOMAIN-KEYWORD,xnxx,國際互聯(A),no-resolve
+  - DOMAIN-KEYWORD,pornhub,國際互聯(A),no-resolve
+  - DOMAIN-KEYWORD,xhamster,國際互聯(A),no-resolve
+  - DOMAIN-KEYWORD,stripchat,國際互聯(A),no-resolve
+  - RULE-SET,TikTok,國際抖音(A),no-resolve
+  - RULE-SET,電報,飛機電報(A),no-resolve
+  - RULE-SET,Reddit,國際互聯(A),no-resolve
+  - DOMAIN-KEYWORD,redd,國際互聯(A),no-resolve
+  - RULE-SET,推特,國際互聯(A),no-resolve
+  - RULE-SET,IG,國際互聯(A),no-resolve
+  - RULE-SET,臉書,國際互聯(A),no-resolve
+  - RULE-SET,Copilot,人工智能(A),no-resolve
+  - DOMAIN-KEYWORD,microsoft,微軟服務(M),no-resolve
+  - RULE-SET,微軟,微軟服務(M),no-resolve
+  - RULE-SET,Gemini,人工智能(A),no-resolve
+  - RULE-SET,GPT,人工智能(A),no-resolve
+  - RULE-SET,油管音樂,油管音樂(A),no-resolve
+  - RULE-SET,油管,國際互聯(A),no-resolve
+  - DOMAIN-KEYWORD,mtalk.google.com,國際互聯(A),no-resolve
+  - RULE-SET,谷歌,國際互聯(A),no-resolve
+  - RULE-SET,外國流媒體,國際互聯(A),no-resolve
+  - RULE-SET,GFWList,國際互聯(A),no-resolve
+  - RULE-SET,非CN,國際互聯(A),no-resolve
+  - RULE-SET,Proxy,國際互聯(A),no-resolve  
   - RULE-SET,LAN,中國直連
   - RULE-SET,ASNIP,中國直連
   - RULE-SET,CNIP,中國直連
-  - MATCH,最終出站(手動),dns-failed
+  - MATCH,最終出站(M),dns-failed
