@@ -732,21 +732,21 @@ rules:
   - DOMAIN-KEYWORD,apple,中國直連
   - DOMAIN-KEYWORD,icould,中國直連
   - DOMAIN-KEYWORD,itunes,中國直連
-#  - RULE-SET,百度,中國直連
-#  - RULE-SET,迅雷,中國直連
-#  - RULE-SET,蘋果,中國直連
-#  - RULE-SET,直连APP,中國直連
-#  - RULE-SET,群暉,中國直連
-#  - RULE-SET,美團,中國直連
-#  - RULE-SET,網易,中國直連
-#  - RULE-SET,抖音,中國直連
-#  - RULE-SET,微信,中國直連
-#  - RULE-SET,騰訊,中國直連
-#  - RULE-SET,小米,中國直連
-#  - RULE-SET,支付寶,中國直連
-#  - RULE-SET,阿里巴巴,中國直連
-#  - RULE-SET,京東,中國直連
-#  - RULE-SET,CN,中國直連
+  - RULE-SET,百度,中國直連
+  - RULE-SET,迅雷,中國直連
+  - RULE-SET,蘋果,中國直連
+  - RULE-SET,直连APP,中國直連
+  - RULE-SET,群暉,中國直連
+  - RULE-SET,美團,中國直連
+  - RULE-SET,網易,中國直連
+  - RULE-SET,抖音,中國直連
+  - RULE-SET,微信,中國直連
+  - RULE-SET,騰訊,中國直連
+  - RULE-SET,小米,中國直連
+  - RULE-SET,支付寶,中國直連
+  - RULE-SET,阿里巴巴,中國直連
+  - RULE-SET,京東,中國直連
+  - RULE-SET,CN,中國直連
   - DOMAIN-KEYWORD,www.bilibili.com,嗶哩嗶哩(M),no-resolve
   - RULE-SET,嗶哩嗶哩Intl,嗶哩嗶哩(M),no-resolve
   - RULE-SET,嗶哩嗶哩,嗶哩嗶哩(M),no-resolve
@@ -785,6 +785,6 @@ rules:
   - RULE-SET,非CN,國際互聯(A),no-resolve
   - RULE-SET,Proxy,國際互聯(A),no-resolve  
   - RULE-SET,LAN,中國直連
-#  - RULE-SET,ASNIP,中國直連
-#  - RULE-SET,CNIP,中國直連
+  - RULE-SET,ASNIP,中國直連
+  - RULE-SET,CNIP,中國直連
   - MATCH,最終出站(M),dns-failed
