@@ -709,8 +709,8 @@ rule-providers:
 #-----------------------------------------------------------------------------------------------------------
 #--------↓↓↓分就規則↓↓↓--------#
 rules:
-  - DOMAIN-KEYWORD,doh.pub/dns-query,DIRECT
-  - DOMAIN-KEYWORD,dns.alidns.com/dns-query,DIRECT
+  - DOMAIN-KEYWORD,doh.pub,DIRECT
+  - DOMAIN-KEYWORD,dns.alidns.com,DIRECT
   - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT
   - DOMAIN-KEYWORD,raw.githubusercontent.com,配置更新(A),no-resolve
   - DOMAIN-KEYWORD,unpkg.com,配置更新(A),no-resolve
