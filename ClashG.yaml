@@ -454,10 +454,10 @@ rule-providers:
     url: "https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  非CN:
+ tld-not-cn:
     type: http
     behavior: domain
-    path: ./ruleset/非中國域名.yaml
+    path: ./ruleset/tld-not-cn.yaml
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
@@ -750,44 +750,44 @@ rules:
   - RULE-SET,阿里巴巴,中國直連 #阿里巴巴
   - RULE-SET,京東,中國直連 #京東
   - RULE-SET,CN,中國直連 #中國直連網站
-  - DOMAIN-KEYWORD,www.bilibili.com,嗶哩嗶哩(M),no-resolve
-  - RULE-SET,嗶哩嗶哩Intl,嗶哩嗶哩(M),no-resolve
-  - RULE-SET,嗶哩嗶哩,嗶哩嗶哩(M),no-resolve
-  - DOMAIN-KEYWORD,discomax.com,外媒下載(M),no-resolve
-  - DOMAIN-KEYWORD,media.max.com,外媒下載(M),no-resolve
-  - DOMAIN-KEYWORD,max.com,外媒下載(M),no-resolve
-  - RULE-SET,HBO,外媒下載(M),no-resolve
-  - RULE-SET,香港電臺,外媒下載(M),no-resolve
-  - DOMAIN-KEYWORD,akamaized,外媒下載(M),no-resol
-  - DOMAIN-SUFFIX,themoviedb.org,外媒下載(M),no-resolve
-  - DOMAIN-SUFFIX,tmdb.org,外媒下載(M),no-resolve
-  - DOMAIN-SUFFIX,image.tmdb.org,外媒下載(M),no-resolve
-  - DOMAIN-KEYWORD,xvideos,國際互聯(A),no-resolve
-  - DOMAIN-KEYWORD,xnxx,國際互聯(A),no-resolve
-  - DOMAIN-KEYWORD,pornhub,國際互聯(A),no-resolve
-  - DOMAIN-KEYWORD,xhamster,國際互聯(A),no-resolve
-  - DOMAIN-KEYWORD,stripchat,國際互聯(A),no-resolve
-  - RULE-SET,TikTok,國際抖音(A),no-resolve
-  - RULE-SET,電報,飛機電報(A),no-resolve
-  - RULE-SET,Reddit,國際互聯(A),no-resolve
-  - DOMAIN-KEYWORD,redd,國際互聯(A),no-resolve
-  - RULE-SET,推特,國際互聯(A),no-resolve
-  - RULE-SET,IG,國際互聯(A),no-resolve
-  - RULE-SET,臉書,國際互聯(A),no-resolve
+  - DOMAIN-KEYWORD,www.bilibili.com,嗶哩嗶哩(M),no-resolve #嗶哩嗶哩
+  - RULE-SET,嗶哩嗶哩Intl,嗶哩嗶哩(M),no-resolve #嗶哩嗶哩
+  - RULE-SET,嗶哩嗶哩,嗶哩嗶哩(M),no-resolve #嗶哩嗶哩
+  - DOMAIN-KEYWORD,discomax.com,外媒下載(M),no-resolve #www.hbomax.com
+  - DOMAIN-KEYWORD,media.max.com,外媒下載(M),no-resolve #www.hbomax.com
+  - DOMAIN-KEYWORD,max.com,外媒下載(M),no-resolve #www.hbomax.com
+  - RULE-SET,HBO,外媒下載(M),no-resolve #www.hbomax.com
+  - RULE-SET,香港電臺,外媒下載(M),no-resolve #香港電臺
+  - DOMAIN-KEYWORD,akamaized,外媒下載(M),no-resol #香港電臺
+  - DOMAIN-SUFFIX,themoviedb.org,外媒下載(M),no-resolve #www.themoviedb.org
+  - DOMAIN-SUFFIX,tmdb.org,外媒下載(M),no-resolve #www.themoviedb.org
+  - DOMAIN-SUFFIX,image.tmdb.org,外媒下載(M),no-resolve #www.themoviedb.org
+  - DOMAIN-KEYWORD,xvideos,國際互聯(A),no-resolve #www.xvideos.com
+  - DOMAIN-KEYWORD,xnxx,國際互聯(A),no-resolve #www.xnxx.com
+  - DOMAIN-KEYWORD,pornhub,國際互聯(A),no-resolve #www.pornhub.com
+  - DOMAIN-KEYWORD,xhamster,國際互聯(A),no-resolve #www.xhamster.com
+  - DOMAIN-KEYWORD,stripchat,國際互聯(A),no-resolve #www.stripchat.com
+  - RULE-SET,TikTok,國際抖音(A),no-resolve #TikTok
+  - RULE-SET,電報,飛機電報(A),no-resolve #Telegram
+  - RULE-SET,Reddit,國際互聯(A),no-resolve #Reddit
+  - DOMAIN-KEYWORD,redd,國際互聯(A),no-resolve #Reddit
+  - RULE-SET,推特,國際互聯(A),no-resolve #Twitter
+  - RULE-SET,IG,國際互聯(A),no-resolve #Instagram
+  - RULE-SET,臉書,國際互聯(A),no-resolve #FaceBook
   - RULE-SET,Copilot,人工智能(A),no-resolve
-  - DOMAIN-KEYWORD,microsoft,微軟服務(M),no-resolve
-  - RULE-SET,微軟,微軟服務(M),no-resolve
-  - RULE-SET,Gemini,人工智能(A),no-resolve
-  - RULE-SET,GPT,人工智能(A),no-resolve
-  - RULE-SET,油管音樂,油管音樂(A),no-resolve
-  - RULE-SET,油管,國際互聯(A),no-resolve
-  - DOMAIN-KEYWORD,mtalk.google.com,國際互聯(A),no-resolve
-  - RULE-SET,谷歌,國際互聯(A),no-resolve
-  - RULE-SET,外國流媒體,國際互聯(A),no-resolve
-  - RULE-SET,GFWList,國際互聯(A),no-resolve
-  - RULE-SET,非CN,國際互聯(A),no-resolve
-  - RULE-SET,Proxy,國際互聯(A),no-resolve  
-  - RULE-SET,LAN,中國直連
-  - RULE-SET,ASNIP,中國直連
-  - RULE-SET,CNIP,中國直連
+  - DOMAIN-KEYWORD,microsoft,微軟服務(M),no-resolve #微軟
+  - RULE-SET,微軟,微軟服務(M),no-resolve #微軟
+  - RULE-SET,Gemini,人工智能(A),no-resolve #谷歌AI
+  - RULE-SET,GPT,no-resolno-resolve #OpenAI
+  - RULE-SET,油管音樂,油管音樂(A),no-resolve #YouTubeMusic
+  - RULE-SET,油管,國際互聯(A),no-resolve #Youtube
+  - DOMAIN-KEYWORD,mtalk.google.com,國際互聯(A),no-resolve #Google推送服務
+  - RULE-SET,谷歌,國際互聯(A),no-resolve #www.google.com
+  - RULE-SET,外國流媒體,國際互聯(A),no-resolve #國外流媒體平臺
+  - RULE-SET,GFWList,國際互聯(A),no-resolve #GFWList 域名列表
+  - RULE-SET,tld-not-cn,國際互聯(A),no-resolve #非中国大陆使用的顶级域名列表
+  - RULE-SET,Proxy,國際互聯(A),no-resolve #代理域名列表
+  - RULE-SET,LAN,中國直連 #局域网
+  - RULE-SET,ASNIP,中國直連 #中国ASN
+  - RULE-SET,CNIP,中國直連 #中国IP
   - MATCH,最終出站(M),dns-failed
