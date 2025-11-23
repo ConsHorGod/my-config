@@ -712,19 +712,19 @@ rules:
   - DOMAIN-KEYWORD,pool.ntp.org,DIRECT #時間同步服務器
   - DOMAIN-KEYWORD,doh.pub,DIRECT #加密DNS服務器
   - DOMAIN-KEYWORD,dns.alidns.com,DIRECT #加密DNS服務器
-  - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT
-  - DOMAIN-KEYWORD,raw.githubusercontent.com,配置更新(A),no-resolve
-  - DOMAIN-KEYWORD,unpkg.com,配置更新(A),no-resolve
-  - DOMAIN,msmp.abchina.com.cn,REJECT
-  - DOMAIN-KEYWORD,dsmynas.com,DIRECT
-  - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT
-  - DOMAIN-KEYWORD,asuscomm.com,DIRECT
-  - DOMAIN-KEYWORD,linghunyun,配置更新(A),no-resolve
-  - DOMAIN-KEYWORD,okztwo,配置更新(A),no-resolve
-  - DOMAIN-KEYWORD,47.107.66.153:65533,配置更新(A),no-resolve
-  - DOMAIN-KEYWORD,feiniaoyun,配置更新(A),no-resolve
-  - DOMAIN-KEYWORD,x3.344211.cc,配置更新(A),no-resolve
-  - RULE-SET,GitHub,國際互聯(A),no-resolve
+  - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT #CDN源碼鏈接
+  - DOMAIN-KEYWORD,raw.githubusercontent.com,配置更新(A),no-resolve #GitHub源碼鏈接
+  - DOMAIN-KEYWORD,unpkg.com,配置更新(A),no-resolve 
+  - DOMAIN,msmp.abchina.com.cn,REJECT #排除農業銀行
+  - DOMAIN-KEYWORD,dsmynas.com,DIRECT #群暉DDNS
+  - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT #花生殼DDNS
+  - DOMAIN-KEYWORD,asuscomm.com,DIRECT #華碩DDNS
+  - DOMAIN-KEYWORD,linghunyun,配置更新(A),no-resolve #靈魂雲
+  - DOMAIN-KEYWORD,okztwo,配置更新(A),no-resolve #OKZTWO
+  - DOMAIN-KEYWORD,47.107.66.153:65533,配置更新(A),no-resolve #OKZTWO
+  - DOMAIN-KEYWORD,feiniaoyun,配置更新(A),no-resolve #飛鳥雲
+  - DOMAIN-KEYWORD,x3.344211.cc,配置更新(A),no-resolve #飛鳥雲
+  - RULE-SET,GitHub,國際互聯(A),no-resolve #GitHub
   - RULE-SET,AD-Block,廣告過濾(M)
   - DOMAIN-KEYWORD,xn--ngstr-lra8j,中國直連
   - DOMAIN-KEYWORD,googleapis.cn,中國直連
