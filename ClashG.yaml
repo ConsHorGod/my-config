@@ -778,7 +778,7 @@ rules:
   - DOMAIN-KEYWORD,microsoft,微軟服務(M),no-resolve #微軟
   - RULE-SET,微軟,微軟服務(M),no-resolve #微軟
   - RULE-SET,Gemini,人工智能(A),no-resolve #谷歌AI
-  - RULE-SET,GPT,no-resolno-resolve #OpenAI
+  - RULE-SET,GPT,人工智能(A),no-resolve #OpenAI
   - RULE-SET,油管音樂,油管音樂(A),no-resolve #YouTubeMusic
   - RULE-SET,油管,國際互聯(A),no-resolve #Youtube
   - DOMAIN-KEYWORD,mtalk.google.com,國際互聯(A),no-resolve #Google推送服務
