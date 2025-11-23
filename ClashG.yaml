@@ -454,7 +454,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
- tld-not-cn:
+  tld-not-cn:
     type: http
     behavior: domain
     path: ./ruleset/tld-not-cn.yaml
