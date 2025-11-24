@@ -711,7 +711,7 @@ rules:
   - DOMAIN-KEYWORD,pool.ntp.org,DIRECT #時間同步服務器
   - DOMAIN-KEYWORD,doh.pub,DIRECT #加密DNS服務器
   - DOMAIN-KEYWORD,dns.alidns.com,DIRECT #加密DNS服務器
-  - DOMAIN-KEYWORD,cdn.jsdelivr.net,配置更新(A),no-resolve #CDN源碼鏈接
+  - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT #CDN源碼鏈接
   - DOMAIN-KEYWORD,raw.githubusercontent.com,配置更新(A),no-resolve #GitHub源碼鏈接
   - DOMAIN-KEYWORD,unpkg.com,配置更新(A),no-resolve #CDN鏡像檔案庫
   - DOMAIN,msmp.abchina.com.cn,REJECT #排除農業銀行
