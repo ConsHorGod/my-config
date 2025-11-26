@@ -418,6 +418,14 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy_Classical.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
+  網絡時間同步:
+    type: http
+    behavior: classical
+    path: ./ruleset/NTPService.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/NTPService/NTPService.yaml"
+    interval: 21600
+
+#-----------------------------------------------------------------------------------------------------------
   CNIP:
     type: http
     behavior: ipcidr
@@ -694,7 +702,7 @@ rule-providers:
 #-----------------------------------------------------------------------------------------------------------
 #--------↓↓↓分就規則↓↓↓--------#
 rules:
-  - DOMAIN-KEYWORD,pool.ntp.org,DIRECT #時間同步服務器
+  - RULE-SET,網絡時間同步,DIRECT #時間同步服務器
   - DOMAIN-KEYWORD,doh.pub,DIRECT #加密DNS服務器
   - DOMAIN-KEYWORD,dns.alidns.com,DIRECT #加密DNS服務器
   - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT #CDN源碼鏈接
