@@ -11,45 +11,32 @@ dns:
   listen: :23453
   default-nameserver:
     - 223.5.5.5
-    - 119.29.29.29
+    - 8.8.8.8
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16 
   fake-ip-filter-mode: blacklist
   fake-ip-filter: 
-    - "*.lan"
-    - "*.local"
-    - "*.localdomain"
-    - "*.localhost"
-    - "*.msftncsi.com"
-    - "*.dsmynas.com"
-    - "*.x3322.net"
-    - "*.asuscomm.com"
-    - "jlxa.wicp.net"
-    - "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
-    - "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Baidu/Baidu.yaml"
-    - "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Xunlei/Xunlei.yaml"
-    - "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple_Classical.yaml"
-    - "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Synology/Synology.yaml"
-    - "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/WeChat/WeChat.yaml"
-    - "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Tencent/Tencent_Classical.yaml"
-    - "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/DouYin/DouYin.yaml"
-    - "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/MeiTuan/MeiTuan.yaml"
-    - "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/NetEase/NetEase.yaml"
-    - "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaIPs/ChinaIPs_IP.yaml"
-    - "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMaxNoIP/ChinaMaxNoIP_Classical.yaml"
-    - "https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.yaml"
-    - "time.apple.com"
-    - "time.ios.apple.com"
-    - "time.apple.com.akadns.net"
-    - "time.android.com"
-    - "ntp.tencent.com"
-    - "ntp1.aliyun.com"
-    - "ntp2.aliyun.com"
-    - "ntp3.aliyun.com"
-    - "cn.ntp.org.cn"
-    - "pool.ntp.org"
+    - '*.lan'
+    - '*.local'
+    - '*.localdomain'
+    - '*.localhost'
+    - 'pool.ntp.org'
+    - 'cn.ntp.org.cn'
+    - '*.msftncsi.com'
+    - 'ads2301.dsmynas.com'
+    - 'ads2301.x3322.net'
+    - 'jlxa.wicp.net'
+    - 'time.apple.com'
+    - 'time.ios.apple.com'
+    - 'time.apple.com.akadns.net'
+    - 'time.android.com'
+    - 'ntp.tencent.com'
+    - 'ntp1.aliyun.com'
+    - 'ntp2.aliyun.com'
+    - 'ntp3.aliyun.com'
   nameserver:
-    - https://doh.pub/dns-query
+    - 223.5.5.5
+    - 8.8.8.8
 #-----------------------------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------------------------
 #--------↓↓↓代理節點↓↓↓--------#
