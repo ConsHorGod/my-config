@@ -177,6 +177,7 @@ proxy-groups:
     proxies:         #代理選項
       - LHY香港0.25x
       - LHY日本0.25x
+      - LHY香港
       - OKZ香港
       - OKZ专线
       - FNY
