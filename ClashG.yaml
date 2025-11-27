@@ -190,6 +190,7 @@ proxy-groups:
     interval: 600         #测速时间间隔(秒)
     proxies:         #代理選項
       - DIRECT
+      - 國際互聯(A)
 #-----------------------------------------------------------------------------------------------------------
   - name: FNY
     icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"         #策略組圖標
