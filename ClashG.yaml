@@ -743,7 +743,7 @@ rules:
   - RULE-SET,支付寶,中國直連 #支付寶
   - RULE-SET,阿里巴巴,中國直連 #阿里巴巴
   - RULE-SET,京東,中國直連 #京東
-  - RULE-SET,CN,中國直連 #中國直連網站
+  #- RULE-SET,CN,中國直連 #中國直連網站
   - DOMAIN-KEYWORD,www.bilibili.com,嗶哩嗶哩,no-resolve #嗶哩嗶哩
   - RULE-SET,嗶哩嗶哩Intl,嗶哩嗶哩,no-resolve #嗶哩嗶哩
   - RULE-SET,嗶哩嗶哩,嗶哩嗶哩,no-resolve #嗶哩嗶哩
@@ -782,6 +782,7 @@ rules:
   - RULE-SET,tld-not-cn,國際互聯,no-resolve #非中国大陆使用的顶级域名列表
   - RULE-SET,Proxy,國際互聯,no-resolve #代理域名列表
   - RULE-SET,LAN,中國直連 #局域网
-  - RULE-SET,ASNIP,中國直連 #中国ASN
-  - RULE-SET,CNIP,中國直連 #中国IP
+  #- RULE-SET,ASNIP,中國直連 #中国ASN
+  #- RULE-SET,CNIP,中國直連 #中国IP
+  - GEOIP,CN,中國直連
   - MATCH,最終出站,dns-failed
