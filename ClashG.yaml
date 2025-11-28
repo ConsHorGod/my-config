@@ -602,6 +602,14 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/RTHK/RTHK.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
+  中國農業銀行:
+    type: http
+    behavior: classical
+    path: ./ruleset/中國農業銀行.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ABC/ABC.yaml"
+    interval: 21600
+  
+#-----------------------------------------------------------------------------------------------------------
   微信:
     type: http
     behavior: classical
@@ -711,7 +719,8 @@ rules:
   - DOMAIN-KEYWORD,raw.githubusercontent.com,配置更新,no-resolve #GitHub源碼鏈接
   - RULE-SET,GitHub,國際互聯,no-resolve #GitHub
   - DOMAIN-KEYWORD,unpkg.com,配置更新,no-resolve #CDN鏡像檔案庫
-  - DOMAIN,msmp.abchina.com.cn,REJECT #排除農業銀行
+  - DOMAIN,msmp.abchina.com.cn,REJECT #排除中國農業銀行檢測
+  - RULE-SET,中國農業銀行,中國直連 #中國農業銀行
   - DOMAIN-KEYWORD,dsmynas.com,DIRECT #群暉DDNS
   - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT #花生殼DDNS
   - DOMAIN-KEYWORD,asuscomm.com,DIRECT #華碩DDNS
