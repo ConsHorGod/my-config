@@ -794,5 +794,5 @@ rules:
   - RULE-SET,CN,中國直連 #中國直連網站
   - RULE-SET,ASNIP,中國直連 #中国ASNIP
   - RULE-SET,CNIP,中國直連 #中国IP
-  #- GEOIP,CN,中國直連 #中国IP
+  - GEOIP,CN,中國直連 #中国IP
   - MATCH,最終出站,dns-failed
