@@ -481,7 +481,7 @@ proxy-providers:
   "XMR日本直連":
     type: http
     path: ./provide/XMR日本直連.yml
-    url: https://cdn2.xmrth.one/s/iklnHqwkBFhi7643?clash=1
+    url: https://api.wcc.best/sub?target=clash&url=https%3A%2F%2Fcdn2.xmrth.one%2Fs%2FBibHUR80Uo2K6FEE%3Fclash%3D1&insert=false&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&new_name=true
     interval: 3600
     filter: '(?!.*(日本)).*(JP)'
     health-check:
@@ -492,7 +492,7 @@ proxy-providers:
   "XMR日本中繼":
     type: http
     path: ./provide/XMR日本中繼.yml
-    url: https://cdn2.xmrth.one/s/iklnHqwkBFhi7643?clash=1
+    url: https://api.wcc.best/sub?target=clash&url=https%3A%2F%2Fcdn2.xmrth.one%2Fs%2FBibHUR80Uo2K6FEE%3Fclash%3D1&insert=false&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&new_name=true
     interval: 3600
     filter: '日本.*中继|中继.*日本'
     health-check:
@@ -503,7 +503,7 @@ proxy-providers:
   "XMR日本專線":
     type: http
     path: ./provide/XMR日本專線.yml
-    url: https://cdn2.xmrth.one/s/iklnHqwkBFhi7643?clash=1
+    url: https://api.wcc.best/sub?target=clash&url=https%3A%2F%2Fcdn2.xmrth.one%2Fs%2FBibHUR80Uo2K6FEE%3Fclash%3D1&insert=false&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&new_name=true
     interval: 3600
     filter: 'IPLC.*JP|JP.*IPLC'
     health-check:
@@ -514,7 +514,7 @@ proxy-providers:
   "XMR香港直連":
     type: http
     path: ./provide/XMR香港直連.yml
-    url: https://cdn2.xmrth.one/s/iklnHqwkBFhi7643?clash=1
+    url: https://api.wcc.best/sub?target=clash&url=https%3A%2F%2Fcdn2.xmrth.one%2Fs%2FBibHUR80Uo2K6FEE%3Fclash%3D1&insert=false&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&new_name=true
     interval: 3600
     filter: '(?!.*(香港)).*(HK)'
     health-check:
@@ -525,7 +525,7 @@ proxy-providers:
   "XMR香港中繼":
     type: http
     path: ./provide/XMR香港中繼.yml
-    url: https://cdn2.xmrth.one/s/iklnHqwkBFhi7643?clash=1
+    url: https://api.wcc.best/sub?target=clash&url=https%3A%2F%2Fcdn2.xmrth.one%2Fs%2FBibHUR80Uo2K6FEE%3Fclash%3D1&insert=false&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&new_name=true
     interval: 3600
     filter: '香港.*中继|中继.*香港'
     health-check:
@@ -536,7 +536,7 @@ proxy-providers:
   "XMR香港專線":
     type: http
     path: ./provide/XMR香港專線.yml
-    url: https://cdn2.xmrth.one/s/iklnHqwkBFhi7643?clash=1
+    url: https://api.wcc.best/sub?target=clash&url=https%3A%2F%2Fcdn2.xmrth.one%2Fs%2FBibHUR80Uo2K6FEE%3Fclash%3D1&insert=false&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&new_name=true
     interval: 3600
     filter: 'IPLC.*HK|HK.*IPLC'
     health-check:
