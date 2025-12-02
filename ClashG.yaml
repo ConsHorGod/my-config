@@ -63,6 +63,9 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     proxies:         #代理選項
+      - XMR香港直連
+      - XMR香港中繼
+      - XMR香港專線
       - LHY香港0.25x
       - LHY香港
       - OKZ专线
@@ -78,6 +81,9 @@ proxy-groups:
     proxies:         #代理選項
       - LHY香港0.25x
       - LHY香港
+      - XMR香港直連
+      - XMR香港中繼
+      - XMR香港專線
       - OKZ专线
       - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
@@ -89,10 +95,11 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     proxies:         #代理選項
-      - XMR日本直連
-      - XMR日本中繼
       - LHY日本0.25x
       - LHY日本
+      - XMR日本直連
+      - XMR日本中繼
+      - XMR日本專線
       - OKZ日本
 #-----------------------------------------------------------------------------------------------------------
   - name: 外媒下載
@@ -105,6 +112,9 @@ proxy-groups:
     proxies:         #代理選項
       - LHY香港0.25x
       - LHY香港
+      - XMR香港直連
+      - XMR香港中繼
+      - XMR香港專線
       - OKZ专线
       - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
@@ -117,6 +127,9 @@ proxy-groups:
     interval: 600         #测速时间间隔(秒)
     proxies:         #代理選項
       - LHY香港0.25x
+      - XMR香港直連
+      - XMR香港中繼
+      - XMR香港專線
       - OKZ专线
       - OKZ香港            
 #-----------------------------------------------------------------------------------------------------------
@@ -132,6 +145,9 @@ proxy-groups:
       - LHY香港0.25x
       - LHY香港
       - OKZ香港
+      - XMR香港直連
+      - XMR香港中繼
+      - XMR香港專線
       - LHY日本
       - OKZ日本
 #-----------------------------------------------------------------------------------------------------------
@@ -146,6 +162,8 @@ proxy-groups:
       - 中國直連
       - LHY香港0.25x
       - LHY香港
+      - XMR香港中繼
+      - XMR香港專線
       - OKZ专线
       - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
@@ -159,6 +177,9 @@ proxy-groups:
     proxies:         #代理選項
       - LHY日本0.25x    
       - LHY日本
+      - XMR日本直連
+      - XMR日本中繼
+      - XMR日本專線
       - OKZ日本
 #-----------------------------------------------------------------------------------------------------------
   - name: 廣告過濾
@@ -182,6 +203,10 @@ proxy-groups:
       - LHY香港0.25x
       - LHY日本0.25x
       - LHY香港
+      - XMR香港中繼
+      - XMR香港專線
+      - XMR日本中繼
+      - XMR日本專線
       - OKZ香港
       - OKZ专线
       - FNY
@@ -303,6 +328,42 @@ proxy-groups:
     interval: 600         #测速时间间隔(秒)
     use:
       - XMR日本直連
+#-----------------------------------------------------------------------------------------------------------
+  - name: XMR日本專線
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"         #策略組圖標
+    hidden: true         #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test         #自动测速
+    url: http://www.gstatic.com/generate_204         #用于测试的链接
+    interval: 600         #测速时间间隔(秒)
+    use:
+      - XMR日本專線
+#-----------------------------------------------------------------------------------------------------------
+  - name: XMR香港中繼
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"         #策略組圖標
+    hidden: true         #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test         #自动测速
+    url: http://www.gstatic.com/generate_204         #用于测试的链接
+    interval: 600         #测速时间间隔(秒)
+    use:
+      - XMR香港中繼
+#-----------------------------------------------------------------------------------------------------------
+  - name: XMR香港直連
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"         #策略組圖標
+    hidden: true         #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test         #自动测速
+    url: http://www.gstatic.com/generate_204         #用于测试的链接
+    interval: 600         #测速时间间隔(秒)
+    use:
+      - XMR香港直連
+#-----------------------------------------------------------------------------------------------------------
+  - name: XMR香港專線
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"         #策略組圖標
+    hidden: true         #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test         #自动测速
+    url: http://www.gstatic.com/generate_204         #用于测试的链接
+    interval: 600         #测速时间间隔(秒)
+    use:
+      - XMR香港專線         
 #-----------------------------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------------------------
 #--------↓↓↓代理集↓↓↓--------#
@@ -427,7 +488,7 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 600
-      #-----------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------
   "XMR日本中繼":
     type: http
     path: ./provide/XMR日本中繼.yml
@@ -438,6 +499,50 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 600
+#-----------------------------------------------------------------------------------------------------------
+  "XMR日本專線":
+    type: http
+    path: ./provide/XMR日本專線.yml
+    url: https://cdn2.xmrth.one/s/iklnHqwkBFhi7643?clash=1
+    interval: 3600
+    filter: 'IPLC.*JP|JP.*IPLC'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+#-----------------------------------------------------------------------------------------------------------
+  "XMR香港直連":
+    type: http
+    path: ./provide/XMR香港直連.yml
+    url: https://cdn2.xmrth.one/s/iklnHqwkBFhi7643?clash=1
+    interval: 3600
+    filter: '(?!.*(香港)).*(HK)'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+#-----------------------------------------------------------------------------------------------------------
+  "XMR香港中繼":
+    type: http
+    path: ./provide/XMR香港中繼.yml
+    url: https://cdn2.xmrth.one/s/iklnHqwkBFhi7643?clash=1
+    interval: 3600
+    filter: '香港.*中继|中继.*香港'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+#-----------------------------------------------------------------------------------------------------------
+  "XMR香港專線":
+    type: http
+    path: ./provide/XMR香港專線.yml
+    url: https://cdn2.xmrth.one/s/iklnHqwkBFhi7643?clash=1
+    interval: 3600
+    filter: 'IPLC.*HK|HK.*IPLC'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600           
 #-----------------------------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------------------------
 #--------↓↓↓規則集↓↓↓--------#
