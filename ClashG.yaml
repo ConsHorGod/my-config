@@ -312,7 +312,7 @@ proxy-groups:
       - LHY美國
 #-----------------------------------------------------------------------------------------------------------
   - name: XMR日本中繼
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"         #策略組圖標
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"         #策略組圖標
     hidden: true         #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test         #自动测速
     url: http://www.gstatic.com/generate_204         #用于测试的链接
@@ -321,7 +321,7 @@ proxy-groups:
       - XMR日本中繼
 #-----------------------------------------------------------------------------------------------------------
   - name: XMR日本直連
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"         #策略組圖標
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"         #策略組圖標
     hidden: true         #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test         #自动测速
     url: http://www.gstatic.com/generate_204         #用于测试的链接
@@ -330,7 +330,7 @@ proxy-groups:
       - XMR日本直連
 #-----------------------------------------------------------------------------------------------------------
   - name: XMR日本專線
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"         #策略組圖標
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"         #策略組圖標
     hidden: true         #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test         #自动测速
     url: http://www.gstatic.com/generate_204         #用于测试的链接
@@ -339,7 +339,7 @@ proxy-groups:
       - XMR日本專線
 #-----------------------------------------------------------------------------------------------------------
   - name: XMR香港中繼
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"         #策略組圖標
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"         #策略組圖標
     hidden: true         #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test         #自动测速
     url: http://www.gstatic.com/generate_204         #用于测试的链接
@@ -348,7 +348,7 @@ proxy-groups:
       - XMR香港中繼
 #-----------------------------------------------------------------------------------------------------------
   - name: XMR香港直連
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"         #策略組圖標
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"         #策略組圖標
     hidden: true         #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test         #自动测速
     url: http://www.gstatic.com/generate_204         #用于测试的链接
@@ -357,7 +357,7 @@ proxy-groups:
       - XMR香港直連
 #-----------------------------------------------------------------------------------------------------------
   - name: XMR香港專線
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"         #策略組圖標
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"         #策略組圖標
     hidden: true         #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test         #自动测速
     url: http://www.gstatic.com/generate_204         #用于测试的链接
