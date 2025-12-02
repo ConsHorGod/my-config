@@ -878,6 +878,7 @@ rules:
   - DOMAIN-KEYWORD,47.107.66.153,配置更新,no-resolve #OKZTWO
   - DOMAIN-KEYWORD,feiniaoyun,配置更新,no-resolve #飛鳥雲
   - DOMAIN-KEYWORD,x3.344211.cc,配置更新,no-resolve #飛鳥雲
+  - DOMAIN-KEYWORD,xmrth,配置更新,no-resolve #XMRTH
   - RULE-SET,AD-Block,廣告過濾 #anti-AD去廣告
   - DOMAIN-KEYWORD,xn--ngstr-lra8j,中國直連 #Google Play商店
   - DOMAIN-KEYWORD,googleapis.cn,中國直連 #Google Play商店
