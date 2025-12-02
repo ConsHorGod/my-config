@@ -89,6 +89,8 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     proxies:         #代理選項
+      - XMR日本直連
+      - XMR日本中繼
       - LHY日本0.25x
       - LHY日本
       - OKZ日本
