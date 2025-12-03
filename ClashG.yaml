@@ -903,7 +903,12 @@ rules:
   - RULE-SET,微軟,微軟服務,no-resolve #微軟
   - RULE-SET,Gemini,人工智能,no-resolve #谷歌AI
   - RULE-SET,GPT,人工智能,no-resolve #OpenAI
-  - USER-AGENT,*YouTubeMusic*,油管音樂,no-resolve #YouTubeMusic
+  - DOMAIN-SUFFIX,music.youtube.com,油管音樂,no-resolve #YouTubeMusic
+  - DOMAIN-SUFFIX,youtube-music.l.google.com,油管音樂,no-resolve #YouTubeMusic
+  - DOMAIN-SUFFIX,s.youtube.com,油管音樂,no-resolve #YouTubeMusic
+  - DOMAIN-KEYWORD,youtubemusic,油管音樂,no-resolve #YouTubeMusic
+  - PROCESS-NAME,com.google.android.apps.youtube.music,油管音樂,no-resolve #YouTubeMusic
+  - DOMAIN-SUFFIX,youtube-music.l.google.com,油管音樂,no-resolve #YouTubeMusic
   - RULE-SET,油管音樂,油管音樂,no-resolve #YouTubeMusic
   - RULE-SET,油管,國際互聯,no-resolve #Youtube
   - DOMAIN-KEYWORD,mtalk.google.com,國際互聯,no-resolve #Google推送服務
