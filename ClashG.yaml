@@ -66,7 +66,7 @@ proxy-groups:
       - LHY香港0.25x
       - LHY香港
       - XMR香港直連
-      - XMR香港專線
+      - XMR香港IPLC
       - OKZ专线
       - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
@@ -81,7 +81,7 @@ proxy-groups:
       - LHY香港0.25x
       - LHY香港
       - XMR香港直連
-      - XMR香港專線
+      - XMR香港IPLC
       - OKZ专线
       - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
@@ -96,7 +96,7 @@ proxy-groups:
       - LHY日本0.25x
       - LHY日本
       - XMR日本直連
-      - XMR日本專線
+      - XMR日本IPLC
       - OKZ日本
 #-----------------------------------------------------------------------------------------------------------
   - name: 外媒下載
@@ -110,7 +110,7 @@ proxy-groups:
       - LHY香港0.25x
       - LHY香港
       - XMR香港直連
-      - XMR香港專線
+      - XMR香港IPLC
       - OKZ专线
       - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
@@ -124,7 +124,7 @@ proxy-groups:
     proxies:         #代理選項
       - LHY香港0.25x
       - XMR香港直連
-      - XMR香港專線
+      - XMR香港IPLC
       - OKZ专线
       - OKZ香港            
 #-----------------------------------------------------------------------------------------------------------
@@ -141,7 +141,7 @@ proxy-groups:
       - LHY香港
       - OKZ香港
       - XMR香港直連
-      - XMR香港專線
+      - XMR香港IPLC
       - LHY日本
       - OKZ日本
 #-----------------------------------------------------------------------------------------------------------
@@ -156,7 +156,7 @@ proxy-groups:
       - 中國直連
       - LHY香港0.25x
       - LHY香港
-      - XMR香港專線
+      - XMR香港IPLC
       - OKZ专线
       - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
@@ -171,7 +171,7 @@ proxy-groups:
       - LHY日本0.25x    
       - LHY日本
       - XMR日本直連
-      - XMR日本專線
+      - XMR日本IPLC
       - OKZ日本
 #-----------------------------------------------------------------------------------------------------------
   - name: 廣告過濾
@@ -197,8 +197,8 @@ proxy-groups:
       - LHY香港
       - XMR日本直連
       - XMR日本直連
-      - XMR香港專線
-      - XMR日本專線
+      - XMR香港IPLC
+      - XMR日本IPLC
       - OKZ香港
       - OKZ专线
       - FNY
@@ -321,14 +321,14 @@ proxy-groups:
     use:
       - XMR日本直連
 #-----------------------------------------------------------------------------------------------------------
-  - name: XMR日本專線
+  - name: XMR日本IPLC
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"         #策略組圖標
     hidden: true         #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test         #自动测速
     url: http://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     use:
-      - XMR日本專線
+      - XMR日本IPLC
 #-----------------------------------------------------------------------------------------------------------
   - name: XMR香港中繼
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"         #策略組圖標
@@ -348,14 +348,14 @@ proxy-groups:
     use:
       - XMR香港直連
 #-----------------------------------------------------------------------------------------------------------
-  - name: XMR香港專線
+  - name: XMR香港IPLC
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"         #策略組圖標
     hidden: true         #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test         #自动测速
     url: http://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     use:
-      - XMR香港專線         
+      - XMR香港IPLC         
 #-----------------------------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------------------------
 #--------↓↓↓代理集↓↓↓--------#
@@ -492,9 +492,9 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 600
 #-----------------------------------------------------------------------------------------------------------
-  "XMR日本專線":
+  "XMR日本IPLC":
     type: http
-    path: ./provide/XMR日本專線.yml
+    path: ./provide/XMR日本IPLC.yml
     url: https://api.wcc.best/sub?target=clash&url=https%3A%2F%2Fcdn2.xmrth.one%2Fs%2FBibHUR80Uo2K6FEE%3Fclash%3D1&insert=false&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&new_name=true
     interval: 3600
     filter: 'IPLC.*JP|JP.*IPLC'
@@ -525,9 +525,9 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 600
 #-----------------------------------------------------------------------------------------------------------
-  "XMR香港專線":
+  "XMR香港IPLC":
     type: http
-    path: ./provide/XMR香港專線.yml
+    path: ./provide/XMR香港IPLC.yml
     url: https://api.wcc.best/sub?target=clash&url=https%3A%2F%2Fcdn2.xmrth.one%2Fs%2FBibHUR80Uo2K6FEE%3Fclash%3D1&insert=false&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&new_name=true
     interval: 3600
     filter: 'IPLC.*HK|HK.*IPLC'
