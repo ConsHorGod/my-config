@@ -839,7 +839,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./ruleset/YouTubeMusic.yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/YouTubeMusic/YouTubeMusic.list"
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTubeMusic/YouTubeMusic.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   油管:
