@@ -70,6 +70,20 @@ proxy-groups:
       - OKZ专线
       - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
+  - name: 谷歌油管
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube_Music.png"         #策略組圖標
+    hidden: false         #隱藏代理組，“true=執行”，“false=禁用”
+    lazy: false         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    type: url-test         #自动测速
+    url: http://www.gstatic.com/generate_204         #用于测试的链接
+    interval: 600         #测速时间间隔(秒)
+    proxies:         #代理選項
+      - LHY香港0.25x
+      - XMR日本直連
+      - XMR日本IPLC
+      - OKZ专线
+      - OKZ香港             
+#-----------------------------------------------------------------------------------------------------------
   - name: 飛機電報
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png"         #策略組圖標
     hidden: false         #隱藏代理組，“true=執行”，“false=禁用”
@@ -112,21 +126,7 @@ proxy-groups:
       - XMR香港直連
       - XMR香港IPLC
       - OKZ专线
-      - OKZ香港
-#-----------------------------------------------------------------------------------------------------------
-  - name: 油管音樂
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube_Music.png"         #策略組圖標
-    hidden: true         #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: false         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
-    type: url-test         #自动测速
-    url: http://www.gstatic.com/generate_204         #用于测试的链接
-    interval: 600         #测速时间间隔(秒)
-    proxies:         #代理選項
-      - LHY香港0.25x
-      - XMR日本直連
-      - XMR日本IPLC
-      - OKZ专线
-      - OKZ香港            
+      - OKZ香港     
 #-----------------------------------------------------------------------------------------------------------
   - name: 嗶哩嗶哩
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili_3.png"         #策略組圖標
@@ -903,10 +903,10 @@ rules:
   - RULE-SET,微軟,微軟服務,no-resolve #微軟
   - RULE-SET,Gemini,人工智能,no-resolve #谷歌AI
   - RULE-SET,GPT,人工智能,no-resolve #OpenAI
-  - RULE-SET,油管音樂,油管音樂,no-resolve #YouTubeMusic
-  - RULE-SET,油管,國際互聯,no-resolve #Youtube
-  - DOMAIN-KEYWORD,mtalk.google.com,國際互聯,no-resolve #Google推送服務
-  - RULE-SET,谷歌,國際互聯,no-resolve #www.google.com
+  - RULE-SET,油管音樂,谷歌油管,no-resolve #YouTubeMusic
+  - RULE-SET,油管,谷歌油管,no-resolve #Youtube
+  - DOMAIN-KEYWORD,mtalk.google.com,谷歌油管,no-resolve #Google推送服務
+  - RULE-SET,谷歌,谷歌油管,no-resolve #www.google.com
   - RULE-SET,外國流媒體,國際互聯,no-resolve #國外流媒體平臺
   - RULE-SET,GFWList,國際互聯,no-resolve #GFWList 域名列表
   - RULE-SET,tld-not-cn,國際互聯,no-resolve #非中国大陆使用的顶级域名列表
