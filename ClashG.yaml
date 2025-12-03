@@ -71,7 +71,7 @@ proxy-groups:
       - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
   - name: 谷歌油管
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube_Music.png"         #策略組圖標
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google.png"         #策略組圖標
     hidden: false         #隱藏代理組，“true=執行”，“false=禁用”
     lazy: false         #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test         #自动测速
