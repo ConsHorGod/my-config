@@ -43,6 +43,16 @@ dns:
 #-----------------------------------------------------------------------------------------------------------
 #--------↓↓↓代理節點↓↓↓--------#
 proxies:
+  - {"name":"香港800 专线 BGP","type":"trojan","server":"ktcc.xmrthnode.com","port":48800,"password":"e6839ebc-6957-3ff6-a6ef-3f3320422355","sni":"cos.ap-guangzhou.myqcloud.com","skip-cert-verify":true,"udp":true}
+  - {"name":"JP 001","type":"vmess","server":"txj001.xmrthnode.com","port":443,"uuid":"e6839ebc-6957-3ff6-a6ef-3f3320422355","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"ws-aicdn.com"}},"ws-path":"/index","ws-headers":{"Host":"ws-aicdn.com"},"tls":true,"skip-cert-verify":true}
+  - {"name":"JP 002","type":"vmess","server":"txj002.xmrthnode.com","port":443,"uuid":"e6839ebc-6957-3ff6-a6ef-3f3320422355","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"ws-aicdn.com"}},"ws-path":"/index","ws-headers":{"Host":"ws-aicdn.com"},"tls":true,"skip-cert-verify":true}
+  - {"name":"HK 000","type":"vmess","server":"txh000.xmrthnode.com","port":443,"uuid":"e6839ebc-6957-3ff6-a6ef-3f3320422355","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"ws-aicdn.com"}},"ws-path":"/index","ws-headers":{"Host":"ws-aicdn.com"},"tls":true,"skip-cert-verify":true}
+  - {"name":"HK 001","type":"vmess","server":"txh001.xmrthnode.com","port":443,"uuid":"e6839ebc-6957-3ff6-a6ef-3f3320422355","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"ws-aicdn.com"}},"ws-path":"/index","ws-headers":{"Host":"ws-aicdn.com"},"tls":true,"skip-cert-verify":true}
+  - {"name":"HK 002","type":"vmess","server":"txh002.xmrthnode.com","port":443,"uuid":"e6839ebc-6957-3ff6-a6ef-3f3320422355","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"ws-aicdn.com"}},"ws-path":"/index","ws-headers":{"Host":"ws-aicdn.com"},"tls":true,"skip-cert-verify":true}
+  - {"name":"HK 003","type":"vmess","server":"txh003.xmrthnode.com","port":443,"uuid":"e6839ebc-6957-3ff6-a6ef-3f3320422355","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"ws-aicdn.com"}},"ws-path":"/index","ws-headers":{"Host":"ws-aicdn.com"},"tls":true,"skip-cert-verify":true}
+  - {"name":"HK 011","type":"vmess","server":"txh011.xmrthnode.com","port":443,"uuid":"e6839ebc-6957-3ff6-a6ef-3f3320422355","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"ws-aicdn.com"}},"ws-path":"/index","ws-headers":{"Host":"ws-aicdn.com"},"tls":true,"skip-cert-verify":true}
+  - {"name":"HK 012","type":"vmess","server":"txh012.xmrthnode.com","port":443,"uuid":"e6839ebc-6957-3ff6-a6ef-3f3320422355","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"ws-aicdn.com"}},"ws-path":"/index","ws-headers":{"Host":"ws-aicdn.com"},"tls":true,"skip-cert-verify":true}
+  - {"name":"HK 013","type":"vmess","server":"txh013.xmrthnode.com","port":443,"uuid":"e6839ebc-6957-3ff6-a6ef-3f3320422355","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"path":"/index","headers":{"Host":"ws-aicdn.com"}},"ws-path":"/index","ws-headers":{"Host":"ws-aicdn.com"},"tls":true,"skip-cert-verify":true}
 #--------↓↓↓代理組↓↓↓--------#
 proxy-groups:
   - name: 最終出站
@@ -68,6 +78,7 @@ proxy-groups:
       - LHY香港
       - XMR香港直連
       - XMR香港IPLC
+      - XMR香港專線BGP
       - OKZ专线
       - OKZ香港       
 #-----------------------------------------------------------------------------------------------------------
@@ -364,7 +375,22 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204         #用于测试的链接
     interval: 600         #测速时间间隔(秒)
     use:
-      - XMR香港直連
+    - 'HK 000'
+    - 'HK 001'
+    - 'HK 002'
+    - 'HK 003'
+    - 'HK 011'
+    - 'HK 012'
+    - 'HK 013'
+#-----------------------------------------------------------------------------------------------------------
+  - name: XMR香港專線BGP
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"         #策略組圖標
+    hidden: true         #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test         #自动测速
+    url: http://www.gstatic.com/generate_204         #用于测试的链接
+    interval: 600         #测速时间间隔(秒)
+    use:
+    - "香港800 专线 BGP" 
 #-----------------------------------------------------------------------------------------------------------
   - name: XMR香港中繼
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"         #策略組圖標
