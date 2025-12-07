@@ -127,7 +127,7 @@ proxy-groups:
       - LHY香港0.25x
       - LHY香港
       - XMR香港直連
-      - XMR香港中继
+      - XMR香港中繼
       - XMR香港IPLC
       - OKZ专线
       - OKZ香港     
@@ -144,7 +144,6 @@ proxy-groups:
       - LHY香港0.25x
       - LHY香港
       - OKZ香港
-      - XMR香港直連
       - XMR香港IPLC
       - LHY日本
       - OKZ日本
@@ -188,7 +187,6 @@ proxy-groups:
     proxies:         #代理選項
       - LHY日本0.25x    
       - LHY日本
-      - XMR日本直連
       - XMR日本IPLC
       - OKZ日本
 #-----------------------------------------------------------------------------------------------------------
