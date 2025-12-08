@@ -868,8 +868,8 @@ rule-providers:
 rules:
   - RULE-SET,LAN,中國直連 #局域网
   - RULE-SET,網絡時間同步,DIRECT #時間同步服務器
-  - DOMAIN-KEYWORD,doh.pub,DIRECT #加密DNS服務器
-  - DOMAIN-KEYWORD,dns.alidns.com,DIRECT #加密DNS服務器
+  - DOMAIN-SUFFIX,https://doh.pub,DIRECT #騰訊加密DNS服務器
+  - DOMAIN-SUFFIX,https://223.5.5.5,DIRECT #阿里加密DNS服務器
   - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT #CDN源碼鏈接
   - DOMAIN-KEYWORD,raw.githubusercontent.com,配置更新,no-resolve #GitHub源碼鏈接
   - RULE-SET,GitHub,國際互聯,no-resolve #GitHub
