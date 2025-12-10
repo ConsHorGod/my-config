@@ -172,10 +172,9 @@ proxy-groups:
     interval: 600         #测速时间间隔(秒)
     proxies:         #代理選項
       - LHY香港0.25x
-      - XMR日本直連
-      - XMR日本IPLC
+      - LHY美國
       - OKZ专线
-      - OKZ香港
+      - OKZ美國
 #-----------------------------------------------------------------------------------------------------------
   - name: 人工智能
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"         #策略組圖標
