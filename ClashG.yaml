@@ -879,13 +879,15 @@ rules:
   - DOMAIN-KEYWORD,dsmynas.com,DIRECT #群暉DDNS
   - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT #花生殼DDNS
   - DOMAIN-KEYWORD,asuscomm.com,DIRECT #華碩DDNS
-  - DOMAIN-KEYWORD,linghunyun,配置更新,no-resolve #靈魂雲
-  - DOMAIN-KEYWORD,okztwo,配置更新,no-resolve #OKZTWO
-  - DOMAIN-KEYWORD,47.107.66.153,配置更新,no-resolve #OKZTWO
-  - DOMAIN-KEYWORD,feiniaoyun,配置更新,no-resolve #飛鳥雲
-  - DOMAIN-KEYWORD,x3.344211.cc,配置更新,no-resolve #飛鳥雲
-  - DOMAIN-KEYWORD,xmrth.one,配置更新,no-resolve #XMRTH
+  - DOMAIN-KEYWORD,linghunyun,配置更新,no-resolve #靈魂雲(機場)
+  - DOMAIN-KEYWORD,okztwo,配置更新,no-resolve #OKZTWO(機場)
+  - DOMAIN-KEYWORD,47.107.66.153,配置更新,no-resolve #OKZTWO(機場)
+  - DOMAIN-KEYWORD,feiniaoyun,配置更新,no-resolve #飛鳥雲(機場)
+  - DOMAIN-KEYWORD,x3.344211.cc,配置更新,no-resolve #飛鳥雲(機場)
+  - DOMAIN-KEYWORD,xmrth.one,配置更新,no-resolve #XMRTH(機場)
   - RULE-SET,AD-Block,廣告過濾 #anti-AD去廣告
+  - DOMAIN-SUFFIX,zh.savefrom.net,國際互聯 #zh.savefrom.net(視頻下載網)
+  - DOMAIN-SUFFIX,snapvid.net,國際互聯 #snapvid.net(視頻下載網)
   - DOMAIN-KEYWORD,xn--ngstr-lra8j,中國直連 #Google Play商店
   - DOMAIN-KEYWORD,googleapis.cn,中國直連 #Google Play商店
   - DOMAIN-KEYWORD,www.bilibili.com,嗶哩嗶哩,no-resolve #嗶哩嗶哩
