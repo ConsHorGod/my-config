@@ -68,8 +68,8 @@ proxy-groups:
       - LHY香港
       - XMR香港中繼
       - XMR香港IPLC
-     # - OKZ专线
-     # - OKZ香港       
+      - OKZ专线
+      - OKZ香港       
 #-----------------------------------------------------------------------------------------------------------
   - name: 谷歌油管
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"         #策略組圖標
@@ -83,8 +83,8 @@ proxy-groups:
       - LHY香港
       - XMR香港中繼
       - XMR香港IPLC
-     # - OKZ专线
-     # - OKZ香港
+      - OKZ专线
+      - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
   - name: 飛機電報
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png"         #策略組圖標
@@ -99,8 +99,8 @@ proxy-groups:
       - XMR香港直連
       - XMR香港中繼
       - XMR香港IPLC
-     # - OKZ专线
-     # - OKZ香港
+      - OKZ专线
+      - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
   - name: 國際抖音
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"         #策略組圖標
@@ -114,7 +114,7 @@ proxy-groups:
       - LHY日本
       - XMR日本中繼
       - XMR日本IPLC
-     # - OKZ日本
+      - OKZ日本
 #-----------------------------------------------------------------------------------------------------------
   - name: 外媒下載
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Download.png"         #策略組圖標
@@ -129,8 +129,8 @@ proxy-groups:
       - XMR香港直連
       - XMR香港中繼
       - XMR香港IPLC
-     # - OKZ专线
-     # - OKZ香港     
+      - OKZ专线
+      - OKZ香港     
 #-----------------------------------------------------------------------------------------------------------
   - name: 嗶哩嗶哩
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili_3.png"         #策略組圖標
@@ -143,10 +143,10 @@ proxy-groups:
       - 中國直連
       - LHY香港0.25x
       - LHY香港
-     # - OKZ香港
+      - OKZ香港
       - XMR香港IPLC
       - LHY日本
-     # - OKZ日本
+      - OKZ日本
 #-----------------------------------------------------------------------------------------------------------
   - name: 微軟服務
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png"         #策略組圖標
@@ -160,8 +160,8 @@ proxy-groups:
       - LHY香港0.25x
       - LHY香港
       - XMR香港IPLC
-     # - OKZ专线
-     # - OKZ香港
+      - OKZ专线
+      - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
   - name: 油管音樂
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube_Music.png"         #策略組圖標
@@ -174,8 +174,8 @@ proxy-groups:
       - LHY香港0.25x
       - XMR日本直連
       - XMR日本IPLC
-     # - OKZ专线
-     # - OKZ香港
+      - OKZ专线
+      - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
   - name: 人工智能
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"         #策略組圖標
@@ -188,7 +188,7 @@ proxy-groups:
       - LHY日本0.25x    
       - LHY日本
       - XMR日本IPLC
-     # - OKZ日本
+      - OKZ日本
 #-----------------------------------------------------------------------------------------------------------
   - name: 廣告過濾
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AdBlack.png"         #策略組圖標
@@ -388,7 +388,7 @@ proxy-providers:
   "OKZ专线":
     type: http
     path: ./provide/OKZ专线.yml
-    url: http://47.107.66.153:65533/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
+    url: http://47.107.66.153:65533/api/v1/v2/v3?token=2cd2522984108e0698c5400efd5818ff
     interval: 3600
     filter: '专线'
     health-check:
@@ -399,7 +399,7 @@ proxy-providers:
   "OKZ香港":
     type: http
     path: ./provide/OKZ香港.yml
-    url: http://47.107.66.153:65533/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
+    url: http://47.107.66.153:65533/api/v1/v2/v3?token=2cd2522984108e0698c5400efd5818ff
     interval: 3600
     filter: '香港'
     health-check:
@@ -410,7 +410,7 @@ proxy-providers:
   "OKZ美國":
     type: http
     path: ./provide/OKZ美國.yml
-    url: http://47.107.66.153:65533/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
+    url: http://47.107.66.153:65533/api/v1/v2/v3?token=2cd2522984108e0698c5400efd5818ff
     interval: 3600
     filter: '美國'
     health-check:
@@ -421,7 +421,7 @@ proxy-providers:
   "OKZ日本":
     type: http
     path: ./provide/OKZ日本.yml
-    url: http://47.107.66.153:65533/api/v1/client/subscribe?token=66368a1a2772118e82ea7b9122d57d85
+    url: http://47.107.66.153:65533/api/v1/v2/v3?token=2cd2522984108e0698c5400efd5818ff
     interval: 3600
     filter: 日本'
     health-check:
