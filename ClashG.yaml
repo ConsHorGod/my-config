@@ -864,7 +864,6 @@ rule-providers:
 #-----------------------------------------------------------------------------------------------------------
 #--------↓↓↓分就規則↓↓↓--------#
 rules:
-  - RULE-SET,LAN,中國直連 #局域网
   - RULE-SET,網絡時間同步,DIRECT #時間同步服務器
   - DOMAIN-SUFFIX,https://doh.pub,DIRECT #騰訊加密DNS服務器
   - DOMAIN-SUFFIX,https://223.5.5.5,DIRECT #阿里加密DNS服務器
@@ -952,8 +951,9 @@ rules:
   - RULE-SET,支付寶,中國直連 #支付寶
   - RULE-SET,阿里巴巴,中國直連 #阿里巴巴
   - RULE-SET,京東,中國直連 #京東
-  - RULE-SET,CN,中國直連 #中國直連網站
-  - RULE-SET,ASNIP,中國直連 #中国ASNIP
-  - RULE-SET,CNIP,中國直連 #中国IP
+  - RULE-SET,LAN,中國直連 #局域网
+  #- RULE-SET,CN,中國直連 #中國直連網站
+  #- RULE-SET,ASNIP,中國直連 #中国ASNIP
+  #- RULE-SET,CNIP,中國直連 #中国IP
   - GEOIP,CN,中國直連 #中国IP
   - MATCH,最終出站,dns-failed
