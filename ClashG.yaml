@@ -587,7 +587,7 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaIPs/ChinaIPs_IP.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  CN:
+  ChinaMaxNoIP:
     type: http
     behavior: classical
     path: ./ruleset/中國域名.yaml
@@ -951,7 +951,7 @@ rules:
   - RULE-SET,支付寶,中國直連 #支付寶
   - RULE-SET,阿里巴巴,中國直連 #阿里巴巴
   - RULE-SET,京東,中國直連 #京東
-  - RULE-SET,CN,中國直連 #中國直連網站
+  - RULE-SET,ChinaMaxNoIP,中國直連 #中國直連網站
   - RULE-SET,ASNIP,中國直連 #中国ASNIP
   - RULE-SET,CNIP,中國直連 #中国IP
   - RULE-SET,LAN,中國直連 #局域网
