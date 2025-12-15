@@ -1,4 +1,4 @@
-SUBSCRIBED: https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/main/ClashG.yaml
+SUBSCRIBED: https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/main/ClashG.yaml  #配置更新鏈接
 mixed-port: 7890  #混合端口
 allow-lan: true  #允許局域網
 mode: Rule  #運行模式
