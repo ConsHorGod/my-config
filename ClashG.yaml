@@ -52,7 +52,21 @@ proxy-groups:
       - XMR香港中繼
       - XMR香港IPLC
       - OKZ专线
-      - OKZ香港       
+      - OKZ香港
+#-----------------------------------------------------------------------------------------------------------
+  - name: 國際媒體
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    type: select  #手动选择
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 600  #测速时间间隔(秒)
+    proxies:  #代理選項
+      - LHY香港0.25x
+      - LHY香港
+      - XMR香港IPLC
+      - OKZ专线
+      - OKZ香港        
 #-----------------------------------------------------------------------------------------------------------
   - name: 谷歌油管
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"  #策略組圖標
@@ -98,22 +112,6 @@ proxy-groups:
       - XMR日本中繼
       - XMR日本IPLC
       - OKZ日本
-#-----------------------------------------------------------------------------------------------------------
-  - name: 外媒下載
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Download.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
-    type: select  #手动选择
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
-    proxies:  #代理選項
-      - LHY香港0.25x
-      - LHY香港
-      - XMR香港直連
-      - XMR香港中繼
-      - XMR香港IPLC
-      - OKZ专线
-      - OKZ香港     
 #-----------------------------------------------------------------------------------------------------------
   - name: 嗶哩嗶哩
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili_3.png"  #策略組圖標
@@ -869,34 +867,34 @@ rules:
   - DOMAIN-KEYWORD,x3.344211.cc,配置更新,no-resolve #飛鳥雲(機場)
   - DOMAIN-KEYWORD,xmrth.one,配置更新,no-resolve #XMRTH(機場)
   - RULE-SET,AD-Block,廣告過濾 #anti-AD去廣告
-  - DOMAIN-SUFFIX,zh.savefrom.net,國際互聯 #zh.savefrom.net(視頻下載網)
-  - DOMAIN-SUFFIX,snapvid.net,國際互聯 #snapvid.net(視頻下載網)
+  - DOMAIN-SUFFIX,zh.savefrom.net,國際媒體 #zh.savefrom.net(視頻下載網)
+  - DOMAIN-SUFFIX,snapvid.net,國際媒體 #snapvid.net(視頻下載網)
   - DOMAIN-KEYWORD,xn--ngstr-lra8j,中國直連 #Google Play商店
   - DOMAIN-KEYWORD,googleapis.cn,中國直連 #Google Play商店
   - DOMAIN-KEYWORD,www.bilibili.com,嗶哩嗶哩,no-resolve #嗶哩嗶哩
   - RULE-SET,嗶哩嗶哩Intl,嗶哩嗶哩,no-resolve #嗶哩嗶哩
   - RULE-SET,嗶哩嗶哩,嗶哩嗶哩,no-resolve #嗶哩嗶哩
-  - DOMAIN-KEYWORD,discomax.com,外媒下載,no-resolve #www.hbomax.com
-  - DOMAIN-KEYWORD,media.max.com,外媒下載,no-resolve #www.hbomax.com
-  - DOMAIN-KEYWORD,max.com,外媒下載,no-resolve #www.hbomax.com
-  - RULE-SET,HBO,外媒下載,no-resolve #www.hbomax.com
-  - RULE-SET,香港電臺,外媒下載,no-resolve #香港電臺
-  - DOMAIN-KEYWORD,akamaized,外媒下載,no-resol #香港電臺
-  - DOMAIN-SUFFIX,themoviedb.org,外媒下載,no-resolve #www.themoviedb.org
-  - DOMAIN-SUFFIX,tmdb.org,外媒下載,no-resolve #www.themoviedb.org
-  - DOMAIN-SUFFIX,image.tmdb.org,外媒下載,no-resolve #www.themoviedb.org
-  - DOMAIN-KEYWORD,xvideos,國際互聯,no-resolve #www.xvideos.com
-  - DOMAIN-KEYWORD,xnxx,國際互聯,no-resolve #www.xnxx.com
-  - DOMAIN-KEYWORD,pornhub,國際互聯,no-resolve #www.pornhub.com
-  - DOMAIN-KEYWORD,xhamster,國際互聯,no-resolve #www.xhamster.com
-  - DOMAIN-KEYWORD,stripchat,國際互聯,no-resolve #www.stripchat.com
+  - DOMAIN-KEYWORD,discomax.com,國際媒體,no-resolve #www.hbomax.com
+  - DOMAIN-KEYWORD,media.max.com,國際媒體,no-resolve #www.hbomax.com
+  - DOMAIN-KEYWORD,max.com,國際媒體,no-resolve #www.hbomax.com
+  - RULE-SET,HBO,國際媒體,no-resolve #www.hbomax.com
+  - RULE-SET,香港電臺,國際媒體,no-resolve #香港電臺
+  - DOMAIN-KEYWORD,akamaized,國際媒體,no-resol #香港電臺
+  - DOMAIN-SUFFIX,themoviedb.org,國際媒體,no-resolve #www.themoviedb.org
+  - DOMAIN-SUFFIX,tmdb.org,國際媒體,no-resolve #www.themoviedb.org
+  - DOMAIN-SUFFIX,image.tmdb.org,國際媒體,no-resolve #www.themoviedb.org
+  - DOMAIN-KEYWORD,xvideos,國際媒體,no-resolve #www.xvideos.com
+  - DOMAIN-KEYWORD,xnxx,國際媒體,no-resolve #www.xnxx.com
+  - DOMAIN-KEYWORD,pornhub,國際媒體,no-resolve #www.pornhub.com
+  - DOMAIN-KEYWORD,xhamster,國際媒體,no-resolve #www.xhamster.com
+  - DOMAIN-KEYWORD,stripchat,國際媒體,no-resolve #www.stripchat.com
   - RULE-SET,TikTok,國際抖音,no-resolve #TikTok
   - RULE-SET,電報,飛機電報,no-resolve #Telegram
-  - RULE-SET,Reddit,國際互聯,no-resolve #Reddit
-  - DOMAIN-KEYWORD,redd,國際互聯,no-resolve #Reddit
-  - RULE-SET,推特,國際互聯,no-resolve #Twitter
-  - RULE-SET,IG,國際互聯,no-resolve #Instagram
-  - RULE-SET,臉書,國際互聯,no-resolve #FaceBook
+  - RULE-SET,Reddit,國際媒體,no-resolve #Reddit
+  - DOMAIN-KEYWORD,redd,國際媒體,no-resolve #Reddit
+  - RULE-SET,推特,國際媒體,no-resolve #Twitter
+  - RULE-SET,IG,國際媒體,no-resolve #Instagram
+  - RULE-SET,臉書,國際媒體,no-resolve #FaceBook
   - RULE-SET,Copilot,人工智能,no-resolve
   - DOMAIN-KEYWORD,microsoft,微軟服務,no-resolve #微軟
   - RULE-SET,微軟,微軟服務,no-resolve #微軟
@@ -909,10 +907,10 @@ rules:
   - PROCESS-NAME,com.google.android.apps.youtube.music,油管音樂,no-resolve #YouTubeMusic
   - DOMAIN-SUFFIX,youtube-music.l.google.com,油管音樂,no-resolve #YouTubeMusic
   - RULE-SET,油管音樂,油管音樂,no-resolve #YouTubeMusic
-  - RULE-SET,油管,國際互聯,no-resolve #Youtube
-  - DOMAIN-KEYWORD,mtalk.google.com,國際互聯,no-resolve #Google推送服務
-  - RULE-SET,谷歌,國際互聯,no-resolve #www.google.com
-  #- RULE-SET,外國流媒體,國際互聯,no-resolve #國外流媒體平臺
+  - RULE-SET,油管,國際媒體,no-resolve #Youtube
+  - DOMAIN-KEYWORD,mtalk.google.com,國際媒體,no-resolve #Google推送服務
+  - RULE-SET,谷歌,國際媒體,no-resolve #www.google.com
+  #- RULE-SET,外國流媒體,國際媒體,no-resolve #國外流媒體平臺
   - RULE-SET,GFWList,國際互聯,no-resolve #GFWList 域名列表
   - RULE-SET,tld-not-cn,國際互聯,no-resolve #非中国大陆使用的顶级域名列表
   - RULE-SET,Proxy,國際互聯,no-resolve #代理域名列表
