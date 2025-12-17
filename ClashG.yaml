@@ -49,8 +49,8 @@ proxy-groups:
     proxies:  #代理選項
       - LHY香港0.25x
       - LHY香港
-      - XMR香港中繼
-      - XMR香港IPLC
+      #- XMR香港中繼
+      #- XMR香港IPLC
       - OKZ专线
       - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
@@ -64,21 +64,6 @@ proxy-groups:
     proxies:  #代理選項
       - LHY香港0.25x
       - LHY香港
-      - XMR香港IPLC
-      - OKZ专线
-      - OKZ香港        
-#-----------------------------------------------------------------------------------------------------------
-  - name: 谷歌油管
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
-    proxies:  #代理選項
-      - LHY香港0.25x
-      - LHY香港
-      - XMR香港中繼
       - XMR香港IPLC
       - OKZ专线
       - OKZ香港
@@ -101,7 +86,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: 國際抖音
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
@@ -112,6 +97,21 @@ proxy-groups:
       - XMR日本中繼
       - XMR日本IPLC
       - OKZ日本
+#-----------------------------------------------------------------------------------------------------------
+  - name: 谷歌油管
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 600  #测速时间间隔(秒)
+    proxies:  #代理選項
+      - LHY香港0.25x
+      - LHY香港
+      - XMR香港中繼
+      - XMR香港IPLC
+      - OKZ专线
+      - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
   - name: 嗶哩嗶哩
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili_3.png"  #策略組圖標
