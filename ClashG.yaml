@@ -58,7 +58,7 @@ proxy-groups:
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
-    type: select  #手动选择
+    type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
     proxies:  #代理選項
