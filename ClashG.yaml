@@ -609,14 +609,14 @@ rule-providers:
 #-----------------------------------------------------------------------------------------------------------
   cn-blocked-IP:
     type: http
-    behavior: ipcidr
+    behavior: classical
     path: ./ruleset/cn-blocked-IP.yaml
     url: "https://raw.githubusercontent.com/Loyalsoldier/cn-blocked-domain/release/ip.txt"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   cn-blocked-domain:
     type: http
-    behavior: classical
+    behavior: domain
     path: ./ruleset/cn-blocked-domain.yaml
     url: "https://raw.githubusercontent.com/Loyalsoldier/cn-blocked-domain/release/domains.txt"
     interval: 21600
@@ -938,20 +938,20 @@ rules:
   - DOMAIN-KEYWORD,apple,中國直連 #蘋果
   - DOMAIN-KEYWORD,icould,中國直連 #蘋果
   - DOMAIN-KEYWORD,itunes,中國直連 #蘋果
-  #- RULE-SET,蘋果,中國直連 #蘋果
-  #- RULE-SET,百度,中國直連 #百度
-  #- RULE-SET,迅雷,中國直連 #迅雷
-  #- RULE-SET,直连APP,中國直連 #直連應用
-  #- RULE-SET,群暉,中國直連 #群暉
-  #- RULE-SET,美團,中國直連 #美團
-  #- RULE-SET,網易,中國直連 #網易
-  #- RULE-SET,抖音,中國直連 #抖音
-  #- RULE-SET,微信,中國直連 #微信
-  #- RULE-SET,騰訊,中國直連 #騰訊
-  #- RULE-SET,小米,中國直連 #小米
-  #- RULE-SET,支付寶,中國直連 #支付寶
-  #- RULE-SET,阿里巴巴,中國直連 #阿里巴巴
-  #- RULE-SET,京東,中國直連 #京東
+  - RULE-SET,蘋果,中國直連 #蘋果
+  - RULE-SET,百度,中國直連 #百度
+  - RULE-SET,迅雷,中國直連 #迅雷
+  - RULE-SET,直连APP,中國直連 #直連應用
+  - RULE-SET,群暉,中國直連 #群暉
+  - RULE-SET,美團,中國直連 #美團
+  - RULE-SET,網易,中國直連 #網易
+  - RULE-SET,抖音,中國直連 #抖音
+  - RULE-SET,微信,中國直連 #微信
+  - RULE-SET,騰訊,中國直連 #騰訊
+  - RULE-SET,小米,中國直連 #小米
+  - RULE-SET,支付寶,中國直連 #支付寶
+  - RULE-SET,阿里巴巴,中國直連 #阿里巴巴
+  - RULE-SET,京東,中國直連 #京東
   - RULE-SET,ChinaMaxNoIP,中國直連 #中國直連網站
   - RULE-SET,LAN,中國直連 #局域网
   - RULE-SET,ASNIP,中國直連 #中国ASNIP
