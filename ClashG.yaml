@@ -609,14 +609,14 @@ rule-providers:
 #-----------------------------------------------------------------------------------------------------------
   cn-blocked-IP:
     type: http
-    behavior: domain
+    behavior: ipcidr
     path: ./ruleset/cn-blocked-IP.yaml
     url: "https://raw.githubusercontent.com/Loyalsoldier/cn-blocked-domain/release/ip.txt"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   cn-blocked-domain:
     type: http
-    behavior: domain
+    behavior: classical
     path: ./ruleset/cn-blocked-domain.yaml
     url: "https://raw.githubusercontent.com/Loyalsoldier/cn-blocked-domain/release/domains.txt"
     interval: 21600
