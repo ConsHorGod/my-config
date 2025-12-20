@@ -54,20 +54,6 @@ proxy-groups:
       - OKZ专线
       - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
-  #- name: 國際媒體
-    #icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png"  #策略組圖標
-    #hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    #lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
-    #type: url-test  #自动测速
-    #url: http://www.gstatic.com/generate_204  #用于测试的链接
-    #interval: 600  #测速时间间隔(秒)
-    #proxies:  #代理選項
-      #- LHY香港0.25x
-      #- LHY香港
-      #- XMR香港IPLC
-      #- OKZ专线
-      #- OKZ香港
-#-----------------------------------------------------------------------------------------------------------
   - name: 飛機電報
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
@@ -97,6 +83,20 @@ proxy-groups:
       - XMR日本中繼
       - XMR日本IPLC
       - OKZ日本
+#-----------------------------------------------------------------------------------------------------------
+  - name: HBOMAX
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 600  #测速时间间隔(秒)
+    proxies:  #代理選項
+      - LHY香港0.25x
+      - LHY香港
+      - XMR香港IPLC
+      - OKZ专线
+      - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
   - name: 谷歌油管
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"  #策略組圖標
@@ -889,10 +889,10 @@ rules:
   - DOMAIN-KEYWORD,www.bilibili.com,嗶哩嗶哩,no-resolve #嗶哩嗶哩
   - RULE-SET,嗶哩嗶哩Intl,嗶哩嗶哩,no-resolve #嗶哩嗶哩
   - RULE-SET,嗶哩嗶哩,嗶哩嗶哩,no-resolve #嗶哩嗶哩
-  - DOMAIN-KEYWORD,discomax.com,國際互聯,no-resolve #www.hbomax.com
-  - DOMAIN-KEYWORD,media.max.com,國際互聯,no-resolve #www.hbomax.com
-  - DOMAIN-KEYWORD,max.com,國際互聯,no-resolve #www.hbomax.com
-  - RULE-SET,HBO,國際互聯,no-resolve #www.hbomax.com
+  - DOMAIN-KEYWORD,discomax.com,HBOMAX,no-resolve #www.hbomax.com
+  - DOMAIN-KEYWORD,media.max.com,HBOMAX,no-resolve #www.hbomax.com
+  - DOMAIN-KEYWORD,max.com,HBOMAX,no-resolve #www.hbomax.com
+  - RULE-SET,HBO,HBOMAX,no-resolve #www.hbomax.com
   - RULE-SET,香港電臺,國際互聯,no-resolve #香港電臺
   - DOMAIN-KEYWORD,akamaized,國際互聯,no-resol #香港電臺
   - DOMAIN-SUFFIX,themoviedb.org,國際互聯,no-resolve #www.themoviedb.org
