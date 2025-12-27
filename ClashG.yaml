@@ -155,10 +155,10 @@ proxy-groups:
     proxies:  #代理選項
       - LHY日本0.25x
       - LHY日本
-      - XMR日本IPLC
+      - XMR日本直連
       - XMR日本中繼
-      - XMR美國IPLC
-      - XMR美國中繼
+      #- XMR美國IPLC
+      #- XMR美國中繼
       #- OKZ日本
       #- OKZ专线
       #- OKZ香港
