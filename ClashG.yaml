@@ -381,7 +381,7 @@ proxy-groups:
     use:
       - XMR美國IPLC
 #-----------------------------------------------------------------------------------------------------------
-  - name: XMRt台灣直連
+  - name: XMR台灣直連
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
