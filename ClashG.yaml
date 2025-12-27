@@ -667,6 +667,13 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple_Classical.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
+  蘋果代理:
+    type: http
+    behavior: classical
+    path: ./ruleset/AppleProxy.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/AppleProxy/AppleProxy.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
   推特:
     type: http
     behavior: classical
@@ -930,6 +937,7 @@ rules:
   - DOMAIN-KEYWORD,mtalk.google.com,國際互聯,no-resolve #Google推送服務
   - RULE-SET,谷歌,國際互聯,no-resolve #www.google.com
   #- RULE-SET,外國流媒體,國際互聯,no-resolve #國外流媒體平臺
+  - RULE-SET,蘋果代理,國際互聯,no-resolve
   - RULE-SET,GFWList,國際互聯,no-resolve #GFWList 域名列表
   - RULE-SET,tld-not-cn,國際互聯,no-resolve #非中国大陆使用的顶级域名列表
   - RULE-SET,Proxy,國際互聯,no-resolve #代理域名列表
