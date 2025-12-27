@@ -157,6 +157,9 @@ proxy-groups:
       - LHY日本
       - XMR日本直連
       - XMR日本中繼
+      - XMR台灣直連
+      - XMR台灣中繼
+      - XMR台灣IPLC
       #- XMR美國IPLC
       #- XMR美國中繼
       #- OKZ日本
@@ -367,7 +370,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
     use:
-      - XMR美國中繼  
+      - XMR美國中繼
 #-----------------------------------------------------------------------------------------------------------
   - name: XMR美國IPLC
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
@@ -377,6 +380,33 @@ proxy-groups:
     interval: 600  #测速时间间隔(秒)
     use:
       - XMR美國IPLC
+#-----------------------------------------------------------------------------------------------------------
+  - name: XMRt台灣直連
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 600  #测速时间间隔(秒)
+    use:
+      - XMR台灣直連
+#-----------------------------------------------------------------------------------------------------------
+  - name: XMR台灣中繼
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 600  #测速时间间隔(秒)
+    use:
+      - XMR台灣中繼
+#-----------------------------------------------------------------------------------------------------------
+  - name: XMR台灣IPLC
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 600  #测速时间间隔(秒)
+    use:
+      - XMR台灣IPLC
 #-----------------------------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------------------------
 #--------↓↓↓代理集↓↓↓--------#
@@ -574,6 +604,39 @@ proxy-providers:
     url: https://cdn2.xmrth.one/s/x15YTTsgkpt5E538?clash=1
     interval: 3600
     filter: 'IPLC.*US|US.*IPLC'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600    
+#-----------------------------------------------------------------------------------------------------------
+  "XMR台灣中繼":
+    type: http
+    path: ./provide/XMR台灣中繼.yml
+    url: https://cdn2.xmrth.one/s/x15YTTsgkpt5E538?clash=1
+    interval: 3600
+    filter: '台湾.*中继|中继.*台湾'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+#-----------------------------------------------------------------------------------------------------------
+  "XMR台灣IPLC":
+    type: http
+    path: ./provide/XMR台灣IPLC.yml
+    url: https://cdn2.xmrth.one/s/x15YTTsgkpt5E538?clash=1
+    interval: 3600
+    filter: 'IPLC.*TW|TW.*IPLC'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600    
+#-----------------------------------------------------------------------------------------------------------
+  "XMR台灣直連":
+    type: http
+    path: ./provide/XMR台灣直連.yml
+    url: https://cdn2.xmrth.one/s/x15YTTsgkpt5E538?clash=1
+    interval: 3600
+    filter: '(?!.*(台湾)).*(TW)'
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
