@@ -107,11 +107,11 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
     proxies:  #代理選項
-      #- LHY香港0.25x
-      #- LHY香港
+      - LHY香港0.25x
+      - LHY香港
       #- XMR香港中繼
       #- XMR香港IPLC
-      #- OKZ专线
+      - OKZ专线
       - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
   - name: 嗶哩嗶哩
@@ -1038,7 +1038,7 @@ rules:
   - PROCESS-NAME,com.google.android.apps.youtube.music,油管音樂,no-resolve #YouTubeMusic
   - DOMAIN-SUFFIX,youtube-music.l.google.com,油管音樂,no-resolve #YouTubeMusic
   - RULE-SET,油管音樂,油管音樂,no-resolve #YouTubeMusic
-  - RULE-SET,油管,谷歌油管,no-resolve #Youtube
+  - RULE-SET,油管,國際互聯,no-resolve #Youtube
   - RULE-SET,谷歌,國際互聯,no-resolve #www.google.com
   #- RULE-SET,外國流媒體,國際互聯,no-resolve #國外流媒體平臺
   - RULE-SET,蘋果代理,國際互聯,no-resolve
