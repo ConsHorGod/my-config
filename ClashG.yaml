@@ -970,36 +970,35 @@ rules:
   - DOMAIN-SUFFIX,https://223.5.5.5,DIRECT #阿里加密DNS服務器
   - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT #CDN源碼鏈接
   - DOMAIN-KEYWORD,raw.githubusercontent.com,配置更新,no-resolve #GitHub源碼鏈接
-  - RULE-SET,GitHub,國際互聯,no-resolve #GitHub
+  - RULE-SET,GitHub,國際互聯,no-resolve #www.GitHub.com
   - DOMAIN-KEYWORD,unpkg.com,配置更新,no-resolve #CDN鏡像檔案庫
   - DOMAIN,msmp.abchina.com.cn,REJECT #排除中國農業銀行檢測
   - RULE-SET,中國農業銀行,中國直連 #中國農業銀行
   - DOMAIN-KEYWORD,dsmynas.com,DIRECT #群暉DDNS
   - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT #花生殼DDNS
   - DOMAIN-KEYWORD,asuscomm.com,DIRECT #華碩DDNS
-  - DOMAIN-KEYWORD,linghunyun,配置更新,no-resolve #靈魂雲(機場)
-  - DOMAIN-KEYWORD,okztwo,配置更新,no-resolve #OKZTWO(機場)
-  - DOMAIN-KEYWORD,47.107.66.153,配置更新,no-resolve #OKZTWO(機場)
-  - DOMAIN-KEYWORD,feiniaoyun,配置更新,no-resolve #飛鳥雲(機場)
-  - DOMAIN-KEYWORD,x3.344211.cc,配置更新,no-resolve #飛鳥雲(機場)
-  - DOMAIN-KEYWORD,xmrth.one,DIRECT #XMRTH(機場)
+  - DOMAIN-KEYWORD,linghunyun,配置更新,no-resolve #www.linghunyun.com(靈魂雲機場)
+  - DOMAIN-KEYWORD,okztwo,配置更新,no-resolve #www.okztwo.com(OKZTWO機場)
+  - DOMAIN-KEYWORD,feiniaoyun,配置更新,no-resolve #www.feiniaoyun.xyz(飛鳥雲)
+  - DOMAIN-KEYWORD,x3.344211.cc,配置更新,no-resolve #www.feiniaoyun.xyz(飛鳥雲)
+  - DOMAIN-KEYWORD,xmrth.one,DIRECT #www.xmrth.com(XMRTH機場)
   - RULE-SET,AD-Block,廣告過濾 #anti-AD去廣告
   - DOMAIN-SUFFIX,zh.savefrom.net,國際互聯 #zh.savefrom.net(視頻下載網)
   - DOMAIN-SUFFIX,snapvid.net,國際互聯 #snapvid.net(視頻下載網)
-  - DOMAIN-KEYWORD,xn--ngstr-lra8j,中國直連 #Google Play商店
-  - DOMAIN-KEYWORD,googleapis.cn,中國直連 #Google Play商店
+  - DOMAIN-KEYWORD,xn--ngstr-lra8j,中國直連 #www.play.google.com(GooglePlay商店)
+  - DOMAIN-KEYWORD,googleapis.cn,中國直連 #www.play.google.com(GooglePlay商店)
   - DOMAIN-KEYWORD,www.bilibili.com,嗶哩嗶哩,no-resolve #www.bilibili.com
   - RULE-SET,嗶哩嗶哩Intl,嗶哩嗶哩,no-resolve #www.bilibili.com
   - RULE-SET,嗶哩嗶哩,嗶哩嗶哩,no-resolve #www.bilibili.com
-  - DOMAIN-KEYWORD,discomax.com,HBOMAX,no-resolve #www.hbomax.com
-  - DOMAIN-KEYWORD,media.max.com,HBOMAX,no-resolve #www.hbomax.com
-  - DOMAIN-KEYWORD,max.com,HBOMAX,no-resolve #www.hbomax.com
-  - RULE-SET,HBO,HBOMAX,no-resolve #www.hbomax.com
-  - RULE-SET,香港電臺,國際互聯,no-resolve #香港電臺
-  - DOMAIN-KEYWORD,akamaized,國際互聯,no-resol #香港電臺
-  - DOMAIN-SUFFIX,themoviedb.org,國際互聯,no-resolve #www.themoviedb.org
-  - DOMAIN-SUFFIX,tmdb.org,國際互聯,no-resolve #www.themoviedb.org
-  - DOMAIN-SUFFIX,image.tmdb.org,國際互聯,no-resolve #www.themoviedb.org
+  - DOMAIN-KEYWORD,discomax.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
+  - DOMAIN-KEYWORD,media.max.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
+  - DOMAIN-KEYWORD,max.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
+  - RULE-SET,HBO,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
+  - RULE-SET,香港電臺,國際互聯,no-resolve #www.rthk.hk(香港電臺)
+  - DOMAIN-KEYWORD,akamaized,國際互聯,no-resol #www.rthk.hk(香港電臺)
+  - DOMAIN-SUFFIX,themoviedb.org,國際互聯,no-resolve #www.themoviedb.org(TMDB)
+  - DOMAIN-SUFFIX,tmdb.org,國際互聯,no-resolve #www.themoviedb.org(TMDB)
+  - DOMAIN-SUFFIX,image.tmdb.org,國際互聯,no-resolve #www.themoviedb.org(TMDB)
   - DOMAIN-KEYWORD,xvideos,國際互聯,no-resolve #www.xvideos.com
   - DOMAIN-KEYWORD,xnxx,國際互聯,no-resolve #www.xnxx.com
   - DOMAIN-KEYWORD,pornhub,國際互聯,no-resolve #www.pornhub.com
@@ -1007,8 +1006,8 @@ rules:
   - DOMAIN-KEYWORD,stripchat,國際互聯,no-resolve #www.stripchat.com
   - RULE-SET,TikTok,國際抖音,no-resolve #TikTok
   - RULE-SET,電報,飛機電報,no-resolve #Telegram
-  - RULE-SET,Reddit,國際互聯,no-resolve #Reddit
-  - DOMAIN-KEYWORD,redd,國際互聯,no-resolve #Reddit
+  - RULE-SET,Reddit,國際互聯,no-resolve #www.reddit.com(Reddit)
+  - DOMAIN-KEYWORD,redd,國際互聯,no-resolve #www.reddit.com(Reddit)
   - RULE-SET,推特,國際互聯,no-resolve #Twitter
   - RULE-SET,IG,國際互聯,no-resolve #Instagram
   - RULE-SET,臉書,國際互聯,no-resolve #FaceBook
@@ -1031,20 +1030,20 @@ rules:
   - RULE-SET,GFWList,國際互聯,no-resolve #GFWList 域名列表
   - RULE-SET,tld-not-cn,國際互聯,no-resolve #非中国大陆使用的顶级域名列表
   - RULE-SET,Proxy,國際互聯,no-resolve #代理域名列表
-  - DOMAIN-KEYWORD,deainx,中國直連 #飄雪_https://www.dranime.net
-  - DOMAIN-KEYWORD,dranime,中國直連 #飄雪_https://www.dranime.net
-  - DOMAIN-KEYWORD,gomicx,中國直連 #粵漫社
-  - DOMAIN-KEYWORD,dotmu,中國直連 #飄雪_https://www.dranime.net
-  - DOMAIN-KEYWORD,apple,中國直連 #蘋果
-  - DOMAIN-KEYWORD,icould,中國直連 #蘋果
-  - DOMAIN-KEYWORD,itunes,中國直連 #蘋果
-  - RULE-SET,蘋果,中國直連 #蘋果
-  - RULE-SET,百度,中國直連 #百度
+  - DOMAIN-KEYWORD,deainx,中國直連 #www.dranime.net(飄雪)
+  - DOMAIN-KEYWORD,dranime,中國直連 #www.dranime.net(飄雪)
+  - DOMAIN-KEYWORD,dotmu,中國直連 #www.dranime.net(飄雪)
+  - DOMAIN-KEYWORD,gomicx,中國直連 #www.gomicx.net(粵漫社)
+  - DOMAIN-KEYWORD,apple,中國直連 #www.apple.com(蘋果)
+  - DOMAIN-KEYWORD,icould,中國直連 #www.apple.com(蘋果)
+  - DOMAIN-KEYWORD,itunes,中國直連 #www.apple.com(蘋果)
+  - RULE-SET,蘋果,中國直連 #www.apple.com(蘋果)
+  - RULE-SET,百度,中國直連 #www.baidu.com(百度)
   - RULE-SET,迅雷,中國直連 #迅雷
   - RULE-SET,直连APP,中國直連 #直連應用
   - RULE-SET,群暉,中國直連 #群暉
   - RULE-SET,美團,中國直連 #美團
-  - RULE-SET,網易,中國直連 #網易
+  - RULE-SET,網易,中國直連 #www.163.net(網易)
   - RULE-SET,抖音,中國直連 #抖音
   - RULE-SET,微信,中國直連 #微信
   - RULE-SET,騰訊,中國直連 #騰訊
