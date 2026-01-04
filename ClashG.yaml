@@ -164,7 +164,7 @@ proxy-groups:
       #- XMR美國中繼
       - OKZ日本
       - OKZ专线
-      - OKZ香港
+      #- OKZ香港
 #-----------------------------------------------------------------------------------------------------------
   - name: 人工智能
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"  #策略組圖標
