@@ -1051,8 +1051,8 @@ rules:
   - PROCESS-NAME,com.google.android.apps.youtube.music,油管音樂,no-resolve #www.music.youtube.com
   - DOMAIN-SUFFIX,youtube-music.l.google.com,油管音樂,no-resolve #www.music.youtube.com
   - RULE-SET,油管音樂,油管音樂,no-resolve #www.music.youtube.com
-  - RULE-SET,油管,谷歌油管,no-resolve #www.youtube.com
-  - RULE-SET,谷歌,谷歌油管,no-resolve #www.google.com
+  - RULE-SET,油管,國際媒體,no-resolve #www.youtube.com
+  - RULE-SET,谷歌,國際媒體,no-resolve #www.google.com
   - RULE-SET,外國流媒體,國際媒體,no-resolve #國外流媒體平臺
   #- RULE-SET,蘋果代理,國際媒體,no-resolve
   - RULE-SET,GFWList,國際互聯,no-resolve #GFWList 域名列表
