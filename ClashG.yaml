@@ -134,21 +134,6 @@ proxy-groups:
       - LHY日本
       - OKZ日本
 #-----------------------------------------------------------------------------------------------------------
-  - name: 微軟服務
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
-    type: select  #手动选择
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
-    proxies:  #代理選項
-      - 中國直連
-      - LHY香港0.25x
-      - LHY香港
-      #- XMR香港IPLC
-      - OKZ专线
-      - OKZ香港
-#-----------------------------------------------------------------------------------------------------------
   - name: 油管音樂
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube_Music.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
@@ -1041,7 +1026,7 @@ rules:
   - RULE-SET,臉書,國際媒體,no-resolve #FaceBook
   - RULE-SET,Copilot,人工智能,no-resolve
   - DOMAIN-KEYWORD,microsoft,微軟服務,no-resolve #微軟
-  - RULE-SET,微軟,微軟服務,no-resolve #微軟
+  - RULE-SET,微軟,國際媒體,no-resolve #微軟
   - RULE-SET,Gemini,人工智能,no-resolve #谷歌AI
   - RULE-SET,GPT,人工智能,no-resolve #OpenAI
   - DOMAIN-SUFFIX,music.youtube.com,油管音樂,no-resolve #www.music.youtube.com
