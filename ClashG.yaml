@@ -39,14 +39,14 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
     proxies:  #代理選項
-      - 中國直連
-      - 國際互聯
+      - DIRECT
+      - GLOBAL
       - FNY
 #-----------------------------------------------------------------------------------------------------------
-  - name: 國際互聯
+  - name: GLOBAL
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: true  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
@@ -61,7 +61,7 @@ proxy-groups:
   - name: 國際媒體
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: true  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
@@ -76,7 +76,7 @@ proxy-groups:
   - name: 飛機電報
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: true  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
@@ -92,7 +92,7 @@ proxy-groups:
   - name: 國際抖音
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: true  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
@@ -101,12 +101,12 @@ proxy-groups:
       - LHY日本
       #- XMR日本中繼
       #- XMR日本IPLC
-      - OKZ日本
+      #- OKZ日本
 #-----------------------------------------------------------------------------------------------------------
   - name: HBOMAX
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: true  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
@@ -121,12 +121,12 @@ proxy-groups:
   - name: 嗶哩嗶哩
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili_3.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: true  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
     proxies:  #代理選項
-      - 中國直連
+      - DIRECT
       - LHY香港0.25x
       - LHY香港
       - OKZ香港
@@ -137,7 +137,7 @@ proxy-groups:
   - name: 微軟服務
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: true  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
@@ -152,7 +152,7 @@ proxy-groups:
   - name: 油管音樂
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube_Music.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: true  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
@@ -173,7 +173,7 @@ proxy-groups:
   - name: 人工智能
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: true  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
@@ -197,7 +197,7 @@ proxy-groups:
   - name: 配置更新
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png"  #策略組圖標
     hidden:  false  #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: true  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 300  #测速时间间隔(秒)
@@ -212,16 +212,6 @@ proxy-groups:
       - OKZ专线
       - OKZ香港
       - FNY
-#-----------------------------------------------------------------------------------------------------------
-  - name: 中國直連
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #手动选择
-    url: https://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
-    proxies:  #代理選項
-      - DIRECT
-      - 國際互聯
 #-----------------------------------------------------------------------------------------------------------
   - name: FNY
     icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"  #策略組圖標
@@ -969,46 +959,46 @@ rule-providers:
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️分就規則⚠️⚠️⚠️⚠️⚠️⚠️#
 rules:
-#⚠️⚠️⚠️⚠️⚠️⚠️#⚠️⚠️⚠️⚠️⚠️⚠️直連⚠️⚠️⚠️⚠️⚠️⚠️#⚠️⚠️⚠️⚠️⚠️⚠️#
-  - RULE-SET,網絡時間同步,中國直連 #時間同步服務器
+#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️直連⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️#
+  - RULE-SET,網絡時間同步,DIRECT #時間同步服務器
   - RULE-SET,AD-Block,廣告過濾 #anti-AD去廣告
-  - DOMAIN-SUFFIX,https://doh.pub,中國直連 #騰訊加密DNS服務器
-  - DOMAIN-SUFFIX,https://223.5.5.5,中國直連 #阿里加密DNS服務器
-  - DOMAIN-KEYWORD,cdn.jsdelivr.net,中國直連 #CDN源碼鏈接
-  - DOMAIN-KEYWORD,xn--ngstr-lra8j,中國直連 #www.play.google.com(GooglePlay商店)
-  - DOMAIN-KEYWORD,googleapis.cn,中國直連 #www.play.google.com(GooglePlay商店)
+  - DOMAIN-SUFFIX,https://doh.pub,DIRECT #騰訊加密DNS服務器
+  - DOMAIN-SUFFIX,https://223.5.5.5,DIRECT #阿里加密DNS服務器
+  - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT #CDN源碼鏈接
+  - DOMAIN-KEYWORD,xn--ngstr-lra8j,DIRECT #www.play.google.com(GooglePlay商店)
+  - DOMAIN-KEYWORD,googleapis.cn,DIRECT #www.play.google.com(GooglePlay商店)
   - DOMAIN,msmp.abchina.com.cn,REJECT #排除中國農業銀行檢測
-  - RULE-SET,中國農業銀行,中國直連 #中國農業銀行
-  - DOMAIN-KEYWORD,dsmynas.com,中國直連 #群暉DDNS
-  - DOMAIN-KEYWORD,jlxa.wicp.net,中國直連 #花生殼DDNS
-  - DOMAIN-KEYWORD,asuscomm.com,中國直連 #華碩DDNS
-  - DOMAIN-KEYWORD,xmrth.one,中國直連 #www.xmrth.com(XMRTH機場)
-  - DOMAIN-KEYWORD,deainx,中國直連 #www.dranime.net(飄雪)
-  - DOMAIN-KEYWORD,dranime,中國直連 #www.dranime.net(飄雪)
-  - DOMAIN-KEYWORD,dotmu,中國直連 #www.dranime.net(飄雪)
-  - DOMAIN-KEYWORD,gomicx,中國直連 #www.gomicx.net(粵漫社)
-  - DOMAIN-KEYWORD,apple,中國直連 #www.apple.com(蘋果)
-  - DOMAIN-KEYWORD,icould,中國直連 #www.apple.com(蘋果)
-  - DOMAIN-KEYWORD,itunes,中國直連 #www.apple.com(蘋果)
-  - RULE-SET,蘋果,中國直連 #www.apple.com(蘋果)
-  - RULE-SET,百度,中國直連 #www.baidu.com(百度)
-  - RULE-SET,迅雷,中國直連 #迅雷
-  - RULE-SET,直连APP,中國直連 #直連應用
-  - RULE-SET,群暉,中國直連 #群暉
-  - RULE-SET,美團,中國直連 #美團
-  - RULE-SET,網易,中國直連 #www.163.net(網易)
-  - RULE-SET,抖音,中國直連 #抖音
-  - RULE-SET,微信,中國直連 #微信
-  - RULE-SET,騰訊,中國直連 #騰訊
-  - RULE-SET,小米,中國直連 #小米
-  - RULE-SET,支付寶,中國直連 #支付寶
-  - RULE-SET,阿里巴巴,中國直連 #阿里巴巴
-  - RULE-SET,京東,中國直連 #京東
+  - RULE-SET,中國農業銀行,DIRECT #中國農業銀行
+  - DOMAIN-KEYWORD,dsmynas.com,DIRECT #群暉DDNS
+  - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT #花生殼DDNS
+  - DOMAIN-KEYWORD,asuscomm.com,DIRECT #華碩DDNS
+  - DOMAIN-KEYWORD,xmrth.one,DIRECT #www.xmrth.com(XMRTH機場)
+  - DOMAIN-KEYWORD,deainx,DIRECT #www.dranime.net(飄雪)
+  - DOMAIN-KEYWORD,dranime,DIRECT #www.dranime.net(飄雪)
+  - DOMAIN-KEYWORD,dotmu,DIRECT #www.dranime.net(飄雪)
+  - DOMAIN-KEYWORD,gomicx,DIRECT #www.gomicx.net(粵漫社)
+  - DOMAIN-KEYWORD,apple,DIRECT #www.apple.com(蘋果)
+  - DOMAIN-KEYWORD,icould,DIRECT #www.apple.com(蘋果)
+  - DOMAIN-KEYWORD,itunes,DIRECT #www.apple.com(蘋果)
+  - RULE-SET,蘋果,DIRECT #www.apple.com(蘋果)
+  - RULE-SET,百度,DIRECT #www.baidu.com(百度)
+  - RULE-SET,迅雷,DIRECT #迅雷
+  - RULE-SET,直连APP,DIRECT #直連應用
+  - RULE-SET,群暉,DIRECT #群暉
+  - RULE-SET,美團,DIRECT #美團
+  - RULE-SET,網易,DIRECT #www.163.net(網易)
+  - RULE-SET,抖音,DIRECT #抖音
+  - RULE-SET,微信,DIRECT #微信
+  - RULE-SET,騰訊,DIRECT #騰訊
+  - RULE-SET,小米,DIRECT #小米
+  - RULE-SET,支付寶,DIRECT #支付寶
+  - RULE-SET,阿里巴巴,DIRECT #阿里巴巴
+  - RULE-SET,京東,DIRECT #京東
   - DOMAIN-KEYWORD,www.bilibili.com,嗶哩嗶哩,no-resolve #www.bilibili.com
   - RULE-SET,嗶哩嗶哩Intl,嗶哩嗶哩,no-resolve #www.bilibili.com
   - RULE-SET,嗶哩嗶哩,嗶哩嗶哩,no-resolve #www.bilibili.com
-  - RULE-SET,ChinaMaxNoIP,中國直連 #中國直連網站
-#⚠️⚠️⚠️⚠️⚠️⚠️#⚠️⚠️⚠️⚠️⚠️⚠️代理⚠️⚠️⚠️⚠️⚠️⚠️#⚠️⚠️⚠️⚠️⚠️⚠️#
+  - RULE-SET,ChinaMaxNoIP,DIRECT #DIRECT網站
+#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️代理⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️#
   - DOMAIN-KEYWORD,linghunyun.com,配置更新,no-resolve #www.linghunyun.com(靈魂雲機場)
   - DOMAIN-KEYWORD,okztwo.com,配置更新,no-resolve #www.okztwo.com(OKZTWO機場)
   - DOMAIN-KEYWORD,feiniaoyun,配置更新,no-resolve #www.feiniaoyun.xyz(飛鳥雲)
@@ -1055,11 +1045,11 @@ rules:
   - RULE-SET,谷歌,國際媒體,no-resolve #www.google.com
   - RULE-SET,外國流媒體,國際媒體,no-resolve #國外流媒體平臺
   #- RULE-SET,蘋果代理,國際媒體,no-resolve
-  - RULE-SET,GFWList,國際互聯,no-resolve #GFWList 域名列表
-  - RULE-SET,tld-not-cn,國際互聯,no-resolve #非中国大陆使用的顶级域名列表
-  - RULE-SET,Proxy,國際互聯,no-resolve #代理域名列表
-  - RULE-SET,ASNIP,中國直連 #中国ASNIP
-  - RULE-SET,CNIP,中國直連 #中国IP
-  - RULE-SET,LAN,中國直連 #局域网
-  - GEOIP,CN,中國直連 #中国IP
+  - RULE-SET,GFWList,GLOBAL,no-resolve #GFWList 域名列表
+  - RULE-SET,tld-not-cn,GLOBAL,no-resolve #非中国大陆使用的顶级域名列表
+  - RULE-SET,Proxy,GLOBAL,no-resolve #代理域名列表
+  - RULE-SET,ASNIP,DIRECT #中国ASNIP
+  - RULE-SET,CNIP,DIRECT #中国IP
+  - RULE-SET,LAN,DIRECT #局域网
+  - GEOIP,CN,DIRECT #中国IP
   - MATCH,最終出站,dns-failed
