@@ -91,7 +91,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: 國際抖音
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
@@ -99,6 +99,7 @@ proxy-groups:
     proxies:  #代理選項
       - LHY日本0.25x
       - LHY日本
+      - OKZ专线
       #- XMR日本中繼
       #- XMR日本IPLC
       #- OKZ日本
