@@ -99,7 +99,7 @@ proxy-groups:
     proxies:  #代理選項
       - LHY日本0.25x
       - LHY日本
-      - OKZ专线
+      #- OKZ专线
       #- XMR日本中繼
       #- XMR日本IPLC
       #- OKZ日本
