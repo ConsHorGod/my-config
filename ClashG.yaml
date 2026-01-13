@@ -40,12 +40,12 @@ proxy-groups:
     interval: 600  #测速时间间隔(秒)
     proxies:  #代理選項
       - DIRECT
-      - 國際互聯
+      - 國際媒體
       - FNY
 #-----------------------------------------------------------------------------------------------------------
   - name: 國際互聯
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
@@ -66,11 +66,11 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
     proxies:  #代理選項
-      #- LHY香港0.25x
+      - LHY香港0.25x
       - LHY香港
       #- XMR香港中繼
       #- XMR香港IPLC
-      #- OKZ专线
+      - OKZ专线
       - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
   - name: 飛機電報
@@ -1046,9 +1046,9 @@ rules:
   - RULE-SET,谷歌,國際媒體,no-resolve #www.google.com
   - RULE-SET,外國流媒體,國際媒體,no-resolve #國外流媒體平臺
   #- RULE-SET,蘋果代理,國際媒體,no-resolve
-  - RULE-SET,GFWList,國際互聯,no-resolve #GFWList 域名列表
-  - RULE-SET,tld-not-cn,國際互聯,no-resolve #非中国大陆使用的顶级域名列表
-  - RULE-SET,Proxy,國際互聯,no-resolve #代理域名列表
+  - RULE-SET,GFWList,國際媒體,no-resolve #GFWList 域名列表
+  - RULE-SET,tld-not-cn,國際媒體,no-resolve #非中国大陆使用的顶级域名列表
+  - RULE-SET,Proxy,國際媒體,no-resolve #代理域名列表
   - RULE-SET,ASNIP,DIRECT #中国ASNIP
   - RULE-SET,CNIP,DIRECT #中国IP
   - RULE-SET,LAN,DIRECT #局域网
