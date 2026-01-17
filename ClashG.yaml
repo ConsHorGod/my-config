@@ -16,7 +16,7 @@ dns:  #DNS解析
     - 119.29.29.29  #騰訊雲
   enhanced-mode: fake-ip  #假ip
   fake-ip-range: 198.18.0.1/16  #假ip地址範圍
-  fake-ip-filter-mode: whitelist  #允許使用假ip模式，whitelist_白名單，blacklist_黑名單
+  fake-ip-filter-mode: whitelist  #允許使用假ip模式，rule_规则模式，whitelist_白名單，blacklist_黑名單
   fake-ip-filter:  #允許的列表如下
     - 'geosite: gfw'
   nameserver:  #主要DNS解析服務器
