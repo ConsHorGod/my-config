@@ -205,7 +205,6 @@ proxy-groups:
     interval: 300  #测速时间间隔(秒)
     proxies:  #代理選項
       - LHY香港0.25x
-      - LHY日本0.25x
       - LHY香港
       - OKZ专线
       - OKZ香港
