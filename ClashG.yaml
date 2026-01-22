@@ -443,7 +443,7 @@ proxy-providers:
     path: ./provide/FNY.yml
     url: https://x3.344211.cc/api/v1/client/subscribe?token=0e79462ce42ab0413ed58d454329934e
     interval: 86400
-    filter: '香港|台湾'
+    filter: '香港'
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
