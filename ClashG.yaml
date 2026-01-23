@@ -4,7 +4,6 @@ allow-lan: true  #允許局域網
 mode: Rule  #運行模式
 log-level: info  #日誌
 external-controller: 127.0.0.1:60000  #外部控制地址與端口
-
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️DNS设置⚠️⚠️⚠️⚠️⚠️⚠️#
 dns:  #DNS解析
@@ -17,6 +16,8 @@ dns:  #DNS解析
   enhanced-mode: fake-ip  #假ip
   fake-ip-range: 198.18.0.1/16  #假ip地址範圍
   fake-ip-filter-mode: rule  #允許使用假ip模式，rule_规则模式，whitelist_白名單，blacklist_黑名單
+  respect-rules: true  #遵守規則，true_是，false_否
+  prefet-h3: false
   fake-ip-filter:  #允許的列表如下
     - RULE-SET,網絡時間同步,real-ip #時間同步服務器
     - DOMAIN-KEYWORD,cdn.jsdelivr.net,real-ip #CDN源碼鏈接
@@ -51,16 +52,19 @@ dns:  #DNS解析
     - RULE-SET,ChinaMaxNoIP,real-ip #DIRECT網站
     - RULE-SET,ASNIP,real-ip #中国ASNIP
     - RULE-SET,LAN,real-ip #局域网
+  proxy-server-nameserver:
+    #- 119.29.29.29  #騰訊雲
+    - https://doh.pub/dns-query  #騰訊雲加密
+    #- 223.5.5.5  #阿里雲
+    - https://dns.alidns.com/dns-query  #阿里雲加密
   nameserver:  #主要DNS解析服務器
     #- 119.29.29.29  #騰訊雲
     - https://doh.pub/dns-query  #騰訊雲加密
     #- 223.5.5.5  #阿里雲
     - https://dns.alidns.com/dns-query  #阿里雲加密
-
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️代理節點⚠️⚠️⚠️⚠️⚠️⚠️#
 proxies:
-
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️代理組⚠️⚠️⚠️⚠️⚠️⚠️#
 proxy-groups:
@@ -434,7 +438,6 @@ proxy-groups:
     interval: 600  #测速时间间隔(秒)
     use:
       - XMR台灣IPLC
-
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️代理集⚠️⚠️⚠️⚠️⚠️⚠️#
 proxy-providers:
@@ -668,7 +671,6 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 600    
-
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️規則集⚠️⚠️⚠️⚠️⚠️⚠️#
 rule-providers:
@@ -715,7 +717,7 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMaxNoIP/ChinaMaxNoIP_Classical.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  ASNIP:
+  ASN:
     type: http
     behavior: classical
     path: ./ruleset/ASN.China.yaml
@@ -988,7 +990,6 @@ rule-providers:
     path: ./ruleset/YouTube.yaml
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml"
     interval: 21600
-
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️分就規則⚠️⚠️⚠️⚠️⚠️⚠️#
 rules:
@@ -1001,7 +1002,6 @@ rules:
   - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT #CDN源碼鏈接
   - DOMAIN-KEYWORD,xn--ngstr-lra8j,DIRECT #www.play.google.com(GooglePlay商店)
   - DOMAIN-KEYWORD,googleapis.cn,DIRECT #www.play.google.com(GooglePlay商店)
-  - RULE-SET,中國農業銀行,DIRECT #中國農業銀行
   - DOMAIN-KEYWORD,dsmynas.com,DIRECT #群暉DDNS
   - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT #花生殼DDNS
   - DOMAIN-KEYWORD,asuscomm.com,DIRECT #華碩DDNS
@@ -1013,24 +1013,28 @@ rules:
   - DOMAIN-KEYWORD,apple,DIRECT #www.apple.com(蘋果)
   - DOMAIN-KEYWORD,icould,DIRECT #www.apple.com(蘋果)
   - DOMAIN-KEYWORD,itunes,DIRECT #www.apple.com(蘋果)
-  - RULE-SET,蘋果,DIRECT #www.apple.com(蘋果)
-  - RULE-SET,百度,DIRECT #www.baidu.com(百度)
-  - RULE-SET,迅雷,DIRECT #迅雷
-  - RULE-SET,直连APP,DIRECT #直連應用
-  - RULE-SET,群暉,DIRECT #群暉
-  - RULE-SET,美團,DIRECT #美團
-  - RULE-SET,網易,DIRECT #www.163.net(網易)
-  - RULE-SET,抖音,DIRECT #抖音
-  - RULE-SET,微信,DIRECT #微信
-  - RULE-SET,騰訊,DIRECT #騰訊
-  - RULE-SET,小米,DIRECT #小米
-  - RULE-SET,支付寶,DIRECT #支付寶
-  - RULE-SET,阿里巴巴,DIRECT #阿里巴巴
-  - RULE-SET,京東,DIRECT #京東
+  #- RULE-SET,蘋果,DIRECT #www.apple.com(蘋果)
+  #- RULE-SET,百度,DIRECT #www.baidu.com(百度)
+  #- RULE-SET,迅雷,DIRECT #迅雷
+  #- RULE-SET,直连APP,DIRECT #直連應用
+  #- RULE-SET,群暉,DIRECT #群暉
+  #- RULE-SET,美團,DIRECT #美團
+  #- RULE-SET,網易,DIRECT #www.163.net(網易)
+  #- RULE-SET,抖音,DIRECT #抖音
+  #- RULE-SET,微信,DIRECT #微信
+  #- RULE-SET,騰訊,DIRECT #騰訊
+  #- RULE-SET,小米,DIRECT #小米
+  #- RULE-SET,支付寶,DIRECT #支付寶
+  #- RULE-SET,阿里巴巴,DIRECT #阿里巴巴
+  #- RULE-SET,京東,DIRECT #京東
+  #- RULE-SET,中國農業銀行,DIRECT #中國農業銀行
   - DOMAIN-KEYWORD,www.bilibili.com,嗶哩嗶哩,no-resolve #www.bilibili.com
   - RULE-SET,嗶哩嗶哩Intl,嗶哩嗶哩,no-resolve #www.bilibili.com
   - RULE-SET,嗶哩嗶哩,嗶哩嗶哩,no-resolve #www.bilibili.com
   - RULE-SET,ChinaMaxNoIP,DIRECT #DIRECT網站
+  - RULE-SET,ASN,DIRECT #中国ASN
+  - RULE-SET,CNIP,DIRECT #中国IP
+  - GEOIP,CN,DIRECT #中国IP
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️代理⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️#
   - DOMAIN-KEYWORD,linghunyun.com,配置更新,no-resolve #www.linghunyun.com(靈魂雲機場)
   - DOMAIN-KEYWORD,okztwo.com,配置更新,no-resolve #www.okztwo.com(OKZTWO機場)
@@ -1081,8 +1085,5 @@ rules:
   - RULE-SET,GFWList,國際媒體,no-resolve #GFWList 域名列表
   - RULE-SET,tld-not-cn,國際媒體,no-resolve #非中国大陆使用的顶级域名列表
   - RULE-SET,Proxy,國際媒體,no-resolve #代理域名列表
-  - RULE-SET,ASNIP,DIRECT #中国ASNIP
-  - RULE-SET,CNIP,DIRECT #中国IP
   - RULE-SET,LAN,DIRECT #局域网
-  - GEOIP,CN,DIRECT #中国IP
   - MATCH,最終出站,dns-failed
