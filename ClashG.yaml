@@ -50,7 +50,7 @@ dns:  #DNS解析
     - RULE-SET,阿里巴巴,real-ip #阿里巴巴
     - RULE-SET,京東,real-ip #京東
     - RULE-SET,ChinaMaxNoIP,real-ip #DIRECT網站
-    - RULE-SET,ASNIP,real-ip #中国ASNIP
+    - RULE-SET,ASN,real-ip #中国ASNIP
     - RULE-SET,LAN,real-ip #局域网
   proxy-server-nameserver:
     #- 119.29.29.29  #騰訊雲
