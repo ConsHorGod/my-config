@@ -1000,17 +1000,17 @@ rules:
   - DOMAIN-SUFFIX,https://doh.pub,DIRECT #騰訊加密DNS服務器
   - DOMAIN-SUFFIX,https://223.5.5.5,DIRECT #阿里加密DNS服務器
   - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT #CDN源碼鏈接
-  - DOMAIN-KEYWORD,xn--ngstr-lra8j,DIRECT #www.play.google.com(GooglePlay商店)
-  - DOMAIN-KEYWORD,googleapis.cn,DIRECT #www.play.google.com(GooglePlay商店)
+  #- DOMAIN-KEYWORD,xn--ngstr-lra8j,DIRECT #www.play.google.com(GooglePlay商店)
+  #- DOMAIN-KEYWORD,googleapis.cn,DIRECT #www.play.google.com(GooglePlay商店)
   - DOMAIN-KEYWORD,dsmynas.com,DIRECT #群暉DDNS
   - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT #花生殼DDNS
   - DOMAIN-KEYWORD,asuscomm.com,DIRECT #華碩DDNS
-  - DOMAIN-KEYWORD,x3.344211.cc,DIRECT, #www.feiniaoyun.xyz(飛鳥雲)
-  - DOMAIN-KEYWORD,xmrth.one,DIRECT #www.xmrth.com(XMRTH機場)
-  - DOMAIN-KEYWORD,deainx,DIRECT #www.dranime.net(飄雪)
-  - DOMAIN-KEYWORD,dranime,DIRECT #www.dranime.net(飄雪)
-  - DOMAIN-KEYWORD,dotmu,DIRECT #www.dranime.net(飄雪)
-  - DOMAIN-KEYWORD,gomicx,DIRECT #www.gomicx.net(粵漫社)
+  #- DOMAIN-KEYWORD,x3.344211.cc,DIRECT, #www.feiniaoyun.xyz(飛鳥雲)
+  #- DOMAIN-KEYWORD,xmrth.one,DIRECT #www.xmrth.com(XMRTH機場)
+  #- DOMAIN-KEYWORD,deainx,DIRECT #www.dranime.net(飄雪)
+  #- DOMAIN-KEYWORD,dranime,DIRECT #www.dranime.net(飄雪)
+  #- DOMAIN-KEYWORD,dotmu,DIRECT #www.dranime.net(飄雪)
+  #- DOMAIN-KEYWORD,gomicx,DIRECT #www.gomicx.net(粵漫社)
   - DOMAIN-KEYWORD,apple,DIRECT #www.apple.com(蘋果)
   - DOMAIN-KEYWORD,icould,DIRECT #www.apple.com(蘋果)
   - DOMAIN-KEYWORD,itunes,DIRECT #www.apple.com(蘋果)
@@ -1082,9 +1082,9 @@ rules:
   - RULE-SET,tld-not-cn,國際媒體,no-resolve #非中国大陆使用的顶级域名列表
   - RULE-SET,Proxy,國際媒體,no-resolve #代理域名列表
 #⚠️⚠️⚠️⚠️⚠️⚠️國內IP與域名⚠️⚠️⚠️⚠️⚠️⚠️#
-  - RULE-SET,ChinaMaxNoIP,DIRECT #DIRECT網站
-  - RULE-SET,ASN,DIRECT #中国ASN
-  - RULE-SET,CNIP,DIRECT #中国IP
-  - RULE-SET,LAN,DIRECT #局域网
-  - GEOIP,CN,DIRECT #中国IP
+  #- RULE-SET,ChinaMaxNoIP,DIRECT #DIRECT網站
+  #- RULE-SET,ASN,DIRECT #中国ASN
+  #- RULE-SET,CNIP,DIRECT #中国IP
+  #- RULE-SET,LAN,DIRECT #局域网
+  #- GEOIP,CN,DIRECT #中国IP
   - MATCH,最終出站,dns-failed
