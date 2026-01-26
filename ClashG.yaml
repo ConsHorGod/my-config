@@ -455,7 +455,7 @@ proxy-providers:
   "OKZ专线":
     type: http
     path: ./provide/OKZ专线.yml
-    url: https://api.wcc.best/sub?target=clash&url=http%3A%2F%2F47.107.66.153%3A65533%2Fapi%2Fv1%2F12%2F25%3Ftoken%3D2cd2522984108e0698c5400efd5818ff&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&udp=true&new_name=true
+    url: http://47.107.66.153:65533/api/v1/12/25?token=2cd2522984108e0698c5400efd5818ff
     interval: 86400
     filter: '专线'
     health-check:
@@ -466,7 +466,7 @@ proxy-providers:
   "OKZ香港":
     type: http
     path: ./provide/OKZ香港.yml
-    url: https://api.wcc.best/sub?target=clash&url=http%3A%2F%2F47.107.66.153%3A65533%2Fapi%2Fv1%2F12%2F25%3Ftoken%3D2cd2522984108e0698c5400efd5818ff&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&udp=true&new_name=true
+    url: http://47.107.66.153:65533/api/v1/12/25?token=2cd2522984108e0698c5400efd5818ff
     interval: 86400
     filter: '香港'
     health-check:
@@ -477,7 +477,7 @@ proxy-providers:
   "OKZ美國":
     type: http
     path: ./provide/OKZ美國.yml
-    url: https://api.wcc.best/sub?target=clash&url=http%3A%2F%2F47.107.66.153%3A65533%2Fapi%2Fv1%2F12%2F25%3Ftoken%3D2cd2522984108e0698c5400efd5818ff&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&udp=true&new_name=true
+    url: http://47.107.66.153:65533/api/v1/12/25?token=2cd2522984108e0698c5400efd5818ff
     interval: 86400
     filter: '美國'
     health-check:
@@ -488,7 +488,7 @@ proxy-providers:
   "OKZ日本":
     type: http
     path: ./provide/OKZ日本.yml
-    url: https://api.wcc.best/sub?target=clash&url=http%3A%2F%2F47.107.66.153%3A65533%2Fapi%2Fv1%2F12%2F25%3Ftoken%3D2cd2522984108e0698c5400efd5818ff&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&udp=true&new_name=true
+    url: http://47.107.66.153:65533/api/v1/12/25?token=2cd2522984108e0698c5400efd5818ff
     interval: 86400
     filter: 日本'
     health-check:
