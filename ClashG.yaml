@@ -1082,8 +1082,8 @@ rules:
   - RULE-SET,tld-not-cn,國際媒體,no-resolve #非中国大陆使用的顶级域名列表
   - RULE-SET,Proxy,國際媒體,no-resolve #代理域名列表
 #⚠️⚠️⚠️⚠️⚠️⚠️國內IP與域名⚠️⚠️⚠️⚠️⚠️⚠️#
-  - RULE-SET,ChinaMaxNoIP,DIRECT #DIRECT網站
   - RULE-SET,ASN,DIRECT #中国ASN
+  - RULE-SET,ChinaMaxNoIP,DIRECT #DIRECT網站
   - RULE-SET,CNIP,DIRECT #中国IP
   - RULE-SET,LAN,DIRECT #局域网
   - GEOIP,CN,DIRECT #中国IP
