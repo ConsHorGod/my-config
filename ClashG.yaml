@@ -11,10 +11,8 @@ dns:  #DNS解析
   ipv6: false  #ipv6解析
   listen: :23453  #監聽端口
   default-nameserver:  #備用DNS解析服務器
-    #- 223.5.5.5  #阿里雲
-    #- 119.29.29.29  #騰訊雲
-    - 202.96.128.86  #廣東電信
-    - 202.96.134.133  #廣東電信
+    - 223.5.5.5  #阿里雲
+    - 119.29.29.29  #騰訊雲
   enhanced-mode: fake-ip  #假ip
   fake-ip-range: 198.18.0.1/16  #假ip地址範圍
   fake-ip-filter-mode: rule  #允許使用假ip模式，rule_规则模式，whitelist_白名單，blacklist_黑名單
@@ -56,18 +54,14 @@ dns:  #DNS解析
     - RULE-SET,LAN,real-ip #局域网
   proxy-server-nameserver:
     #- 119.29.29.29  #騰訊雲
-    #- https://doh.pub/dns-query  #騰訊雲加密
+    - https://doh.pub/dns-query  #騰訊雲加密
     #- 223.5.5.5  #阿里雲
-    #- https://dns.alidns.com/dns-query  #阿里雲加密
-     - 202.96.128.86
-     - 202.96.134.133
+    - https://dns.alidns.com/dns-query  #阿里雲加密
   nameserver:  #主要DNS解析服務器
     #- 119.29.29.29  #騰訊雲
-    #- https://doh.pub/dns-query  #騰訊雲加密
+    - https://doh.pub/dns-query  #騰訊雲加密
     #- 223.5.5.5  #阿里雲
-    #- https://dns.alidns.com/dns-query  #阿里雲加密
-     - 202.96.128.86
-     - 202.96.134.133
+    - https://dns.alidns.com/dns-query  #阿里雲加密
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️代理節點⚠️⚠️⚠️⚠️⚠️⚠️#
 proxies:
