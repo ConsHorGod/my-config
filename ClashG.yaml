@@ -1086,5 +1086,5 @@ rules:
   #- RULE-SET,ChinaMaxNoIP,DIRECT #DIRECT網站
   #- RULE-SET,CNIP,DIRECT #中国IP
   - RULE-SET,LAN,DIRECT #局域网
-  #- GEOIP,CN,DIRECT #中国IP
+  - GEOIP,CN,DIRECT #中国IP
   - MATCH,最終出站,dns-failed
