@@ -790,7 +790,7 @@ rules:
   #- RULE-SET,GFWList,國際媒體,no-resolve #GFWList 域名列表
   #- RULE-SET,tld-not-cn,國際媒體,no-resolve #非中國大陸使用的頂級域名列表
   #- RULE-SET,Proxy,國際媒體,no-resolve #代理域名列表
-  - RULE-SET,ASN-China,DIRECT #中國ASN
+  #- RULE-SET,ASN-China,DIRECT #中國ASN
   - RULE-SET,ChinaMaxNoIP,DIRECT #中國網站
   - RULE-SET,LAN,DIRECT #局域網
   - RULE-SET,CNIP,DIRECT #中國IP
