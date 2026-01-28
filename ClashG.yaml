@@ -704,7 +704,7 @@ rules:
 #⚠️⚠️⚠️⚠️⚠️⚠️直連⚠️⚠️⚠️⚠️⚠️⚠️#
   - DOMAIN,msmp.abchina.com.cn,REJECT #排除中國農業銀行檢測
   - RULE-SET,網絡時間同步,DIRECT #時間同步服務器
-  #- RULE-SET,AD-Block,廣告過濾 #anti-AD去廣告
+  - RULE-SET,AD-Block,廣告過濾 #anti-AD去廣告
   - DOMAIN-KEYWORD,doh.pub,DIRECT #騰訊加密DNS服務器
   - DOMAIN-KEYWORD,dns.alidns.com,DIRECT #阿里加密DNS服務器
   - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT #CDN源碼鏈接
@@ -741,7 +741,7 @@ rules:
   - RULE-SET,嗶哩嗶哩Intl,嗶哩嗶哩,no-resolve #www.bilibili.com
   - RULE-SET,嗶哩嗶哩,嗶哩嗶哩,no-resolve #www.bilibili.com
   - RULE-SET,ASN-China,DIRECT #中国ASN
-  # - RULE-SET,ChinaMaxNoIP,DIRECT #DIRECT網站
+  - RULE-SET,ChinaMaxNoIP,DIRECT #DIRECT網站
 #⚠️⚠️⚠️⚠️⚠️⚠️代理⚠️⚠️⚠️⚠️⚠️⚠️#
   - DOMAIN-KEYWORD,linghunyun.com,配置更新,no-resolve #www.linghunyun.com(靈魂雲機場)
   - DOMAIN-KEYWORD,okztwo.com,配置更新,no-resolve #www.okztwo.com(OKZTWO機場)
@@ -749,26 +749,26 @@ rules:
   - DOMAIN-KEYWORD,raw.githubusercontent.com,配置更新,no-resolve #GitHub源碼鏈接
   #- RULE-SET,GitHub,國際媒體,no-resolve #www.GitHub.com
   - DOMAIN-KEYWORD,unpkg.com,配置更新,no-resolve #CDN鏡像檔案庫
-  - DOMAIN-SUFFIX,zh.savefrom.net,國際媒體 #zh.savefrom.net(視頻下載網)
-  - DOMAIN-SUFFIX,snapvid.net,國際媒體 #snapvid.net(視頻下載網)
+  #- DOMAIN-SUFFIX,zh.savefrom.net,國際媒體 #zh.savefrom.net(視頻下載網)
+  #- DOMAIN-SUFFIX,snapvid.net,國際媒體 #snapvid.net(視頻下載網)
   - DOMAIN-KEYWORD,discomax.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
   - DOMAIN-KEYWORD,media.max.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
   - DOMAIN-KEYWORD,max.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
   - RULE-SET,HBO,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
   #- RULE-SET,香港電臺,國際媒體,no-resolve #www.rthk.hk(香港電臺)
-  - DOMAIN-KEYWORD,akamaized,國際媒體,no-resol #www.rthk.hk(香港電臺)
-  - DOMAIN-SUFFIX,themoviedb.org,國際媒體,no-resolve #www.themoviedb.org(TMDB)
-  - DOMAIN-SUFFIX,tmdb.org,國際媒體,no-resolve #www.themoviedb.org(TMDB)
-  - DOMAIN-SUFFIX,image.tmdb.org,國際媒體,no-resolve #www.themoviedb.org(TMDB)
-  - DOMAIN-KEYWORD,xvideos,國際媒體,no-resolve #www.xvideos.com
-  - DOMAIN-KEYWORD,xnxx,國際媒體,no-resolve #www.xnxx.com
-  - DOMAIN-KEYWORD,pornhub,國際媒體,no-resolve #www.pornhub.com
-  - DOMAIN-KEYWORD,xhamster,國際媒體,no-resolve #www.xhamster.com
-  - DOMAIN-KEYWORD,stripchat,國際媒體,no-resolve #www.stripchat.com
+  #- DOMAIN-KEYWORD,akamaized,國際媒體,no-resol #www.rthk.hk(香港電臺)
+  #- DOMAIN-SUFFIX,themoviedb.org,國際媒體,no-resolve #www.themoviedb.org(TMDB)
+  #- DOMAIN-SUFFIX,tmdb.org,國際媒體,no-resolve #www.themoviedb.org(TMDB)
+  #- DOMAIN-SUFFIX,image.tmdb.org,國際媒體,no-resolve #www.themoviedb.org(TMDB)
+  #- DOMAIN-KEYWORD,xvideos,國際媒體,no-resolve #www.xvideos.com
+  #- DOMAIN-KEYWORD,xnxx,國際媒體,no-resolve #www.xnxx.com
+  #- DOMAIN-KEYWORD,pornhub,國際媒體,no-resolve #www.pornhub.com
+  #- DOMAIN-KEYWORD,xhamster,國際媒體,no-resolve #www.xhamster.com
+  #- DOMAIN-KEYWORD,stripchat,國際媒體,no-resolve #www.stripchat.com
   - RULE-SET,TikTok,國際抖音,no-resolve #TikTok
   - RULE-SET,電報,飛機電報,no-resolve #Telegram
   #- RULE-SET,Reddit,國際媒體,no-resolve #www.reddit.com(Reddit)
-  - DOMAIN-KEYWORD,redd,國際媒體,no-resolve #www.reddit.com(Reddit)
+  #- DOMAIN-KEYWORD,redd,國際媒體,no-resolve #www.reddit.com(Reddit)
   #- RULE-SET,推特,國際媒體,no-resolve #Twitter
   #- RULE-SET,IG,國際媒體,no-resolve #Instagram
   #- RULE-SET,臉書,國際媒體,no-resolve #FaceBook
