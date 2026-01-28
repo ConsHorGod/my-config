@@ -788,6 +788,6 @@ rules:
   #- RULE-SET,tld-not-cn,國際媒體,no-resolve #非中国大陆使用的顶级域名列表
   #- RULE-SET,Proxy,國際媒體,no-resolve #代理域名列表
   - RULE-SET,LAN,DIRECT #局域网
-  # - RULE-SET,CNIP,DIRECT #中国IP
-  - GEOIP,CN,DIRECT #中国IP
+  - RULE-SET,CNIP,DIRECT #中国IP
+  # - GEOIP,CN,DIRECT #中国IP
   - MATCH,最終出站,dns-failed
