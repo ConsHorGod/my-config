@@ -15,11 +15,17 @@ dns:  #DNS解析
     - 119.29.29.29  #騰訊雲
   enhanced-mode: fake-ip  #假ip
   fake-ip-range: 198.18.0.1/16  #假ip地址範圍
-  fake-ip-filter-mode: whitelist  #允許使用假ip模式，rule_规则模式，whitelist_白名單，blacklist_黑名單
-  respect-rules: false  #遵守規則，true_是，false_否
+  fake-ip-filter-mode: rule  #允許使用假ip模式，rule_规则模式，whitelist_白名單，blacklist_黑名單
+  respect-rules: true  #遵守規則，true_是，false_否
   prefet-h3: false
   fake-ip-filter:  #允許的列表如下
-    - 'geosite: gfw'
+    - DOMAIN-KEYWORD,dsmynas.com,real-ip
+    - DOMAIN-KEYWORD,jlxa.wicp.net,real-ip
+    - DOMAIN-KEYWORD,asuscomm.com,real-ip
+    - DOMAIN-KEYWORD,apple,real-ip
+    - DOMAIN-KEYWORD,icould,real-ip
+    - DOMAIN-KEYWORD,itunes,real-ip
+    - RULE-SET,LAN,real-ip
   proxy-server-nameserver:
     #- 119.29.29.29  #騰訊雲
     - https://doh.pub/dns-query  #騰訊雲加密
