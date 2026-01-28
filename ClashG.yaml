@@ -743,8 +743,6 @@ rules:
   - DOMAIN-KEYWORD,www.bilibili.com,嗶哩嗶哩,no-resolve #www.bilibili.com
   - RULE-SET,嗶哩嗶哩Intl,嗶哩嗶哩,no-resolve #www.bilibili.com
   - RULE-SET,嗶哩嗶哩,嗶哩嗶哩,no-resolve #www.bilibili.com
-  - RULE-SET,ASN-China,DIRECT #中國ASN
-  - RULE-SET,ChinaMaxNoIP,DIRECT #中國網站
   - DOMAIN-KEYWORD,linghunyun.com,配置更新,no-resolve #www.linghunyun.com(靈魂雲機場)
   - DOMAIN-KEYWORD,okztwo.com,配置更新,no-resolve #www.okztwo.com(OKZTWO機場)
   - DOMAIN-KEYWORD,feiniaoyun,配置更新,no-resolve #www.feiniaoyun.xyz(飛鳥雲)
@@ -792,6 +790,8 @@ rules:
   #- RULE-SET,GFWList,國際媒體,no-resolve #GFWList 域名列表
   #- RULE-SET,tld-not-cn,國際媒體,no-resolve #非中國大陸使用的頂級域名列表
   #- RULE-SET,Proxy,國際媒體,no-resolve #代理域名列表
+  - RULE-SET,ASN-China,DIRECT #中國ASN
+  - RULE-SET,ChinaMaxNoIP,DIRECT #中國網站
   - RULE-SET,LAN,DIRECT #局域網
   - RULE-SET,CNIP,DIRECT #中國IP
   # - GEOIP,CN,DIRECT #中國IP
