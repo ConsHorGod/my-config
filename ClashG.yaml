@@ -327,7 +327,7 @@ proxy-providers:
   "FNY":
     type: http
     path: ./provide/FNY.yml
-    url: https://x3.344211.cc/api/v1/client/subscribe?token=0e79462ce42ab0413ed58d454329934e
+    url: https://x1.332244.icu/api/v1/client/subscribe?token=0e79462ce42ab0413ed58d454329934e
     interval: 86400
     filter: '香港'
     health-check:
