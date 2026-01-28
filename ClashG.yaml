@@ -43,9 +43,9 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
     proxies:  #代理選項
-      - DIRECT
       - 國際媒體
       - FNY
+      - DIRECT
 #-----------------------------------------------------------------------------------------------------------
   - name: 國際互聯
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png"  #策略組圖標
