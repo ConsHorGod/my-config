@@ -395,6 +395,34 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
+  網絡時間同步:
+    type: http
+    behavior: classical
+    path: ./ruleset/NTPService.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/NTPService/NTPService.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
+  CNIP:
+    type: http
+    behavior: ipcidr
+    path: ./ruleset/中國IP.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaIPs/ChinaIPs_IP.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
+  ChinaMaxNoIP:
+    type: http
+    behavior: classical
+    path: ./ruleset/中國域名.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMaxNoIP/ChinaMaxNoIP_Classical.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
+  ASN-China:
+    type: http
+    behavior: classical
+    path: ./ruleset/ASN.China.yaml
+    url: "https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.yaml"
+    interval: 21600  
+#-----------------------------------------------------------------------------------------------------------    
   #直连APP:
   #  type: http
   #  behavior: domain
@@ -408,35 +436,6 @@ rule-providers:
   #  path: ./ruleset/Proxy.yaml
   #  url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy_Classical.yaml"
   #  interval: 21600
-#-----------------------------------------------------------------------------------------------------------
-  網絡時間同步:
-    type: http
-    behavior: classical
-    path: ./ruleset/NTPService.yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/NTPService/NTPService.yaml"
-    interval: 21600
-
-#-----------------------------------------------------------------------------------------------------------
-  #CNIP:
-  #  type: http
-  #  behavior: ipcidr
-  #  path: ./ruleset/中國IP.yaml
-  #  url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaIPs/ChinaIPs_IP.yaml"
-  #  interval: 21600
-#-----------------------------------------------------------------------------------------------------------
-  #ChinaMaxNoIP:
-  #  type: http
-  #  behavior: classical
-  #  path: ./ruleset/中國域名.yaml
-  #  url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMaxNoIP/ChinaMaxNoIP_Classical.yaml"
-  #  interval: 21600
-#-----------------------------------------------------------------------------------------------------------
-  ASN-China:
-    type: http
-    behavior: classical
-    path: ./ruleset/ASN.China.yaml
-    url: "https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.yaml"
-    interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   #tld-not-cn:
   #  type: http
