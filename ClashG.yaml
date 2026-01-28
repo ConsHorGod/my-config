@@ -699,7 +699,7 @@ rule-providers:
   #  interval: 21600
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️分就規則⚠️⚠️⚠️⚠️⚠️⚠️#
-rules:
+rules: 
   - DOMAIN,msmp.abchina.com.cn,REJECT #排除中國農業銀行檢測
   - RULE-SET,網絡時間同步,DIRECT #時間同步服務器
   - RULE-SET,AD-Block,廣告過濾 #anti-AD去廣告
@@ -711,7 +711,7 @@ rules:
   - DOMAIN-KEYWORD,dsmynas.com,DIRECT #群暉DDNS
   - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT #花生殼DDNS
   - DOMAIN-KEYWORD,asuscomm.com,DIRECT #華碩DDNS
-  - DOMAIN-KEYWORD,x3.344211.cc,DIRECT, #www.feiniaoyun.xyz(飛鳥雲)
+  - DOMAIN-KEYWORD,x3.344211.cc,DIRECT #www.feiniaoyun.xyz(飛鳥雲)
   - DOMAIN-KEYWORD,xmrth.one,DIRECT #www.xmrth.com(XMRTH機場)
   - DOMAIN-KEYWORD,deainx,DIRECT #www.dranime.net(飄雪)
   - DOMAIN-KEYWORD,dranime,DIRECT #www.dranime.net(飄雪)
