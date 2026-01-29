@@ -773,12 +773,12 @@ rules:
   - RULE-SET,油管音樂,油管音樂,no-resolve #www.music.youtube.com
   - RULE-SET,油管,國際媒體,no-resolve #www.youtube.com
   - RULE-SET,谷歌,國際媒體,no-resolve #www.google.com
-  - RULE-SET,外國流媒體,國際媒體,no-resolve #國外流媒體平臺
   - RULE-SET,蘋果代理,國際媒體,no-resolve
   - DOMAIN-KEYWORD,apple,DIRECT #www.apple.com(蘋果)
   - DOMAIN-KEYWORD,icloud,DIRECT #www.apple.com(蘋果)
   - DOMAIN-KEYWORD,itunes,DIRECT #www.apple.com(蘋果)
   - RULE-SET,蘋果,DIRECT #www.apple.com(蘋果)
+  - RULE-SET,外國流媒體,國際媒體,no-resolve #國外流媒體平臺
   - RULE-SET,GFWList,國際媒體,no-resolve #GFWList 域名列表
   - RULE-SET,tld-not-cn,國際媒體,no-resolve #非中國大陸使用的頂級域名列表
   - RULE-SET,Proxy,國際媒體,no-resolve #代理域名列表
