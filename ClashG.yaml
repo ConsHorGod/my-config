@@ -727,7 +727,7 @@ rules:
   - DOMAIN-KEYWORD,apple,DIRECT #www.apple.com(蘋果)
   - DOMAIN-KEYWORD,icould,DIRECT #www.apple.com(蘋果)
   - DOMAIN-KEYWORD,itunes,DIRECT #www.apple.com(蘋果)
-  #- RULE-SET,蘋果,DIRECT #www.apple.com(蘋果)
+  - RULE-SET,蘋果,DIRECT #www.apple.com(蘋果)
   #- RULE-SET,百度,DIRECT #www.baidu.com(百度)
   #- RULE-SET,迅雷,DIRECT #迅雷
   #- RULE-SET,直连APP,DIRECT #直連應用
