@@ -725,13 +725,9 @@ rules:
   - DOMAIN-KEYWORD,doh.pub,DIRECT #騰訊加密DNS服務器
   - DOMAIN-KEYWORD,dns.alidns.com,DIRECT #阿里加密DNS服務器
   - DOMAIN,msmp.abchina.com.cn,REJECT #排除中國農業銀行檢測
+  - RULE-SET,網絡時間同步,DIRECT #時間同步服務器
   - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT #CDN源碼鏈接
   - DOMAIN-KEYWORD,raw.githubusercontent.com,配置更新,no-resolve #GitHub源碼鏈接
-  - RULE-SET,網絡時間同步,DIRECT #時間同步服務器
-  - DOMAIN-KEYWORD,apple,DIRECT #www.apple.com(蘋果)
-  - DOMAIN-KEYWORD,icloud,DIRECT #www.apple.com(蘋果)
-  - DOMAIN-KEYWORD,itunes,DIRECT #www.apple.com(蘋果)
-  - RULE-SET,蘋果,DIRECT #www.apple.com(蘋果)
   - DOMAIN-KEYWORD,dsmynas,DIRECT #群暉DDNS
   - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT #花生殼DDNS
   - DOMAIN-KEYWORD,asuscomm,DIRECT #華碩DDNS
@@ -778,7 +774,11 @@ rules:
   - RULE-SET,油管,國際媒體,no-resolve #www.youtube.com
   - RULE-SET,谷歌,國際媒體,no-resolve #www.google.com
   - RULE-SET,外國流媒體,國際媒體,no-resolve #國外流媒體平臺
-  #- RULE-SET,蘋果代理,國際媒體,no-resolve
+  - RULE-SET,蘋果代理,國際媒體,no-resolve
+  - DOMAIN-KEYWORD,apple,DIRECT #www.apple.com(蘋果)
+  - DOMAIN-KEYWORD,icloud,DIRECT #www.apple.com(蘋果)
+  - DOMAIN-KEYWORD,itunes,DIRECT #www.apple.com(蘋果)
+  - RULE-SET,蘋果,DIRECT #www.apple.com(蘋果)
   - RULE-SET,GFWList,國際媒體,no-resolve #GFWList 域名列表
   - RULE-SET,tld-not-cn,國際媒體,no-resolve #非中國大陸使用的頂級域名列表
   - RULE-SET,Proxy,國際媒體,no-resolve #代理域名列表
