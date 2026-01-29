@@ -25,6 +25,8 @@ dns:  #DNS解析
     - DOMAIN-KEYWORD,apple,real-ip
     - DOMAIN-KEYWORD,icould,real-ip
     - DOMAIN-KEYWORD,itunes,real-ip
+    - RULE-SET,ChinaMaxNoIP,real-ip
+    - RULE-SET,ASN.China,real-ip
     - RULE-SET,LAN,real-ip
   proxy-server-nameserver:
     #- 119.29.29.29  #騰訊雲
@@ -416,7 +418,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMaxNoIP/ChinaMaxNoIP_Domain.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  ASN-China:
+  ASN.China:
     type: http
     behavior: classical
     path: ./ruleset/ASN.China.yaml
@@ -790,7 +792,7 @@ rules:
   #- RULE-SET,GFWList,國際媒體,no-resolve #GFWList 域名列表
   #- RULE-SET,tld-not-cn,國際媒體,no-resolve #非中國大陸使用的頂級域名列表
   #- RULE-SET,Proxy,國際媒體,no-resolve #代理域名列表
-  - RULE-SET,ASN-China,DIRECT #中國ASN
+  - RULE-SET,ASN.China,DIRECT #中國ASN
   - RULE-SET,ChinaMaxNoIP,DIRECT #中國網站
   - RULE-SET,LAN,DIRECT #局域網
   - RULE-SET,CNIP,DIRECT #中國IP
