@@ -495,12 +495,12 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Copilot/Copilot.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  #蘋果:
-  #  type: http
-  #  behavior: classical
-  #  path: ./ruleset/Apple_Classical.yaml
-  #  url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple_Classical.yaml"
-  #  interval: 21600
+  蘋果:
+    type: http
+    behavior: classical
+    path: ./ruleset/Apple_Classical.yaml
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple_Classical.yaml"
+    interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   #蘋果代理:
   #  type: http
