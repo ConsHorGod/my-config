@@ -803,7 +803,7 @@ rules:
   - RULE-SET,油管,國際媒體,no-resolve #www.youtube.com
   - RULE-SET,谷歌,國際媒體,no-resolve #www.google.com
   - RULE-SET,外國流媒體,國際媒體,no-resolve #國外流媒體平臺
-  - RULE-SET,蘋果代理,國際媒體,no-resolve
+  #- RULE-SET,蘋果代理,國際媒體,no-resolve
   - RULE-SET,GFWList,國際媒體,no-resolve #GFWList 域名列表
   - RULE-SET,tld-not-cn,國際媒體,no-resolve #非中國大陸使用的頂級域名列表
   - RULE-SET,Proxy,國際媒體,no-resolve #代理域名列表
@@ -811,5 +811,5 @@ rules:
   - RULE-SET,ChinaMaxNoIP,DIRECT #中國網站
   - RULE-SET,LAN,DIRECT #局域網
   - RULE-SET,CNIP,DIRECT #中國IP
-  # - GEOIP,CN,DIRECT #中國IP
+  #- GEOIP,CN,DIRECT #中國IP
   - MATCH,最終出站,dns-failed
