@@ -722,48 +722,23 @@ rule-providers:
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️分就規則⚠️⚠️⚠️⚠️⚠️⚠️#
 rules: 
-  - DOMAIN,msmp.abchina.com.cn,REJECT #排除中國農業銀行檢測
-  - RULE-SET,網絡時間同步,DIRECT #時間同步服務器
-  - RULE-SET,AD-Block,廣告過濾 #anti-AD去廣告
   - DOMAIN-KEYWORD,doh.pub,DIRECT #騰訊加密DNS服務器
   - DOMAIN-KEYWORD,dns.alidns.com,DIRECT #阿里加密DNS服務器
+  - DOMAIN,msmp.abchina.com.cn,REJECT #排除中國農業銀行檢測
   - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT #CDN源碼鏈接
-  - DOMAIN-KEYWORD,xn--ngstr-lra8j,DIRECT #www.play.google.com(GooglePlay商店)
-  - DOMAIN-KEYWORD,googleapis.cn,DIRECT #www.play.google.com(GooglePlay商店)
-  - DOMAIN-KEYWORD,dsmynas,DIRECT #群暉DDNS
-  - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT #花生殼DDNS
-  - DOMAIN-KEYWORD,asuscomm,DIRECT #華碩DDNS
-  - DOMAIN-KEYWORD,x3.344211.cc,DIRECT #www.feiniaoyun.xyz(飛鳥雲)
-  - DOMAIN-KEYWORD,xmrth.one,DIRECT #www.xmrth.com(XMRTH機場)
-  - DOMAIN-KEYWORD,deainx,DIRECT #www.dranime.net(飄雪)
-  - DOMAIN-KEYWORD,dranime,DIRECT #www.dranime.net(飄雪)
-  - DOMAIN-KEYWORD,dotmu,DIRECT #www.dranime.net(飄雪)
-  - DOMAIN-KEYWORD,gomicx,DIRECT #www.gomicx.net(粵漫社)
+  - DOMAIN-KEYWORD,raw.githubusercontent.com,配置更新,no-resolve #GitHub源碼鏈接
+  - RULE-SET,網絡時間同步,DIRECT #時間同步服務器
   - DOMAIN-KEYWORD,apple,DIRECT #www.apple.com(蘋果)
   - DOMAIN-KEYWORD,icloud,DIRECT #www.apple.com(蘋果)
   - DOMAIN-KEYWORD,itunes,DIRECT #www.apple.com(蘋果)
   - RULE-SET,蘋果,DIRECT #www.apple.com(蘋果)
-  - RULE-SET,百度,DIRECT #www.baidu.com(百度)
-  - RULE-SET,迅雷,DIRECT #迅雷
-  - RULE-SET,直连APP,DIRECT #直連應用
-  - RULE-SET,群暉,DIRECT #群暉
-  - RULE-SET,美團,DIRECT #美團
-  - RULE-SET,網易,DIRECT #www.163.net(網易)
-  - RULE-SET,抖音,DIRECT #抖音
-  - RULE-SET,微信,DIRECT #微信
-  - RULE-SET,騰訊,DIRECT #騰訊
-  - RULE-SET,小米,DIRECT #小米
-  - RULE-SET,支付寶,DIRECT #支付寶
-  - RULE-SET,阿里巴巴,DIRECT #阿里巴巴
-  - RULE-SET,京東,DIRECT #京東
-  - RULE-SET,中國農業銀行,DIRECT #中國農業銀行
-  - DOMAIN-KEYWORD,bilibili,嗶哩嗶哩,no-resolve #www.bilibili.com
-  - RULE-SET,嗶哩嗶哩Intl,嗶哩嗶哩,no-resolve #www.bilibili.com
-  - RULE-SET,嗶哩嗶哩,嗶哩嗶哩,no-resolve #www.bilibili.com
+  - DOMAIN-KEYWORD,dsmynas,DIRECT #群暉DDNS
+  - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT #花生殼DDNS
+  - DOMAIN-KEYWORD,asuscomm,DIRECT #華碩DDNS
+  - RULE-SET,AD-Block,廣告過濾 #anti-AD去廣告
   - DOMAIN-KEYWORD,linghunyun.com,配置更新,no-resolve #www.linghunyun.com(靈魂雲機場)
   - DOMAIN-KEYWORD,okztwo.com,配置更新,no-resolve #www.okztwo.com(OKZTWO機場)
   - DOMAIN-KEYWORD,feiniaoyun,配置更新,no-resolve #www.feiniaoyun.xyz(飛鳥雲)
-  - DOMAIN-KEYWORD,raw.githubusercontent.com,配置更新,no-resolve #GitHub源碼鏈接
   - DOMAIN-KEYWORD,unpkg.com,配置更新,no-resolve #CDN鏡像檔案庫
   - RULE-SET,GitHub,國際媒體,no-resolve #www.GitHub.com
   - DOMAIN-SUFFIX,zh.savefrom.net,國際媒體 #zh.savefrom.net(視頻下載網)
@@ -807,6 +782,31 @@ rules:
   - RULE-SET,GFWList,國際媒體,no-resolve #GFWList 域名列表
   - RULE-SET,tld-not-cn,國際媒體,no-resolve #非中國大陸使用的頂級域名列表
   - RULE-SET,Proxy,國際媒體,no-resolve #代理域名列表
+  - DOMAIN-KEYWORD,xn--ngstr-lra8j,DIRECT #www.play.google.com(GooglePlay商店)
+  - DOMAIN-KEYWORD,googleapis.cn,DIRECT #www.play.google.com(GooglePlay商店)
+  - DOMAIN-KEYWORD,x3.344211.cc,DIRECT #www.feiniaoyun.xyz(飛鳥雲)
+  - DOMAIN-KEYWORD,xmrth.one,DIRECT #www.xmrth.com(XMRTH機場)
+  - DOMAIN-KEYWORD,deainx,DIRECT #www.dranime.net(飄雪)
+  - DOMAIN-KEYWORD,dranime,DIRECT #www.dranime.net(飄雪)
+  - DOMAIN-KEYWORD,dotmu,DIRECT #www.dranime.net(飄雪)
+  - DOMAIN-KEYWORD,gomicx,DIRECT #www.gomicx.net(粵漫社)
+  - RULE-SET,百度,DIRECT #www.baidu.com(百度)
+  - RULE-SET,迅雷,DIRECT #迅雷
+  - RULE-SET,直连APP,DIRECT #直連應用
+  - RULE-SET,群暉,DIRECT #群暉
+  - RULE-SET,美團,DIRECT #美團
+  - RULE-SET,網易,DIRECT #www.163.net(網易)
+  - RULE-SET,抖音,DIRECT #抖音
+  - RULE-SET,微信,DIRECT #微信
+  - RULE-SET,騰訊,DIRECT #騰訊
+  - RULE-SET,小米,DIRECT #小米
+  - RULE-SET,支付寶,DIRECT #支付寶
+  - RULE-SET,阿里巴巴,DIRECT #阿里巴巴
+  - RULE-SET,京東,DIRECT #京東
+  - RULE-SET,中國農業銀行,DIRECT #中國農業銀行
+  - DOMAIN-KEYWORD,bilibili,嗶哩嗶哩,no-resolve #www.bilibili.com
+  - RULE-SET,嗶哩嗶哩Intl,嗶哩嗶哩,no-resolve #www.bilibili.com
+  - RULE-SET,嗶哩嗶哩,嗶哩嗶哩,no-resolve #www.bilibili.com
   - RULE-SET,ASN.China,DIRECT #中國ASN
   - RULE-SET,ChinaMaxNoIP,DIRECT #中國網站
   - RULE-SET,LAN,DIRECT #局域網
