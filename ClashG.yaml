@@ -19,11 +19,11 @@ dns:  #DNS解析
   respect-rules: true  #遵守規則，true_是，false_否
   prefet-h3: false
   fake-ip-filter:  #允許的列表如下
-    - DOMAIN-KEYWORD,dsmynas.com,real-ip
+    - DOMAIN-KEYWORD,dsmynas,real-ip
     - DOMAIN-KEYWORD,jlxa.wicp.net,real-ip
-    - DOMAIN-KEYWORD,asuscomm.com,real-ip
+    - DOMAIN-KEYWORD,asuscomm,real-ip
     - DOMAIN-KEYWORD,apple,real-ip
-    - DOMAIN-KEYWORD,icould,real-ip
+    - DOMAIN-KEYWORD,icloud,real-ip
     - DOMAIN-KEYWORD,itunes,real-ip
     - RULE-SET,ChinaMaxNoIP,real-ip
     - RULE-SET,ASN.China,real-ip
@@ -404,12 +404,12 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/NTPService/NTPService.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  CNIP:
-    type: http
-    behavior: ipcidr
-    path: ./ruleset/中國IP.yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaIPs/ChinaIPs_IP.yaml"
-    interval: 21600
+  #CNIP:
+  #  type: http
+  #  behavior: ipcidr
+  #  path: ./ruleset/中國IP.yaml
+  #  url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaIPs/ChinaIPs_IP.yaml"
+  #  interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   ChinaMaxNoIP:
     type: http
@@ -495,12 +495,12 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Copilot/Copilot.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  蘋果:
-    type: http
-    behavior: classical
-    path: ./ruleset/Apple_Classical.yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple_Classical.yaml"
-    interval: 21600
+  #蘋果:
+  #  type: http
+  #  behavior: classical
+  #  path: ./ruleset/Apple_Classical.yaml
+  #  url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple_Classical.yaml"
+  #  interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   #蘋果代理:
   #  type: http
@@ -715,9 +715,9 @@ rules:
   - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT #CDN源碼鏈接
   - DOMAIN-KEYWORD,xn--ngstr-lra8j,DIRECT #www.play.google.com(GooglePlay商店)
   - DOMAIN-KEYWORD,googleapis.cn,DIRECT #www.play.google.com(GooglePlay商店)
-  - DOMAIN-KEYWORD,dsmynas.com,DIRECT #群暉DDNS
+  - DOMAIN-KEYWORD,dsmynas,DIRECT #群暉DDNS
   - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT #花生殼DDNS
-  - DOMAIN-KEYWORD,asuscomm.com,DIRECT #華碩DDNS
+  - DOMAIN-KEYWORD,asuscomm,DIRECT #華碩DDNS
   - DOMAIN-KEYWORD,x3.344211.cc,DIRECT #www.feiniaoyun.xyz(飛鳥雲)
   - DOMAIN-KEYWORD,xmrth.one,DIRECT #www.xmrth.com(XMRTH機場)
   - DOMAIN-KEYWORD,deainx,DIRECT #www.dranime.net(飄雪)
@@ -725,9 +725,9 @@ rules:
   - DOMAIN-KEYWORD,dotmu,DIRECT #www.dranime.net(飄雪)
   - DOMAIN-KEYWORD,gomicx,DIRECT #www.gomicx.net(粵漫社)
   - DOMAIN-KEYWORD,apple,DIRECT #www.apple.com(蘋果)
-  - DOMAIN-KEYWORD,icould,DIRECT #www.apple.com(蘋果)
+  - DOMAIN-KEYWORD,icloud,DIRECT #www.apple.com(蘋果)
   - DOMAIN-KEYWORD,itunes,DIRECT #www.apple.com(蘋果)
-  - RULE-SET,蘋果,DIRECT #www.apple.com(蘋果)
+  #- RULE-SET,蘋果,DIRECT #www.apple.com(蘋果)
   #- RULE-SET,百度,DIRECT #www.baidu.com(百度)
   #- RULE-SET,迅雷,DIRECT #迅雷
   #- RULE-SET,直连APP,DIRECT #直連應用
@@ -742,7 +742,7 @@ rules:
   #- RULE-SET,阿里巴巴,DIRECT #阿里巴巴
   #- RULE-SET,京東,DIRECT #京東
   #- RULE-SET,中國農業銀行,DIRECT #中國農業銀行
-  - DOMAIN-KEYWORD,www.bilibili.com,嗶哩嗶哩,no-resolve #www.bilibili.com
+  - DOMAIN-KEYWORD,bilibili,嗶哩嗶哩,no-resolve #www.bilibili.com
   - RULE-SET,嗶哩嗶哩Intl,嗶哩嗶哩,no-resolve #www.bilibili.com
   - RULE-SET,嗶哩嗶哩,嗶哩嗶哩,no-resolve #www.bilibili.com
   - DOMAIN-KEYWORD,linghunyun.com,配置更新,no-resolve #www.linghunyun.com(靈魂雲機場)
@@ -795,6 +795,6 @@ rules:
   - RULE-SET,ASN.China,DIRECT #中國ASN
   - RULE-SET,ChinaMaxNoIP,DIRECT #中國網站
   - RULE-SET,LAN,DIRECT #局域網
-  - RULE-SET,CNIP,DIRECT #中國IP
+  #- RULE-SET,CNIP,DIRECT #中國IP
   # - GEOIP,CN,DIRECT #中國IP
   - MATCH,最終出站,dns-failed
