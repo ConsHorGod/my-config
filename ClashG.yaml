@@ -737,8 +737,8 @@ rules:
   - DOMAIN-KEYWORD,feiniaoyun,配置更新,no-resolve #www.feiniaoyun.xyz(飛鳥雲)
   - DOMAIN-KEYWORD,unpkg.com,配置更新,no-resolve #CDN鏡像檔案庫
   - RULE-SET,GitHub,國際媒體,no-resolve #www.GitHub.com
-  - DOMAIN-SUFFIX,zh.savefrom.net,國際媒體 #zh.savefrom.net(視頻下載網)
-  - DOMAIN-SUFFIX,snapvid.net,國際媒體 #snapvid.net(視頻下載網)
+  - DOMAIN-SUFFIX,zh.savefrom.net,國際媒體,no-resolve #zh.savefrom.net(視頻下載網)
+  - DOMAIN-SUFFIX,snapvid.net,國際媒體,no-resolve #snapvid.net(視頻下載網)
   - DOMAIN-KEYWORD,discomax.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
   - DOMAIN-KEYWORD,media.max.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
   - DOMAIN-KEYWORD,max.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
