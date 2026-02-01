@@ -693,7 +693,6 @@ rules:
   - DOMAIN-KEYWORD,doh.pub,DIRECT #騰訊加密DNS服務器
   - DOMAIN-KEYWORD,dns.alidns.com,DIRECT #阿里加密DNS服務器
   - DOMAIN,msmp.abchina.com.cn,REJECT #排除中國農業銀行檢測
-  - RULE-SET,網絡時間同步,DIRECT #時間同步服務器
   - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT #CDN源碼鏈接
   - DOMAIN-KEYWORD,raw.githubusercontent.com,配置更新,no-resolve #GitHub源碼鏈接
   - DOMAIN-KEYWORD,dsmynas,DIRECT #群暉DDNS
