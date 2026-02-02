@@ -406,7 +406,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./ruleset/ASN.China.yaml
-    url: "https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.yaml"
+    url: "https://raw.githubusercontent.com/missuo/ASN-China/main/ASN.China.list"
     interval: 21600  
 #-----------------------------------------------------------------------------------------------------------    
   直连APP:
