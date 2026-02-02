@@ -539,6 +539,10 @@ rules:
   - DOMAIN-KEYWORD,dranime,DIRECT #www.dranime.net(飄雪)
   - DOMAIN-KEYWORD,dotmu,DIRECT #www.dranime.net(飄雪)
   - DOMAIN-KEYWORD,gomicx,DIRECT #www.gomicx.net(粵漫社)
+  - DOMAIN-KEYWORD,apple,DIRECT
+  - DOMAIN-KEYWORD,icloud,DIRECT
+  - DOMAIN-KEYWORD,itunes,DIRECT
+  - RULE-SET,蘋果,DIRECT #www.apple.com(蘋果)
   - DOMAIN-KEYWORD,bilibili,嗶哩嗶哩,no-resolve #www.bilibili.com
   - RULE-SET,嗶哩嗶哩Intl,嗶哩嗶哩,no-resolve #www.bilibili.com
   - RULE-SET,嗶哩嗶哩,嗶哩嗶哩,no-resolve #www.bilibili.com
@@ -568,7 +572,6 @@ rules:
   - PROCESS-NAME,com.google.android.apps.youtube.music,油管音樂,no-resolve #www.music.youtube.com
   - DOMAIN-SUFFIX,youtube-music.l.google.com,油管音樂,no-resolve #www.music.youtube.com
   - RULE-SET,油管音樂,油管音樂,no-resolve #www.music.youtube.com
-  - RULE-SET,蘋果,DIRECT #www.apple.com(蘋果)
   - RULE-SET,GFWList,國際媒體,no-resolve #GFWList 域名列表
   - RULE-SET,tld-not-cn,國際媒體,no-resolve #非中國大陸使用的頂級域名列表
   - RULE-SET,Proxy,國際媒體,no-resolve #代理域名列表
