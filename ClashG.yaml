@@ -529,7 +529,7 @@ rules:
   - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT #CDN源碼鏈接
   - DOMAIN-KEYWORD,raw.githubusercontent.com,配置更新,no-resolve #GitHub源碼鏈接
   - DOMAIN-KEYWORD,ads2301,DIRECT #群暉DDNS
-  - RULE-SET,private,DIRECT  #私有网络专用域名列表
+  #- RULE-SET,private,DIRECT  #私有网络专用域名列表
   - RULE-SET,AD-Block,廣告過濾 #anti-AD去廣告
   - DOMAIN-KEYWORD,xn--ngstr-lra8j,DIRECT #www.play.google.com(GooglePlay商店)
   - DOMAIN-KEYWORD,googleapis.cn,DIRECT #www.play.google.com(GooglePlay商店)
