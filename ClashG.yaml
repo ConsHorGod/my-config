@@ -553,7 +553,7 @@ rules:
   - DOMAIN-KEYWORD,discomax.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
   - DOMAIN-KEYWORD,media.max.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
   - DOMAIN-KEYWORD,max.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
-  - RULE-SET,HBO,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
+  - RULE-SET,HBOMAX,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
   - RULE-SET,TikTok,國際抖音,no-resolve #TikTok
   - RULE-SET,Telegram,飛機電報,no-resolve #Telegram
   - RULE-SET,Copilot,人工智能,no-resolve #微軟AI
