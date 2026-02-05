@@ -541,6 +541,8 @@ rules:
   - DOMAIN-KEYWORD,bilibili,嗶哩嗶哩 #www.bilibili.com
   - RULE-SET,BiliBili-Intl,嗶哩嗶哩 #www.bilibili.com
   - RULE-SET,BiliBili,嗶哩嗶哩 #www.bilibili.com
+  - DOMAIN-KEYWORD,*.cn,DIRECT
+  - DOMAIN-KEYWORD,*.cn.org,DIRECT
   - RULE-SET,ASN.China,DIRECT #中國ASN
   - RULE-SET,Direct,DIRECT #直连域名列表
   - RULE-SET,CNIP,DIRECT,no-resolve #中国大陆IP地址列表
