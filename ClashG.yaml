@@ -15,12 +15,58 @@ dns:
     - 119.29.29.29
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16 
-  fake-ip-filter-mode: whitelist
+  fake-ip-filter-mode: rule
+  respect-rules: true
   fake-ip-filter:
-    - 'geosite: gfw'
+    - DOMAIN-KEYWORD,doh.pub,real-ip
+    - DOMAIN-KEYWORD,dns.alidns.com,real-ip
+    - DOMAIN-KEYWORD,ads2301,real-ip
+    - RULE-SET,private,real-ip
+    - DOMAIN-KEYWORD,apple,real-ip
+    - DOMAIN-KEYWORD,icloud,real-ip
+    - DOMAIN-KEYWORD,itunes,real-ip
+    - RULE-SET,Apple,real-ip
+    - DOMAIN-KEYWORD,.cn,real-ip
+    - DOMAIN-KEYWORD,gov.cn,real-ip
+    - RULE-SET,ASN.China,real-ip
+    - RULE-SET,Direct,real-ip
+    - GEOSITE,cn,real-ip
+    - DOMAIN-KEYWORD,bilibili,fake-ip
+    - RULE-SET,BiliBili-Intl,fake-ip
+    - RULE-SET,BiliBili,fake-ip
+    - DOMAIN-KEYWORD,linghunyun.com,fake-ip
+    - DOMAIN-KEYWORD,okztwo.com,fake-ip
+    - DOMAIN-KEYWORD,feiniaoyun,fake-ip
+    - DOMAIN-KEYWORD,unpkg.com,fake-ip
+    - DOMAIN-SUFFIX,zh.savefrom.net,fake-ip
+    - DOMAIN-SUFFIX,snapvid.net,fake-ip
+    - DOMAIN-KEYWORD,discomax.com,fake-ip
+    - DOMAIN-KEYWORD,media.max.com,fake-ip
+    - DOMAIN-KEYWORD,max.com,fake-ip
+    - RULE-SET,HBOMAX,fake-ip
+    - RULE-SET,TikTok,fake-ip
+    - RULE-SET,Telegram,fake-ip
+    - RULE-SET,Copilot,fake-ip
+    - RULE-SET,Microsoft,fake-ip
+    - RULE-SET,Gemini,fake-ip
+    - RULE-SET,GPT,fake-ip
+    - DOMAIN-SUFFIX,music.youtube.com,fake-ip
+    - DOMAIN-SUFFIX,youtube-music.l.google.com,fake-ip
+    - DOMAIN-SUFFIX,s.youtube.com,fake-ip
+    - DOMAIN-KEYWORD,youtubemusic,fake-ip
+    - DOMAIN-SUFFIX,youtube-music.l.google.com,fake-ip
+    - RULE-SET,YouTubeMusic,fake-ip
+    - RULE-SET,GFWList,fake-ip
+    - RULE-SET,tld-not-cn,fake-ip
+    - RULE-SET,Proxy,fake-ip
+    - MATCH,fake-ip
+  proxy-server-nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
   nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
+    - 180.76.76.76
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️代理節點⚠️⚠️⚠️⚠️⚠️⚠️#
 proxies:
