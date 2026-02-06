@@ -527,6 +527,7 @@ rules:
   - DOMAIN-KEYWORD,dns.alidns.com,DIRECT #阿里加密DNS服務器
   - DOMAIN,msmp.abchina.com.cn,REJECT #排除中國農業銀行檢測
   - DOMAIN-KEYWORD,ads2301,DIRECT #群暉DDNS
+  - DOMAIN-KEYWORD,synology,DIRECT  #群暉官網
   - RULE-SET,private,DIRECT  #私有網絡專用域名列表
   #- RULE-SET,AD-Block,廣告過濾 #anti-AD去廣告
   - DOMAIN-KEYWORD,xn--ngstr-lra8j,DIRECT #www.play.google.com(GooglePlay商店)
