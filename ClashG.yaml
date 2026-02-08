@@ -93,7 +93,7 @@ proxy-groups:
     proxies:  #代理選項
       - LHY香港0.25x
       - LHY香港
-      - OKZ专线
+      #- OKZ专线
       - OKZ香港
       #- XMR香港中繼
       #- XMR香港IPLC
@@ -155,7 +155,7 @@ proxy-groups:
     proxies:  #代理選項
       - LHY香港0.25x
       - LHY香港
-      - OKZ专线
+      #- OKZ专线
       - OKZ香港
       #- XMR香港IPLC
       #- XMR香港中繼
@@ -184,10 +184,12 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
     proxies:  #代理選項
-      - LHY香港0.25x
-      - LHY香港
-      - OKZ专线
-      - OKZ香港
+      - 國際媒體
+      - DIRECT
+      #- LHY香港0.25x
+      #- LHY香港
+      #- OKZ专线
+      #- OKZ香港
       #- XMR香港IPLC
       #- XMR香港中繼
 #-----------------------------------------------------------------------------------------------------------
