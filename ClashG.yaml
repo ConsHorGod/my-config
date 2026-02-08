@@ -111,9 +111,6 @@ proxy-groups:
       - LHY日本0.25x
       - LHY日本
       - OKZ日本
-      #- OKZ专线
-      #- XMR日本中繼
-      #- XMR日本IPLC
 #-----------------------------------------------------------------------------------------------------------
   - name: HBOMAX
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png"  #策略組圖標
@@ -126,8 +123,6 @@ proxy-groups:
       - LHY香港0.25x
       - LHY香港
       - OKZ香港
-      #- XMR香港IPLC
-      #- XMR香港中繼
 #-----------------------------------------------------------------------------------------------------------
   - name: 嗶哩嗶哩
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili_3.png"  #策略組圖標
@@ -140,7 +135,6 @@ proxy-groups:
       - DIRECT
       - 香港
       - 日本
-      #- XMR香港IPLC
 #-----------------------------------------------------------------------------------------------------------
   - name: 微軟服務
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png"  #策略組圖標
@@ -150,14 +144,9 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
     use:  #代理選項
-      - 香港
-      - DIRECT
-      #- LHY香港0.25x
-      #- LHY香港
-      #- OKZ专线
-      #- OKZ香港
-      #- XMR香港IPLC
-      #- XMR香港中繼
+      - LHY香港0.25x
+      - LHY香港
+      - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
   - name: 油管音樂
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube_Music.png"  #策略組圖標
@@ -171,13 +160,6 @@ proxy-groups:
       - LHY日本
       - OKZ日本
       - OKZ专线
-      #- XMR日本直連
-      #- XMR日本中繼
-      #- XMR台灣直連
-      #- XMR台灣中繼
-      #- XMR台灣IPLC
-      #- XMR美國IPLC
-      #- XMR美國中繼
 #-----------------------------------------------------------------------------------------------------------
   - name: 人工智能
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"  #策略組圖標
@@ -190,8 +172,6 @@ proxy-groups:
       - LHY日本0.25x
       - LHY日本
       - OKZ日本
-      #- XMR日本IPLC
-      #- XMR日本中繼
 #-----------------------------------------------------------------------------------------------------------
   - name: 廣告過濾
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AdBlack.png"  #策略組圖標
@@ -215,10 +195,6 @@ proxy-groups:
       - LHY香港
       - OKZ香港
       - OKZ专线
-      #- XMR香港中繼
-      #- XMR日本中繼
-      #- XMR香港IPLC
-      #- XMR日本IPLC
       - FNY
 #-----------------------------------------------------------------------------------------------------------
   - name: FNY
@@ -535,8 +511,8 @@ rules:
   - DOMAIN-KEYWORD,okztwo.com,配置更新,no-resolve #www.okztwo.com(OKZTWO機場)
   - DOMAIN-KEYWORD,feiniaoyun,配置更新,no-resolve #www.feiniaoyun.xyz(飛鳥雲)
   - DOMAIN-KEYWORD,unpkg.com,配置更新,no-resolve #CDN鏡像檔案庫
-  - DOMAIN-SUFFIX,zh.savefrom.net,國際媒體,no-resolve #zh.savefrom.net(視頻下載網)
-  - DOMAIN-SUFFIX,snapvid.net,國際媒體,no-resolve #snapvid.net(視頻下載網)
+  - DOMAIN-SUFFIX,zh.savefrom.net,香港,no-resolve #zh.savefrom.net(視頻下載網)
+  - DOMAIN-SUFFIX,snapvid.net,香港,no-resolve #snapvid.net(視頻下載網)
   - DOMAIN-KEYWORD,discomax.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
   - DOMAIN-KEYWORD,media.max.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
   - DOMAIN-KEYWORD,max.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
