@@ -130,7 +130,7 @@ proxy-groups:
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
-    proxies:  #代理選項
+    use:  #代理選項
       - 日本
       #- OKZ专线
       #- XMR日本中繼
@@ -143,7 +143,7 @@ proxy-groups:
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
-    proxies:  #代理選項
+    use:  #代理選項
       - 香港
       #- XMR香港IPLC
       #- XMR香港中繼
@@ -186,7 +186,7 @@ proxy-groups:
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
-    proxies:  #代理選項
+    use:  #代理選項
       - 日本
       - OKZ专线
       #- XMR日本直連
@@ -204,7 +204,7 @@ proxy-groups:
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
-    proxies:  #代理選項
+    use:  #代理選項
       - 日本
       #- XMR日本IPLC
       #- XMR日本中繼
@@ -226,7 +226,7 @@ proxy-groups:
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 300  #测速时间间隔(秒)
-    proxies:  #代理選項
+    use:  #代理選項
       - 香港
       - OKZ专线
       #- XMR香港中繼
@@ -255,7 +255,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: 香港
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
@@ -266,7 +266,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: 日本
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
