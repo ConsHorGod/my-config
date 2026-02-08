@@ -96,9 +96,6 @@ proxy-groups:
       - LHY香港
       - OKZ香港
       - OKZ专线
-      #- XMR香港直連
-      #- XMR香港中繼
-      #- XMR香港IPLC
 #-----------------------------------------------------------------------------------------------------------
   - name: 國際抖音
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"  #策略組圖標
