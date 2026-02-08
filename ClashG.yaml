@@ -116,9 +116,10 @@ proxy-groups:
     type: select  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
-    proxies:  #代理選項
-      - 香港
-      - 日本
+    use:  #代理選項
+      - LHY香港0.25x
+      - LHY香港
+      - OKZ香港
       #- XMR香港直連
       #- XMR香港中繼
       #- XMR香港IPLC
@@ -131,7 +132,9 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
     use:  #代理選項
-      - 日本
+      - LHY日本0.25x
+      - LHY日本
+      - OKZ日本
       #- OKZ专线
       #- XMR日本中繼
       #- XMR日本IPLC
@@ -144,7 +147,9 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
     use:  #代理選項
-      - 香港
+      - LHY香港0.25x
+      - LHY香港
+      - OKZ香港
       #- XMR香港IPLC
       #- XMR香港中繼
 #-----------------------------------------------------------------------------------------------------------
@@ -187,7 +192,9 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
     use:  #代理選項
-      - 日本
+      - LHY日本0.25x
+      - LHY日本
+      - OKZ日本
       - OKZ专线
       #- XMR日本直連
       #- XMR日本中繼
@@ -205,7 +212,9 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
     use:  #代理選項
-      - 日本
+      - LHY日本0.25x
+      - LHY日本
+      - OKZ日本
       #- XMR日本IPLC
       #- XMR日本中繼
 #-----------------------------------------------------------------------------------------------------------
@@ -227,7 +236,9 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 300  #测速时间间隔(秒)
     use:  #代理選項
-      - 香港
+      - LHY香港0.25x
+      - LHY香港
+      - OKZ香港
       - OKZ专线
       #- XMR香港中繼
       #- XMR日本中繼
