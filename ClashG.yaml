@@ -91,10 +91,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
     proxies:  #代理選項
-      - LHY香港0.25x
-      - LHY香港
-      #- OKZ专线
-      - OKZ香港
+      - 香港
       #- XMR香港中繼
       #- XMR香港IPLC
 
@@ -107,10 +104,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
     proxies:  #代理選項
-      - LHY香港0.25x
-      - LHY香港
-      - OKZ专线
-      - OKZ香港
+      - 香港
       #- XMR香港中繼
       #- XMR香港IPLC
 #-----------------------------------------------------------------------------------------------------------
@@ -122,10 +116,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
     proxies:  #代理選項
-      - LHY香港0.25x
-      - LHY香港
-      - OKZ专线
-      - OKZ香港
+      - 香港
       #- XMR香港直連
       #- XMR香港中繼
       #- XMR香港IPLC
@@ -138,9 +129,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
     proxies:  #代理選項
-      - LHY日本0.25x
-      - LHY日本
-      - OKZ日本
+      - 日本
       #- OKZ专线
       #- XMR日本中繼
       #- XMR日本IPLC
@@ -153,10 +142,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
     proxies:  #代理選項
-      - LHY香港0.25x
-      - LHY香港
-      #- OKZ专线
-      - OKZ香港
+      - 香港
       #- XMR香港IPLC
       #- XMR香港中繼
 #-----------------------------------------------------------------------------------------------------------
@@ -169,11 +155,8 @@ proxy-groups:
     interval: 600  #测速时间间隔(秒)
     proxies:  #代理選項
       - DIRECT
-      - LHY香港0.25x
-      - LHY香港
-      - LHY日本
-      - OKZ香港
-      - OKZ日本
+      - 香港
+      - 日本
       #- XMR香港IPLC
 #-----------------------------------------------------------------------------------------------------------
   - name: 微軟服務
@@ -184,7 +167,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
     proxies:  #代理選項
-      - 國際媒體
+      - 香港
       - DIRECT
       #- LHY香港0.25x
       #- LHY香港
@@ -201,11 +184,8 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
     proxies:  #代理選項
-      - LHY日本0.25x
-      - LHY日本
-      - OKZ日本
+      - 日本
       - OKZ专线
-      - OKZ香港
       #- XMR日本直連
       #- XMR日本中繼
       #- XMR台灣直連
@@ -246,10 +226,8 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 300  #测速时间间隔(秒)
     proxies:  #代理選項
-      - LHY香港0.25x
-      - LHY香港
+      - 香港
       - OKZ专线
-      - OKZ香港
       #- XMR香港中繼
       #- XMR日本中繼
       #- XMR香港IPLC
@@ -274,52 +252,18 @@ proxy-groups:
     use:
       - OKZ专线
 #-----------------------------------------------------------------------------------------------------------
-  - name: OKZ香港
+  - name: 香港
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
-    use:
-      - OKZ香港
-#-----------------------------------------------------------------------------------------------------------
-  - name: OKZ日本
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
-    use:
-      - OKZ日本
-#-----------------------------------------------------------------------------------------------------------
-  - name: LHY香港
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
-    use:
-      - LHY香港
-#-----------------------------------------------------------------------------------------------------------
-  - name: LHY香港0.25x
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
     use:
       - LHY香港0.25x
+      - LHY香港
+      - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
-  - name: LHY日本
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
-    use:
-      - LHY日本
-#-----------------------------------------------------------------------------------------------------------
-  - name: LHY日本0.25x
+  - name: 日本
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
@@ -327,6 +271,8 @@ proxy-groups:
     interval: 600  #测速时间间隔(秒)
     use:
       - LHY日本0.25x
+      - LHY日本
+      - OKZ日本
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️代理集⚠️⚠️⚠️⚠️⚠️⚠️#
 proxy-providers:
