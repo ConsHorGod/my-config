@@ -18,44 +18,46 @@ dns:
   fake-ip-filter-mode: rule
   respect-rules: true
   fake-ip-filter:
-    - DOMAIN-KEYWORD,doh.pub,real-ip
-    - DOMAIN-KEYWORD,dns.alidns.com,real-ip
-    - DOMAIN-KEYWORD,ads2301,real-ip
-    - RULE-SET,private,real-ip
-    - DOMAIN-KEYWORD,apple,real-ip
-    - DOMAIN-KEYWORD,icloud,real-ip
-    - DOMAIN-KEYWORD,itunes,real-ip
-    - RULE-SET,Apple,real-ip
-    - DOMAIN-KEYWORD,.cn,real-ip
-    - DOMAIN-KEYWORD,gov.cn,real-ip
-    - RULE-SET,ASN.China,real-ip
-    - RULE-SET,Direct,real-ip
-    - GEOSITE,cn,real-ip
-    - DOMAIN-KEYWORD,bilibili,fake-ip
-    - RULE-SET,BiliBili-Intl,fake-ip
-    - RULE-SET,BiliBili,fake-ip
-    - DOMAIN-KEYWORD,linghunyun.com,fake-ip
-    - DOMAIN-KEYWORD,okztwo.com,fake-ip
-    - DOMAIN-KEYWORD,feiniaoyun,fake-ip
-    - DOMAIN-KEYWORD,unpkg.com,fake-ip
-    - DOMAIN-SUFFIX,zh.savefrom.net,fake-ip
-    - DOMAIN-SUFFIX,snapvid.net,fake-ip
-    - DOMAIN-KEYWORD,discomax.com,fake-ip
-    - DOMAIN-KEYWORD,media.max.com,fake-ip
-    - DOMAIN-KEYWORD,max.com,fake-ip
-    - RULE-SET,HBOMAX,fake-ip
-    - RULE-SET,TikTok,fake-ip
-    - RULE-SET,Telegram,fake-ip
-    - RULE-SET,Copilot,fake-ip
-    - RULE-SET,Microsoft,fake-ip
-    - RULE-SET,Gemini,fake-ip
-    - RULE-SET,GPT,fake-ip
-    - DOMAIN-SUFFIX,music.youtube.com,fake-ip
-    - DOMAIN-SUFFIX,youtube-music.l.google.com,fake-ip
-    - DOMAIN-SUFFIX,s.youtube.com,fake-ip
-    - DOMAIN-KEYWORD,youtubemusic,fake-ip
-    - DOMAIN-SUFFIX,youtube-music.l.google.com,fake-ip
-    - RULE-SET,YouTubeMusic,fake-ip
+    - DOMAIN-KEYWORD,doh.pub,real-ip  #騰訊DNS地址
+    - DOMAIN-KEYWORD,dns.alidns.com,real-ip  #阿里DNS地址
+    - DOMAIN-KEYWORD,msftconnecttest,real-ip  #微軟網絡檢測地址
+    - DOMAIN-KEYWORD,msftncsi,real-ip  #微軟網絡檢測地址
+    - DOMAIN-KEYWORD,ads2301,real-ip  #我的DDNS
+    - RULE-SET,private,real-ip  #私密地址
+    - DOMAIN-KEYWORD,apple,real-ip  #Apple
+    - DOMAIN-KEYWORD,icloud,real-ip  #Apple
+    - DOMAIN-KEYWORD,itunes,real-ip  #Apple
+    - RULE-SET,Apple,real-ip  #Apple
+    - DOMAIN-KEYWORD,.cn,real-ip  #中國域名後綴
+    - DOMAIN-KEYWORD,gov.cn,real-ip  #中國政府後綴
+    - RULE-SET,ASN.China,real-ip  #中國遠端IP合集
+    - RULE-SET,Direct,real-ip  #中國域名合集
+    - GEOSITE,cn,real-ip    #中國地址位置
+    - DOMAIN-KEYWORD,bilibili,fake-ip  #嗶哩嗶哩
+    - RULE-SET,BiliBili-Intl,fake-ip  #嗶哩嗶哩
+    - RULE-SET,BiliBili,fake-ip  #嗶哩嗶哩
+    - DOMAIN-KEYWORD,linghunyun.com,fake-ip  #靈魂雲
+    - DOMAIN-KEYWORD,okztwo.com,fake-ip  #OKZTWO
+    - DOMAIN-KEYWORD,feiniaoyun,fake-ip  #飛鳥雲
+    - DOMAIN-KEYWORD,unpkg.com,fake-ip  #鏡像
+    - DOMAIN-SUFFIX,zh.savefrom.net,fake-ip  #savefrom視頻下載
+    - DOMAIN-SUFFIX,snapvid.net,fake-ip  #snapvid視頻下載
+    - DOMAIN-KEYWORD,discomax.com,fake-ip  #HBOMAX
+    - DOMAIN-KEYWORD,media.max.com,fake-ip  #HBOMAX
+    - DOMAIN-KEYWORD,max.com,fake-ip  #HBOMAX
+    - RULE-SET,HBOMAX,fake-ip  #HBOMAX
+    - RULE-SET,TikTok,fake-ip  #國際抖音
+    - RULE-SET,Telegram,fake-ip  #IG
+    - RULE-SET,Copilot,fake-ip  #微軟AI
+    - RULE-SET,Microsoft,fake-ip  #微軟
+    - RULE-SET,Gemini,fake-ip  #谷歌AI
+    - RULE-SET,GPT,fake-ip  #OpenAI
+    - DOMAIN-SUFFIX,music.youtube.com,fake-ip  #YouTubeMusic
+    - DOMAIN-SUFFIX,youtube-music.l.google.com,fake-ip  #YouTubeMusic
+    - DOMAIN-SUFFIX,s.youtube.com,fake-ip  #YouTubeMusic
+    - DOMAIN-KEYWORD,youtubemusic,fake-ip  #YouTubeMusic
+    - DOMAIN-SUFFIX,youtube-music.l.google.com,fake-ip  #YouTubeMusic
+    - RULE-SET,YouTubeMusic,fake-ip  #YouTubeMusic
     - RULE-SET,GFWList,fake-ip
     - RULE-SET,tld-not-cn,fake-ip
     - RULE-SET,Proxy,fake-ip
@@ -462,9 +464,11 @@ rule-providers:
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️分就規則⚠️⚠️⚠️⚠️⚠️⚠️#
 rules: 
-  - DOMAIN-KEYWORD,doh.pub,DIRECT #騰訊加密DNS服務器
-  - DOMAIN-KEYWORD,dns.alidns.com,DIRECT #阿里加密DNS服務器
-  - DOMAIN,msmp.abchina.com.cn,REJECT #排除中國農業銀行檢測
+  - DOMAIN-KEYWORD,doh.pub,DIRECT  #騰訊加密DNS服務器
+  - DOMAIN-KEYWORD,dns.alidns.com,DIRECT  #阿里加密DNS服務器
+  - DOMAIN,msmp.abchina.com.cn,REJECT  #排除中國農業銀行檢測
+  - DOMAIN-KEYWORD,msftconnecttest,DIRECT  #微軟網絡檢測地址
+  - DOMAIN-KEYWORD,msftncsi,DIRECT  #微軟網絡檢測地址
   - DOMAIN-KEYWORD,ads2301,DIRECT #群暉DDNS
   - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT #Bc_0135DDNS 
   - DOMAIN-KEYWORD,synology,DIRECT  #群暉官網
