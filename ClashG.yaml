@@ -145,15 +145,6 @@ proxy-groups:
     use:
       - FNY
 #-----------------------------------------------------------------------------------------------------------
-  - name: OKZ专线
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
-    use:
-      - OKZ专线
-#-----------------------------------------------------------------------------------------------------------
   - name: 香港
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
@@ -175,6 +166,69 @@ proxy-groups:
       - LHY日本0.25x
       - LHY日本
       - OKZ日本
+#-----------------------------------------------------------------------------------------------------------
+  - name: OKZ香港
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 600  #测速时间间隔(秒)
+    use:
+      - OKZ香港
+#-----------------------------------------------------------------------------------------------------------
+  - name: OKZ专线
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 600  #测速时间间隔(秒)
+    use:
+      - OKZ专线
+#-----------------------------------------------------------------------------------------------------------
+  - name: OKZ日本
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 600  #测速时间间隔(秒)
+    use:
+      - OKZ日本
+#-----------------------------------------------------------------------------------------------------------
+  - name: LHY香港0.25x
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 600  #测速时间间隔(秒)
+    use:
+      - LHY香港0.25x
+#-----------------------------------------------------------------------------------------------------------
+  - name: LHY香港
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 600  #测速时间间隔(秒)
+    use:
+      - LHY香港
+#-----------------------------------------------------------------------------------------------------------
+  - name: LHY日本0.25x
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 600  #测速时间间隔(秒)
+    use:
+      - LHY日本0.25x
+#-----------------------------------------------------------------------------------------------------------
+  - name: LHY日本
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 600  #测速时间间隔(秒)
+    use:
+      - LHY日本
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️代理集⚠️⚠️⚠️⚠️⚠️⚠️#
 proxy-providers:
