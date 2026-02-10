@@ -151,7 +151,7 @@ proxy-groups:
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
-    use:
+    proxies:
       - LHY香港0.25x
       - LHY香港
       - OKZ香港
@@ -162,7 +162,7 @@ proxy-groups:
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
-    use:
+    proxies:
       - LHY日本0.25x
       - LHY日本
       - OKZ日本
