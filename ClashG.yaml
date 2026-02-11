@@ -128,7 +128,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: 廣告過濾
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AdBlack.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
