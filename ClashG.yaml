@@ -157,7 +157,18 @@ proxy-groups:
     interval: 600
     use:
       - FNY
-
+#-----------------------------------------------------------------------------------------------------------
+  - name: 香港
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 600  #测速时间间隔(秒)
+    proxies:
+      - LHY香港0.25x
+      - LHY香港
+      - OKZ香港
+      - OKZ专线
 #-----------------------------------------------------------------------------------------------------------
   - name: 日本
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
