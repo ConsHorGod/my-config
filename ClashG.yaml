@@ -500,7 +500,10 @@ rules:
   - RULE-SET,BiliBili-Intl,嗶哩嗶哩 #www.bilibili.com
   - RULE-SET,BiliBili,嗶哩嗶哩 #www.bilibili.com
   - DOMAIN-KEYWORD,.cn,DIRECT
-  - DOMAIN-KEYWORD,gov.cn,DIRECT
+  - DOMAIN-KEYWORD,.com.cn,DIRECT
+  - DOMAIN-KEYWORD,.gov.cn,DIRECT
+  - DOMAIN-KEYWORD,.gov.com,DIRECT
+  - DOMAIN-KEYWORD,.gov.com.cn,DIRECT
   - RULE-SET,ASN.China,DIRECT #國內遠端IP.ASN
   - RULE-SET,Direct,DIRECT #直連域名列表
   - RULE-SET,CNIP,DIRECT,no-resolve #中國大陆IP地址列表
