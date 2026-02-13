@@ -539,6 +539,8 @@ rules:
   - DOMAIN-KEYWORD,unpkg.com,國際媒體,no-resolve #CDN鏡像檔案庫
   - DOMAIN-SUFFIX,zh.savefrom.net,國際媒體,no-resolve #zh.savefrom.net(視頻下載網)
   - DOMAIN-SUFFIX,snapvid.net,國際媒體,no-resolve #snapvid.net(視頻下載網)
+  - DOMAIN-KEYWORD,redd,國際媒體,no-resolve  #www.reddit.com(Reddit)
+  - DOMAIN-KEYWORD,reddit,國際媒體,no-resolve  #www.reddit.com(Reddit)
   - DOMAIN-KEYWORD,discomax.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
   - DOMAIN-KEYWORD,media.max.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
   - DOMAIN-KEYWORD,max.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
