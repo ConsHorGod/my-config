@@ -5,6 +5,21 @@ mode: Rule  #運行模式
 log-level: info  #日誌
 external-controller: 127.0.0.1:60000  #外部控制地址與端口
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+#⚠️⚠️⚠️⚠️⚠️⚠️虛擬網卡設置⚠️⚠️⚠️⚠️⚠️⚠️#
+tun:
+  enable: true  #true开 #false默认关
+  device: Meta  #system（稳）、gvisor（安全）、mixed（自动切换，兼容最好）
+  stack: mixed
+  dns-hijack:  #劫持所有发往53端口的DNS请求，让Clash自己的DNS模块接管解析。这两行缺一不可
+    - any:53  #UDP53端口
+    - tcp://any:53  #TCP53端口
+  udp-timeout: 300  #UDP连接闲置300秒后自动关闭，防内存泄漏，不动它。
+  auto-route: true  #自动添加路由表，让TUN虚拟网卡接管所有流量。必须true。
+  strict-route: true  #严格路由，防止流量回流、死循环。推荐true，除非遇到特殊兼容问题。
+  auto-redirect: false  #TCP重定向开关。TUN模式下一般false，让TUN统一接管，不用iptables再劫持一次。
+  auto-detect-interface: true  #自动检测物理网卡(WAN口)，让路由规则生效。建议true。
+  exclude-package:  #安卓专属，排除特定App不走TUN。路由器上用不到，这一行可以删掉或注释。
+#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️DNS设置⚠️⚠️⚠️⚠️⚠️⚠️#
 dns:
   enable: true
