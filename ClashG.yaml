@@ -57,7 +57,7 @@ proxy-groups:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
   - name: 國際媒體
-    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png"  #策略組圖標
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
