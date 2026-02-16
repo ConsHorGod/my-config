@@ -504,10 +504,12 @@ rules:
   - DOMAIN-KEYWORD,doh.pub,DIRECT  #騰訊加密DNS服務器
   - DOMAIN-KEYWORD,dns.alidns.com,DIRECT  #阿里加密DNS服務器
   - DOMAIN,msmp.abchina.com.cn,REJECT  #排除中國農業銀行檢測
+  - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT
+  - DOMAIN-KEYWORD,raw.githubusercontent.com,國際媒體,no-resolve
   - DOMAIN-KEYWORD,msftconnecttest,DIRECT  #微軟網絡檢測地址
   - DOMAIN-KEYWORD,msftncsi,DIRECT  #微軟網絡檢測地址
-  - DOMAIN-KEYWORD,ads2301,DIRECT #群暉DDNS
-  - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT #Bc_0135DDNS 
+  - DOMAIN-KEYWORD,ads2301,DIRECT #ADS2301_DDNS
+  - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT #Bc_0135_DDNS 
   - DOMAIN-KEYWORD,synology,DIRECT  #群暉官網
   #- RULE-SET,AD-Block,廣告過濾 #anti-AD去廣告
   - DOMAIN-KEYWORD,xn--ngstr-lra8j,DIRECT #www.play.google.com(GooglePlay商店)
