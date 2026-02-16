@@ -56,6 +56,17 @@ proxy-groups:
       - FNY
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
+  - name: 配置更新
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 600  #测速时间间隔(秒)
+    use:
+      - 香港
+      - 日本
+      - FNY
+#-----------------------------------------------------------------------------------------------------------
   - name: 國際媒體
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
