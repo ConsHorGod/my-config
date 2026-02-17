@@ -61,7 +61,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
+    interval: 300  #测速时间间隔(秒)
     use:
       - LHY香港0.25x
       - LHY香港
