@@ -517,7 +517,7 @@ rule-providers:
 #⚠️⚠️⚠️⚠️⚠️⚠️分就規則⚠️⚠️⚠️⚠️⚠️⚠️#
 rules: 
   - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT
-  - DOMAIN-KEYWORD,raw.githubusercontent.com,配置更新,no-resolve
+  - DOMAIN-KEYWORD,githubusercontent.com,配置更新,no-resolve
   - RULE-SET,private,DIRECT  #私有網絡專用域名列表
   - DOMAIN-KEYWORD,doh.pub,DIRECT  #騰訊加密DNS服務器
   - DOMAIN-KEYWORD,dns.alidns.com,DIRECT  #阿里加密DNS服務器
