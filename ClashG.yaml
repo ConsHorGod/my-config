@@ -1,4 +1,4 @@
-SUBSCRIBED: https://cdn.jsdelivr.net/gh/ConsHorGod/my-config@refs/heads/main/ClashG.yaml  #配置更新鏈接
+SUBSCRIBED: https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/main/ClashG.yaml  #配置更新鏈接
 mixed-port: 7890  #混合端口
 allow-lan: true  #允許局域網
 mode: Rule  #運行模式
@@ -7,7 +7,7 @@ external-controller: 127.0.0.1:60000  #外部控制地址與端口
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️虛擬網卡設置⚠️⚠️⚠️⚠️⚠️⚠️#
 tun:
-  enable: true  #true开 #false默认关
+  enable: false  #true开 #false默认关
   device: Meta  #system（稳）、gvisor（安全）、mixed（自动切换，兼容最好）
   stack: mixed
   dns-hijack:  #劫持所有发往53端口的DNS请求，让Clash自己的DNS模块接管解析。这两行缺一不可
