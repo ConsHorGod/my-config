@@ -62,8 +62,8 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
-    proxies:
+    interval: 300  #测速时间间隔(秒)
+    use:
       - LHY香港0.25x
       - LHY香港
       - OKZ香港
@@ -75,8 +75,8 @@ proxy-groups:
     lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自動測速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
-    proxies:  #代理選項
+    interval: 300  #测速时间间隔(秒)
+    use:  #代理選項
       - LHY香港0.25x
       - LHY香港
       - OKZ香港
@@ -88,8 +88,8 @@ proxy-groups:
     lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
-    proxies:  #代理選項
+    interval: 300  #测速时间间隔(秒)
+    use:  #代理選項
       - LHY日本0.25x
       - LHY日本
       - OKZ日本
@@ -100,8 +100,8 @@ proxy-groups:
     lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
-    proxies:  #代理選項
+    interval: 300  #测速时间间隔(秒)
+    use:  #代理選項
       - LHY香港0.25x
       - LHY香港
       - OKZ香港
@@ -112,8 +112,8 @@ proxy-groups:
     lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #手動選擇
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
-    proxies:  #代理選項
+    interval: 300  #测速时间间隔(秒)
+    use:  #代理選項
       - LHY香港0.25x
       - LHY香港
       - OKZ香港
@@ -124,8 +124,8 @@ proxy-groups:
     lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
-    proxies:  #代理選項
+    interval: 300  #测速时间间隔(秒)
+    use:  #代理選項
       - LHY日本0.25x
       - LHY日本
       - OKZ日本
@@ -137,8 +137,8 @@ proxy-groups:
     lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
-    proxies:  #代理選項
+    interval: 300  #测速时间间隔(秒)
+    use:  #代理選項
       - LHY日本0.25x
       - LHY日本
       - OKZ日本
@@ -149,7 +149,7 @@ proxy-groups:
     lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
+    interval: 300  #测速时间间隔(秒)
     proxies:  #代理選項
       - DIRECT
       - 香港
@@ -186,7 +186,7 @@ proxy-groups:
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600
+    interval: 300
     use:
       - FNY
 #-----------------------------------------------------------------------------------------------------------
@@ -195,7 +195,7 @@ proxy-groups:
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
+    interval: 300  #测速时间间隔(秒)
     proxies:
       - LHY香港0.25x
       - LHY香港
@@ -206,7 +206,7 @@ proxy-groups:
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
+    interval: 300  #测速时间间隔(秒)
     proxies:
       - LHY日本0.25x
       - LHY日本
@@ -217,7 +217,7 @@ proxy-groups:
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
+    interval: 300  #测速时间间隔(秒)
     use:
       - OKZ香港
 #-----------------------------------------------------------------------------------------------------------
@@ -226,7 +226,7 @@ proxy-groups:
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
+    interval: 300  #测速时间间隔(秒)
     use:
       - OKZ专线
 #-----------------------------------------------------------------------------------------------------------
@@ -235,7 +235,7 @@ proxy-groups:
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
+    interval: 300  #测速时间间隔(秒)
     use:
       - OKZ日本
 #-----------------------------------------------------------------------------------------------------------
@@ -244,7 +244,7 @@ proxy-groups:
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
+    interval: 300  #测速时间间隔(秒)
     use:
       - LHY香港0.25x
 #-----------------------------------------------------------------------------------------------------------
@@ -253,7 +253,7 @@ proxy-groups:
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
+    interval: 300  #测速时间间隔(秒)
     use:
       - LHY香港
 #-----------------------------------------------------------------------------------------------------------
@@ -262,7 +262,7 @@ proxy-groups:
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
+    interval: 300  #测速时间间隔(秒)
     use:
       - LHY日本0.25x
 #-----------------------------------------------------------------------------------------------------------
@@ -271,7 +271,7 @@ proxy-groups:
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
+    interval: 300  #测速时间间隔(秒)
     use:
       - LHY日本
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
