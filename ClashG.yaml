@@ -55,22 +55,7 @@ proxy-groups:
       - 國際媒體
       - FNY
       - DIRECT
-#-----------------------------------------------------------------------------------------------------------
-  - name: 配置更新
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 300  #测速时间间隔(秒)
-    use:
-      - LHY香港0.25x
-      - LHY香港
-      - OKZ香港
-      - OKZ专线
-      - LHY日本0.25x
-      - LHY日本
-      - OKZ日本
-      - FNY
+
 #-----------------------------------------------------------------------------------------------------------
   - name: 國際媒體
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"  #策略組圖標
@@ -157,6 +142,22 @@ proxy-groups:
       - LHY日本0.25x
       - LHY日本
       - OKZ日本
+#-----------------------------------------------------------------------------------------------------------
+  - name: 配置更新
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 300  #测速时间间隔(秒)
+    use:
+      - LHY香港0.25x
+      - LHY香港
+      - OKZ香港
+      - OKZ专线
+      - LHY日本0.25x
+      - LHY日本
+      - OKZ日本
+      - FNY
 #-----------------------------------------------------------------------------------------------------------
   - name: 嗶哩嗶哩
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili_3.png"  #策略組圖標
