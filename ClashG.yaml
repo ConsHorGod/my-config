@@ -171,15 +171,15 @@ proxy-groups:
       - OKZ日本
       - FNY
 #-----------------------------------------------------------------------------------------------------------
-  - name: 廣告過濾
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AdBlack.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #手动选择
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
-    proxies:  #代理選項
-      - REJECT
-      - DIRECT
+  #- name: 廣告過濾
+    #icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AdBlack.png"  #策略組圖標
+    #hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    #type: select  #手动选择
+    #url: http://www.gstatic.com/generate_204  #用于测试的链接
+    #interval: 600  #测速时间间隔(秒)
+    #proxies:  #代理選項
+      #- REJECT
+      #- DIRECT
 #-----------------------------------------------------------------------------------------------------------
   - name: FNY
     icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"  #策略組圖標
