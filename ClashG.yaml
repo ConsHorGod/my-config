@@ -431,12 +431,12 @@ rule-providers:
     url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  AD-Block:
-    type: http
-    behavior: domain
-    path: ./ruleset/AD-Block.yaml
-    url: "https://anti-ad.net/clash.yaml"
-    interval: 21600
+  #AD-Block:
+    #type: http
+    #behavior: domain
+    #path: ./ruleset/AD-Block.yaml
+    #url: "https://anti-ad.net/clash.yaml"
+    #interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   TikTok:
     type: http
