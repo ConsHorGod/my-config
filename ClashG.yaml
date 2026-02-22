@@ -380,10 +380,6 @@ rule-providers:
   geolocation-!cn:
     <<: *domain
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs
-    
-  category-ads-all:
-    <<: *domain
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs
 
   private_ip:
     <<: *ip
