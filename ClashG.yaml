@@ -1,4 +1,5 @@
 subscribed: https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/main/ClashG.yaml  #配置更新鏈接
+port: 7890
 dns:
   enable: true
   ipv6: false
@@ -74,11 +75,10 @@ dns:
     - RULE-SET,cn,real-ip
     - MATCH,fake-ip
   nameserver:
-    - 223.6.6.6
     - 223.5.5.5 
     - 119.29.29.29
+    - 180.76.76.76
 
-port: 7890
 proxies:
 
 # 机场配置模块
@@ -97,9 +97,7 @@ proxy-providers:
     <<: *provider_config
     override:
       additional-prefix: "[OKZ]"
-  # 第三个机场
 
-      
 # 分组配置模块
 standard_proxies: &standard_proxies {"type": "select", "proxies": ["🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇸 美国节点", "🇨🇳 台湾节点", "🇸🇬 新加坡节点", "🇰🇷 韩国节点", "🌍 其他节点", "DIRECT"], "include-all": false}
 
@@ -453,14 +451,14 @@ rules:
   - DOMAIN-KEYWORD,discomax.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
   - DOMAIN-KEYWORD,media.max.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
   - DOMAIN-KEYWORD,max.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
-  - RULE-SET,hbomax,HBOMAX
-  - RULE-SET,tiktok,TikTok
-  - RULE-SET,netflix,Netflix
-  - RULE-SET,disney,Disney
-  - RULE-SET,spotify,Spotify
-  - RULE-SET,speedtest,Speedtest
-  - RULE-SET,github,GitHub
-  - RULE-SET,telegram,Telegram
+  - RULE-SET,hbomax,HBOMAX,no-resolve
+  - RULE-SET,tiktok,TikTok,no-resolve
+  - RULE-SET,netflix,Netflix,no-resolve
+  - RULE-SET,disney,Disney,no-resolve
+  - RULE-SET,spotify,Spotify,no-resolve
+  - RULE-SET,speedtest,Speedtest,no-resolve
+  - RULE-SET,github,GitHub,no-resolve
+  - RULE-SET,telegram,Telegram,no-resolve
   - DOMAIN-SUFFIX,music.youtube.com,YouTubeMusic,no-resolve
   - DOMAIN-SUFFIX,youtube-music.l.google.com,YouTubeMusic,no-resolve
   - DOMAIN-SUFFIX,s.youtube.com,YouTubeMusic,no-resolve
@@ -473,10 +471,10 @@ rules:
   - RULE-SET,instagram,Instagram,no-resolve
   - RULE-SET,facebook,Facebook,no-resolve
   - RULE-SET,steam@cn,DIRECT
-  - RULE-SET,steam,Steam
+  - RULE-SET,steam,Steam,no-resolve
   - RULE-SET,microsoft@cn,DIRECT
-  - RULE-SET,microsoft,Microsoft
-  - RULE-SET,category-ai-!cn,AI
+  - RULE-SET,microsoft,Microsoft,no-resolve
+  - RULE-SET,category-ai-!cn,AI,no-resolve
   - RULE-SET,geolocation-!cn,國際媒體
   - RULE-SET,private_ip,DIRECT,no-resolve
   - RULE-SET,apple_ip,Apple,no-resolve
@@ -484,6 +482,6 @@ rules:
   - RULE-SET,telegram_ip,Telegram,no-resolve
   - RULE-SET,netflix_ip,Netflix,no-resolve
   - RULE-SET,twitter_ip,Twitter,no-resolve
-  - RULE-SET,cn_ip,DIRECT
+  - RULE-SET,cn_ip,DIRECT,no-resolve
   - RULE-SET,LAN,DIRECT
   - MATCH,最終出站
