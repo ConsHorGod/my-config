@@ -75,6 +75,8 @@ dns:
     - RULE-SET,microsoft,fake-ip
     - RULE-SET,category-ai-!cn,fake-ip
     - RULE-SET,geolocation-!cn,fake-ip
+    - RULE-SET,tld-not-cn,fake-ip
+    - RULE-SET,gfw,fake-ip
     - RULE-SET,cn,real-ip
     - MATCH,fake-ip
   nameserver:
@@ -439,7 +441,7 @@ rules:
   - DOMAIN-KEYWORD,ads2301,DIRECT #ADS2301_DDNS
   - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT #Bc_0135_DDNS 
   - DOMAIN-KEYWORD,synology,DIRECT  #群暉官網
-  - RULE-SET,AD-Block,REJECT
+  - RULE-SET,ad-block,REJECT
   - RULE-SET,bilibili,Bilibili
   - RULE-SET,apple@cn,DIRECT
   - RULE-SET,apple,DIRECT
