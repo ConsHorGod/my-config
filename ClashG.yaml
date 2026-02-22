@@ -455,9 +455,9 @@ rules:
   - DOMAIN-KEYWORD,synology,DIRECT  #群暉官網
   - RULE-SET,ad-block,REJECT
   - RULE-SET,bilibili,Bilibili
-  - RULE-SET,apple@cn,DIRECT
-  - RULE-SET,apple,DIRECT
-  - RULE-SET,apple_ip,DIRECT,no-resolve
+  - RULE-SET,apple@cn,DIRECT #www.apple.com(蘋果)
+  - RULE-SET,apple,DIRECT #www.apple.com(蘋果)
+  - RULE-SET,apple_ip,DIRECT,no-resolve #www.apple.com(蘋果)
   - DOMAIN-KEYWORD,apple,DIRECT #www.apple.com(蘋果)
   - DOMAIN-KEYWORD,icloud,DIRECT #www.apple.com(蘋果)
   - DOMAIN-KEYWORD,itunes,DIRECT #www.apple.com(蘋果)
@@ -475,7 +475,7 @@ rules:
   - DOMAIN-KEYWORD,.gov.com,DIRECT
   - DOMAIN-KEYWORD,.gov.com.cn,DIRECT
   - RULE-SET,cn,DIRECT
-  - RULE-SET,asn,DIRECT
+  - RULE-SET,ASN.China,DIRECT
   - RULE-SET,cn_ip,DIRECT,no-resolve
   - DOMAIN-KEYWORD,linghunyun.com,國際媒體,no-resolve #www.linghunyun.com(靈魂雲機場)
   - DOMAIN-KEYWORD,okztwo.com,國際媒體,no-resolve #www.okztwo.com(OKZTWO機場)
