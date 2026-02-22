@@ -23,7 +23,7 @@ dns:
     - DOMAIN-KEYWORD,ads2301,real-ip
     - DOMAIN-KEYWORD,jlxa.wicp.net,real-ip
     - DOMAIN-KEYWORD,synology,real-ip
-    - RULE-SET,AD-Block,real-ip
+    - RULE-SET,ad-block,real-ip
     - RULE-SET,bilibili,real-ip
     - RULE-SET,apple@cn,real-ip
     - RULE-SET,apple,real-ip
