@@ -124,11 +124,13 @@ proxy-groups:
 
   - name: YouTube
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png"
-    <<: *standard_proxies  
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇭🇰|香港|专线|(\b(HK|Hong)\b))).*$'
 
   - name: Google
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png"
-    <<: *standard_proxies
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇭🇰|香港|专线|(\b(HK|Hong)\b))).*$'
 
   - name: Telegram
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png"
@@ -174,17 +176,20 @@ proxy-groups:
   - name: Twitter
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png"
     hidden: true
-    <<: *standard_proxies
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇭🇰|香港|专线|(\b(HK|Hong)\b))).*$'
 
   - name: Instagram
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Instagram.png"
     hidden: true
-    <<: *standard_proxies
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇭🇰|香港|专线|(\b(HK|Hong)\b))).*$'
 
   - name: Facebook
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Facebook.png"
     hidden: true
-    <<: *standard_proxies
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇭🇰|香港|专线|(\b(HK|Hong)\b))).*$'
 
   - name: Spotify
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png"
@@ -199,7 +204,8 @@ proxy-groups:
   - name: GitHub
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png"
     hidden: true
-    <<: *standard_proxies
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇭🇰|香港|专线|(\b(HK|Hong)\b))).*$'
 
   - name: Steam
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png"
