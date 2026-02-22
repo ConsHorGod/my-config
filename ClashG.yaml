@@ -420,12 +420,18 @@ rule-providers:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/ad.mrs
 
   tld-not-cn:
-    <<: *domain
+    type: http
+    behavior: domain
+    path: ./ruleset/tld-not-cn.yaml
     url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt"
-    
+    interval: 21600
+
   gfw:
-    <<: *domain
+    type: http
+    behavior: domain
+    path: ./ruleset/gfw.yaml
     url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt"
+    interval: 21600
 #-----------------------------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------------------------
 #-----------------------------------------------------------------------------------------------------------
