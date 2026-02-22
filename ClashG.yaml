@@ -445,7 +445,7 @@ rules:
   - RULE-SET,bilibili,Bilibili
   - RULE-SET,apple@cn,DIRECT
   - RULE-SET,apple,DIRECT
-  - RULE-SET,apple_ip,Apple,no-resolve
+  - RULE-SET,apple_ip,DIRECT,no-resolve
   - DOMAIN-KEYWORD,apple,DIRECT #www.apple.com(蘋果)
   - DOMAIN-KEYWORD,icloud,DIRECT #www.apple.com(蘋果)
   - DOMAIN-KEYWORD,itunes,DIRECT #www.apple.com(蘋果)
