@@ -134,7 +134,7 @@ proxy-groups:
 
   - name: Telegram
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png"
-    <<: *standard_proxies
+    filter: '^(?=.*((?i)🇭🇰|香港|专线|(\b(HK|Hong)\b))).*$'
 
   - name: TikTok
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png"
@@ -143,7 +143,11 @@ proxy-groups:
     
   - name: Apple
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png"
-    <<: *standard_proxies
+    hidden: false
+    type: select
+    proxies:
+      - DIRECT
+      - 國際媒體
 
   - name: HBOMAX
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png" 
@@ -152,7 +156,9 @@ proxy-groups:
 
   - name: Microsoft
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png"
-    <<: *standard_proxies
+    hidden: false
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b))).*$'
 
   - name: YouTubeMusic
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube_Music.png"
@@ -215,7 +221,8 @@ proxy-groups:
   - name: AI
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png"
     hidden: true
-    <<: *standard_proxies
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b))).*$'
 
   - name: 🇺🇸 美国节点
     hidden: true
@@ -433,7 +440,7 @@ rules:
   - DOMAIN-KEYWORD,.gov.com,DIRECT
   - DOMAIN-KEYWORD,.gov.com.cn,DIRECT
   - RULE-SET,cn,DIRECT
-  - RULE-SET,ASN,DIRECT,no-resolve
+  - RULE-SET,ASN,DIRECT
   - DOMAIN-KEYWORD,linghunyun.com,國際媒體,no-resolve #www.linghunyun.com(靈魂雲機場)
   - DOMAIN-KEYWORD,okztwo.com,國際媒體,no-resolve #www.okztwo.com(OKZTWO機場)
   - DOMAIN-KEYWORD,feiniaoyun,國際媒體,no-resolve #www.feiniaoyun.xyz(飛鳥雲)
