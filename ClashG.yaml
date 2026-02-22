@@ -134,6 +134,7 @@ proxy-groups:
 
   - name: Telegram
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png"
+    <<: *filter_proxies
     filter: '^(?=.*((?i)🇭🇰|香港|专线|(\b(HK|Hong)\b))).*$'
 
   - name: TikTok
