@@ -163,7 +163,8 @@ proxy-groups:
   - name: YouTubeMusic
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube_Music.png"
     hidden: false
-    <<: *standard_proxies
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b))).*$'
 
   - name: Bilibili
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili.png"
