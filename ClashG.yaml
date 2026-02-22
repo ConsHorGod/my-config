@@ -122,11 +122,13 @@ proxy-groups:
 
   - name: YouTube
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png"
+    hidden: true
     <<: *filter_proxies
     filter: '^(?=.*((?i)🇭🇰|香港|专线|(\b(HK|Hong)\b))).*$'
 
   - name: Google
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png"
+    hidden: true
     <<: *filter_proxies
     filter: '^(?=.*((?i)🇭🇰|香港|专线|(\b(HK|Hong)\b))).*$'
 
@@ -139,14 +141,6 @@ proxy-groups:
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png"
     <<: *filter_proxies
     filter: '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b))).*$'
-    
-  - name: Apple
-    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png"
-    hidden: false
-    type: select
-    proxies:
-      - DIRECT
-      - 國際媒體
 
   - name: HBOMAX
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png" 
@@ -422,7 +416,7 @@ rules:
   - RULE-SET,AD-Block,REJECT
   - RULE-SET,bilibili,Bilibili
   - RULE-SET,apple@cn,DIRECT
-  - RULE-SET,apple,Apple
+  - RULE-SET,apple,DIRECT
   - DOMAIN-KEYWORD,apple,DIRECT #www.apple.com(蘋果)
   - DOMAIN-KEYWORD,icloud,DIRECT #www.apple.com(蘋果)
   - DOMAIN-KEYWORD,itunes,DIRECT #www.apple.com(蘋果)
