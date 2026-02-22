@@ -413,10 +413,6 @@ rule-providers:
     <<: *ip
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo-lite/geoip/cn.mrs
   
-  ad_ip:
-    <<: *ip
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/ad.mrs
-
   tld-not-cn:
     type: http
     behavior: domain
