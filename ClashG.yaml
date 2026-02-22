@@ -98,11 +98,7 @@ proxy-providers:
     override:
       additional-prefix: "[OKZ]"
   # 第三个机场
-  AP3:
-    url: https://XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX #修改你的机场3订阅地址
-    <<: *provider_config
-    override:
-      additional-prefix: "[AP3]"
+
       
 # 分组配置模块
 standard_proxies: &standard_proxies {"type": "select", "proxies": ["🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇸 美国节点", "🇨🇳 台湾节点", "🇸🇬 新加坡节点", "🇰🇷 韩国节点", "🌍 其他节点", "DIRECT"], "include-all": false}
