@@ -392,19 +392,19 @@ rule-providers:
     path: ./ruleset/lancidr.yaml
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  CNIP:
-    type: http
-    behavior: ipcidr
-    path: ./ruleset/cncidr.yaml
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt"
-    interval: 21600
+  #CNIP:
+    #type: http
+    #behavior: ipcidr
+    #path: ./ruleset/cncidr.yaml
+    #url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt"
+    #interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  Direct:
-    type: http
-    behavior: domain
-    path: ./ruleset/Direct.yaml
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
-    interval: 21600
+  #Direct:
+    #type: http
+    #behavior: domain
+    #path: ./ruleset/Direct.yaml
+    #url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
+    #interval: 21600
 #-----------------------------------------------------------------------------------------------------------    
   private:
     type: http
@@ -531,6 +531,13 @@ rule-providers:
     path: ./ruleset/YouTubeMusic.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTubeMusic/YouTubeMusic.yaml"
     interval: 21600
+#-----------------------------------------------------------------------------------------------------------
+  AdultDomain(18+):
+    type: http
+    behavior: domain
+    path: ./ruleset/AdultDomain.yaml
+    url: "https://raw.githubusercontent.com/Thoseyearsbrian/Aegis/main/rules/AdultDomain.list"
+    interval: 21600   
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️分就規則⚠️⚠️⚠️⚠️⚠️⚠️#
 rules: 
@@ -566,13 +573,13 @@ rules:
   - DOMAIN-KEYWORD,.gov.cn,DIRECT,no-resolve #中國域名關鍵字
   - DOMAIN-KEYWORD,.gov.com,DIRECT,no-resolve #中國域名關鍵字
   - DOMAIN-KEYWORD,.gov.com.cn,DIRECT,no-resolve #中國域名關鍵字
-  - RULE-SET,ASN.China,DIRECT,no-resolve #中國自治系統號碼
-  - RULE-SET,Direct,DIRECT,no-resolve #直連域名列表
-  - RULE-SET,CNIP,DIRECT,no-resolve #中國大陆IP地址列表
+  #- RULE-SET,Direct,DIRECT,no-resolve #直連域名列表
+  #- RULE-SET,CNIP,DIRECT,no-resolve #中國大陆IP地址列表
   - DOMAIN-KEYWORD,linghunyun.com,其它節點,no-resolve #www.linghunyun.com(靈魂雲機場)
   - DOMAIN-KEYWORD,okztwo.com,其它節點,no-resolve #www.okztwo.com(OKZTWO機場)
   - DOMAIN-KEYWORD,feiniaoyun,其它節點,no-resolve #www.feiniaoyun.xyz(飛鳥雲)
   - DOMAIN-KEYWORD,unpkg.com,國際媒體,no-resolve #CDN鏡像檔案庫
+  - RULE-SET,AdultDomain(18+),國際媒體,no-resolve #AdultDomain(18+成人網站)
   - DOMAIN-SUFFIX,zh.savefrom.net,國際媒體,no-resolve #zh.savefrom.net(視頻下載網)
   - DOMAIN-SUFFIX,snapvid.net,國際媒體,no-resolve #snapvid.net(視頻下載網)
   - DOMAIN-KEYWORD,redd,國際媒體,no-resolve  #www.reddit.com(Reddit)
@@ -596,6 +603,7 @@ rules:
   - RULE-SET,GFWList,國際媒體,no-resolve #GFWList 域名列表
   - RULE-SET,tld-not-cn,國際媒體,no-resolve #非中國大陸使用的頂級域名列表
   - RULE-SET,Proxy,國際媒體,no-resolve #代理域名列表
+  - RULE-SET,ASN.China,DIRECT,no-resolve #中國自治系統號碼
   - RULE-SET,LAN,DIRECT #局域網
   - GEOIP,CN,DIRECT
   - MATCH,最終出站,dns-failed
