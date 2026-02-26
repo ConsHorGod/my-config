@@ -34,11 +34,11 @@ dns:
   fake-ip-filter:
     - 'geosite: gfw'
   nameserver:
-    - 119.29.29.29
-    - 223.5.5.5
-    - 180.76.76.76
-    #- https://doh.pub/dns-query
-    #- https://dns.alidns.com/dns-query
+    #- 119.29.29.29
+    #- 223.5.5.5
+    #- 180.76.76.76
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️代理節點⚠️⚠️⚠️⚠️⚠️⚠️#
 proxies:
