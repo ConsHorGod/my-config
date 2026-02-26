@@ -534,7 +534,7 @@ rule-providers:
 #-----------------------------------------------------------------------------------------------------------
   AdultDomain(18+):
     type: http
-    behavior: domain
+    behavior: classical
     path: ./ruleset/AdultDomain.yaml
     url: "https://raw.githubusercontent.com/Thoseyearsbrian/Aegis/main/rules/AdultDomain.list"
     interval: 21600   
