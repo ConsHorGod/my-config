@@ -399,12 +399,12 @@ rule-providers:
     #url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt"
     #interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  #Direct:
-    #type: http
-    #behavior: domain
-    #path: ./ruleset/Direct.yaml
-    #url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
-    #interval: 21600
+  ChinaMaxNoIP:
+    type: http
+    behavior: classical
+    path: ./ruleset/ChinaMaxNoIP.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMaxNoIP/ChinaMaxNoIP_Classical.yaml"
+    interval: 21600
 #-----------------------------------------------------------------------------------------------------------    
   private:
     type: http
@@ -561,8 +561,8 @@ rules:
   - DOMAIN-KEYWORD,bilibili,嗶哩嗶哩,no-resolve #www.bilibili.com
   - RULE-SET,BiliBili-Intl,嗶哩嗶哩,no-resolve #www.bilibili.com
   - RULE-SET,BiliBili,嗶哩嗶哩,no-resolve #www.bilibili.com
-  - RULE-SET,private,DIRECT,no-resolve  #私有網絡專用域名列表
+  - RULE-SET,ChinaMaxNoIP,DIRECT #中國域名
   - RULE-SET,LAN,DIRECT,no-resolve #局域網
-  - RULE-SET,ASN.China,DIRECT #中國自治系統號碼
+  - RULE-SET,ASN.China,DIRECT,no-resolve #中國自治系統號碼
   - GEOIP,CN,DIRECT
   - MATCH,最終出站,dns-failed
