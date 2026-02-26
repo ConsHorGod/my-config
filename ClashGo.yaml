@@ -534,9 +534,9 @@ rule-providers:
 #-----------------------------------------------------------------------------------------------------------
   AdultDomain(18+):
     type: http
-    behavior: domain
-    path: ./ruleset/AdultDomain.list
-    url: "https://raw.githubusercontent.com/Thoseyearsbrian/Aegis/main/rules/AdultDomain.list"
+    behavior: classical
+    path: ./ruleset/AdultDomain.yaml
+    url: "https://subconverters.com/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2FThoseyearsbrian%2FAegis%2Fmain%2Frules%2FAdultDomain.list&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true"
     interval: 21600   
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️分就規則⚠️⚠️⚠️⚠️⚠️⚠️#
