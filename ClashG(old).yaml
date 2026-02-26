@@ -544,13 +544,13 @@ rules:
   - DOMAIN-KEYWORD,bilibili,嗶哩嗶哩 #www.bilibili.com
   - RULE-SET,BiliBili-Intl,嗶哩嗶哩 #www.bilibili.com
   - RULE-SET,BiliBili,嗶哩嗶哩 #www.bilibili.com
-  - DOMAIN-KEYWORD,.cn,DIRECT
-  - DOMAIN-KEYWORD,.com.cn,DIRECT
-  - DOMAIN-KEYWORD,.gov.cn,DIRECT
-  - DOMAIN-KEYWORD,.gov.com,DIRECT
-  - DOMAIN-KEYWORD,.gov.com.cn,DIRECT
+  - DOMAIN-KEYWORD,.cn,DIRECT #中國域名關鍵字
+  - DOMAIN-KEYWORD,.com.cn,DIRECT #中國域名關鍵字
+  - DOMAIN-KEYWORD,.gov.cn,DIRECT #中國域名關鍵字
+  - DOMAIN-KEYWORD,.gov.com,DIRECT #中國域名關鍵字
+  - DOMAIN-KEYWORD,.gov.com.cn,DIRECT #中國域名關鍵字
+  - RULE-SET,ASN.China,DIRECT,no-resolve #中國自治系統號碼
   - RULE-SET,Direct,DIRECT #直連域名列表
-  - RULE-SET,ASN.China,DIRECT,no-resolve #國內遠端IP.ASN
   - RULE-SET,CNIP,DIRECT,no-resolve #中國大陆IP地址列表
   - DOMAIN-KEYWORD,linghunyun.com,配置更新,no-resolve #www.linghunyun.com(靈魂雲機場)
   - DOMAIN-KEYWORD,okztwo.com,配置更新,no-resolve #www.okztwo.com(OKZTWO機場)
@@ -579,6 +579,6 @@ rules:
   - RULE-SET,GFWList,國際媒體,no-resolve #GFWList 域名列表
   - RULE-SET,tld-not-cn,國際媒體,no-resolve #非中國大陸使用的頂級域名列表
   - RULE-SET,Proxy,國際媒體,no-resolve #代理域名列表
-  - RULE-SET,LAN,DIRECT
+  - RULE-SET,LAN,DIRECT #局域網
   - GEOIP,CN,DIRECT
   - MATCH,最終出站,dns-failed
