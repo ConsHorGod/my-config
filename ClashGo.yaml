@@ -53,9 +53,10 @@ proxy-groups:
     interval: 600  #测速时间间隔(秒)
     proxies:  #代理選項
       - 國際媒體
+      - 其它節點
       - FNY
       - DIRECT
-
+      - REJECT
 #-----------------------------------------------------------------------------------------------------------
   - name: 國際媒體
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"  #策略組圖標
@@ -155,23 +156,7 @@ proxy-groups:
       - 香港
       - 日本
 #-----------------------------------------------------------------------------------------------------------
-  - name: 配置更新
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 300  #测速时间间隔(秒)
-    use:
-      - LHY香港0.25x
-      - LHY香港
-      - OKZ香港
-      - OKZ专线
-      - LHY日本0.25x
-      - LHY日本
-      - OKZ日本
-      - FNY
-#-----------------------------------------------------------------------------------------------------------
-  - name: 其它节点
+  - name: 其它節點
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/AAEX.png  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
@@ -310,6 +295,16 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 600
 #-----------------------------------------------------------------------------------------------------------
+  "LHY":
+    type: http
+    path: ./provide/LHY.yml
+    url: https://www.linghunyun.com/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
+    interval: 86400
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+#-----------------------------------------------------------------------------------------------------------
   "OKZ专线":
     type: http
     path: ./provide/OKZ专线.yml
@@ -338,16 +333,6 @@ proxy-providers:
     url: http://47.107.66.153:65533/api/v1/12/25?token=2cd2522984108e0698c5400efd5818ff
     interval: 86400
     filter: '日本'
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 600
-#-----------------------------------------------------------------------------------------------------------
-  "LHY":
-    type: http
-    path: ./provide/LHY香港.yml
-    url: https://www.linghunyun.com/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
-    interval: 86400
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -549,44 +534,44 @@ rule-providers:
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️分就規則⚠️⚠️⚠️⚠️⚠️⚠️#
 rules: 
-  - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT
-  - DOMAIN-KEYWORD,githubusercontent.com,配置更新,no-resolve
-  - RULE-SET,private,DIRECT  #私有網絡專用域名列表
+  - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT,no-resolve
+  - DOMAIN-KEYWORD,githubusercontent.com,其它節點,no-resolve
+  - RULE-SET,private,DIRECT,no-resolve  #私有網絡專用域名列表
   - DOMAIN-KEYWORD,doh.pub,DIRECT  #騰訊加密DNS服務器
   - DOMAIN-KEYWORD,dns.alidns.com,DIRECT  #阿里加密DNS服務器
-  - DOMAIN,msmp.abchina.com.cn,REJECT  #排除中國農業銀行檢測
-  - DOMAIN-KEYWORD,msftconnecttest.com,DIRECT  #微軟網絡檢測地址
-  - DOMAIN-KEYWORD,msftncsi.com,DIRECT  #微軟網絡檢測地址
-  - DOMAIN-KEYWORD,ads2301,DIRECT #ADS2301_DDNS
-  - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT #Bc_0135_DDNS 
-  - DOMAIN-KEYWORD,synology,DIRECT  #群暉官網
-  #- RULE-SET,AD-Block,廣告過濾 #anti-AD去廣告
-  - DOMAIN-KEYWORD,xn--ngstr-lra8j,DIRECT #www.play.google.com(GooglePlay商店)
-  - DOMAIN-KEYWORD,googleapis.cn,DIRECT #www.play.google.com(GooglePlay商店)
-  - DOMAIN-KEYWORD,x3.344211.cc,DIRECT #www.feiniaoyun.xyz(飛鳥雲)
-  - DOMAIN-KEYWORD,xmrth.one,DIRECT #www.xmrth.com(XMRTH機場)
-  - DOMAIN-KEYWORD,deainx,DIRECT #www.dranime.net(飄雪)
-  - DOMAIN-KEYWORD,dranime,DIRECT #www.dranime.net(飄雪)
-  - DOMAIN-KEYWORD,dotmu,DIRECT #www.dranime.net(飄雪)
-  - DOMAIN-KEYWORD,gomicx,DIRECT #www.gomicx.net(粵漫社)
-  - DOMAIN-KEYWORD,apple,DIRECT #www.apple.com(蘋果)
-  - DOMAIN-KEYWORD,icloud,DIRECT #www.apple.com(蘋果)
-  - DOMAIN-KEYWORD,itunes,DIRECT #www.apple.com(蘋果)
-  - RULE-SET,Apple,DIRECT #www.apple.com(蘋果)
-  - DOMAIN-KEYWORD,bilibili,嗶哩嗶哩 #www.bilibili.com
-  - RULE-SET,BiliBili-Intl,嗶哩嗶哩 #www.bilibili.com
-  - RULE-SET,BiliBili,嗶哩嗶哩 #www.bilibili.com
-  - DOMAIN-KEYWORD,.cn,DIRECT #中國域名關鍵字
-  - DOMAIN-KEYWORD,.com.cn,DIRECT #中國域名關鍵字
-  - DOMAIN-KEYWORD,.gov.cn,DIRECT #中國域名關鍵字
-  - DOMAIN-KEYWORD,.gov.com,DIRECT #中國域名關鍵字
-  - DOMAIN-KEYWORD,.gov.com.cn,DIRECT #中國域名關鍵字
+  - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
+  - DOMAIN-KEYWORD,msftconnecttest.com,DIRECT,no-resolve  #微軟網絡檢測地址
+  - DOMAIN-KEYWORD,msftncsi.com,DIRECT,no-resolve  #微軟網絡檢測地址
+  - DOMAIN-KEYWORD,ads2301,DIRECT,no-resolve #ADS2301_DDNS
+  - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT,no-resolve #Bc_0135_DDNS 
+  - DOMAIN-KEYWORD,synology,DIRECT,no-resolve  #群暉官網
+  #- RULE-SET,AD-Block,廣告過濾,no-resolve #anti-AD去廣告
+  - DOMAIN-KEYWORD,xn--ngstr-lra8j,DIRECT,no-resolve #www.play.google.com(GooglePlay商店)
+  - DOMAIN-KEYWORD,googleapis.cn,DIRECT,no-resolve #www.play.google.com(GooglePlay商店)
+  - DOMAIN-KEYWORD,x3.344211.cc,DIRECT,no-resolve #www.feiniaoyun.xyz(飛鳥雲)
+  - DOMAIN-KEYWORD,xmrth.one,DIRECT,no-resolve #www.xmrth.com(XMRTH機場)
+  - DOMAIN-KEYWORD,deainx,DIRECT,no-resolve #www.dranime.net(飄雪)
+  - DOMAIN-KEYWORD,dranime,DIRECT,no-resolve #www.dranime.net(飄雪)
+  - DOMAIN-KEYWORD,dotmu,DIRECT,no-resolve #www.dranime.net(飄雪)
+  - DOMAIN-KEYWORD,gomicx,DIRECT,no-resolve #www.gomicx.net(粵漫社)
+  - DOMAIN-KEYWORD,apple,DIRECT,no-resolve #www.apple.com(蘋果)
+  - DOMAIN-KEYWORD,icloud,DIRECT,no-resolve #www.apple.com(蘋果)
+  - DOMAIN-KEYWORD,itunes,DIRECT,no-resolve #www.apple.com(蘋果)
+  - RULE-SET,Apple,DIRECT,no-resolve #www.apple.com(蘋果)
+  - DOMAIN-KEYWORD,bilibili,嗶哩嗶哩,no-resolve #www.bilibili.com
+  - RULE-SET,BiliBili-Intl,嗶哩嗶哩,no-resolve #www.bilibili.com
+  - RULE-SET,BiliBili,嗶哩嗶哩,no-resolve #www.bilibili.com
+  - DOMAIN-KEYWORD,.cn,DIRECT,no-resolve #中國域名關鍵字
+  - DOMAIN-KEYWORD,.com.cn,DIRECT,no-resolve #中國域名關鍵字
+  - DOMAIN-KEYWORD,.gov.cn,DIRECT,no-resolve #中國域名關鍵字
+  - DOMAIN-KEYWORD,.gov.com,DIRECT,no-resolve #中國域名關鍵字
+  - DOMAIN-KEYWORD,.gov.com.cn,DIRECT,no-resolve #中國域名關鍵字
   - RULE-SET,ASN.China,DIRECT,no-resolve #中國自治系統號碼
-  - RULE-SET,Direct,DIRECT #直連域名列表
+  - RULE-SET,Direct,DIRECT,no-resolve #直連域名列表
   - RULE-SET,CNIP,DIRECT,no-resolve #中國大陆IP地址列表
-  - DOMAIN-KEYWORD,linghunyun.com,配置更新,no-resolve #www.linghunyun.com(靈魂雲機場)
-  - DOMAIN-KEYWORD,okztwo.com,配置更新,no-resolve #www.okztwo.com(OKZTWO機場)
-  - DOMAIN-KEYWORD,feiniaoyun,配置更新,no-resolve #www.feiniaoyun.xyz(飛鳥雲)
+  - DOMAIN-KEYWORD,linghunyun.com,其它節點,no-resolve #www.linghunyun.com(靈魂雲機場)
+  - DOMAIN-KEYWORD,okztwo.com,其它節點,no-resolve #www.okztwo.com(OKZTWO機場)
+  - DOMAIN-KEYWORD,feiniaoyun,其它節點,no-resolve #www.feiniaoyun.xyz(飛鳥雲)
   - DOMAIN-KEYWORD,unpkg.com,國際媒體,no-resolve #CDN鏡像檔案庫
   - DOMAIN-SUFFIX,zh.savefrom.net,國際媒體,no-resolve #zh.savefrom.net(視頻下載網)
   - DOMAIN-SUFFIX,snapvid.net,國際媒體,no-resolve #snapvid.net(視頻下載網)
