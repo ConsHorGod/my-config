@@ -580,4 +580,5 @@ rules:
   - RULE-SET,tld-not-cn,國際媒體,no-resolve #非中國大陸使用的頂級域名列表
   - RULE-SET,Proxy,國際媒體,no-resolve #代理域名列表
   - RULE-SET,LAN,DIRECT
+  - GEOIP,CN,DIRECT
   - MATCH,最終出站,dns-failed
