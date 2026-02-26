@@ -537,7 +537,7 @@ rule-providers:
     behavior: domain
     url: "https://raw.githubusercontent.com/Thoseyearsbrian/Aegis/main/rules/AdultDomain.list"
     interval: 21600
-    format: list  # 指明源格式为text
+    format: yaml  # 指明源格式为text
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️分就規則⚠️⚠️⚠️⚠️⚠️⚠️#
 rules: 
