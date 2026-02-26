@@ -171,6 +171,18 @@ proxy-groups:
       - OKZ日本
       - FNY
 #-----------------------------------------------------------------------------------------------------------
+  - name: 其它节点
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/AAEX.png  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 300
+    filter: '^(?!.*(官网|失联|发布|流量|剩余|群|套餐|客服|🇺🇸|专线|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|🇭🇰|香港|HK|Hong|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|JP|Japan|🇨🇳|台湾|🇹🇼|TW|🇸🇬|狮|SG|Singapore|🇰🇷|韩国|首尔|KR|Korea)).*$'
+    use:
+      - OKZ
+      - LHY
+      - FNY
+#-----------------------------------------------------------------------------------------------------------
   #- name: 廣告過濾
     #icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AdBlack.png"  #策略組圖標
     #hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
@@ -288,6 +300,16 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 600
 #-----------------------------------------------------------------------------------------------------------
+  "OKZ":
+    type: http
+    path: ./provide/OKZ.yml
+    url: http://47.107.66.153:65533/api/v1/12/25?token=2cd2522984108e0698c5400efd5818ff
+    interval: 86400
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+#-----------------------------------------------------------------------------------------------------------
   "OKZ专线":
     type: http
     path: ./provide/OKZ专线.yml
@@ -316,6 +338,16 @@ proxy-providers:
     url: http://47.107.66.153:65533/api/v1/12/25?token=2cd2522984108e0698c5400efd5818ff
     interval: 86400
     filter: '日本'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+#-----------------------------------------------------------------------------------------------------------
+  "LHY":
+    type: http
+    path: ./provide/LHY香港.yml
+    url: https://www.linghunyun.com/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
+    interval: 86400
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
