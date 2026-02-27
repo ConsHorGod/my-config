@@ -547,6 +547,6 @@ rules:
   - RULE-SET,BiliBili,嗶哩嗶哩 #www.bilibili.com
   - RULE-SET,ChinaMaxNoIP,DIRECT #中國域名
   - RULE-SET,LAN,DIRECT,no-resolve #局域網
-  - RULE-SET,ASN.China,DIRECT,no-resolve #中國自治系統號碼
+  - RULE-SET,ASN.China,DIRECT #中國自治系統號碼
   - GEOIP,CN,DIRECT
   - MATCH,最終出站,dns-failed
