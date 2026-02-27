@@ -404,7 +404,7 @@ rule-providers:
 #-----------------------------------------------------------------------------------------------------------
   CN-ipv4:
     type: http
-    behavior: ipcidr
+    behavior: classical
     path: ./ruleset/ChinaIPs_Classical_No_IPv6.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaIPs/ChinaIPs_Classical_No_IPv6.yaml"
     interval: 21600
