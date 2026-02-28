@@ -422,13 +422,6 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMaxNoIP/ChinaMaxNoIP_Classical.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------    
-  private:
-    type: http
-    behavior: domain
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt"
-    path: ./ruleset/private.yaml
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
   CN-ASN:
     type: http
     behavior: classical
@@ -436,136 +429,82 @@ rule-providers:
     url: "https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.yaml"
     interval: 21600  
 #-----------------------------------------------------------------------------------------------------------    
-  直连APP:
-    type: http
-    behavior: domain
-    path: ./ruleset/直连APP.yaml
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
-  Proxy:
-    type: http
-    behavior: domain
-    path: ./ruleset/Proxy.yaml
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
-  tld-not-cn:
-    type: http
-    behavior: domain
-    path: ./ruleset/tld-not-cn.yaml
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
-  GFWList:
-    type: http
-    behavior: domain
-    path: ./ruleset/GFWList.yaml
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
-  #AD-Block:
-    #type: http
-    #behavior: domain
-    #path: ./ruleset/AD-Block.yaml
-    #url: "https://anti-ad.net/clash.yaml"
-    #interval: 21600
-#-----------------------------------------------------------------------------------------------------------
   TikTok:
     type: http
     behavior: classical
     path: ./ruleset/TikTok_No_Resolve.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TikTok/TikTok_No_Resolve.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
-  GPT:
-    type: http
-    behavior: classical
-    path: ./ruleset/OpenAI_No_Resolve.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/OpenAI/OpenAI_No_Resolve.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TikTok/TikTok.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   Copilot:
     type: http
     behavior: classical
-    path: ./ruleset/Copilot_No_Resolve.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Copilot/Copilot_No_Resolve.yaml"
+    path: ./ruleset/Copilot.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Copilot/Copilot.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   Apple:
     type: http
     behavior: classical
-    path: ./ruleset/Apple_Classical_No_Resolve.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple_Classical_No_Resolve.yaml"
+    path: ./ruleset/Apple_Classical.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple_Classical.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   Telegram:
     type: http
     behavior: classical
-    path: ./ruleset/Telegram_No_Resolve.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Telegram/Telegram_No_Resolve.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
-  Gemini:
-    type: http
-    behavior: classical
-    path: ./ruleset/Gemini_No_Resolve.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Gemini/Gemini_No_Resolve.yaml"
+    path: ./ruleset/Telegram.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Telegram/Telegram.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   HBOMAX:
     type: http
     behavior: classical
-    path: ./ruleset/HBO_No_Resolve.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/HBO/HBO_No_Resolve.yaml"
+    path: ./ruleset/HBO.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/HBO/HBO.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   BiliBili-Intl:
     type: http
     behavior: classical
-    path: ./ruleset/BiliBiliIntl_No_Resolve.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BiliBiliIntl/BiliBiliIntl_No_Resolve.yaml"
+    path: ./ruleset/BiliBiliIntl.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BiliBiliIntl/BiliBiliIntl.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   BiliBili:
     type: http
     behavior: classical
-    path: ./ruleset/BiliBili_No_Resolve.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BiliBili/BiliBili_No_Resolve.yaml.yaml"
+    path: ./ruleset/BiliBili.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BiliBili/BiliBili.yaml"
     interval: 21600
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️分就規則⚠️⚠️⚠️⚠️⚠️⚠️#
 rules: 
   - RULE-SET,LAN,DIRECT,no-resolve #局域網
-  - DOMAIN,msmp.abchina.com.cn,REJECT  #排除中國農業銀行檢測
-  - DOMAIN-KEYWORD,discomax.com,HBOMAX #www.hbomax.com(HBOMAX)
-  - DOMAIN-KEYWORD,media.max.com,HBOMAX #www.hbomax.com(HBOMAX)
-  - DOMAIN-KEYWORD,max.com,HBOMAX #www.hbomax.com(HBOMAX)
-  - RULE-SET,HBOMAX,HBOMAX #www.hbomax.com(HBOMAX)
-  - RULE-SET,TikTok,國際抖音 #TikTok
-  - RULE-SET,Telegram,飛機電報 #Telegram
-  - RULE-SET,Copilot,人工智能 #微軟AI
-  - RULE-SET,Gemini,人工智能 #谷歌AI
-  - RULE-SET,GPT,人工智能 #OpenAI
-  - DOMAIN-KEYWORD,music.youtube.com,油管音樂 #www.music.youtube.com
-  - DOMAIN-KEYWORD,youtube-music.l.google.com,油管音樂 #www.music.youtube.com
-  - DOMAIN-KEYWORD,s.youtube.com,油管音樂 #www.music.youtube.com
-  - DOMAIN-KEYWORD,youtubemusic,油管音樂 #www.music.youtube.com
-  - PROCESS-NAME,com.google.android.apps.youtube.music,油管音樂 #www.music.youtube.com
-  - DOMAIN-KEYWORD,youtube-music.l.google.com,油管音樂 #www.music.youtube.com
-  - DOMAIN-KEYWORD,asuscomm,DIRECT  #华硕路由器
-  - DOMAIN-KEYWORD,msft,DIRECT  #微軟網絡檢測地址
-  - DOMAIN-KEYWORD,dotmu.net,DIRECT  #飘雪
-  - DOMAIN-KEYWORD,dranime.net,DIRECT  #飘雪
-  - DOMAIN-KEYWORD,gomicx,DIRECT #www.gomicx.net(粵漫社)
-  - DOMAIN-KEYWORD,apple,DIRECT #www.apple.com(蘋果)
-  - DOMAIN-KEYWORD,icloud,DIRECT #www.apple.com(蘋果)
-  - DOMAIN-KEYWORD,itunes,DIRECT #www.apple.com(蘋果)
-  - RULE-SET,Apple,DIRECT #www.apple.com(蘋果)
-  - DOMAIN-KEYWORD,bilibili,嗶哩嗶哩 #www.bilibili.com
-  - RULE-SET,BiliBili-Intl,嗶哩嗶哩 #www.bilibili.com
-  - RULE-SET,BiliBili,嗶哩嗶哩 #www.bilibili.com
-  - RULE-SET,CN,DIRECT #中國域名
+  - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
+  - RULE-SET,HBOMAX,HBOMAX,no-resolve
+  - RULE-SET,TikTok,國際抖音,no-resolve
+  - RULE-SET,Telegram,飛機電報,no-resolve
+  - RULE-SET,Copilot,人工智能,no-resolve
+  - DOMAIN-KEYWORD,music.youtube.com,油管音樂,no-resolve
+  - DOMAIN-KEYWORD,youtube-music.l.google.com,油管音樂,no-resolve
+  - DOMAIN-KEYWORD,s.youtube.com,油管音樂,no-resolve
+  - DOMAIN-KEYWORD,youtubemusic,油管音樂,no-resolve
+  - PROCESS-NAME,com.google.android.apps.youtube.music,油管音樂,no-resolve
+  - DOMAIN-KEYWORD,youtube-music.l.google.com,油管音樂,no-resolve
+  - DOMAIN-KEYWORD,asuscomm,DIRECT,no-resolve  #华硕路由器
+  - DOMAIN-KEYWORD,msft,DIRECT,no-resolve  #微軟網絡檢測地址
+#  - DOMAIN-KEYWORD,dotmu.net,DIRECT  #飘雪
+#  - DOMAIN-KEYWORD,dranime.net,DIRECT  #飘雪
+  - DOMAIN-KEYWORD,gomicx,DIRECT,no-resolve
+#  - DOMAIN-KEYWORD,apple,DIRECT
+#  - DOMAIN-KEYWORD,icloud,DIRECT
+#  - DOMAIN-KEYWORD,itunes,DIRECT
+  - RULE-SET,Apple,DIRECT,no-resolve
+  - DOMAIN-KEYWORD,bilibili,嗶哩嗶哩,no-resolve
+  - RULE-SET,BiliBili-Intl,嗶哩嗶哩,no-resolve
+  - RULE-SET,BiliBili,嗶哩嗶哩,no-resolve
+  - RULE-SET,CN,DIRECT,no-resolve #中國域名
   - RULE-SET,CN-ASN,DIRECT #中國自治系統號碼
   - RULE-SET,CN-IP,DIRECT
   - MATCH,最終出站,dns-failed
