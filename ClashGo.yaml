@@ -553,8 +553,11 @@ rules:
   - DOMAIN-KEYWORD,youtubemusic,油管音樂 #www.music.youtube.com
   - PROCESS-NAME,com.google.android.apps.youtube.music,油管音樂 #www.music.youtube.com
   - DOMAIN-KEYWORD,youtube-music.l.google.com,油管音樂 #www.music.youtube.com
-  - DOMAIN-KEYWORD,gomicx,DIRECT #www.gomicx.net(粵漫社)
+  - DOMAIN-KEYWORD,asuscomm,DIRECT  #华硕路由器
   - DOMAIN-KEYWORD,msft,DIRECT  #微軟網絡檢測地址
+  - DOMAIN-KEYWORD,dotmu.net,DIRECT  #飘雪
+  - DOMAIN-KEYWORD,dranime.net,DIRECT  #飘雪
+  - DOMAIN-KEYWORD,gomicx,DIRECT #www.gomicx.net(粵漫社)
   - DOMAIN-KEYWORD,apple,DIRECT #www.apple.com(蘋果)
   - DOMAIN-KEYWORD,icloud,DIRECT #www.apple.com(蘋果)
   - DOMAIN-KEYWORD,itunes,DIRECT #www.apple.com(蘋果)
