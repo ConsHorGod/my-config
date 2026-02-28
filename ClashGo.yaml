@@ -565,7 +565,7 @@ rules:
   - DOMAIN-KEYWORD,bilibili,嗶哩嗶哩 #www.bilibili.com
   - RULE-SET,BiliBili-Intl,嗶哩嗶哩 #www.bilibili.com
   - RULE-SET,BiliBili,嗶哩嗶哩 #www.bilibili.com
-  - RULE-SET,CN-ASN,DIRECT #中國自治系統號碼
   - RULE-SET,CN,DIRECT #中國域名
+  - RULE-SET,CN-ASN,DIRECT #中國自治系統號碼
   - RULE-SET,CN-IP,DIRECT
   - MATCH,最終出站,dns-failed
