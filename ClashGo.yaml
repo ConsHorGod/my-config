@@ -492,6 +492,9 @@ rules:
   - DOMAIN-KEYWORD,youtubemusic,油管音樂,no-resolve
   - PROCESS-NAME,com.google.android.apps.youtube.music,油管音樂,no-resolve
   - DOMAIN-KEYWORD,youtube-music.l.google.com,油管音樂,no-resolve
+  - DOMAIN-KEYWORD,.cn,DIRECT,no-resolve  #直連關鍵字
+  - DOMAIN-KEYWORD,-cn,DIRECT,no-resolve  #直連關鍵字
+  - DOMAIN-KEYWORD,.gov,DIRECT,no-resolve  #直連關鍵字
   - DOMAIN-KEYWORD,asuscomm,DIRECT,no-resolve  #华硕路由器
   - DOMAIN-KEYWORD,msft,DIRECT,no-resolve  #微軟網絡檢測地址
   - DOMAIN-KEYWORD,gomicx,DIRECT,no-resolve
