@@ -285,7 +285,7 @@ proxy-groups:
       - LHY日本
 #-----------------------------------------------------------------------------------------------------------
   - name: LHY美国
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
@@ -471,13 +471,6 @@ rule-providers:
     behavior: classical
     path: ./ruleset/TikTok_No_Resolve.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TikTok/TikTok.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
-  Copilot:
-    type: http
-    behavior: classical
-    path: ./ruleset/Copilot.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Copilot/Copilot.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   Apple:
