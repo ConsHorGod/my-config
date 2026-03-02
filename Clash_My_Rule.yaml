@@ -1,0 +1,10 @@
+payload:
+  - DOMAIN-KEYWORD,.cn  #直連關鍵字
+  - DOMAIN-KEYWORD,-cn  #直連關鍵字
+  - DOMAIN-KEYWORD,.gov  #直連關鍵字
+  - DOMAIN-KEYWORD,ads2301  #ADS2301_DDNS
+  - DOMAIN-KEYWORD,asuscomm.com  #华硕路由器
+  - DOMAIN-KEYWORD,msft  #微軟網絡檢測地址
+  - DOMAIN-KEYWORD,gomicx.net  #粤漫社
+  - DOMAIN-KEYWORD,dranime.net  #飘雪
+  - DOMAIN-KEYWORD,dotmu.net  #飘雪

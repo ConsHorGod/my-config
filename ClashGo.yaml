@@ -1,0 +1,417 @@
+SUBSCRIBED: https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/main/ClashGo.yaml  #配置更新鏈接
+mixed-port: 7890  #混合端口
+allow-lan: true  #允許局域網
+mode: Rule  #運行模式
+log-level: info  #日誌
+external-controller: 127.0.0.1:60000  #外部控制地址與端口
+#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+#⚠️⚠️⚠️⚠️⚠️⚠️虛擬網卡設置⚠️⚠️⚠️⚠️⚠️⚠️#
+tun:
+  enable: false  #true开 #false默认关
+  device: Meta  #system（稳）、gvisor（安全）、mixed（自动切换，兼容最好）
+  stack: mixed
+  dns-hijack:  #劫持所有发往53端口的DNS请求，让Clash自己的DNS模块接管解析。这两行缺一不可
+    - any:53  #UDP53端口
+    - tcp://any:53  #TCP53端口
+  udp-timeout: 300  #UDP连接闲置300秒后自动关闭，防内存泄漏，不动它。
+  auto-route: true  #自动添加路由表，让TUN虚拟网卡接管所有流量。必须true。
+  strict-route: true  #严格路由，防止流量回流、死循环。推荐true，除非遇到特殊兼容问题。
+  auto-redirect: false  #TCP重定向开关。TUN模式下一般false，让TUN统一接管，不用iptables再劫持一次。
+  auto-detect-interface: true  #自动检测物理网卡(WAN口)，让路由规则生效。建议true。
+  exclude-package:  #安卓专属，排除特定App不走TUN。路由器上用不到，这一行可以删掉或注释。
+#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+#⚠️⚠️⚠️⚠️⚠️⚠️DNS设置⚠️⚠️⚠️⚠️⚠️⚠️#
+dns:
+  enable: true
+  ipv6: false
+  listen: :23453
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16 
+  fake-ip-filter-mode: whitelist
+  fake-ip-filter:
+    - 'geosite: gfw'
+  nameserver:
+    #- 119.29.29.29
+    #- 223.5.5.5
+    #- 180.76.76.76
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+#⚠️⚠️⚠️⚠️⚠️⚠️代理節點⚠️⚠️⚠️⚠️⚠️⚠️#
+proxies:
+#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+#⚠️⚠️⚠️⚠️⚠️⚠️代理組⚠️⚠️⚠️⚠️⚠️⚠️#
+proxy-groups:
+  - name: 最終出站
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    type: select  #手动选择
+    url: https://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 600  #测速时间间隔(秒)
+    proxies:  #代理選項
+      - 香港特區
+      - 美利堅國
+      - 日本島國
+      - 其它節點
+      - FNY
+      - DIRECT
+      - REJECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 香港特區
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 300  #测速时间间隔(秒)
+    filter: ^(?!.*(CU|CM|TEL|聯通|移動|電信))
+    use:
+      - LHY香港0.25x
+      - LHY香港
+      - OKZ香港
+      - OKZ专线
+#-----------------------------------------------------------------------------------------------------------
+  - name: 美利堅國
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 300  #测速时间间隔(秒)
+    use:
+      - LHY美國
+      - OKZ美國
+#-----------------------------------------------------------------------------------------------------------
+  - name: 日本島國
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 300  #测速时间间隔(秒)
+    use:
+      - LHY日本0.25x
+      - LHY日本
+      - OKZ日本
+#-----------------------------------------------------------------------------------------------------------
+  - name: 其它節點
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/AAEX.png  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 300
+    filter: '^(?!.*(官网|失联|发布|流量|剩余|群|套餐|客服|🇺🇸|专线|美國|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|🇭🇰|香港|HK|Hong|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|JP|Japan|🇨🇳|台湾|🇹🇼|TW|🇸🇬|狮|SG|Singapore|🇰🇷|韩国|首尔|KR|Korea)).*$'
+    use:
+      - OKZ
+      - LHY
+#-----------------------------------------------------------------------------------------------------------
+  - name: 飛機電報
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    type: url-test  #自動測速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 300  #测速时间间隔(秒)
+    filter: ^(?!.*(CU|CM|TEL|聯通|移動|電信))
+    use:  #代理選項
+      - LHY香港0.25x
+      - LHY香港
+      - OKZ香港
+      - OKZ专线
+#-----------------------------------------------------------------------------------------------------------
+  - name: HBOMAX
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 300  #测速时间间隔(秒)
+    filter: ^(?!.*(CU|CM|TEL|聯通|移動|電信))
+    use:  #代理選項
+      - LHY香港0.25x
+      - LHY香港
+      - OKZ香港
+  #-----------------------------------------------------------------------------------------------------------
+  - name: Win屏蔽更新
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AdBlack.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    type: select  #手动选择
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 600  #测速时间间隔(秒)
+    proxies:  #代理選項
+      - REJECT
+      - 香港特區
+#-----------------------------------------------------------------------------------------------------------
+  - name: 嗶哩嗶哩
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili_3.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    type: select  #手动选择
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 300  #测速时间间隔(秒)
+    proxies:  #代理選項
+      - DIRECT
+      - 香港特區
+      - 日本島國
+      #-----------------------------------------------------------------------------------------------------------
+  - name: FNY
+    icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 300  #测速时间间隔(秒)
+    use:  #代理選項
+      - FNY
+#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+#⚠️⚠️⚠️⚠️⚠️⚠️代理集⚠️⚠️⚠️⚠️⚠️⚠️#
+proxy-providers:
+  "FNY":
+    type: http
+    path: ./provide/FNY.yml
+    url: https://b3.342242.icu/api/v1/client/subscribe?token=0e79462ce42ab0413ed58d454329934e
+    interval: 86400
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+#-----------------------------------------------------------------------------------------------------------
+  "OKZ":
+    type: http
+    path: ./provide/OKZ.yml
+    url: http://47.107.66.153:65533/api/v1/12/25?token=2cd2522984108e0698c5400efd5818ff
+    interval: 86400
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+#-----------------------------------------------------------------------------------------------------------
+  "LHY":
+    type: http
+    path: ./provide/LHY.yml
+    url: https://www.linghunyun.com/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
+    interval: 86400
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+#-----------------------------------------------------------------------------------------------------------
+  "OKZ专线":
+    type: http
+    path: ./provide/OKZ专线.yml
+    url: http://47.107.66.153:65533/api/v1/12/25?token=2cd2522984108e0698c5400efd5818ff
+    interval: 86400
+    filter: '专线'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+#-----------------------------------------------------------------------------------------------------------
+  "OKZ香港":
+    type: http
+    path: ./provide/OKZ香港.yml
+    url: http://47.107.66.153:65533/api/v1/12/25?token=2cd2522984108e0698c5400efd5818ff
+    interval: 86400
+    filter: '香港'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+#-----------------------------------------------------------------------------------------------------------
+  "OKZ日本":
+    type: http
+    path: ./provide/OKZ日本.yml
+    url: http://47.107.66.153:65533/api/v1/12/25?token=2cd2522984108e0698c5400efd5818ff
+    interval: 86400
+    filter: '日本'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+#-----------------------------------------------------------------------------------------------------------
+  "OKZ美國":
+    type: http
+    path: ./provide/OKZ美國.yml
+    url: http://47.107.66.153:65533/api/v1/12/25?token=2cd2522984108e0698c5400efd5818ff
+    interval: 86400
+    filter: '美国|美國'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+#-----------------------------------------------------------------------------------------------------------
+  "LHY香港":
+    type: http
+    path: ./provide/LHY香港.yml
+    url: https://www.linghunyun.com/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
+    interval: 86400
+    filter: '香港-'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+#-----------------------------------------------------------------------------------------------------------
+  "LHY香港0.25x":
+    type: http
+    path: ./provide/LHY香港0.25x.yml
+    url: https://www.linghunyun.com/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
+    interval: 86400
+    filter: '香港.*低倍率|低倍率.*香港'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+#-----------------------------------------------------------------------------------------------------------
+  "LHY日本":
+    type: http
+    path: ./provide/LHY日本.yml
+    url: https://www.linghunyun.com/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
+    interval: 86400
+    filter: '日本-'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+#-----------------------------------------------------------------------------------------------------------
+  "LHY日本0.25x":
+    type: http
+    path: ./provide/LHY日本低倍率.yml
+    url: https://www.linghunyun.com/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
+    interval: 86400
+    filter: '日本.*低倍率|低倍率.*日本'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+#-----------------------------------------------------------------------------------------------------------
+  "LHY美國":
+    type: http
+    path: ./provide/LHY美國.yml
+    url: https://www.linghunyun.com/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
+    interval: 86400
+    filter: '美国'
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+#⚠️⚠️⚠️⚠️⚠️⚠️規則集⚠️⚠️⚠️⚠️⚠️⚠️#
+rule-providers:
+#-----------------------------------------------------------------------------------------------------------
+  LAN:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml"
+    path: ./ruleset/Lan.yaml
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
+  CN-IP:
+    type: http
+    behavior: classical
+    path: ./ruleset/ChinaIPs_Classical_No_IPv6.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaIPs/ChinaIPs_Classical_No_IPv6.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
+  CN:
+    type: http
+    behavior: classical
+    path: ./ruleset/ChinaMaxNoIP.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMaxNoIP/ChinaMaxNoIP_Classical.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------    
+  CN-ASN:
+    type: http
+    behavior: classical
+    path: ./ruleset/ASN.China.yaml
+    url: "https://yfamilys.com/rule/ASN-CN.rule"
+    interval: 21600  
+#-----------------------------------------------------------------------------------------------------------    
+  TikTok:
+    type: http
+    behavior: classical
+    path: ./ruleset/TikTok_No_Resolve.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TikTok/TikTok.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
+  Apple:
+    type: http
+    behavior: classical
+    path: ./ruleset/Apple_Classical.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple_Classical.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
+  Telegram:
+    type: http
+    behavior: classical
+    path: ./ruleset/Telegram.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Telegram/Telegram.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
+  HBOMAX:
+    type: http
+    behavior: classical
+    path: ./ruleset/HBO.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/HBO/HBO.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
+  BiliBili-Intl:
+    type: http
+    behavior: classical
+    path: ./ruleset/BiliBiliIntl.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BiliBiliIntl/BiliBiliIntl.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
+  BiliBili:
+    type: http
+    behavior: classical
+    path: ./ruleset/BiliBili.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BiliBili/BiliBili.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
+  AI:
+    type: http
+    behavior: classical
+    path: ./ruleset/ai.yaml
+    url: "https://yfamilys.com/rule/ai.rule"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
+  Win屏蔽更新:
+    type: http
+    behavior: classical
+    path: ./ruleset/Clash_Block_Win_Update.yaml
+    url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/main/Clash_Block_Win_Update.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
+  YouTubeMusic:
+    type: http
+    behavior: classical
+    path: ./ruleset/YouTubeMusic.yaml
+    url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/main/Clash_YouTubeMusic.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
+  My.Rule:
+    type: http
+    behavior: classical
+    path: ./ruleset/My_Rule.yaml
+    url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/main/Clash_My_Rule.yaml"
+    interval: 21600
+#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+#⚠️⚠️⚠️⚠️⚠️⚠️分就規則⚠️⚠️⚠️⚠️⚠️⚠️#
+rules: 
+  - RULE-SET,LAN,DIRECT,no-resolve #局域網
+  - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
+  - RULE-SET,HBOMAX,HBOMAX,no-resolve
+  - RULE-SET,TikTok,美利堅國,no-resolve
+  - RULE-SET,Telegram,飛機電報,no-resolve
+  - RULE-SET,AI,美利堅國,no-resolve
+  - RULE-SET,YouTubeMusic,美利堅國,no-resolve
+  - RULE-SET,Win屏蔽更新,Win屏蔽更新,no-resolve
+  - RULE-SET,Apple,DIRECT,no-resolve
+  - DOMAIN-KEYWORD,bilibili,嗶哩嗶哩,no-resolve
+  - RULE-SET,BiliBili-Intl,嗶哩嗶哩,no-resolve
+  - RULE-SET,BiliBili,嗶哩嗶哩,no-resolve
+  - RULE-SET,My.Rule,DIRECT,no-resolve #中國域名
+  - RULE-SET,CN,DIRECT,no-resolve #中國域名
+  - RULE-SET,CN-ASN,DIRECT #中國自治系統號碼
+  - RULE-SET,CN-IP,DIRECT
+  - MATCH,最終出站,dns-failed

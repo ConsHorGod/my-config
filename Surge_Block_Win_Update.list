@@ -1,0 +1,5 @@
+DOMAIN-KEYWORD,download.microsoft.com  #屏蔽Windows更新
+DOMAIN-KEYWORD,download.windowsupdate.com  #屏蔽Windows更新
+DOMAIN-KEYWORD,win.data.microsoft.com  #屏蔽Windows更新
+DOMAIN-KEYWORD,windowsupdate.microsoft.com  #屏蔽Windows更新
+DOMAIN-KEYWORD,update.microsoft.com   #屏蔽Windows更新

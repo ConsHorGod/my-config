@@ -1,0 +1,507 @@
+subscribed: https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/main/ClashG.yaml  #配置更新鏈接
+port: 7890
+#-----------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  listen: :7874 #MC如需使用，7874改成23453，再复制粘贴到MC的DNS编辑里
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: rule
+  respect-rules: false
+  prefer-h3: false
+  fake-ip-filter:
+    - DOMAIN-KEYWORD,cdn.jsdelivr.net,real-ip
+    - DOMAIN-KEYWORD,githubusercontent.com,real-ip
+    - DOMAIN-KEYWORD,doh.pub,real-ip
+    - DOMAIN-KEYWORD,dns.alidns.com,real-ip
+    - DOMAIN,msmp.abchina.com.cn,real-ip
+    - DOMAIN-KEYWORD,msftconnecttest.com,real-ip
+    - DOMAIN-KEYWORD,msftncsi.com,real-ip
+    - DOMAIN-KEYWORD,ads2301,real-ip
+    - DOMAIN-KEYWORD,jlxa.wicp.net,real-ip
+    - DOMAIN-KEYWORD,synology,real-ip
+    - RULE-SET,bilibili,real-ip
+    - RULE-SET,apple@cn,real-ip
+    - RULE-SET,apple,real-ip
+    - DOMAIN-KEYWORD,apple,real-ip
+    - DOMAIN-KEYWORD,icloud,real-ip
+    - DOMAIN-KEYWORD,itunes,real-ip
+    - DOMAIN-KEYWORD,xn--ngstr-lra8j,real-ip
+    - DOMAIN-KEYWORD,googleapis.cn,real-ip
+    - DOMAIN-KEYWORD,x3.344211.cc,fake-ip
+    - DOMAIN-KEYWORD,xmrth.one,fake-ip
+    - DOMAIN-KEYWORD,deainx,real-ip
+    - DOMAIN-KEYWORD,dranime,real-ip
+    - DOMAIN-KEYWORD,dotmu,real-ip
+    - DOMAIN-KEYWORD,gomicx,real-ip
+    - DOMAIN-KEYWORD,.cn,real-ip
+    - DOMAIN-KEYWORD,.com.cn,real-ip
+    - DOMAIN-KEYWORD,.gov.cn,real-ip
+    - DOMAIN-KEYWORD,.gov.com,real-ip
+    - DOMAIN-KEYWORD,.gov.com.cn,real-ip
+    - RULE-SET,tiktok,fake-ip
+    - RULE-SET,netflix,fake-ip
+    - RULE-SET,disney,fake-ip
+    - RULE-SET,spotify,fake-ip
+    - RULE-SET,speedtest,fake-ip
+    - RULE-SET,github,fake-ip
+    - RULE-SET,telegram,fake-ip
+    - DOMAIN-KEYWORD,unpkg.com,fake-ip
+    - DOMAIN-SUFFIX,zh.savefrom.net,fake-ip
+    - DOMAIN-SUFFIX,snapvid.net,fake-ip
+    - DOMAIN-KEYWORD,redd,fake-ip
+    - DOMAIN-KEYWORD,discomax.com,fake-ip
+    - DOMAIN-KEYWORD,media.max.com,fake-ip
+    - DOMAIN-KEYWORD,max.com,fake-ip
+    - RULE-SET,hbomax,fake-ip
+    - DOMAIN-SUFFIX,music.youtube.com,fake-ip
+    - DOMAIN-SUFFIX,youtube-music.l.google.com,fake-ip
+    - DOMAIN-SUFFIX,s.youtube.com,fake-ip
+    - DOMAIN-KEYWORD,youtubemusic,fake-ip
+    - DOMAIN-SUFFIX,youtube-music.l.google.com,fake-ip
+    - RULE-SET,youtubemusic,fake-ip
+    - RULE-SET,youtube,fake-ip
+    - RULE-SET,google,fake-ip
+    - RULE-SET,twitter,fake-ip
+    - RULE-SET,instagram,fake-ip
+    - RULE-SET,facebook,fake-ip
+    - RULE-SET,steam@cn,real-ip
+    - RULE-SET,steam,fake-ip
+    - RULE-SET,microsoft@cn,real-ip
+    - RULE-SET,microsoft,fake-ip
+    - RULE-SET,category-ai-!cn,fake-ip
+    - RULE-SET,geolocation-!cn,fake-ip
+    - RULE-SET,tld-not-cn,fake-ip
+    - RULE-SET,gfw,fake-ip
+    - RULE-SET,cn,real-ip
+    - MATCH,fake-ip
+  nameserver:
+    - 223.5.5.5 
+    - 119.29.29.29
+    - 180.76.76.76
+#-----------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------
+proxies:
+#-----------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------
+# 机场配置模块
+provider_config: &provider_config {"type": "http","interval": 86400,"user-agent": "clash","health-check": {"enable": true,"url": "http://www.apple.com/library/test/success.html","interval": 300}}
+#-----------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------
+proxy-providers:
+  # 第一个机场
+  LHY:
+    url: https://www.linghunyun.com/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
+    <<: *provider_config
+    override:
+      additional-prefix: "[LHY]"
+  # 第二个机场
+  OKZ:
+    url: http://47.107.66.153:65533/api/v1/12/25?token=2cd2522984108e0698c5400efd5818ff
+    <<: *provider_config
+    override:
+      additional-prefix: "[OKZ]"
+#-----------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------
+# 分组配置模块
+standard_proxies: &standard_proxies {"type": "select", "proxies": ["🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇸 美国节点", "🇨🇳 台湾节点", "🇸🇬 新加坡节点", "🇰🇷 韩国节点", "其它节点", "DIRECT"], "include-all": false}
+
+# 节点配置模块
+filter_proxies: &filter_proxies {"type": "url-test", "url": "http://www.apple.com/library/test/success.html", "interval": 300, "tolerance": 100, "include-all": true}
+
+FNY: &FNY {"type": "url-test", "url": "http://www.apple.com/library/test/success.html", "interval": 300, "tolerance": 100, "include-all": true}
+#-----------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------
+proxy-groups:
+  - name: 最終出站
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png"  #策略組圖標
+    hidden: false
+    type: select
+    proxies:
+      - 國際媒體
+      - 其它节点
+      - DIRECT
+
+  - name: 國際媒體
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇭🇰|香港|专线|(\b(HK|Hong)\b))).*$'
+
+  - name: YouTube
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"
+    hidden: true
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇭🇰|香港|专线|(\b(HK|Hong)\b))).*$'
+
+  - name: Google
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"
+    hidden: true
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇭🇰|香港|专线|(\b(HK|Hong)\b))).*$'
+
+  - name: Telegram
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png"
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇭🇰|香港|专线|(\b(HK|Hong)\b))).*$'
+
+  - name: TikTok
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b))).*$'
+
+  - name: HBOMAX
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png" 
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b))).*$'
+
+  - name: Microsoft
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png"
+    hidden: false
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b))).*$'
+
+  - name: YouTubeMusic
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube_Music.png"
+    hidden: false
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b))).*$'
+
+  - name: Bilibili
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili.png"
+    <<: *standard_proxies
+      
+  - name: Netflix
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png"
+    hidden: true
+    <<: *standard_proxies
+
+  - name: Disney
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney.png"
+    hidden: true
+    <<: *standard_proxies
+      
+  - name: Twitter
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Twitter.png"
+    hidden: true
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇭🇰|香港|专线|(\b(HK|Hong)\b))).*$'
+
+  - name: Instagram
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Instagram.png"
+    hidden: true
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇭🇰|香港|专线|(\b(HK|Hong)\b))).*$'
+
+  - name: Facebook
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Facebook.png"
+    hidden: true
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇭🇰|香港|专线|(\b(HK|Hong)\b))).*$'
+
+  - name: Spotify
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png"
+    hidden: true
+    <<: *standard_proxies
+
+  - name: Speedtest
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png"
+    hidden: true
+    <<: *standard_proxies
+
+  - name: GitHub
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png"
+    hidden: true
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇭🇰|香港|专线|(\b(HK|Hong)\b))).*$'
+
+  - name: Steam
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Steam.png"
+    hidden: true
+    <<: *standard_proxies
+
+  - name: AI
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png"
+    hidden: true
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b))).*$'
+
+  - name: 🇺🇸 美国节点
+    hidden: true
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b))).*$'
+
+  - name: 🇭🇰 香港节点
+    hidden: true
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b))).*$'
+
+  - name: 🇯🇵 日本节点
+    hidden: true
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b))).*$'
+
+  - name: 🇨🇳 台湾节点
+    hidden: true
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇨🇳|🇹🇼|TW|台湾)).*$'
+
+  - name: 🇸🇬 新加坡节点
+    hidden: true
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b))).*$'
+      
+  - name: 🇰🇷 韩国节点
+    hidden: true
+    <<: *filter_proxies
+    filter: '^(?=.*((?i)🇰🇷|韩国|首尔|(\b(KR|Korea)\b))).*$'
+
+  - name: 其它节点
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/AAEX.png
+    <<: *filter_proxies
+    filter: '^(?!.*(官网|失联|发布|流量|剩余|群|套餐|客服|🇺🇸|专线|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|🇭🇰|香港|HK|Hong|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|JP|Japan|🇨🇳|台湾|🇹🇼|TW|🇸🇬|狮|SG|Singapore|🇰🇷|韩国|首尔|KR|Korea)).*$'
+#-----------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------
+# ruleSet配置模块
+rule-anchor:
+  ip: &ip {type: http, interval: 43200, behavior: ipcidr, format: mrs}
+  domain: &domain {type: http, interval: 43200, behavior: domain, format: mrs}
+  classical: &classical {type: http, interval: 21600, behavior: classical, format: yaml}
+rule-providers:
+  LAN:
+    <<: *classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml
+    
+  cn:
+    <<: *domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs
+
+  ASN.China:
+    type: http
+    behavior: classical
+    path: ./ruleset/ASN.China.yaml
+    url: "https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.yaml"
+    interval: 21600  
+
+  bilibili:
+    <<: *domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/bilibili.mrs
+
+  tiktok:
+    <<: *domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs
+  
+  netflix:
+    <<: *domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs
+  
+  disney:
+    <<: *domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/disney.mrs
+
+  spotify:
+    <<: *domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/spotify.mrs
+
+  speedtest:
+    <<: *domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/speedtest.mrs
+  
+  github:
+    <<: *domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs
+
+  telegram:
+    <<: *domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs
+
+  hbomax:
+    <<: *classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HBO/HBO.yaml
+
+  youtube:
+    <<: *domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs
+
+  google:
+    <<: *domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs
+
+  youtubemusic:
+    <<: *classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTubeMusic/YouTubeMusic.yaml
+
+  twitter:
+    <<: *domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitter.mrs
+
+  instagram:
+    <<: *domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/instagram.mrs
+
+  facebook:
+    <<: *domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/facebook.mrs
+
+  steam@cn:
+    <<: *domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam@cn.mrs
+
+  steam:
+    <<: *domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam.mrs
+
+  apple@cn:
+    <<: *domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple@cn.mrs
+
+  apple:
+    <<: *domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple.mrs
+
+  microsoft@cn:
+    <<: *domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft@cn.mrs
+
+  microsoft:
+    <<: *domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs
+
+  category-ai-!cn:
+    <<: *domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs
+
+  geolocation-!cn:
+    <<: *domain
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs
+
+  private_ip:
+    <<: *ip
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo-lite/geoip/private.mrs
+
+  apple_ip:
+    <<: *ip
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo-lite/geoip/apple.mrs
+
+  google_ip:
+    <<: *ip
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo-lite/geoip/google.mrs
+
+  telegram_ip:
+    <<: *ip
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo-lite/geoip/telegram.mrs
+
+  netflix_ip:
+    <<: *ip
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo-lite/geoip/netflix.mrs
+
+  twitter_ip:
+    <<: *ip
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo-lite/geoip/twitter.mrs
+
+  cn_ip:
+    <<: *ip
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo-lite/geoip/cn.mrs
+  
+  tld-not-cn:
+    type: http
+    behavior: domain
+    path: ./ruleset/tld-not-cn.yaml
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt"
+    interval: 21600
+
+  gfw:
+    type: http
+    behavior: domain
+    path: ./ruleset/gfw.yaml
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------
+rules:
+  - DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT,no-resolve
+  - DOMAIN-KEYWORD,githubusercontent.com,國際媒體,no-resolve
+  - RULE-SET,private_ip,DIRECT,no-resolve
+  - DOMAIN-KEYWORD,doh.pub,DIRECT  #騰訊加密DNS服務器
+  - DOMAIN-KEYWORD,dns.alidns.com,DIRECT  #阿里加密DNS服務器
+  - DOMAIN,msmp.abchina.com.cn,REJECT  #排除中國農業銀行檢測
+  - DOMAIN-KEYWORD,msftconnecttest.com,DIRECT,no-resolve  #微軟網絡檢測地址
+  - DOMAIN-KEYWORD,msftncsi.com,DIRECT,no-resolve  #微軟網絡檢測地址
+  - DOMAIN-KEYWORD,ads2301,DIRECT,no-resolve #ADS2301_DDNS
+  - DOMAIN-KEYWORD,jlxa.wicp.net,DIRECT,no-resolve #Bc_0135_DDNS 
+  - DOMAIN-KEYWORD,synology,DIRECT,no-resolve  #群暉官網
+  - RULE-SET,bilibili,Bilibili,no-resolve
+  - RULE-SET,apple@cn,DIRECT,no-resolve #www.apple.com(蘋果)
+  - RULE-SET,apple,DIRECT,no-resolve #www.apple.com(蘋果)
+  - RULE-SET,apple_ip,DIRECT,no-resolve,no-resolve #www.apple.com(蘋果)
+  - DOMAIN-KEYWORD,apple,DIRECT,no-resolve #www.apple.com(蘋果)
+  - DOMAIN-KEYWORD,icloud,DIRECT,no-resolve #www.apple.com(蘋果)
+  - DOMAIN-KEYWORD,itunes,DIRECT,no-resolve #www.apple.com(蘋果)
+  - DOMAIN-KEYWORD,xn--ngstr-lra8j,DIRECT,no-resolve #www.play.google.com(GooglePlay商店)
+  - DOMAIN-KEYWORD,googleapis.cn,DIRECT,no-resolve #www.play.google.com(GooglePlay商店)
+  - DOMAIN-KEYWORD,x3.344211.cc,DIRECT,no-resolve #www.feiniaoyun.xyz(飛鳥雲)
+  - DOMAIN-KEYWORD,xmrth.one,DIRECT,no-resolve #www.xmrth.com(XMRTH機場)
+  - DOMAIN-KEYWORD,deainx,DIRECT,no-resolve #www.dranime.net(飄雪)
+  - DOMAIN-KEYWORD,dranime,DIRECT,no-resolve #www.dranime.net(飄雪)
+  - DOMAIN-KEYWORD,dotmu,DIRECT,no-resolve #www.dranime.net(飄雪)
+  - DOMAIN-KEYWORD,gomicx,DIRECT,no-resolve #www.gomicx.net(粵漫社)
+  - DOMAIN-KEYWORD,.cn,DIRECT,no-resolve
+  - DOMAIN-KEYWORD,.com.cn,DIRECT,no-resolve
+  - DOMAIN-KEYWORD,.gov.cn,DIRECT,no-resolve
+  - DOMAIN-KEYWORD,.gov.com,DIRECT,no-resolve
+  - DOMAIN-KEYWORD,.gov.com.cn,DIRECT,no-resolve
+  - RULE-SET,ASN.China,DIRECT,no-resolve
+  - RULE-SET,cn,DIRECT,no-resolve
+  - RULE-SET,cn_ip,DIRECT,no-resolve
+  - DOMAIN-KEYWORD,linghunyun.com,國際媒體,no-resolve #www.linghunyun.com(靈魂雲機場)
+  - DOMAIN-KEYWORD,okztwo.com,國際媒體,no-resolve #www.okztwo.com(OKZTWO機場)
+  - DOMAIN-KEYWORD,feiniaoyun,國際媒體,no-resolve #www.feiniaoyun.xyz(飛鳥雲)
+  - DOMAIN-KEYWORD,unpkg.com,國際媒體,no-resolve #CDN鏡像檔案庫
+  - DOMAIN-SUFFIX,zh.savefrom.net,國際媒體,no-resolve #zh.savefrom.net(視頻下載網)
+  - DOMAIN-SUFFIX,snapvid.net,國際媒體,no-resolve #snapvid.net(視頻下載網)
+  - DOMAIN-KEYWORD,redd,國際媒體,no-resolve  #www.reddit.com(Reddit)
+  - DOMAIN-KEYWORD,discomax.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
+  - DOMAIN-KEYWORD,media.max.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
+  - DOMAIN-KEYWORD,max.com,HBOMAX,no-resolve #www.hbomax.com(HBOMAX)
+  - RULE-SET,hbomax,HBOMAX,no-resolve
+  - RULE-SET,tiktok,TikTok,no-resolve
+  - RULE-SET,netflix,Netflix,no-resolve
+  - RULE-SET,netflix_ip,Netflix,no-resolve
+  - RULE-SET,disney,Disney,no-resolve
+  - RULE-SET,spotify,Spotify,no-resolve
+  - RULE-SET,speedtest,Speedtest,no-resolve
+  - RULE-SET,github,GitHub,no-resolve
+  - RULE-SET,telegram,Telegram,no-resolve
+  - RULE-SET,telegram_ip,Telegram,no-resolve
+  - DOMAIN-SUFFIX,music.youtube.com,YouTubeMusic,no-resolve
+  - DOMAIN-SUFFIX,youtube-music.l.google.com,YouTubeMusic,no-resolve
+  - DOMAIN-SUFFIX,s.youtube.com,YouTubeMusic,no-resolve
+  - DOMAIN-KEYWORD,youtubemusic,YouTubeMusic,no-resolve
+  - DOMAIN-SUFFIX,youtube-music.l.google.com,YouTubeMusic,no-resolve
+  - RULE-SET,youtubemusic,YouTubeMusic,no-resolve
+  - RULE-SET,youtube,YouTube,no-resolve
+  - RULE-SET,google,Google,no-resolve
+  - RULE-SET,google_ip,Google,no-resolve
+  - RULE-SET,twitter,Twitter,no-resolve
+  - RULE-SET,twitter_ip,Twitter,no-resolve
+  - RULE-SET,instagram,Instagram,no-resolve
+  - RULE-SET,facebook,Facebook,no-resolve
+  - RULE-SET,steam@cn,DIRECT,no-resolve
+  - RULE-SET,steam,Steam,no-resolve
+  - RULE-SET,microsoft@cn,DIRECT,no-resolve
+  - RULE-SET,microsoft,Microsoft,no-resolve
+  - RULE-SET,category-ai-!cn,AI,no-resolve
+  - RULE-SET,geolocation-!cn,國際媒體,no-resolve
+  - RULE-SET,tld-not-cn,國際媒體,no-resolve
+  - RULE-SET,gfw,國際媒體,no-resolve
+  - RULE-SET,LAN,DIRECT
+  - MATCH,最終出站
