@@ -379,7 +379,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./ruleset/Clash_Block_Win_Update.yaml
-    url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/main/Clash_Block_Win_Update.yaml"
+    url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/Clash_Block_Win_Update.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   YouTubeMusic:
