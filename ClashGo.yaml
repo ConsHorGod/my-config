@@ -389,7 +389,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/Clash_YouTubeMusic.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  Clashmyrule:
+  我的規則:
     type: http
     behavior: classical
     path: ./ruleset/Clashmyrule.yaml
@@ -410,7 +410,7 @@ rules:
   - DOMAIN-KEYWORD,bilibili,嗶哩嗶哩,no-resolve
   - RULE-SET,BiliBili-Intl,嗶哩嗶哩,no-resolve
   - RULE-SET,BiliBili,嗶哩嗶哩,no-resolve
-  - RULE-SET,Clashmyrule,DIRECT,no-resolve #中國域名
+  - RULE-SET,我的規則,DIRECT,no-resolve #中國域名
   - RULE-SET,CN,DIRECT,no-resolve #中國域名
   - RULE-SET,CN-ASN,DIRECT #中國自治系統號碼
   - RULE-SET,CN-IP,DIRECT
