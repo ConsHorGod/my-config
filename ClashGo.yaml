@@ -93,9 +93,8 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 300  #测速时间间隔(秒)
     use:  #代理選項
-      - LHY日本0.25x
-      - LHY日本
-      - OKZ日本
+      - LHY美国
+      - OKZ美国
 #-----------------------------------------------------------------------------------------------------------
   - name: HBOMAX
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png"  #策略組圖標
