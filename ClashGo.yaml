@@ -389,11 +389,11 @@ rule-providers:
     url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/Clash_YouTubeMusic.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  Clash_My_Rule:
+  Clashmyrule:
     type: http
     behavior: classical
-    path: ./ruleset/Clash_My_Rule.yaml
-    url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/Clash_My_Rule.yaml"
+    path: ./ruleset/Clashmyrule.yaml
+    url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/Clashmyrule.yaml"
     interval: 21600
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️分就規則⚠️⚠️⚠️⚠️⚠️⚠️#
@@ -410,7 +410,7 @@ rules:
   - DOMAIN-KEYWORD,bilibili,嗶哩嗶哩,no-resolve
   - RULE-SET,BiliBili-Intl,嗶哩嗶哩,no-resolve
   - RULE-SET,BiliBili,嗶哩嗶哩,no-resolve
-  - RULE-SET,Clash_My_Rules,DIRECT,no-resolve #中國域名
+  - RULE-SET,Clashmyrule,DIRECT,no-resolve #中國域名
   - RULE-SET,CN,DIRECT,no-resolve #中國域名
   - RULE-SET,CN-ASN,DIRECT #中國自治系統號碼
   - RULE-SET,CN-IP,DIRECT
