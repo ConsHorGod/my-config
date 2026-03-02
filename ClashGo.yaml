@@ -54,7 +54,7 @@ proxy-groups:
     proxies:  #代理選項
       - 國際媒體
       - 其它節點
-      - FNY香港
+      - FNY
       - DIRECT
       - REJECT
 #-----------------------------------------------------------------------------------------------------------
@@ -297,19 +297,8 @@ proxy-providers:
   "FNY":
     type: http
     path: ./provide/FNY.yml
-    url: https://x1.332244.icu/api/v1/client/subscribe?token=0e79462ce42ab0413ed58d454329934e
+    url: https://b3.342242.icu/api/v1/client/subscribe?token=0e79462ce42ab0413ed58d454329934e
     interval: 86400
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 600
-#-----------------------------------------------------------------------------------------------------------
-  "FNY香港":
-    type: http
-    path: ./provide/FNY香港.yml
-    url: https://x1.332244.icu/api/v1/client/subscribe?token=0e79462ce42ab0413ed58d454329934e
-    interval: 86400
-    filter: '香港'
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
