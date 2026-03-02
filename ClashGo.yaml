@@ -386,7 +386,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./ruleset/YouTubeMusic.yaml
-    url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/main/Clash_YouTubeMusic.yaml"
+    url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/Clash_YouTubeMusic.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   Clash_My_Rule:
