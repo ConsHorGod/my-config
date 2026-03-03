@@ -1,0 +1,4 @@
+payload:
+  - DOMAIN-KEYWORD,.cn  #直連關鍵字
+  - DOMAIN-KEYWORD,-cn  #直連關鍵字
+  - DOMAIN-KEYWORD,.gov  #直連關鍵字
