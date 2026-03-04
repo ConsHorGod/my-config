@@ -401,13 +401,13 @@ rule-providers:
 rules: 
   - RULE-SET,LAN,DIRECT,no-resolve #局域網
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
+  - RULE-SET,Win屏蔽更新,Win屏蔽更新,no-resolve
   - RULE-SET,My_PROXY,香港特區,no-resolve
   - RULE-SET,HBOMAX,HBOMAX,no-resolve
   - RULE-SET,TikTok,美利堅國,no-resolve
   - RULE-SET,Telegram,飛機電報,no-resolve
   - RULE-SET,AI,美利堅國,no-resolve
   - RULE-SET,YouTubeMusic,美利堅國,no-resolve
-  - RULE-SET,Win屏蔽更新,Win屏蔽更新,no-resolve
   - RULE-SET,My_DIRECT,DIRECT,no-resolve #中國域名
   - RULE-SET,Apple,DIRECT,no-resolve
   - DOMAIN-KEYWORD,bilibili,嗶哩嗶哩,no-resolve
