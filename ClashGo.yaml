@@ -43,7 +43,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
-    url: https://www.gstatic.com/generate_204  #用于测试的链接
+    url: http://www.apple.com/library/test/success.html  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
     proxies:  #代理選項
       - 香港特區
@@ -58,7 +58,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    url: http://www.apple.com/library/test/success.html  #用于测试的链接
     interval: 300  #测速时间间隔(秒)
     filter: ^(?!.*(CU|CM|TEL|聯通|移動|電信))
     use:
@@ -71,7 +71,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    url: http://www.apple.com/library/test/success.html  #用于测试的链接
     interval: 300  #测速时间间隔(秒)
     use:
       - LHY美國
@@ -81,7 +81,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    url: http://www.apple.com/library/test/success.html  #用于测试的链接
     interval: 300  #测速时间间隔(秒)
     use:
       - LHY日本0.25x
@@ -92,7 +92,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/AAEX.png  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    url: http://www.apple.com/library/test/success.html  #用于测试的链接
     interval: 300
     filter: '^(?!.*(官网|失联|发布|流量|剩余|群|套餐|客服|🇺🇸|专线|美國|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|🇭🇰|香港|HK|Hong|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|JP|Japan|🇨🇳|台湾|🇹🇼|TW|🇸🇬|狮|SG|Singapore|🇰🇷|韩国|首尔|KR|Korea)).*$'
     use:
@@ -104,7 +104,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自動測速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    url: http://www.apple.com/library/test/success.html  #用于测试的链接
     interval: 300  #测速时间间隔(秒)
     filter: ^(?!.*(CU|CM|TEL|聯通|移動|電信))
     use:  #代理選項
@@ -113,12 +113,23 @@ proxy-groups:
       - OKZ香港
       - OKZ专线
 #-----------------------------------------------------------------------------------------------------------
+  - name: 國際抖音
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
+    type: select  #手动选择
+    url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    interval: 300  #测速时间间隔(秒)
+    proxies:  #代理選項
+      - 日本島國
+      - 美利堅國
+#-----------------------------------------------------------------------------------------------------------
   - name: HBOMAX
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    url: http://www.apple.com/library/test/success.html  #用于测试的链接
     interval: 300  #测速时间间隔(秒)
     filter: ^(?!.*(CU|CM|TEL|聯通|移動|電信))
     use:  #代理選項
@@ -130,7 +141,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Reject.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    url: http://www.apple.com/library/test/success.html  #用于测试的链接
     interval: 600  #测速时间间隔(秒)
     proxies:  #代理選項
       - REJECT
@@ -141,7 +152,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: select  #手动选择
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    url: http://www.apple.com/library/test/success.html  #用于测试的链接
     interval: 300  #测速时间间隔(秒)
     proxies:  #代理選項
       - DIRECT
@@ -153,7 +164,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    url: http://www.apple.com/library/test/success.html  #用于测试的链接
     interval: 300  #测速时间间隔(秒)
     use:  #代理選項
       - FNY
@@ -167,7 +178,7 @@ proxy-providers:
     interval: 86400
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: http://www.apple.com/library/test/success.html
       interval: 600
 #-----------------------------------------------------------------------------------------------------------
   "OKZ":
@@ -177,7 +188,7 @@ proxy-providers:
     interval: 86400
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: http://www.apple.com/library/test/success.html
       interval: 600
 #-----------------------------------------------------------------------------------------------------------
   "LHY":
@@ -187,7 +198,7 @@ proxy-providers:
     interval: 86400
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: http://www.apple.com/library/test/success.html
       interval: 600
 #-----------------------------------------------------------------------------------------------------------
   "OKZ专线":
@@ -198,7 +209,7 @@ proxy-providers:
     filter: '专线'
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: http://www.apple.com/library/test/success.html
       interval: 600
 #-----------------------------------------------------------------------------------------------------------
   "OKZ香港":
@@ -209,7 +220,7 @@ proxy-providers:
     filter: '香港'
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: http://www.apple.com/library/test/success.html
       interval: 600
 #-----------------------------------------------------------------------------------------------------------
   "OKZ日本":
@@ -220,7 +231,7 @@ proxy-providers:
     filter: '日本'
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: http://www.apple.com/library/test/success.html
       interval: 600
 #-----------------------------------------------------------------------------------------------------------
   "OKZ美國":
@@ -231,7 +242,7 @@ proxy-providers:
     filter: '美国|美國'
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: http://www.apple.com/library/test/success.html
       interval: 600
 #-----------------------------------------------------------------------------------------------------------
   "LHY香港":
@@ -242,7 +253,7 @@ proxy-providers:
     filter: '香港-'
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: http://www.apple.com/library/test/success.html
       interval: 600
 #-----------------------------------------------------------------------------------------------------------
   "LHY香港0.25x":
@@ -253,7 +264,7 @@ proxy-providers:
     filter: '香港.*低倍率|低倍率.*香港'
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: http://www.apple.com/library/test/success.html
       interval: 600
 #-----------------------------------------------------------------------------------------------------------
   "LHY日本":
@@ -264,7 +275,7 @@ proxy-providers:
     filter: '日本-'
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: http://www.apple.com/library/test/success.html
       interval: 600
 #-----------------------------------------------------------------------------------------------------------
   "LHY日本0.25x":
@@ -275,7 +286,7 @@ proxy-providers:
     filter: '日本.*低倍率|低倍率.*日本'
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: http://www.apple.com/library/test/success.html
       interval: 600
 #-----------------------------------------------------------------------------------------------------------
   "LHY美國":
@@ -286,7 +297,7 @@ proxy-providers:
     filter: '美国'
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: http://www.apple.com/library/test/success.html
       interval: 600
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️規則集⚠️⚠️⚠️⚠️⚠️⚠️#
