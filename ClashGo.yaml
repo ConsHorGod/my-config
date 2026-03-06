@@ -44,7 +44,6 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
     proxies:  #代理選項
       - 香港特區
       - 美利堅國
@@ -129,7 +128,6 @@ proxy-groups:
     lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
-    interval: 300  #测速时间间隔(秒)
     proxies:  #代理選項
       - 日本島國
       - 美利堅國
@@ -152,7 +150,6 @@ proxy-groups:
     lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
-    interval: 300  #测速时间间隔(秒)
     proxies:  #代理選項
       - DIRECT
       - 香港特區
