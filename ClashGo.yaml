@@ -112,7 +112,6 @@ proxy-groups:
   - name: 飛機電報
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自動測速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
     filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港)
@@ -123,7 +122,6 @@ proxy-groups:
   - name: 國際抖音
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
     proxies:  #代理選項
@@ -134,7 +132,6 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
-    lazy: true
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
     filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港)
     use:
@@ -145,7 +142,6 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili_3.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
-    lazy: true
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
     proxies:  #代理選項
       - DIRECT
