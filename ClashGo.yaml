@@ -49,6 +49,7 @@ proxy-groups:
       - 香港特區
       - 美利堅國
       - 日本島國
+      - 中國台灣
       - 其它節點
       - FNY
       - DIRECT
@@ -60,12 +61,11 @@ proxy-groups:
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
     interval: 300  #测速时间间隔(秒)
-    filter: ^(?!.*(CU|CM|TEL|聯通|移動|電信))
+    filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港)
     use:
-      - LHY香港0.25x
-      - LHY香港
-      - OKZ香港
-      - OKZ专线
+      - LHY
+      - OKZ
+
 #-----------------------------------------------------------------------------------------------------------
   - name: 美利堅國
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"  #策略組圖標
@@ -73,9 +73,10 @@ proxy-groups:
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
     interval: 300  #测速时间间隔(秒)
+    filter: '美国|美國'
     use:
-      - LHY美國
-      - OKZ美國
+      - LHY
+      - OKZ
 #-----------------------------------------------------------------------------------------------------------
   - name: 日本島國
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
@@ -83,10 +84,21 @@ proxy-groups:
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
     interval: 300  #测速时间间隔(秒)
+    filter: '日本'
     use:
-      - LHY日本0.25x
-      - LHY日本
-      - OKZ日本
+      - LHY
+      - OKZ
+#-----------------------------------------------------------------------------------------------------------
+  - name: 中國台灣
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    interval: 300  #测速时间间隔(秒)
+    filter: '台灣|台湾|臺灣'
+    use:
+      - LHY
+      - OKZ
 #-----------------------------------------------------------------------------------------------------------
   - name: 其它節點
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/AAEX.png  #策略組圖標
@@ -108,10 +120,7 @@ proxy-groups:
     interval: 300  #测速时间间隔(秒)
     filter: ^(?!.*(CU|CM|TEL|聯通|移動|電信))
     use:  #代理選項
-      - LHY香港0.25x
-      - LHY香港
-      - OKZ香港
-      - OKZ专线
+      - 香港特區
 #-----------------------------------------------------------------------------------------------------------
   - name: 國際抖音
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"  #策略組圖標
@@ -133,18 +142,6 @@ proxy-groups:
     interval: 300  #测速时间间隔(秒)
     filter: ^(?!.*(CU|CM|TEL|聯通|移動|電信))
     use:  #代理選項
-      - LHY香港0.25x
-      - LHY香港
-      - OKZ香港
-  #-----------------------------------------------------------------------------------------------------------
-  - name: Win屏蔽更新
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Reject.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #手动选择
-    url: http://www.apple.com/library/test/success.html  #用于测试的链接
-    interval: 600  #测速时间间隔(秒)
-    proxies:  #代理選項
-      - REJECT
       - 香港特區
 #-----------------------------------------------------------------------------------------------------------
   - name: 嗶哩嗶哩
@@ -158,6 +155,7 @@ proxy-groups:
       - DIRECT
       - 香港特區
       - 日本島國
+      - 中國台灣
       #-----------------------------------------------------------------------------------------------------------
   - name: FNY
     icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"  #策略組圖標
@@ -196,105 +194,6 @@ proxy-providers:
     path: ./provide/LHY.yml
     url: https://www.linghunyun.com/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
     interval: 86400
-    health-check:
-      enable: true
-      url: http://www.apple.com/library/test/success.html
-      interval: 600
-#-----------------------------------------------------------------------------------------------------------
-  "OKZ专线":
-    type: http
-    path: ./provide/OKZ专线.yml
-    url: http://47.107.66.153:65533/api/v1/12/25?token=2cd2522984108e0698c5400efd5818ff
-    interval: 86400
-    filter: '专线'
-    health-check:
-      enable: true
-      url: http://www.apple.com/library/test/success.html
-      interval: 600
-#-----------------------------------------------------------------------------------------------------------
-  "OKZ香港":
-    type: http
-    path: ./provide/OKZ香港.yml
-    url: http://47.107.66.153:65533/api/v1/12/25?token=2cd2522984108e0698c5400efd5818ff
-    interval: 86400
-    filter: '香港'
-    health-check:
-      enable: true
-      url: http://www.apple.com/library/test/success.html
-      interval: 600
-#-----------------------------------------------------------------------------------------------------------
-  "OKZ日本":
-    type: http
-    path: ./provide/OKZ日本.yml
-    url: http://47.107.66.153:65533/api/v1/12/25?token=2cd2522984108e0698c5400efd5818ff
-    interval: 86400
-    filter: '日本'
-    health-check:
-      enable: true
-      url: http://www.apple.com/library/test/success.html
-      interval: 600
-#-----------------------------------------------------------------------------------------------------------
-  "OKZ美國":
-    type: http
-    path: ./provide/OKZ美國.yml
-    url: http://47.107.66.153:65533/api/v1/12/25?token=2cd2522984108e0698c5400efd5818ff
-    interval: 86400
-    filter: '美国|美國'
-    health-check:
-      enable: true
-      url: http://www.apple.com/library/test/success.html
-      interval: 600
-#-----------------------------------------------------------------------------------------------------------
-  "LHY香港":
-    type: http
-    path: ./provide/LHY香港.yml
-    url: https://www.linghunyun.com/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
-    interval: 86400
-    filter: '香港-'
-    health-check:
-      enable: true
-      url: http://www.apple.com/library/test/success.html
-      interval: 600
-#-----------------------------------------------------------------------------------------------------------
-  "LHY香港0.25x":
-    type: http
-    path: ./provide/LHY香港0.25x.yml
-    url: https://www.linghunyun.com/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
-    interval: 86400
-    filter: '香港.*低倍率|低倍率.*香港'
-    health-check:
-      enable: true
-      url: http://www.apple.com/library/test/success.html
-      interval: 600
-#-----------------------------------------------------------------------------------------------------------
-  "LHY日本":
-    type: http
-    path: ./provide/LHY日本.yml
-    url: https://www.linghunyun.com/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
-    interval: 86400
-    filter: '日本-'
-    health-check:
-      enable: true
-      url: http://www.apple.com/library/test/success.html
-      interval: 600
-#-----------------------------------------------------------------------------------------------------------
-  "LHY日本0.25x":
-    type: http
-    path: ./provide/LHY日本低倍率.yml
-    url: https://www.linghunyun.com/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
-    interval: 86400
-    filter: '日本.*低倍率|低倍率.*日本'
-    health-check:
-      enable: true
-      url: http://www.apple.com/library/test/success.html
-      interval: 600
-#-----------------------------------------------------------------------------------------------------------
-  "LHY美國":
-    type: http
-    path: ./provide/LHY美國.yml
-    url: https://www.linghunyun.com/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
-    interval: 86400
-    filter: '美国'
     health-check:
       enable: true
       url: http://www.apple.com/library/test/success.html
@@ -380,13 +279,6 @@ rule-providers:
     url: "https://yfamilys.com/rule/ai.rule"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  Win屏蔽更新:
-    type: http
-    behavior: classical
-    path: ./ruleset/Clash_Block_Win_Update.yaml
-    url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/Clash_Block_Win_Update.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
   YouTubeMusic:
     type: http
     behavior: classical
@@ -412,7 +304,6 @@ rule-providers:
 rules: 
   - RULE-SET,LAN,DIRECT,no-resolve #局域網
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
-  #- RULE-SET,Win屏蔽更新,Win屏蔽更新,no-resolve
   - RULE-SET,My_PROXY,香港特區,no-resolve
   - RULE-SET,HBOMAX,HBOMAX,no-resolve
   - RULE-SET,TikTok,日本島國,no-resolve
