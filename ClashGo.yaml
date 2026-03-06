@@ -40,7 +40,7 @@ proxies:
 #⚠️⚠️⚠️⚠️⚠️⚠️代理組⚠️⚠️⚠️⚠️⚠️⚠️#
 proxy-groups:
   - name: 最終出站
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png"  #策略組圖標
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
@@ -59,7 +59,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
-    interval: 300  #测速时间间隔(秒)
+    # interval: 600  #测速时间间隔(秒)
     filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港)
     use:
       - LHY
@@ -71,7 +71,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
-    interval: 300  #测速时间间隔(秒)
+    interval: 600  #测速时间间隔(秒)
     filter: '美国|美國'
     use:
       - LHY
@@ -82,7 +82,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
-    interval: 300  #测速时间间隔(秒)
+    interval: 600  #测速时间间隔(秒)
     filter: '日本'
     use:
       - LHY
@@ -93,7 +93,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
-    interval: 300  #测速时间间隔(秒)
+    interval: 600  #测速时间间隔(秒)
     filter: '台灣|台湾|臺灣'
     use:
       - LHY
@@ -104,7 +104,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
-    interval: 300
+    interval: 600
     filter: '^(?!.*(官网|失联|发布|流量|剩余|群|套餐|客服|🇺🇸|专线|美國|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|🇭🇰|香港|HK|Hong|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|JP|Japan|🇨🇳|台湾|🇹🇼|TW|🇸🇬|狮|SG|Singapore|🇰🇷|韩国|首尔|KR|Korea)).*$'
     use:
       - OKZ
@@ -116,7 +116,6 @@ proxy-groups:
     lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自動測速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
-    interval: 300  #测速时间间隔(秒)
     filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港)
     use:
       - LHY
@@ -138,7 +137,6 @@ proxy-groups:
     lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
-    interval: 300  #测速时间间隔(秒)
     filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港)
     use:
       - LHY
@@ -162,7 +160,7 @@ proxy-groups:
     lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
-    interval: 300  #测速时间间隔(秒)
+    interval: 600  #测速时间间隔(秒)
     use:  #代理選項
       - FNY
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
