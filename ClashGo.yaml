@@ -1,4 +1,4 @@
-SUBSCRIBED: https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/ClashGo.yaml  #配置更新鏈接
+subscribed: https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/ClashGo.yaml  #配置更新鏈接
 mixed-port: 7890  #混合端口
 allow-lan: true  #允許局域網
 mode: Rule  #運行模式
@@ -59,6 +59,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    interval: 600
     filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港)
     use:
       - LHY
@@ -69,6 +70,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    interval: 600
     filter: '美国|美國'
     use:
       - LHY
@@ -79,6 +81,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    interval: 600
     filter: '日本'
     use:
       - LHY
@@ -89,6 +92,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    interval: 600
     filter: '台灣|台湾|臺灣'
     use:
       - LHY
@@ -99,6 +103,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    interval: 600
     filter: '^(?!.*(官网|失联|发布|流量|剩余|群|套餐|客服|🇺🇸|专线|美國|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|🇭🇰|香港|HK|Hong|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|JP|Japan|🇨🇳|台湾|🇹🇼|TW|🇸🇬|狮|SG|Singapore|🇰🇷|韩国|首尔|KR|Korea)).*$'
     use:
       - OKZ
@@ -109,6 +114,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自動測速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    interval: 600
     filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港)
     use:
       - LHY
@@ -119,6 +125,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    interval: 600
     proxies:  #代理選項
       - 日本島國
       - 美利堅國
@@ -128,6 +135,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    interval: 600
     filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港)
     use:
       - LHY
@@ -138,6 +146,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    interval: 600
     proxies:  #代理選項
       - DIRECT
       - 香港特區
@@ -149,6 +158,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    interval: 600
     use:  #代理選項
       - FNY
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
