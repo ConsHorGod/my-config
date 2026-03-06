@@ -118,9 +118,10 @@ proxy-groups:
     type: url-test  #自動測速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
     interval: 300  #测速时间间隔(秒)
-    filter: ^(?!.*(CU|CM|TEL|聯通|移動|電信))
-    use:  #代理選項
-      - 香港特區
+    filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港)
+    use:
+      - LHY
+      - OKZ
 #-----------------------------------------------------------------------------------------------------------
   - name: 國際抖音
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"  #策略組圖標
@@ -140,9 +141,10 @@ proxy-groups:
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
     interval: 300  #测速时间间隔(秒)
-    filter: ^(?!.*(CU|CM|TEL|聯通|移動|電信))
-    use:  #代理選項
-      - 香港特區
+    filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港)
+    use:
+      - LHY
+      - OKZ
 #-----------------------------------------------------------------------------------------------------------
   - name: 嗶哩嗶哩
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili_3.png"  #策略組圖標
