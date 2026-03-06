@@ -114,7 +114,6 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自動測速
-    lazy: true
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
     filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港)
     use:
@@ -134,7 +133,6 @@ proxy-groups:
   - name: HBOMAX
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     lazy: true
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
@@ -146,7 +144,6 @@ proxy-groups:
   - name: 嗶哩嗶哩
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili_3.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: select  #手动选择
     lazy: true
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
@@ -159,7 +156,6 @@ proxy-groups:
   - name: FNY
     icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    lazy: false  #惰性策略組只會在使用時對代理進行延遲測試，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     lazy: true
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
