@@ -90,7 +90,7 @@ proxy-groups:
       - OKZ
 #-----------------------------------------------------------------------------------------------------------
   - name: 中國台灣
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
