@@ -63,7 +63,6 @@ proxy-groups:
     use:
       - LHY
       - OKZ
-
 #-----------------------------------------------------------------------------------------------------------
   - name: 美利堅國
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"  #策略組圖標
