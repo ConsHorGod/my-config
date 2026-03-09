@@ -297,6 +297,7 @@ rule-providers:
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️分就規則⚠️⚠️⚠️⚠️⚠️⚠️#
 rules: 
+  - AND,((NOT,((DEST-PORT,80),(DEST-PORT,443)))),DIRECT #"80,443"以外端口一律直連
   - RULE-SET,LAN,DIRECT,no-resolve #局域網
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
   - RULE-SET,My_PROXY,香港特區,no-resolve
