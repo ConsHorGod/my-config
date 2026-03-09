@@ -53,7 +53,6 @@ proxy-groups:
       - FNY
       - DIRECT
       - REJECT
-      - GLOBAL
 #-----------------------------------------------------------------------------------------------------------
   - name: 香港特區
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
