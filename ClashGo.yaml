@@ -297,23 +297,23 @@ rule-providers:
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 #⚠️⚠️⚠️⚠️⚠️⚠️分就規則⚠️⚠️⚠️⚠️⚠️⚠️#
 rules:
-  - DST-PORT,0-79,DIRECT
-  - DST-PORT,81-442,DIRECT
-  - DST-PORT,444-65535,DIRECT
-  - RULE-SET,LAN,DIRECT,no-resolve #局域網
+  - DST-PORT,0-79,DIRECT  #0-79端口直連
+  - DST-PORT,81-442,DIRECT  #81-442端口直連
+  - DST-PORT,444-65535,DIRECT  #444-65535端口直連
+  - RULE-SET,LAN,DIRECT,no-resolve  #局域網
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
-  - RULE-SET,My_PROXY,香港特區,no-resolve
-  - RULE-SET,HBOMAX,HBOMAX,no-resolve
-  - RULE-SET,TikTok,日本島國,no-resolve
-  - RULE-SET,Telegram,飛機電報,no-resolve
-  - RULE-SET,AI,美利堅國,no-resolve
-  - RULE-SET,YouTubeMusic,美利堅國,no-resolve
-  - RULE-SET,My_DIRECT,DIRECT,no-resolve #中國域名
-  - RULE-SET,Apple,DIRECT,no-resolve
-  - DOMAIN-KEYWORD,bilibili,嗶哩嗶哩,no-resolve
-  - RULE-SET,BiliBili-Intl,嗶哩嗶哩,no-resolve
-  - RULE-SET,BiliBili,嗶哩嗶哩,no-resolve
-  - RULE-SET,CN,DIRECT,no-resolve #中國域名
-  - RULE-SET,CN-ASN,DIRECT #中國自治系統號碼
-  - RULE-SET,CN-IP,DIRECT
+  - RULE-SET,My_PROXY,香港特區,no-resolve  #我的翻墻網站
+  - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
+  - RULE-SET,TikTok,日本島國,no-resolve  #TikTok
+  - RULE-SET,Telegram,飛機電報,no-resolve  #Telegram
+  - RULE-SET,AI,美利堅國,no-resolve  #人工智能
+  - RULE-SET,YouTubeMusic,美利堅國,no-resolve  #油管音樂
+  - RULE-SET,My_DIRECT,DIRECT,no-resolve  #我的直連網站
+  - RULE-SET,Apple,DIRECT,no-resolve  #Apple
+  - DOMAIN-KEYWORD,bilibili,嗶哩嗶哩,no-resolve  #嗶哩嗶哩
+  - RULE-SET,BiliBili-Intl,嗶哩嗶哩,no-resolve  #嗶哩嗶哩
+  - RULE-SET,BiliBili,嗶哩嗶哩,no-resolve  #嗶哩嗶哩
+  - RULE-SET,CN,DIRECT,no-resolve  #中國域名
+  - RULE-SET,CN-ASN,DIRECT  #中國自治系統號碼
+  - RULE-SET,CN-IP,DIRECT  #中國IP
   - MATCH,最終出站,dns-failed
