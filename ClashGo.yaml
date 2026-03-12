@@ -207,7 +207,7 @@ rule-providers:
   anti-ad:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/privacy-protection-tools/anti-ad.github.io/master/docs/mihomo.mrs"
+    url: "https://anti-ad.net/mihomo.mrs"
     path: ./ruleset/anti-ad.mrs
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
