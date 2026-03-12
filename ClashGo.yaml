@@ -207,7 +207,7 @@ rule-providers:
   anti-ad:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/anti-ad-clash.yaml"
+    url: "https://anti-ad.net/clash.yaml"
     path: ./ruleset/anti-ad.yaml
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
