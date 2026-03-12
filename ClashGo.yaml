@@ -206,9 +206,9 @@ rule-providers:
 #-----------------------------------------------------------------------------------------------------------
   anti-ad:
     type: http
-    behavior: domain
-    url: "https://anti-ad.net/mihomo.mrs"
-    path: ./ruleset/anti-ad.mrs
+    behavior: classical
+    url: "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/anti-ad-clash.yaml"
+    path: ./ruleset/anti-ad.yaml
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   LAN:
