@@ -292,9 +292,6 @@ rules:
   - RULE-SET,AI,人工智能,no-resolve  #人工智能
   - RULE-SET,YouTubeMusic,美利堅國,no-resolve  #油管音樂
   - RULE-SET,Apple,DIRECT,no-resolve  #Apple
-  - DOMAIN-KEYWORD,bilibili,嗶哩嗶哩,no-resolve  #嗶哩嗶哩
-  - RULE-SET,BiliBili-Intl,嗶哩嗶哩,no-resolve  #嗶哩嗶哩
-  - RULE-SET,BiliBili,嗶哩嗶哩,no-resolve  #嗶哩嗶哩
   - RULE-SET,CN,DIRECT,no-resolve  #中國域名
   - RULE-SET,CN-ASN,DIRECT  #中國自治系統號碼
   - RULE-SET,CN-IP,DIRECT  #中國IP
