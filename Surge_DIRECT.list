@@ -1,3 +1,4 @@
+AND,((NOT,((DEST-PORT,80))), (NOT,((DEST-PORT,443)))) // "80,443"以外端口一律直連
 DOMAIN-KEYWORD,.cn // 直連關鍵字
 DOMAIN-KEYWORD,-cn // 直連關鍵字
 DOMAIN-KEYWORD,.gov // 直連關鍵字
