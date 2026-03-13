@@ -136,15 +136,14 @@ proxy-groups:
       - LHY
       - OKZ
 #-----------------------------------------------------------------------------------------------------------
-  - name: 嗶哩嗶哩
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili_3.png"  #策略組圖標
+  - name: 人工智能
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
     interval: 600
     proxies:  #代理選項
-      - DIRECT
-      - 香港特區
+      - 美利堅國
       - 日本島國
       - 中國台灣
       #-----------------------------------------------------------------------------------------------------------
@@ -253,20 +252,6 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/HBO/HBO.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  BiliBili-Intl:
-    type: http
-    behavior: classical
-    path: ./ruleset/BiliBiliIntl.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BiliBiliIntl/BiliBiliIntl.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
-  BiliBili:
-    type: http
-    behavior: classical
-    path: ./ruleset/BiliBili.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BiliBili/BiliBili.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
   AI:
     type: http
     behavior: classical
@@ -304,7 +289,7 @@ rules:
   - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
   - RULE-SET,TikTok,日本島國,no-resolve  #TikTok
   - RULE-SET,Telegram,飛機電報,no-resolve  #Telegram
-  - RULE-SET,AI,美利堅國,no-resolve  #人工智能
+  - RULE-SET,AI,人工智能,no-resolve  #人工智能
   - RULE-SET,YouTubeMusic,美利堅國,no-resolve  #油管音樂
   - RULE-SET,Apple,DIRECT,no-resolve  #Apple
   - DOMAIN-KEYWORD,bilibili,嗶哩嗶哩,no-resolve  #嗶哩嗶哩
