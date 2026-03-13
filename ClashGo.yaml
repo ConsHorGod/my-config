@@ -3,8 +3,7 @@ allow-lan: true  #允許局域網
 mode: Rule  #運行模式
 log-level: info  #日誌
 external-controller: 127.0.0.1:60000  #外部控制地址與端口
-#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
-#⚠️⚠️⚠️⚠️⚠️⚠️虛擬網卡設置⚠️⚠️⚠️⚠️⚠️⚠️#
+#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️虛擬網卡設置⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 tun:
   enable: false  #true开 #false默认关
   device: Meta  #system（稳）、gvisor（安全）、mixed（自动切换，兼容最好）
@@ -18,8 +17,7 @@ tun:
   auto-redirect: false  #TCP重定向开关。TUN模式下一般false，让TUN统一接管，不用iptables再劫持一次。
   auto-detect-interface: true  #自动检测物理网卡(WAN口)，让路由规则生效。建议true。
   exclude-package:  #安卓专属，排除特定App不走TUN。路由器上用不到，这一行可以删掉或注释。
-#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
-#⚠️⚠️⚠️⚠️⚠️⚠️DNS设置⚠️⚠️⚠️⚠️⚠️⚠️#
+#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️DNS设置⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 dns:
   enable: true
   ipv6: false
@@ -32,11 +30,9 @@ dns:
   nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
-#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
-#⚠️⚠️⚠️⚠️⚠️⚠️代理節點⚠️⚠️⚠️⚠️⚠️⚠️#
+#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️代理節點⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 proxies:
-#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
-#⚠️⚠️⚠️⚠️⚠️⚠️代理組⚠️⚠️⚠️⚠️⚠️⚠️#
+#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️代理組⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 proxy-groups:
   - name: 最終出站
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png"  #策略組圖標
@@ -160,8 +156,7 @@ proxy-groups:
     interval: 600
     use:  #代理選項
       - FNY
-#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
-#⚠️⚠️⚠️⚠️⚠️⚠️代理集⚠️⚠️⚠️⚠️⚠️⚠️#
+#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️代理集⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 proxy-providers:
   "FNY":
     type: http
@@ -192,8 +187,7 @@ proxy-providers:
       enable: true
       url: http://www.apple.com/library/test/success.html
       interval: 600
-#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
-#⚠️⚠️⚠️⚠️⚠️⚠️規則集⚠️⚠️⚠️⚠️⚠️⚠️#
+#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️規則集⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rule-providers:
 #-----------------------------------------------------------------------------------------------------------
   PORT_DIRECT:
@@ -307,20 +301,19 @@ rule-providers:
     path: ./ruleset/Clash_My_PROXY.yaml
     url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Clash_My_PROXY.yaml"
     interval: 21600
-#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
-#⚠️⚠️⚠️⚠️⚠️⚠️分就規則⚠️⚠️⚠️⚠️⚠️⚠️#
+#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️分流規則⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rules:
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
   - RULE-SET,LAN,DIRECT,no-resolve  #局域網
   - RULE-SET,anti-ad,REJECT-DROP,no-resolve  #anti-ad廣告過濾
   - RULE-SET,PORT_DIRECT,DIRECT,no-resolve  #80,443端口
+  - RULE-SET,My_DIRECT,DIRECT,no-resolve  #我的直連網站
   - RULE-SET,My_PROXY,香港特區,no-resolve  #我的翻墻網站
   - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
   - RULE-SET,TikTok,日本島國,no-resolve  #TikTok
   - RULE-SET,Telegram,飛機電報,no-resolve  #Telegram
   - RULE-SET,AI,美利堅國,no-resolve  #人工智能
   - RULE-SET,YouTubeMusic,美利堅國,no-resolve  #油管音樂
-  - RULE-SET,My_DIRECT,DIRECT,no-resolve  #我的直連網站
   - RULE-SET,Apple,DIRECT,no-resolve  #Apple
   - DOMAIN-KEYWORD,bilibili,嗶哩嗶哩,no-resolve  #嗶哩嗶哩
   - RULE-SET,BiliBili-Intl,嗶哩嗶哩,no-resolve  #嗶哩嗶哩
