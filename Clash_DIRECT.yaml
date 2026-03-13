@@ -1,4 +1,7 @@
 payload:
+  - DST-PORT,0-79  #0-79端口直連
+  - DST-PORT,81-442  #81-442端口直連
+  - DST-PORT,444-65535  #444-65535端口直連
   - DOMAIN-KEYWORD,.cn  #直連關鍵字
   - DOMAIN-KEYWORD,-cn  #直連關鍵字
   - DOMAIN-KEYWORD,.gov  #直連關鍵字
