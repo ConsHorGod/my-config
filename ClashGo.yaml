@@ -313,7 +313,7 @@ rule-providers:
 rules:
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
   - RULE-SET,LAN,DIRECT,no-resolve  #局域網
-  - RULE-SET,anti-ad,REJECT,no-resolve  #anti-ad廣告過濾
+  - RULE-SET,anti-ad,REJECT-DROP,no-resolve  #anti-ad廣告過濾
   - RULE-SET,直連端口,DIRECT,no-resolve  #80,443端口
   - RULE-SET,My_PROXY,香港特區,no-resolve  #我的翻墻網站
   - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
