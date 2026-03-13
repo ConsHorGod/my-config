@@ -1,4 +1,9 @@
 payload:
-  - DOMAIN-KEYWORD,github
-  - DOMAIN-KEYWORD,microsoft
-  - DOMAIN-KEYWORD,windows
+  - DOMAIN-KEYWORD,github  #GitHub
+  - DOMAIN-KEYWORD,microsoft  #微軟
+  - DOMAIN-KEYWORD,windows  #微軟
+  - DOMAIN-KEYWORD,music.youtube.com  #YouTubeMusic
+  - DOMAIN-KEYWORD,youtube-music.l.google.com  #YouTubeMusic
+  - DOMAIN-KEYWORD,s.youtube.com  #YouTubeMusic
+  - DOMAIN-KEYWORD,youtubemusic  #YouTubeMusic
+  - DOMAIN-KEYWORD,youtube-music.l.google.com  #YouTubeMusic
