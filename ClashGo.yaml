@@ -135,17 +135,6 @@ proxy-groups:
     use:
       - LHY
       - OKZ
-#-----------------------------------------------------------------------------------------------------------
-  - name: 人工智能
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #手动选择
-    url: http://www.apple.com/library/test/success.html  #用于测试的链接
-    interval: 600
-    proxies:  #代理選項
-      - 美利堅國
-      - 日本島國
-      - 中國台灣
       #-----------------------------------------------------------------------------------------------------------
   - name: FNY
     icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"  #策略組圖標
@@ -287,10 +276,10 @@ rules:
   - RULE-SET,DIRECT,DIRECT,no-resolve  #我的直連網站
   - RULE-SET,PROXY,香港特區,no-resolve  #我的翻墻網站
   - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
-  - RULE-SET,TikTok,日本島國,no-resolve  #TikTok
+  - RULE-SET,TikTok,國際抖音,no-resolve  #TikTok
   - RULE-SET,Telegram,飛機電報,no-resolve  #Telegram
-  - RULE-SET,AI,人工智能,no-resolve  #人工智能
-  - RULE-SET,YouTubeMusic,美利堅國,no-resolve  #油管音樂
+  - RULE-SET,AI,中國台灣,no-resolve  #人工智能
+  - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #油管音樂
   - RULE-SET,Apple,DIRECT,no-resolve  #Apple
   - RULE-SET,CN,DIRECT,no-resolve  #中國域名
   - RULE-SET,CN-ASN,DIRECT  #中國自治系統號碼
