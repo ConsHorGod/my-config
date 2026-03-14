@@ -4,7 +4,6 @@ DOMAIN-KEYWORD,ytmusicapi.googlevideo.com
 DOMAIN-KEYWORD,youtube-music.l.google.com
 DOMAIN-KEYWORD,s.youtube.com
 DOMAIN-KEYWORD,youtubemusic
-DOMAIN-KEYWORD,youtube-music.l.google.com
 USER-AGENT,*YouTubeMusic*
 USER-AGENT,*com.google.ios.youtubemusic*
 USER-AGENT,YouTubeMusic*
