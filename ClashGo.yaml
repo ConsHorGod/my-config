@@ -248,6 +248,13 @@ rule-providers:
     url: "https://yfamilys.com/rule/ai.rule"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
+  YouTube:
+    type: http
+    behavior: classical
+    path: ./ruleset/YouTube.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YouTube/YouTube.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
   YouTubeMusic:
     type: http
     behavior: classical
@@ -279,7 +286,8 @@ rules:
   - RULE-SET,TikTok,國際抖音,no-resolve  #TikTok
   - RULE-SET,Telegram,飛機電報,no-resolve  #Telegram
   - RULE-SET,AI,中國台灣,no-resolve  #人工智能
-  - RULE-SET,YouTubeMusic,香港特區,no-resolve  #油管音樂
+  - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #油管音樂
+  - RULE-SET,YouTube,中國台灣,no-resolve  #油管
   - RULE-SET,Apple,DIRECT,no-resolve  #Apple
   - RULE-SET,CN,DIRECT,no-resolve  #中國域名
   - RULE-SET,CN-ASN,DIRECT  #中國自治系統號碼
