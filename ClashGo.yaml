@@ -279,7 +279,7 @@ rules:
   - RULE-SET,TikTok,國際抖音,no-resolve  #TikTok
   - RULE-SET,Telegram,飛機電報,no-resolve  #Telegram
   - RULE-SET,AI,中國台灣,no-resolve  #人工智能
-  - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #油管音樂
+  - RULE-SET,YouTubeMusic,香港特區,no-resolve  #油管音樂
   - RULE-SET,Apple,DIRECT,no-resolve  #Apple
   - RULE-SET,CN,DIRECT,no-resolve  #中國域名
   - RULE-SET,CN-ASN,DIRECT  #中國自治系統號碼
