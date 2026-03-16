@@ -54,7 +54,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
-    interval: 600
+    interval: 300
     filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港)
     use:
       - LHY
@@ -65,7 +65,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
-    interval: 600
+    interval: 300
     filter: '美国|美國'
     use:
       - LHY
@@ -76,7 +76,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
-    interval: 600
+    interval: 300
     filter: '日本'
     use:
       - LHY
@@ -87,7 +87,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
-    interval: 600
+    interval: 300
     filter: '台灣|台湾|臺灣'
     use:
       - LHY
@@ -98,7 +98,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
-    interval: 600
+    interval: 300
     filter: '^(?!.*(官网|失联|发布|流量|剩余|群|套餐|客服|🇺🇸|专线|美國|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|🇭🇰|香港|HK|Hong|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|JP|Japan|🇨🇳|台湾|🇹🇼|TW|🇸🇬|狮|SG|Singapore|🇰🇷|韩国|首尔|KR|Korea)).*$'
     use:
       - OKZ
@@ -109,7 +109,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自動測速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
-    interval: 600
+    interval: 300
     filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港)
     use:
       - LHY
@@ -120,7 +120,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
-    interval: 600
+    interval: 300
     proxies:  #代理選項
       - 日本島國
       - 美利堅國
@@ -130,18 +130,28 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
-    interval: 600
+    interval: 300
     filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港)
     use:
       - LHY
       - OKZ
-      #-----------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------
+  - name: 廣告過濾
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlack.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    type: select  #手动选择
+    url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    proxies:  #代理選項
+      - REJECT-DROP
+      - REJECT
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
   - name: FNY
     icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.apple.com/library/test/success.html  #用于测试的链接
-    interval: 600
+    interval: 300
     use:  #代理選項
       - FNY
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️代理集⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
@@ -154,7 +164,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.apple.com/library/test/success.html
-      interval: 600
+      interval: 300
 #-----------------------------------------------------------------------------------------------------------
   "OKZ":
     type: http
@@ -164,7 +174,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.apple.com/library/test/success.html
-      interval: 600
+      interval: 300
 #-----------------------------------------------------------------------------------------------------------
   "LHY":
     type: http
@@ -174,7 +184,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.apple.com/library/test/success.html
-      interval: 600
+      interval: 300
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️規則集⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rule-providers:
 #-----------------------------------------------------------------------------------------------------------
@@ -279,7 +289,7 @@ rule-providers:
 rules:
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
   - RULE-SET,LAN,DIRECT,no-resolve  #局域網
-  - RULE-SET,anti-ad,REJECT-DROP,no-resolve  #anti-ad廣告過濾
+  - RULE-SET,anti-ad,廣告過濾,no-resolve  #anti-ad廣告過濾
   - RULE-SET,DIRECT,DIRECT,no-resolve  #我的直連網站
   - RULE-SET,PROXY,香港特區,no-resolve  #我的翻墻網站
   - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
