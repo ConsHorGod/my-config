@@ -216,8 +216,8 @@ rule-providers:
   隐私保护:
     type: http
     behavior: classical
-    path: ./ruleset/Privacy_Domain_For_Clash.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Privacy/Privacy_Domain_For_Clash.txt"
+    path: ./ruleset/Privacy_Classical.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Privacy/Privacy_Classical.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   CN:
