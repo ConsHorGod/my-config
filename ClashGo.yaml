@@ -125,7 +125,7 @@ proxy-groups:
       - 日本島國
       - 美利堅國
 #-----------------------------------------------------------------------------------------------------------
-  - name: YouTube
+  - name: 油管視頻
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
@@ -136,7 +136,7 @@ proxy-groups:
       - 日本島國
       - 美利堅國
 #-----------------------------------------------------------------------------------------------------------
-  - name: HBOMAX
+  - name: 最黃暴嘔
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
@@ -303,12 +303,12 @@ rules:
   - RULE-SET,anti-ad,廣告過濾,no-resolve  #anti-ad廣告過濾
   - RULE-SET,DIRECT,DIRECT,no-resolve  #我的直連網站
   - RULE-SET,PROXY,香港特區,no-resolve  #我的翻墻網站
-  - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
+  - RULE-SET,HBOMAX,最黃暴嘔,no-resolve  #HBOMAX
   - RULE-SET,TikTok,國際抖音,no-resolve  #TikTok
   - RULE-SET,Telegram,飛機電報,no-resolve  #Telegram
   - RULE-SET,AI,中國台灣,no-resolve  #人工智能
-  - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #油管音樂
-  - RULE-SET,YouTube,中國台灣,no-resolve  #油管
+  - RULE-SET,YouTubeMusic,油管視頻,no-resolve  #油管音樂
+  - RULE-SET,YouTube,油管視頻,no-resolve  #油管
   - RULE-SET,Apple,DIRECT,no-resolve  #Apple
   - RULE-SET,CN,DIRECT,no-resolve  #中國域名
   - RULE-SET,CN-ASN,DIRECT  #中國自治系統號碼
