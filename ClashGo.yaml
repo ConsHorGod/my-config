@@ -300,7 +300,7 @@ rule-providers:
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️分流規則⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rules:
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
-  #- RULE-SET,anti-ad,廣告過濾,no-resolve  #anti-ad廣告過濾
+  - RULE-SET,anti-ad,廣告過濾,no-resolve  #anti-ad廣告過濾
   - RULE-SET,DIRECT,DIRECT,no-resolve  #我的直連網站
   - RULE-SET,PROXY,香港特區,no-resolve  #我的翻墻網站
   - RULE-SET,HBOMAX,黃暴嘔爆,no-resolve  #HBOMAX
