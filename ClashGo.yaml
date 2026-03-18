@@ -303,7 +303,7 @@ rules:
   #- RULE-SET,anti-ad,廣告過濾,no-resolve  #anti-ad廣告過濾
   - RULE-SET,DIRECT,DIRECT,no-resolve  #我的直連網站
   - RULE-SET,PROXY,香港特區,no-resolve  #我的翻墻網站
-  - RULE-SET,HBOMAX,最黃暴嘔,no-resolve  #HBOMAX
+  - RULE-SET,HBOMAX,黃暴嘔爆,no-resolve  #HBOMAX
   - RULE-SET,TikTok,國際抖音,no-resolve  #TikTok
   - RULE-SET,Telegram,飛機電報,no-resolve  #Telegram
   - RULE-SET,AI,中國台灣,no-resolve  #人工智能
