@@ -1,4 +1,7 @@
 payload:
+  - DOMAIN,okztwo.com // 强制订阅域名直连
+  - DOMAIN,b3.342242.icu // 强制订阅域名直连
+  - DOMAIN,www.linghunyun.com // 强制订阅域名直连
   - DST-PORT,0-79  #0-79端口直連
   - DST-PORT,81-442  #81-442端口直連
   - DST-PORT,444-65535  #444-65535端口直連
