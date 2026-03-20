@@ -1,4 +1,7 @@
 
+DOMAIN,okztwo.com // 强制订阅域名直连
+DOMAIN,b3.342242.icu // 强制订阅域名直连
+DOMAIN,www.linghunyun.com // 强制订阅域名直连
 AND,((NOT,((DEST-PORT,80))), (NOT,((DEST-PORT,443)))) // "80,443"以外端口一律直連
 DOMAIN-KEYWORD,.cn // 直連關鍵字
 DOMAIN-KEYWORD,-cn // 直連關鍵字
