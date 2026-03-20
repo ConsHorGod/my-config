@@ -182,7 +182,7 @@ proxy-providers:
   "OKZ":
     type: http
     path: ./provide/OKZ.yml
-    url: http://47.107.66.153:65533/api/v1/12/25?token=2cd2522984108e0698c5400efd5818ff
+    url: http://47.107.66.153:65533/api/v1/12/25?token=69738160e04b20b21a90ebf25ad18db7
     interval: 86400
     health-check:
       enable: true
