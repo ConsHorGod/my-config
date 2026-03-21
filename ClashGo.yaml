@@ -39,7 +39,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
-    url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    url: http://1.1.1.1/generate_204  #用于测试的链接
     proxies:  #代理選項
       - 香港特區
       - 美利堅國
@@ -54,7 +54,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
-    url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
     filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港)
     use:
@@ -65,7 +65,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
-    url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
     filter: '美国|美國'
     use:
@@ -76,7 +76,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
-    url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
     filter: '日本'
     use:
@@ -87,7 +87,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
-    url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
     filter: '台灣|台湾|臺灣'
     use:
@@ -98,7 +98,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/AAEX.png  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
-    url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
     filter: '^(?!.*(官网|失联|发布|流量|剩余|群|套餐|客服|🇺🇸|专线|美國|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|🇭🇰|香港|HK|Hong|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|JP|Japan|🇨🇳|台湾|🇹🇼|TW|🇸🇬|狮|SG|Singapore|🇰🇷|韩国|首尔|KR|Korea)).*$'
     use:
@@ -109,7 +109,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自動測速
-    url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
     filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港)
     use:
@@ -120,7 +120,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
-    url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
     proxies:  #代理選項
       - 日本島國
@@ -130,7 +130,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
-    url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
     proxies:  #代理選項
       - 香港特區
@@ -142,7 +142,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
-    url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
     filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港)
     use:
@@ -153,7 +153,7 @@ proxy-groups:
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlack.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
-    url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    url: http://1.1.1.1/generate_204  #用于测试的链接
     proxies:  #代理選項
       - REJECT-DROP
       - REJECT
@@ -163,7 +163,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
-    url: http://www.apple.com/library/test/success.html  #用于测试的链接
+    url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
     use:  #代理選項
       - FNY
@@ -176,7 +176,7 @@ proxy-providers:
     interval: 86400
     health-check:
       enable: true
-      url: http://www.apple.com/library/test/success.html
+      url: http://1.1.1.1/generate_204
       interval: 300
 #-----------------------------------------------------------------------------------------------------------
   "OKZ":
@@ -186,7 +186,7 @@ proxy-providers:
     interval: 86400
     health-check:
       enable: true
-      url: http://www.apple.com/library/test/success.html
+      url: http://1.1.1.1/generate_204
       interval: 300
 #-----------------------------------------------------------------------------------------------------------
   "LHY":
@@ -196,7 +196,7 @@ proxy-providers:
     interval: 86400
     health-check:
       enable: true
-      url: http://www.apple.com/library/test/success.html
+      url: http://1.1.1.1/generate_204
       interval: 300
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️規則集⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rule-providers:
