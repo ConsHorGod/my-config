@@ -13,21 +13,21 @@ DOMAIN-KEYWORD,msft // 微軟網絡檢測地址
 DOMAIN-KEYWORD,gomicx.net // 粤漫社
 DOMAIN-KEYWORD,dranime.net // 飘雪
 DOMAIN-KEYWORD,dotmu.net // 飘雪
-IP-CIDR,0.0.0.0/8,DIRECT // 本机或未知设备
-IP-CIDR,10.0.0.0/8,DIRECT // 大型企业/校园内网
-IP-CIDR,100.64.0.0/10,DIRECT // 运营商大局域网
-IP-CIDR,127.0.0.0/8,DIRECT // 系统自己连自己
-IP-CIDR,169.254.0.0/16,DIRECT // 没连上路由器时的临时地址
-IP-CIDR,172.16.0.0/12,DIRECT // 中型企业内网
-IP-CIDR,192.0.0.0/24,DIRECT // 协议专用地址
-IP-CIDR,192.0.2.0/24,DIRECT // 文档演示专用
-IP-CIDR,192.168.0.0/16,DIRECT // 普通家庭/路由器内网
-IP-CIDR,192.88.99.0/24,DIRECT // IPv6 转换过渡
-# IP-CIDR,198.18.0.0/15,DIRECT // 设备压力测试
-IP-CIDR,198.51.100.0/24,DIRECT // 文档演示专用
-IP-CIDR,203.0.113.0/24,DIRECT // 文档演示专用
-IP-CIDR,224.0.0.0/3,DIRECT // 视频广播/设备搜索
-IP-CIDR6,::/127,DIRECT // IPv6 的“自己连自己”
-IP-CIDR6,fc00::/7,DIRECT // IPv6 的内网地址
-IP-CIDR6,fe80::/10,DIRECT // 局域网内设备互认
-IP-CIDR6,ff00::/8,DIRECT // IPv6 广播流量
+IP-CIDR,0.0.0.0/8 // 本机或未知设备
+IP-CIDR,10.0.0.0/8 // 大型企业/校园内网
+IP-CIDR,100.64.0.0/10 // 运营商大局域网
+IP-CIDR,127.0.0.0/8 // 系统自己连自己
+IP-CIDR,169.254.0.0/16 // 没连上路由器时的临时地址
+IP-CIDR,172.16.0.0/12 // 中型企业内网
+IP-CIDR,192.0.0.0/24 // 协议专用地址
+IP-CIDR,192.0.2.0/24 // 文档演示专用
+IP-CIDR,192.168.0.0/16 // 家庭/普通路由器内网
+IP-CIDR,192.88.99.0/24 // IPv6 转换过渡
+IP-CIDR,198.18.0.0/15 // 设备压力测试
+IP-CIDR,198.51.100.0/24 // 文档演示专用
+IP-CIDR,203.0.113.0/24 // 文档演示专用
+IP-CIDR,224.0.0.0/3 // 视频广播/设备搜索
+IP-CIDR6,::/127 // IPv6 的“自己连自己”
+IP-CIDR6,fc00::/7 // IPv6 的内网地址
+IP-CIDR6,fe80::/10 // 局域网内设备互认
+IP-CIDR6,ff00::/8 // IPv6 广播流量
