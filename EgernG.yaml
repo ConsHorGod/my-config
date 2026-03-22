@@ -8,7 +8,7 @@ hijack_dns:
 - '*:53'
 geoip_db_url: https://github.com/xream/geoip/releases/latest/download/ipinfo.country.mmdb
 asn_db_url: https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-ASN.mmdb
-proxy_latency_test_url: http://www.apple.com/library/test/success.html
+proxy_latency_test_url: ttp://1.1.1.1/generate_204
 direct_latency_test_url: http://www.baidu.com
 compat_route: true
 include_all_networks: false
