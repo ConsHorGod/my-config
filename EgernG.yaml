@@ -283,19 +283,23 @@ mitm:
     - '*.instagram.com'
     - '*.facebook.com'
 modules:
-- name: 限免
-  url: https://whatshub.top/sgmodule/appsdoor.sgmodule
-  enabled: true
-- name: 流媒体解锁检测
-  url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/流媒体解锁检测.official.sgmodule
-  enabled: true
-- name: APP解锁合集
-  url: https://raw.githubusercontent.com/chxm1023/Script_X/main/Collections.sgmodule
-  enabled: true
-- name: Google重定向
-  url: https://raw.githubusercontent.com/cc63/Surge/main/Module/Spec/Google_Rewrite.sgmodule
-  enabled: true
-- url: https://raw.githubusercontent.com/fmz200/wool_scripts/refs/heads/main/Surge/module/blockAds.module
-  enabled: true
-- url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/Reddit%20%E5%8E%BB%E5%B9%BF%E5%91%8A.sgmodule
-  enabled: true
+  - name: "我的远程配置"
+    url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/EgernG.yaml"
+    update_interval: 3600  # 单位为秒，86400 为 24 小时
+    enabled: true
+  - name: 限免
+    url: https://whatshub.top/sgmodule/appsdoor.sgmodule
+    enabled: true
+  - name: 流媒体解锁检测
+    url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/流媒体解锁检测.official.sgmodule
+    enabled: true
+  - name: APP解锁合集
+    url: https://raw.githubusercontent.com/chxm1023/Script_X/main/Collections.sgmodule
+    enabled: true
+  - name: Google重定向
+    url: https://raw.githubusercontent.com/cc63/Surge/main/Module/Spec/Google_Rewrite.sgmodule
+    enabled: true
+  - url: https://raw.githubusercontent.com/fmz200/wool_scripts/refs/heads/main/Surge/module/blockAds.module
+    enabled: true
+  - url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/Reddit%20%E5%8E%BB%E5%B9%BF%E5%91%8A.sgmodule
+    enabled: true
