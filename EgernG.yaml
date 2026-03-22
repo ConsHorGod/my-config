@@ -1,0 +1,301 @@
+ipv6: false
+http_port: 3080
+socks_port: 3090
+allow_external_connections: true
+vif_only: true
+hide_vpn_icon: false
+hijack_dns:
+- '*:53'
+geoip_db_url: https://github.com/xream/geoip/releases/latest/download/ipinfo.country.mmdb
+asn_db_url: https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-ASN.mmdb
+proxy_latency_test_url: http://www.apple.com/library/test/success.html
+direct_latency_test_url: http://www.baidu.com
+compat_route: true
+include_all_networks: false
+dns:
+  bootstrap:
+  - 223.5.5.5
+  - 223.6.6.6
+  - 119.29.29.29
+policy_groups:
+- select:
+    name: 最終出站
+    policies:
+    - DIRECT
+    - 香港特區
+    - 中國台灣
+    - 日本島國
+    - 美利堅國
+    - 其它節點
+    - FNY
+    flatten: false
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
+    hidden: false
+- external:
+    name: FNY
+    type: select
+    urls:
+    - https://b3.342242.icu/api/v1/client/subscribe?token=0e79462ce42ab0413ed58d454329934e
+    update_interval: 86400
+    hidden: true
+- external:
+    name: LHY
+    type: select
+    urls:
+    - https://www.linghunyun.com/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
+    update_interval: 86400
+    hidden: true
+- external:
+    name: OKZ
+    type: select
+    urls:
+    - http://47.107.66.153:65533/api/v1/12/25?token=69738160e04b20b21a90ebf25ad18db7
+    update_interval: 86400
+    hidden: true
+- auto_test:
+    name: 香港特區
+    policies:
+    - LHY
+    - OKZ
+    flatten: true
+    filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港)
+    interval: 60
+    timeout: 3
+    icon: https://iili.io/FaAI3Bt.png
+    hidden: true
+- auto_test:
+    name: 中國台灣
+    policies:
+    - LHY
+    - OKZ
+    flatten: true
+    filter: 台灣|臺灣|台湾
+    interval: 300
+    tolerance: 80
+    timeout: 3
+    icon: https://iili.io/FaAfXou.png
+    hidden: true
+- auto_test:
+    name: 日本島國
+    policies:
+    - LHY
+    - OKZ
+    flatten: true
+    filter: (🇯🇵)|(日本)|(Japan)|(JP)
+    interval: 300
+    tolerance: 80
+    timeout: 3
+    icon: https://iili.io/Fa5AnTb.png
+    hidden: true
+- auto_test:
+    name: 美利堅國
+    policies:
+    - LHY
+    - OKZ
+    flatten: true
+    filter: 美国|美國
+    interval: 300
+    tolerance: 80
+    timeout: 3
+    icon: https://iili.io/FaAug7s.png
+    hidden: true
+- auto_test:
+    name: 其它節點
+    policies: []
+    flatten: true
+    filter: ^(?!.*(官网|失联|发布|流量|剩余|群|套餐|客服|🇺🇸|专线|美国|美國|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|🇭🇰|香港|HK|Hong|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|JP|Japan|🇨🇳|台湾|🇹🇼|TW|🇸🇬|狮|SG|Singapore|🇰🇷|韩国|首尔|KR|Korea)).*$
+    interval: 60
+    tolerance: 80
+    timeout: 3
+    hidden: true
+- auto_test:
+    name: 飛機電報
+    policies:
+    - 香港特區
+    flatten: true
+    interval: 300
+    tolerance: 80
+    timeout: 3
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png
+    hidden: false
+- select:
+    name: 國際抖音
+    policies:
+    - 日本島國
+    - 美利堅國
+    flatten: false
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_1.png
+    hidden: false
+- select:
+    name: 油管視頻
+    policies:
+    - 香港特區
+    - 日本島國
+    - 美利堅國
+    flatten: false
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+    hidden: false
+- auto_test:
+    name: 黃暴嘔爆
+    policies:
+    - 香港特區
+    flatten: true
+    interval: 300
+    tolerance: 80
+    timeout: 3
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HBO_Max.png
+    hidden: false
+- select:
+    name: 廣告過濾
+    policies:
+    - REJECT-DROP
+    - REJECT
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
+    hidden: false
+rules:
+- ssid:
+    match: ASUSWiFi*
+    policy: DIRECT
+    disabled: false
+- domain:
+    match: msmp.abchina.com.cn
+    policy: REJECT
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge2.txt
+    policy: 廣告過濾
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Surge_DIRECT.list
+    policy: DIRECT
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Surge_PROXY.list
+    policy: 香港特區
+    disabled: false
+- rule_set:
+    match: https://whatshub.top/rule/TikTok.list
+    policy: 國際抖音
+- rule_set:
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Surge/Telegram/Telegram_Resolve.list
+    policy: 飛機電報
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/HBO/HBO.list
+    policy: 黃暴嘔爆
+    disabled: false
+- rule_set:
+    match: https://yfamilys.com/rule/ai.list
+    policy: 中國台灣
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Surge_YouTubeMusic.list
+    policy: 中國台灣
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Surge/YouTube/YouTube_Resolve.list
+    policy: 油管視頻
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Surge/Apple/Apple_All.list
+    policy: DIRECT
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Surge/ChinaMaxNoIP/ChinaMaxNoIP_All.list
+    policy: DIRECT
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Surge/Privacy/Privacy_All.list
+    policy: DIRECT
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/missuo/ASN-China/main/ASN.China.list
+    policy: DIRECT
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Surge/ChinaIPs/ChinaIPs_No_IPv6_Resolve.list
+    policy: DIRECT
+    disabled: false
+- default:
+    name: FINAL
+    policy: 最終出站
+url_rewrites:
+- match: ^https?://(.*?L[.])?(?:glgoogle).cn
+  location: https://$1google.com
+  status_code: 302
+body_rewrites:
+- response_regex:
+    match: https://apis.ddfans.com/bian/public/index.php/water/user/onGetUser
+    find: '"id":.\d+,'
+    replace: '"id":88888888,'
+- response_regex:
+    match: https://apis.ddfans.com/bian/public/index.php/water/user/onGetUser
+    find: '"money":\d+,'
+    replace: '"money":88888888,'
+- response_regex:
+    match: https://apis.ddfans.com/bian/public/index.php/water/user/onGetUser
+    find: level_deadline":"未开通"
+    replace: level_deadline":"iBL3ND"
+- response_regex:
+    match: https://apis.ddfans.com/bian/public/index.php/water/user/onGetUser
+    find: level":\d+
+    replace: level":1
+scriptings:
+- schedule:
+    name: 黄金
+    cron: 0 30 07 * * *
+    script_url: 黄金脚本
+- schedule:
+    name: 每日视频
+    cron: 00 23 * * *
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/refs/heads/main/one_daily_task.js
+- schedule:
+    name: 摸鱼
+    cron: 0 0 08 * * *
+    script_url: https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/moyu.js
+- schedule:
+    name: 海口油价
+    cron: 0 0 07 * * *
+    script_url: 海口油价
+- generic:
+    name: socks5筛选
+    script_url: socks5筛选
+- schedule:
+    name: 黑料不打烊
+    cron: 0 0 * * *
+    script_url: https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/hlbdy.js
+    timeout: 30
+    disabled: false
+mitm:
+  ca_p12: egern.p12
+  ca_passphrase: egern
+  hostnames:
+    excludes:
+    - '*.icloud.cn'
+    - '*.apple.cn'
+    - '*.icloud.com'
+    - '*.apple.com'
+    - '*.pstatp.com'
+    - '*.snssdk.com'
+    - '*.twitter.com'
+    - '*.instagram.com'
+    - '*.facebook.com'
+modules:
+- name: 限免
+  url: https://whatshub.top/sgmodule/appsdoor.sgmodule
+  enabled: true
+- name: 流媒体解锁检测
+  url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/流媒体解锁检测.official.sgmodule
+  enabled: true
+- name: APP解锁合集
+  url: https://raw.githubusercontent.com/chxm1023/Script_X/main/Collections.sgmodule
+  enabled: true
+- name: Google重定向
+  url: https://raw.githubusercontent.com/cc63/Surge/main/Module/Spec/Google_Rewrite.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/fmz200/wool_scripts/refs/heads/main/Surge/module/blockAds.module
+  enabled: true
+- url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/Reddit%20%E5%8E%BB%E5%B9%BF%E5%91%8A.sgmodule
+  enabled: true
