@@ -16,7 +16,6 @@ dns:
   bootstrap:
   - 223.5.5.5
   - 223.6.6.6
-  - 119.29.29.29
 policy_groups:
 - select:
     name: 最終出站
@@ -280,7 +279,7 @@ mitm:
     - '*.facebook.com'
 modules:
   - name: 我的远程配置
-    url: https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/EgernG.yaml
+    url: https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/EgernG.yaml
     update_interval: 3600  # 单位为秒，86400 为 24 小时
     enabled: true
   - name: 限免
