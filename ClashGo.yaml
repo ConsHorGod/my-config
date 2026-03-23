@@ -208,13 +208,6 @@ rule-providers:
     path: ./ruleset/anti-ad.yaml
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  CN-IP:
-    type: http
-    behavior: classical
-    path: ./ruleset/ChinaIPs_Classical_No_IPv6.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaIPs/ChinaIPs_Classical_No_IPv6.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
   隐私保护:
     type: http
     behavior: classical
@@ -225,8 +218,8 @@ rule-providers:
   CN:
     type: http
     behavior: classical
-    path: ./ruleset/ChinaMaxNoIP.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMaxNoIP/ChinaMaxNoIP_Classical.yaml"
+    path: ./ruleset/ChinaMax.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------    
   CN-ASN:
@@ -303,6 +296,7 @@ rules:
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
   - RULE-SET,anti-ad,廣告過濾,no-resolve  #anti-ad廣告過濾
   - RULE-SET,DIRECT,DIRECT,no-resolve  #我的直連網站
+  - RULE-SET,隐私保护,DIRECT,no-resolve  #隱私保護
   - RULE-SET,PROXY,香港特區,no-resolve  #我的翻墻網站
   - RULE-SET,HBOMAX,黃暴嘔爆,no-resolve  #HBOMAX
   - RULE-SET,TikTok,國際抖音,no-resolve  #TikTok
@@ -311,8 +305,6 @@ rules:
   - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #油管音樂
   - RULE-SET,YouTube,油管視頻,no-resolve  #油管
   - RULE-SET,Apple,DIRECT,no-resolve  #Apple
-  - RULE-SET,CN,DIRECT,no-resolve  #中國域名
-  - RULE-SET,隐私保护,DIRECT,no-resolve  #中國域名
   - RULE-SET,CN-ASN,DIRECT  #中國自治系統號碼
-  - RULE-SET,CN-IP,DIRECT  #中國IP
+  - RULE-SET,CN,DIRECT,no-resolve  #中國域名
   - MATCH,最終出站,dns-failed
