@@ -306,6 +306,6 @@ rules:
   - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #油管音樂
   - RULE-SET,YouTube,油管視頻,no-resolve  #油管
   - RULE-SET,Apple,DIRECT,no-resolve  #Apple
-  - RULE-SET,CN-ASN,DIRECT  #中國自治系統號碼
   - RULE-SET,CN,DIRECT,no-resolve  #中國域名
+  - RULE-SET,CN-ASN,DIRECT  #中國自治系統號碼
   - MATCH,最終出站,dns-failed
