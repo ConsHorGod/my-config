@@ -51,6 +51,14 @@ proxy-groups:
       - DIRECT
       - REJECT
 #-----------------------------------------------------------------------------------------------------------
+  - name: 國內直連
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    type: select  #手动选择
+    url: http://1.1.1.1/generate_204  #用于测试的链接
+    proxies:  #代理選項
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
   - name: 香港特區
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
