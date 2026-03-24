@@ -48,14 +48,14 @@ proxy-groups:
       - 中國台灣
       - 其它節點
       - FNY
-      - DIRECT
+      - 國內直連
       - REJECT
 #-----------------------------------------------------------------------------------------------------------
   - name: 國內直連
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
-    url: http://1.1.1.1/generate_204  #用于测试的链接
+    url: http://mirrors.aliyun.com/generate_204  #用于测试的链接
     proxies:  #代理選項
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
@@ -166,7 +166,7 @@ proxy-groups:
     proxies:  #代理選項
       - REJECT-DROP
       - REJECT
-      - DIRECT
+      - 國內直連
 #-----------------------------------------------------------------------------------------------------------
   - name: FNY
     icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"  #策略組圖標
@@ -304,8 +304,8 @@ rule-providers:
 rules:
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
   - RULE-SET,anti-ad,廣告過濾,no-resolve  #anti-ad廣告過濾
-  - RULE-SET,DIRECT,DIRECT,no-resolve  #我的直連網站
-  - RULE-SET,隐私保护,DIRECT,no-resolve  #隱私保護
+  - RULE-SET,DIRECT,國內直連,no-resolve  #我的直連網站
+  - RULE-SET,隐私保护,國內直連,no-resolve  #隱私保護
   - RULE-SET,PROXY,香港特區,no-resolve  #我的翻墻網站
   - RULE-SET,HBOMAX,黃暴嘔爆,no-resolve  #HBOMAX
   - RULE-SET,TikTok,國際抖音,no-resolve  #TikTok
@@ -313,7 +313,7 @@ rules:
   - RULE-SET,AI,中國台灣,no-resolve  #人工智能
   - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #油管音樂
   - RULE-SET,YouTube,油管視頻,no-resolve  #油管
-  - RULE-SET,Apple,DIRECT,no-resolve  #Apple
-  - RULE-SET,CN,DIRECT,no-resolve  #中國域名
-  - RULE-SET,CN-ASN,DIRECT  #中國自治系統號碼
+  - RULE-SET,Apple,國內直連,no-resolve  #Apple
+  - RULE-SET,CN,國內直連,no-resolve  #中國域名
+  - RULE-SET,CN-ASN,國內直連  #中國自治系統號碼
   - MATCH,最終出站,dns-failed
