@@ -47,13 +47,13 @@ proxy-groups:
       - 日本島國
       - 中國台灣
       - 其它節點
-      - FNY
+      - 飛鳥雲
       - 國內直連
       - REJECT
 #-----------------------------------------------------------------------------------------------------------
   - name: 國內直連
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://mirrors.aliyun.com/generate_204  #用于测试的链接
     proxies:  #代理選項
@@ -168,19 +168,19 @@ proxy-groups:
       - REJECT
       - 國內直連
 #-----------------------------------------------------------------------------------------------------------
-  - name: FNY
+  - name: 飛鳥雲
     icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
     use:  #代理選項
-      - FNY
+      - 飛鳥雲
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️代理集⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 proxy-providers:
-  "FNY":
+  "飛鳥雲":
     type: http
-    path: ./provide/FNY.yml
+    path: ./provide/飛鳥雲.yml
     url: https://b3.342242.icu/api/v1/client/subscribe?token=0e79462ce42ab0413ed58d454329934e
     interval: 86400
     health-check:
