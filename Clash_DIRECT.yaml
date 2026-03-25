@@ -19,7 +19,8 @@ payload:
   - DOMAIN-KEYWORD,jd.com  #京東
   - DOMAIN-KEYWORD,baidu  #百度
   - DOMAIN-KEYWORD,alibaba  #阿里巴巴
-  - DOMAIN-KEYWORD,alipay#支付寶
+  - DOMAIN-KEYWORD,aliyuncs  #阿里雲
+  - DOMAIN-KEYWORD,alipay  #支付寶
   - DOMAIN-KEYWORD,taobao  #淘寶
   - DOMAIN-KEYWORD,tmall  #天猫
   - DOMAIN-KEYWORD,netease  #網易
