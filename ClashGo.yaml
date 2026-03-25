@@ -127,7 +127,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: 國際抖音
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
@@ -308,7 +308,7 @@ rules:
   - RULE-SET,隐私保护,國內直連,no-resolve  #隱私保護
   - RULE-SET,PROXY,香港特區,no-resolve  #我的翻墻網站
   - RULE-SET,HBOMAX,黃暴嘔爆,no-resolve  #HBOMAX
-  - RULE-SET,TikTok,國際抖音,no-resolve  #TikTok
+#  - RULE-SET,TikTok,國際抖音,no-resolve  #TikTok
   - RULE-SET,Telegram,飛機電報,no-resolve  #Telegram
   - RULE-SET,AI,中國台灣,no-resolve  #人工智能
   - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #油管音樂
