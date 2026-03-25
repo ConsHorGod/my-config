@@ -13,6 +13,11 @@ DOMAIN-KEYWORD,msft // 微軟網絡檢測地址
 DOMAIN-KEYWORD,gomicx.net // 粤漫社
 DOMAIN-KEYWORD,dranime.net // 飘雪
 DOMAIN-KEYWORD,dotmu.net // 飘雪
+DOMAIN-KEYWORD,meituan // 美團
+DOMAIN-KEYWORD,jd.com // 京東
+DOMAIN-KEYWORD,baidu // 百度
+DOMAIN-KEYWORD,taobao // 淘寶
+DOMAIN-KEYWORD,netease // 網易
 IP-CIDR,0.0.0.0/8 // 本機或未知設備
 IP-CIDR,10.0.0.0/8 // 大型企業/校園內網
 IP-CIDR,100.64.0.0/10 // 電信商大局域網
