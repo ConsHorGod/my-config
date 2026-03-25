@@ -19,7 +19,7 @@ payload:
   - DOMAIN-KEYWORD,jd.com  #京東
   - DOMAIN-KEYWORD,baidu  #百度
   - DOMAIN-KEYWORD,alibaba  #阿里巴巴
-  - DOMAIN-KEYWORD,alipay  #支付寶
+  - DOMAIN-KEYWORD,alipay#支付寶
   - DOMAIN-KEYWORD,taobao  #淘寶
   - DOMAIN-KEYWORD,tmall  #天猫
   - DOMAIN-KEYWORD,netease  #網易
@@ -31,23 +31,23 @@ payload:
   - DOMAIN-KEYWORD,douyin  #抖音
   - DOMAIN-KEYWORD,xunlei  #迅雷
   - DOMAIN-KEYWORD,apple  #Apple
-  - DOMAIN-KEYWORD,icloud  #Apple
-  - DOMAIN-KEYWORD,itunes  #Apple
-  - IP-CIDR,0.0.0.0/8
-  - IP-CIDR,10.0.0.0/8
-  - IP-CIDR,100.64.0.0/10
-  - IP-CIDR,127.0.0.0/8
-  - IP-CIDR,169.254.0.0/16
-  - IP-CIDR,172.16.0.0/12
-  - IP-CIDR,192.0.0.0/24
-  - IP-CIDR,192.0.2.0/24
-  - IP-CIDR,192.168.0.0/16
-  - IP-CIDR,192.88.99.0/24
-  - IP-CIDR,198.18.0.0/15
-  - IP-CIDR,198.51.100.0/24
-  - IP-CIDR,203.0.113.0/24
-  - IP-CIDR,224.0.0.0/3
-  - IP-CIDR6,::/127
-  - IP-CIDR6,fc00::/7
-  - IP-CIDR6,fe80::/10
-  - IP-CIDR6,ff00::/8
+  - DOMAIN-KEYWORD,icloud  #iCloud
+  - DOMAIN-KEYWORD,itunes  #iTunes
+  - IP-CIDR,0.0.0.0/8  #本機或未知設備
+  - IP-CIDR,10.0.0.0/8  #大型企業/校園內網
+  - IP-CIDR,100.64.0.0/10  #電信商大局域網
+  - IP-CIDR,127.0.0.0/8  #系統自己連自己
+  - IP-CIDR,169.254.0.0/16  #沒連上路由器時的臨時位址
+  - IP-CIDR,172.16.0.0/12  #中型企業內網
+  - IP-CIDR,192.0.0.0/24  #協定專用位址
+  - IP-CIDR,192.0.2.0/24  #文件演示專用
+  - IP-CIDR,192.88.99.0/24  #IPv6轉換過渡
+  - IP-CIDR,192.168.0.0/16  #家庭/一般路由器內網
+  - IP-CIDR,198.18.0.0/15  #設備壓力測試
+  - IP-CIDR,198.51.100.0/24  #文件演示專用
+  - IP-CIDR,203.0.113.0/24  #文件演示專用
+  - IP-CIDR,224.0.0.0/3  #影片廣播/設備搜尋
+  - IP-CIDR6,::/127  #IPv6的「自己連自己」
+  - IP-CIDR6,fc00::/7  #IPv6的內網位址
+  - IP-CIDR6,fe80::/10  #區域網路內設備互認
+  - IP-CIDR6,ff00::/8  #IPv6廣播流量
