@@ -313,7 +313,6 @@ rules:
   - RULE-SET,AI,中國台灣,no-resolve  #人工智能
   - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #油管音樂
   - RULE-SET,YouTube,油管視頻,no-resolve  #油管
-  - RULE-SET,Apple,國內直連,no-resolve  #Apple
   - RULE-SET,CN,國內直連,no-resolve  #中國域名
   - RULE-SET,CN-ASN,國內直連  #中國自治系統號碼
   - GEOIP,CN,DIRECT
