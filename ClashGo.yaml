@@ -201,7 +201,7 @@ proxy-providers:
   "LHY":
     type: http
     path: ./provide/LHY.yml
-    url: https://www.linghunyun.com/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
+    url: https://lh.adfgawidhioawjd.site/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
     interval: 86400
     health-check:
       enable: true
