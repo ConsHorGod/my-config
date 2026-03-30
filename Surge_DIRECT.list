@@ -2,6 +2,7 @@ OR,((DOMAIN-KEYWORD,linghunyun.com), (DOMAIN-KEYWORD,b3.342242.icu), (DOMAIN-KEY
 AND,((NOT,((DEST-PORT,80))), (NOT,((DEST-PORT,443)))) // "80,443"以外端口一律直連
 OR,((DOMAIN-SUFFIX,cn), (DOMAIN-KEYWORD,-cn), (DOMAIN-SUFFIX,.gov)),DIRECT // CN直連
 OR,((DOMAIN-KEYWORD,jlxa.wicp.net), (DOMAIN-KEYWORD,asus), (DOMAIN-KEYWORD,ads2301)),DIRECT // 私人網絡
+OR,((DOMAIN-KEYWORD,zijieapi), (DOMAIN-KEYWORD,douyin), (DOMAIN-KEYWORD,alibaba), (DOMAIN-KEYWORD,qq.com), (DOMAIN-KEYWORD,tencent), (DOMAIN-KEYWORD,weixin), (DOMAIN-KEYWORD,meituan), (DOMAIN-KEYWORD,jd.com), (DOMAIN-KEYWORD,alipay), (DOMAIN-KEYWORD,tmall), (DOMAIN-KEYWORD,taobao)),DIRECT // 常用軟件
 OR,((DOMAIN-SUFFIX,gomicx.net), (DOMAIN-SUFFIX,dotmu.net), (DOMAIN-SUFFIX,dranime.net)),DIRECT // 粵語論壇
 OR,((DOMAIN-KEYWORD,itunes), (DOMAIN-KEYWORD,icloud), (DOMAIN-KEYWORD,apple)),DIRECT // Apple
 DOMAIN-KEYWORD,msft // 微軟網絡檢測地址
