@@ -126,10 +126,13 @@ proxy-groups:
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
     filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港|HK)
-    use:
-      - LHY
-      - XMR
-      - OKZ
+    proxies:  #代理選項
+      - 香港特區
+      - 日本島國
+      - 美利堅國
+      - 中國台灣
+      - HK直連
+      - TW直連
 #-----------------------------------------------------------------------------------------------------------
   - name: 國際抖音
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"  #策略組圖標
@@ -163,10 +166,9 @@ proxy-groups:
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
     filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港|HK)
-    use:
-      - LHY
-      - XMR
-      - OKZ
+    proxies:  #代理選項
+      - 香港特區
+      - HK直連
 #-----------------------------------------------------------------------------------------------------------
   - name: 廣告過濾
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlack.png"  #策略組圖標
@@ -194,6 +196,16 @@ proxy-groups:
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
     filter: 'HK'
+    use:  #代理選項
+      - XMR
+#-----------------------------------------------------------------------------------------------------------
+  - name: TW直連
+    icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://1.1.1.1/generate_204  #用于测试的链接
+    interval: 300
+    filter: 'TW'
     use:  #代理選項
       - XMR
 #-----------------------------------------------------------------------------------------------------------
