@@ -125,7 +125,7 @@ proxy-groups:
     type: url-test  #自動測速
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
-    filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港)
+    filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港|HK)
     use:
       - LHY
       - XMR
@@ -140,6 +140,8 @@ proxy-groups:
     proxies:  #代理選項
       - 日本島國
       - 美利堅國
+      - JP直連
+      - US直連
 #-----------------------------------------------------------------------------------------------------------
   - name: 油管視頻
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"  #策略組圖標
@@ -152,6 +154,7 @@ proxy-groups:
       - 日本島國
       - 美利堅國
       - 中國台灣
+      - HK直連
 #-----------------------------------------------------------------------------------------------------------
   - name: 黃暴嘔爆
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png"  #策略組圖標
@@ -159,7 +162,7 @@ proxy-groups:
     type: url-test  #自动测速
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
-    filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港)
+    filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港|HK)
     use:
       - LHY
       - XMR
@@ -183,6 +186,36 @@ proxy-groups:
     interval: 300
     use:  #代理選項
       - 飛鳥雲
+#-----------------------------------------------------------------------------------------------------------
+  - name: HK直連
+    icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://1.1.1.1/generate_204  #用于测试的链接
+    interval: 300
+    filter: 'HK'
+    use:  #代理選項
+      - XMR
+#-----------------------------------------------------------------------------------------------------------
+  - name: US直連
+    icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://1.1.1.1/generate_204  #用于测试的链接
+    interval: 300
+    filter: 'US'
+    use:  #代理選項
+      - XMR
+#-----------------------------------------------------------------------------------------------------------
+  - name: JP直連
+    icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://1.1.1.1/generate_204  #用于测试的链接
+    interval: 300
+    filter: 'JP'
+    use:  #代理選項
+      - XMR
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️代理集⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 proxy-providers:
   "飛鳥雲":
