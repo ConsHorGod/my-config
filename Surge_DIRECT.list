@@ -1,4 +1,4 @@
-OR,((DOMAIN-KEYWORD,linghunyun.com), (DOMAIN-KEYWORD,xmrth.one), (DOMAIN-KEYWORD,b3.342242.icu), (DOMAIN-KEYWORD,okztwo.com)),DIRECT // 機場訂閱
+OR,((DOMAIN-KEYWORD,linghunyun.com), (DOMAIN-KEYWORD,bianyuan), (DOMAIN-KEYWORD,b3.342242.icu), (DOMAIN-KEYWORD,okztwo.com)),DIRECT // 機場訂閱
 AND,((NOT,((DEST-PORT,80))), (NOT,((DEST-PORT,443)))) // "80,443"以外端口一律直連
 OR,((DOMAIN-SUFFIX,cn), (DOMAIN-KEYWORD,-cn), (DOMAIN-SUFFIX,.gov)),DIRECT // CN直連
 OR,((DOMAIN-KEYWORD,jlxa.wicp.net), (DOMAIN-KEYWORD,asus), (DOMAIN-KEYWORD,ads2301)),DIRECT // 私人網絡
