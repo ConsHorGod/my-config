@@ -190,7 +190,7 @@ proxy-groups:
       - 飛鳥雲
 #-----------------------------------------------------------------------------------------------------------
   - name: HK直連
-    icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"  #策略組圖標
+    icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Hong_Kong.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://1.1.1.1/generate_204  #用于测试的链接
@@ -200,7 +200,7 @@ proxy-groups:
       - XMR
 #-----------------------------------------------------------------------------------------------------------
   - name: TW直連
-    icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"  #策略組圖標
+    icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Taiwan.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://1.1.1.1/generate_204  #用于测试的链接
@@ -210,7 +210,7 @@ proxy-groups:
       - XMR
 #-----------------------------------------------------------------------------------------------------------
   - name: US直連
-    icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"  #策略組圖標
+    icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/United_States.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://1.1.1.1/generate_204  #用于测试的链接
@@ -220,7 +220,7 @@ proxy-groups:
       - XMR
 #-----------------------------------------------------------------------------------------------------------
   - name: JP直連
-    icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"  #策略組圖標
+    icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Japan.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://1.1.1.1/generate_204  #用于测试的链接
