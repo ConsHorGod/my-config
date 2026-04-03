@@ -238,31 +238,6 @@ body_rewrites:
     find: level":\d+
     replace: level":1
 scriptings:
-- schedule:
-    name: 黄金
-    cron: 0 30 07 * * *
-    script_url: 黄金脚本
-- schedule:
-    name: 每日视频
-    cron: 00 23 * * *
-    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/refs/heads/main/one_daily_task.js
-- schedule:
-    name: 摸鱼
-    cron: 0 0 08 * * *
-    script_url: https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/moyu.js
-- schedule:
-    name: 海口油价
-    cron: 0 0 07 * * *
-    script_url: 海口油价
-- generic:
-    name: socks5筛选
-    script_url: socks5筛选
-- schedule:
-    name: 黑料不打烊
-    cron: 0 0 * * *
-    script_url: https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/hlbdy.js
-    timeout: 30
-    disabled: false
 mitm:
   ca_p12: egern.p12
   ca_passphrase: egern
