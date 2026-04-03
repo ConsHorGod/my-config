@@ -43,9 +43,13 @@ proxy-groups:
     url: http://1.1.1.1/generate_204  #用于测试的链接
     proxies:  #代理選項
       - 香港特區
-      - 美利堅國
+      - HK直連(3000G)
       - 日本島國
+      - JP直連(3000G)
+      - 美利堅國
+      - US直連(3000G)
       - 中國台灣
+      - HK直連(3000G)
       - 其它節點
       - 飛鳥雲
       - 國內直連
@@ -60,11 +64,11 @@ proxy-groups:
     filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港|HK)
     proxies:  #代理選項
       - 香港特區
+      - HK直連(3000G)
       - 日本島國
       - 美利堅國
       - 中國台灣
-      - HK直連(XMR)
-      - TW直連(XMR)
+      - TW直連(3000G)
 #-----------------------------------------------------------------------------------------------------------
   - name: 國際抖音
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"  #策略組圖標
@@ -74,9 +78,9 @@ proxy-groups:
     interval: 300
     proxies:  #代理選項
       - 日本島國
+      - JP直連(3000G)
       - 美利堅國
-      - JP直連(XMR)
-      - US直連(XMR)
+      - US直連(3000G)
 #-----------------------------------------------------------------------------------------------------------
   - name: 油管視頻
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"  #策略組圖標
@@ -86,10 +90,13 @@ proxy-groups:
     interval: 300
     proxies:  #代理選項
       - 香港特區
+      - HK直連(3000G)
       - 日本島國
+      - JP直連(3000G)
       - 美利堅國
+      - US直連(3000G)
       - 中國台灣
-      - HK直連(XMR)
+      - HK直連(3000G)
 #-----------------------------------------------------------------------------------------------------------
   - name: 黃暴嘔爆
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png"  #策略組圖標
@@ -100,7 +107,7 @@ proxy-groups:
     filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港|HK)
     proxies:  #代理選項
       - 香港特區
-      - HK直連(XMR)
+      - HK直連(3000G)
 #-----------------------------------------------------------------------------------------------------------
   - name: 廣告過濾
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlack.png"  #策略組圖標
@@ -133,7 +140,7 @@ proxy-groups:
       - XMR
       - OKZ
 #-----------------------------------------------------------------------------------------------------------
-  - name: HK直連(XMR)
+  - name: HK直連(3000G)
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
@@ -155,7 +162,7 @@ proxy-groups:
       - XMR
       - OKZ
 #-----------------------------------------------------------------------------------------------------------
-  - name: US直連(XMR)
+  - name: US直連(3000G)
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
@@ -177,7 +184,7 @@ proxy-groups:
       - XMR
       - OKZ
 #-----------------------------------------------------------------------------------------------------------
-  - name: JP直連(XMR)
+  - name: JP直連(3000G)
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
     hidden:  false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
@@ -199,7 +206,7 @@ proxy-groups:
       - XMR
       - OKZ
 #-----------------------------------------------------------------------------------------------------------
-  - name: TW直連(XMR)
+  - name: TW直連(3000G)
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
