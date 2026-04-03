@@ -83,7 +83,7 @@ proxy-groups:
       - US直連(3000G)
 #-----------------------------------------------------------------------------------------------------------
   - name: 國際媒體
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"  #策略組圖標
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://1.1.1.1/generate_204  #用于测试的链接
@@ -130,7 +130,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: 香港特區
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
@@ -142,7 +142,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: HK直連(3000G)
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
@@ -152,7 +152,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: 美利堅國
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
@@ -164,7 +164,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: US直連(3000G)
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
@@ -174,7 +174,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: 日本島國
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
@@ -186,7 +186,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: JP直連(3000G)
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
-    hidden:  false  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden:  true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
@@ -196,7 +196,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: 中國台灣
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
@@ -208,7 +208,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: TW直連(3000G)
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
@@ -218,7 +218,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: 其它節點
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/AAEX.png  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
