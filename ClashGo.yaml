@@ -335,6 +335,13 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/HBO/HBO.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
+  Microsoft:
+    type: http
+    behavior: classical
+    path: ./ruleset/Microsoft.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
   AI:
     type: http
     behavior: classical
@@ -416,6 +423,7 @@ rules:
   - RULE-SET,TikTok,國際抖音,no-resolve  #TikTok
   - RULE-SET,Telegram,飛機電報,no-resolve  #Telegram
   - RULE-SET,AI,中國台灣,no-resolve  #人工智能
+  - RULE-SET,Microsoft,香港特區,no-resolve  #Microsoft
   - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #YouTubeMusic
   - RULE-SET,YouTube,國際媒體,no-resolve  #YouTube
   - RULE-SET,Facebook,國際媒體,no-resolve  #Facebook
