@@ -349,11 +349,11 @@ rule-providers:
     url: "https://yfamilys.com/rule/ai.rule"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  YouTube:
+  Global_Classical:
     type: http
     behavior: classical
-    path: ./ruleset/YouTube.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YouTube/YouTube.yaml"
+    path: ./ruleset/Global_Classical.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global_Classical.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   YouTubeMusic:
@@ -361,41 +361,6 @@ rule-providers:
     behavior: classical
     path: ./ruleset/YouTubeMusic.yaml
     url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/Clash_YouTubeMusic.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
-  Facebook:
-    type: http
-    behavior: classical
-    path: ./ruleset/Facebook.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
-  Instagram:
-    type: http
-    behavior: classical
-    path: ./ruleset/Instagram.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
-  Twitch:
-    type: http
-    behavior: classical
-    path: ./ruleset/Twitch.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitch/Twitch.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
-  Twitter:
-    type: http
-    behavior: classical
-    path: ./ruleset/Twitter.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
-  Discord:
-    type: http
-    behavior: classical
-    path: ./ruleset/Discord.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   DIRECT:
@@ -425,12 +390,7 @@ rules:
   - RULE-SET,AI,中國台灣,no-resolve  #人工智能
   - RULE-SET,Microsoft,香港特區,no-resolve  #Microsoft
   - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #YouTubeMusic
-  - RULE-SET,YouTube,國際媒體,no-resolve  #YouTube
-  - RULE-SET,Facebook,國際媒體,no-resolve  #Facebook
-  - RULE-SET,Instagram,國際媒體,no-resolve  #Instagram
-  - RULE-SET,Twitch,國際媒體,no-resolve  #Twitch
-  - RULE-SET,Twitter,國際媒體,no-resolve  #Twitter
-  - RULE-SET,Discord,國際媒體,no-resolve  #Discord
+  - RULE-SET,Global_Classical,國際媒體,no-resolve  #國際媒體
   - RULE-SET,CN,國內直連,no-resolve  #中國域名
   - RULE-SET,CN-ASN,國內直連  #中國自治系統號碼
   - GEOIP,CN,DIRECT
