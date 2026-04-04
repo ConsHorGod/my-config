@@ -82,7 +82,7 @@ proxy-groups:
       - 香港特區
       - HK直連
       - 日本島國
-      - 美利堅國
+      - JP直連
       - 中國台灣
       - TW直連
 #-----------------------------------------------------------------------------------------------------------
@@ -108,6 +108,19 @@ proxy-groups:
     proxies:  #代理選項
       - 香港特區
       - HK直連
+#-----------------------------------------------------------------------------------------------------------
+  - name: 人工智能
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    type: select  #自动测速
+    url: http://1.1.1.1/generate_204  #用于测试的链接
+    interval: 300
+    filter: 
+    proxies:  #代理選項
+      - 中國台灣
+      - TW直
+      - 日本島國
+      - JP直連
 #-----------------------------------------------------------------------------------------------------------
   - name: 廣告過濾
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlack.png"  #策略組圖標
@@ -387,7 +400,7 @@ rules:
   - RULE-SET,HBOMAX,黃暴嘔爆,no-resolve  #HBOMAX
   - RULE-SET,TikTok,國際抖音,no-resolve  #TikTok
   - RULE-SET,Telegram,飛機電報,no-resolve  #Telegram
-  - RULE-SET,AI,中國台灣,no-resolve  #人工智能
+  - RULE-SET,AI,人工智能,no-resolve  #人工智能
   - RULE-SET,Microsoft,香港特區,no-resolve  #Microsoft
   - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #YouTubeMusic
   - RULE-SET,Global_Classical,國際媒體,no-resolve  #國際媒體
