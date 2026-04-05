@@ -283,7 +283,7 @@ proxy-providers:
   "XMR":
     type: http
     path: ./provide/XMR.yml
-    url: https://cdn2.xmrth.one/s/9dkc7icn1whs-6d1cee19?clash=1
+    url: https://cdn2.xmrth.one/s/9dkc7icn1whs-a1db9a90?clash=1
     interval: 86400
     health-check:
       enable: true
