@@ -140,9 +140,9 @@ proxy-groups:
     interval: 300
     filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港)
     use:
-      - LHY
-      - XMR
       - OKZ
+      - XMR
+      - LHY
 #-----------------------------------------------------------------------------------------------------------
   - name: HK直連
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
@@ -162,9 +162,9 @@ proxy-groups:
     interval: 300
     filter: '美国|美國'
     use:
-      - LHY
-      - XMR
       - OKZ
+      - XMR
+      - LHY
 #-----------------------------------------------------------------------------------------------------------
   - name: US直連
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"  #策略組圖標
@@ -184,9 +184,9 @@ proxy-groups:
     interval: 300
     filter: '日本'
     use:
-      - LHY
-      - XMR
       - OKZ
+      - XMR
+      - LHY
 #-----------------------------------------------------------------------------------------------------------
   - name: JP直連
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
@@ -206,9 +206,9 @@ proxy-groups:
     interval: 300
     filter: '台灣|台湾|臺灣'
     use:
-      - LHY
-      - XMR
       - OKZ
+      - XMR
+      - LHY
 #-----------------------------------------------------------------------------------------------------------
   - name: TW直連
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png"  #策略組圖標
