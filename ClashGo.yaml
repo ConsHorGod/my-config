@@ -309,14 +309,14 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Privacy/Privacy_Classical.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  DIRECT1:
+  DIRECT-1:
     type: http
     behavior: classical
     path: ./ruleset/ChinaMax.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------    
-  DIRECT2:
+  DIRECT-2:
     type: http
     behavior: classical
     path: ./ruleset/ASN.China.yaml
