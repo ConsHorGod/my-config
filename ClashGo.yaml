@@ -321,7 +321,14 @@ rule-providers:
     behavior: classical
     path: ./ruleset/ASN.China.yaml
     url: "https://yfamilys.com/rule/ASN-CN.rule"
-    interval: 21600  
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------    
+  GitHub:
+    type: http
+    behavior: classical
+    path: ./ruleset/GitHub.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.yaml"
+    interval: 21600
 #-----------------------------------------------------------------------------------------------------------    
   TikTok:
     type: http
@@ -395,8 +402,8 @@ rule-providers:
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️分流規則⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rules:
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
-  - DOMAIN-KEYWORD,github,最終出站  #GitHub
   - RULE-SET,anti-ad,廣告過濾,no-resolve  #anti-ad廣告過濾
+  - RULE-SET,GitHub,最終出站  #GitHub
   - RULE-SET,DIRECT-0,DIRECT,no-resolve  #我的直連網站
   - RULE-SET,隐私保护,DIRECT,no-resolve  #隱私保護
   - RULE-SET,PROXY,香港特區,no-resolve  #我的翻墻網站
