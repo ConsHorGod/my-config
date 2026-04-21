@@ -1,11 +1,33 @@
 AND,((NOT,((DEST-PORT,80))), (NOT,((DEST-PORT,443)))) // "80,443"以外端口一律直連
-OR,((DOMAIN-SUFFIX,cn), (DOMAIN-KEYWORD,-cn), (DOMAIN-SUFFIX,.gov)),DIRECT // CN直連
-OR,((DOMAIN-KEYWORD,jlxa.wicp.net), (DOMAIN-KEYWORD,asus), (DOMAIN-KEYWORD,ads2301)),DIRECT // 私人網絡
-OR,((DOMAIN-KEYWORD,zijieapi), (DOMAIN-KEYWORD,douyin), (DOMAIN-KEYWORD,alibaba), (DOMAIN-KEYWORD,qq.com), (DOMAIN-KEYWORD,tencent), (DOMAIN-KEYWORD,weixin), (DOMAIN-KEYWORD,meituan), (DOMAIN-KEYWORD,jd.com), (DOMAIN-KEYWORD,alipay), (DOMAIN-KEYWORD,tmall), (DOMAIN-KEYWORD,taobao)),DIRECT // 常用軟件
-OR,((DOMAIN-SUFFIX,gomicx.net), (DOMAIN-SUFFIX,dotmu.net), (DOMAIN-SUFFIX,dranime.net)),DIRECT // 粵語論壇
-OR,((DOMAIN-KEYWORD,itunes), (DOMAIN-KEYWORD,icloud), (DOMAIN-KEYWORD,apple), (DOMAIN-KEYWORD,ipod), (DOMAIN-KEYWORD,itouch), (DOMAIN-KEYWORD,ipad), (DOMAIN-KEYWORD,iphone)),DIRECT // Apple
+DOMAIN-KEYWORD,cn // CN直連
+DOMAIN-KEYWORD,-cn // CN直連
+DOMAIN-KEYWORD,.gov // CN直連
+DOMAIN-KEYWORD,jlxa.wicp.net // 北村
+DOMAIN-KEYWORD,ads2301 // 奧園
+DOMAIN-KEYWORD,asus // 華碩
+DOMAIN-KEYWORD,zijieapi // 字節跳動
+DOMAIN-KEYWORD,douyin // 抖音
+DOMAIN-KEYWORD,alibaba // 阿里巴巴
+DOMAIN-KEYWORD,qq.com // QQ
+DOMAIN-KEYWORD,tencent // 騰訊
+DOMAIN-KEYWORD,weixin // 微信
+DOMAIN-KEYWORD,meituan // 美團
+DOMAIN-KEYWORD,jd.com // 京東
+DOMAIN-KEYWORD,alipay // 支付寶
+DOMAIN-KEYWORD,tmall // 天貓
+DOMAIN-KEYWORD,taobao // 淘寶
+DOMAIN-KEYWORD,gomicx.net // 粵漫社
+DOMAIN-KEYWORD,dotmu.net // 飄雪
+DOMAIN-KEYWORD,dranime.net // 飄雪
+DOMAIN-KEYWORD,apple // Apple
+DOMAIN-KEYWORD,icloud // Apple
+DOMAIN-KEYWORD,itunes // Apple
+DOMAIN-KEYWORD,ipod // Apple
+DOMAIN-KEYWORD,itouch // Apple
+DOMAIN-KEYWORD,ipad // Apple
+DOMAIN-KEYWORD,iphone // Apple
 DOMAIN-KEYWORD,subhd.tv // subhd.tv
-DOMAIN-KEYWORD,zimuku.org // zimuku.org
+DOMAIN-KEYWORD,zimuku.org // 字幕库
 DOMAIN-KEYWORD,msft // 微軟網絡檢測地址
 IP-CIDR,0.0.0.0/8 // 本機或未知設備
 IP-CIDR,10.0.0.0/8 // 大型企業/校園內網
