@@ -365,7 +365,7 @@ rule-providers:
     url: "https://yfamilys.com/rule/ai.rule"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  Global_Classical:
+  Global:
     type: http
     behavior: classical
     path: ./ruleset/Global_Classical.yaml
@@ -406,7 +406,7 @@ rules:
   - RULE-SET,AI,人工智能,no-resolve  #人工智能
   - RULE-SET,Microsoft,微軟服務,no-resolve  #Microsoft
   - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #YouTubeMusic
-  - RULE-SET,Global_Classical,國際媒體,no-resolve  #國際媒體
+  - RULE-SET,Global,國際媒體,no-resolve  #國際媒體
   - RULE-SET,CN,DIRECT,no-resolve  #中國域名
   - RULE-SET,CN-ASN,DIRECT  #中國自治系統號碼
   - GEOIP,CN,DIRECT
