@@ -309,14 +309,14 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Privacy/Privacy_Classical.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  CN:
+  DIRECT1:
     type: http
     behavior: classical
     path: ./ruleset/ChinaMax.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------    
-  CN-ASN:
+  DIRECT2:
     type: http
     behavior: classical
     path: ./ruleset/ASN.China.yaml
@@ -379,7 +379,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/Clash_YouTubeMusic.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  DIRECT:
+  DIRECT-0:
     type: http
     behavior: classical
     path: ./ruleset/Clash_DIRECT.yaml
@@ -397,7 +397,7 @@ rules:
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
   - DOMAIN-KEYWORD,github,最終出站  #GitHub
   - RULE-SET,anti-ad,廣告過濾,no-resolve  #anti-ad廣告過濾
-  - RULE-SET,DIRECT,DIRECT,no-resolve  #我的直連網站
+  - RULE-SET,DIRECT-0,DIRECT,no-resolve  #我的直連網站
   - RULE-SET,隐私保护,DIRECT,no-resolve  #隱私保護
   - RULE-SET,PROXY,香港特區,no-resolve  #我的翻墻網站
   - RULE-SET,HBOMAX,黃暴嘔爆,no-resolve  #HBOMAX
@@ -407,7 +407,7 @@ rules:
   - RULE-SET,Microsoft,微軟服務,no-resolve  #Microsoft
   - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #YouTubeMusic
   - RULE-SET,Global,國際媒體,no-resolve  #國際媒體
-  - RULE-SET,CN,DIRECT,no-resolve  #中國域名
-  - RULE-SET,CN-ASN,DIRECT  #中國自治系統號碼
+  - RULE-SET,DIRECT-1,DIRECT,no-resolve  #中國域名
+  - RULE-SET,DIRECT-2,DIRECT  #中國自治系統號碼
   - GEOIP,CN,DIRECT
   - MATCH,最終出站,dns-failed
