@@ -29,6 +29,7 @@ payload:
   - DOMAIN-KEYWORD,itouch  #Apple
   - DOMAIN-KEYWORD,ipad  #Apple
   - DOMAIN-KEYWORD,iphone  #Apple
+  - DOMAIN-KEYWORD,mini4k  #mini4k.io
   - DOMAIN-KEYWORD,subhd.tv  #subhd.tv
   - DOMAIN-KEYWORD,zimuku.org  #字幕库
   - DOMAIN-KEYWORD,msft  #微軟網絡檢測地址
