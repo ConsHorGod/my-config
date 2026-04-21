@@ -2,21 +2,36 @@ payload:
   - DST-PORT,0-79  #0-79端口直連
   - DST-PORT,81-442  #81-442端口直連
   - DST-PORT,444-65535  #444-65535端口直連
-  - DOMAIN-SUFFIX,cn  #直連關鍵字
-  - DOMAIN-KEYWORD,-cn  #直連關鍵字
-  - DOMAIN-SUFFIX,gov  #直連關鍵字
-  - DOMAIN-KEYWORD,ads2301  #ADS2301_DDNS
-  - DOMAIN-KEYWORD,asuscomm.com  #华硕路由器
-  - DOMAIN-KEYWORD,jlxa.wicp.net  #Bc_0135
-  - DOMAIN-KEYWORD,msft  #微軟網絡檢測地址
-  - DOMAIN-KEYWORD,gomicx.net  #粤漫社
-  - DOMAIN-KEYWORD,dranime.net  #飘雪
-  - DOMAIN-KEYWORD,dotmu.net  #飘雪
-  - DOMAIN-KEYWORD,subhd.tv  #subhd.tv
-  - DOMAIN-KEYWORD,zimuku.org  #zimuku.org
+  - DOMAIN-KEYWORD,cn  #CN直連
+  - DOMAIN-KEYWORD,-cn  #CN直連
+  - DOMAIN-KEYWORD,.gov  #CN直連
+  - DOMAIN-KEYWORD,jlxa.wicp.net  #北村
+  - DOMAIN-KEYWORD,ads2301  #奧園
+  - DOMAIN-KEYWORD,asus  #華碩
+  - DOMAIN-KEYWORD,zijieapi  #字節跳動
+  - DOMAIN-KEYWORD,douyin  #抖音
+  - DOMAIN-KEYWORD,alibaba  #阿里巴巴
+  - DOMAIN-KEYWORD,qq.com  #QQ
+  - DOMAIN-KEYWORD,tencent  #騰訊
+  - DOMAIN-KEYWORD,weixin  #微信
+  - DOMAIN-KEYWORD,meituan  #美團
+  - DOMAIN-KEYWORD,jd.com  #京東
+  - DOMAIN-KEYWORD,alipay  #支付寶
+  - DOMAIN-KEYWORD,tmall  #天貓
+  - DOMAIN-KEYWORD,taobao  #淘寶
+  - DOMAIN-KEYWORD,gomicx.net  #粵漫社
+  - DOMAIN-KEYWORD,dotmu.net  #飄雪
+  - DOMAIN-KEYWORD,dranime.net  #飄雪
   - DOMAIN-KEYWORD,apple  #Apple
-  - DOMAIN-KEYWORD,icloud  #iCloud
-  - DOMAIN-KEYWORD,itunes  #iTunes
+  - DOMAIN-KEYWORD,icloud  #Apple
+  - DOMAIN-KEYWORD,itunes  #Apple
+  - DOMAIN-KEYWORD,ipod  #Apple
+  - DOMAIN-KEYWORD,itouch  #Apple
+  - DOMAIN-KEYWORD,ipad  #Apple
+  - DOMAIN-KEYWORD,iphone  #Apple
+  - DOMAIN-KEYWORD,subhd.tv  #subhd.tv
+  - DOMAIN-KEYWORD,zimuku.org  #字幕库
+  - DOMAIN-KEYWORD,msft  #微軟網絡檢測地址
   - IP-CIDR,0.0.0.0/8  #本機或未知設備
   - IP-CIDR,10.0.0.0/8  #大型企業/校園內網
   - IP-CIDR,100.64.0.0/10  #電信商大局域網
@@ -27,7 +42,7 @@ payload:
   - IP-CIDR,192.0.2.0/24  #文件演示專用
   - IP-CIDR,192.88.99.0/24  #IPv6轉換過渡
   - IP-CIDR,192.168.0.0/16  #家庭/一般路由器內網
-  #- IP-CIDR,198.18.0.0/15  #設備壓力測試
+  - IP-CIDR,198.18.0.0/15  #設備壓力測試
   - IP-CIDR,198.51.100.0/24  #文件演示專用
   - IP-CIDR,203.0.113.0/24  #文件演示專用
   - IP-CIDR,224.0.0.0/3  #影片廣播/設備搜尋
