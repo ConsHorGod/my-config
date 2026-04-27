@@ -1,4 +1,5 @@
 AND,((NOT,((DEST-PORT,80))), (NOT,((DEST-PORT,443)))) // "80,443"以外端口一律直連
+DOMAIN-KEYWORD,xmrth.one // XMR订阅连接
 DOMAIN-KEYWORD,cn // CN直連
 DOMAIN-KEYWORD,-cn // CN直連
 DOMAIN-KEYWORD,.gov // CN直連
