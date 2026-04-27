@@ -402,6 +402,7 @@ rule-providers:
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️分流規則⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rules:
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
+  - DOMAIN-KEYWORD,xmrth,HK直連,no-resolve  #XMRth機場
   - RULE-SET,anti-ad,廣告過濾,no-resolve  #anti-ad廣告過濾
   - RULE-SET,GitHub,最終出站  #GitHub
   - RULE-SET,DIRECT-0,DIRECT,no-resolve  #我的直連網站
