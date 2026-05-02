@@ -1,5 +1,6 @@
 payload:
-  - DOMAIN-KEYWORD,xmrth  #XMRth机场
+  - DOMAIN-KEYWORD,github  #GitHub
+  - DOMAIN-KEYWORD,pornhub  #PornHub
   - DOMAIN-KEYWORD,redd  #Reddit
   - DOMAIN-KEYWORD,tmdb  #TheMovieDB
   - DOMAIN-KEYWORD,themoviedb  #TheMovieDB
