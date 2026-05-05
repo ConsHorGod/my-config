@@ -410,12 +410,13 @@ rule-providers:
     interval: 21600
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️分流規則⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rules:
+  - DST-PORT,0-79  #0-79端口直連
+  - DST-PORT,81-442  #81-442端口直連
+  - DST-PORT,444-65535  #444-65535端口直連
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
   - DOMAIN-KEYWORD,xmrth,XMRth,no-resolve  #XMRth機場
   - RULE-SET,anti-ad,廣告過濾,no-resolve  #anti-ad廣告過濾
   - RULE-SET,PROXY,香港特區,no-resolve  #我的翻墻網站
-  - RULE-SET,DIRECT-0,DIRECT,no-resolve  #我的直連網站
-  - RULE-SET,隐私保护,DIRECT,no-resolve  #隱私保護
   - RULE-SET,HBOMAX,黃暴嘔爆,no-resolve  #HBOMAX
   - RULE-SET,TikTok,國際抖音,no-resolve  #TikTok
   - RULE-SET,Telegram,飛機電報,no-resolve  #Telegram
@@ -423,6 +424,8 @@ rules:
   - RULE-SET,Microsoft,微軟服務,no-resolve  #Microsoft
   - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #YouTubeMusic
   - RULE-SET,Global,國際媒體,no-resolve  #國際媒體
+  - RULE-SET,DIRECT-0,DIRECT,no-resolve  #我的直連網站
+  - RULE-SET,隐私保护,DIRECT,no-resolve  #隱私保護
   - RULE-SET,DIRECT-1,DIRECT,no-resolve  #中國域名
   - RULE-SET,DIRECT-2,DIRECT  #中國自治系統號碼
   - GEOIP,CN,DIRECT
