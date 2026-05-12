@@ -1,7 +1,4 @@
 payload:
-  - DOMAIN-KEYWORD,.cn  #CN直連
-  - DOMAIN-KEYWORD,-cn  #CN直連
-  - DOMAIN-KEYWORD,.gov  #CN直連
   - DOMAIN-KEYWORD,jlxa.wicp.net  #北村
   - DOMAIN-KEYWORD,ads2301  #奧園
   - DOMAIN-KEYWORD,asus  #華碩
@@ -30,4 +27,21 @@ payload:
   - DOMAIN-KEYWORD,subhd.tv  #subhd.tv
   - DOMAIN-KEYWORD,zimuku.org  #字幕库
   - DOMAIN-KEYWORD,msft  #微軟網絡檢測地址
-
+  - IP-CIDR,0.0.0.0/8  #本機或未知設備
+  - IP-CIDR,10.0.0.0/8  #大型企業/校園內網
+  - IP-CIDR,100.64.0.0/10  #電信商大局域網
+  - IP-CIDR,127.0.0.0/8  #系統自己連自己
+  - IP-CIDR,169.254.0.0/16  #沒連上路由器時的臨時位址
+  - IP-CIDR,172.16.0.0/12  #中型企業內網
+  - IP-CIDR,192.0.0.0/24  #協定專用位址
+  - IP-CIDR,192.0.2.0/24  #文件演示專用
+  - IP-CIDR,192.88.99.0/24  #IPv6轉換過渡
+  - IP-CIDR,192.168.0.0/16  #家庭/一般路由器內網
+  - IP-CIDR,198.18.0.0/15  #設備壓力測試
+  - IP-CIDR,198.51.100.0/24  #文件演示專用
+  - IP-CIDR,203.0.113.0/24  #文件演示專用
+  - IP-CIDR,224.0.0.0/3  #影片廣播/設備搜尋
+  - IP-CIDR6,::/127  #IPv6的「自己連自己」
+  - IP-CIDR6,fc00::/7  #IPv6的內網位址
+  - IP-CIDR6,fe80::/10  #區域網路內設備互認
+  - IP-CIDR6,ff00::/8  #IPv6廣播流量
