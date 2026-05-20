@@ -149,7 +149,7 @@ proxy-groups:
     type: url-test  #自动测速
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
-    filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港)
+    filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港|HK-专线)
     use:
       - OKZ
       - XMR
@@ -193,7 +193,7 @@ proxy-groups:
     type: url-test  #自动测速
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
-    filter: '日本'
+    filter: '日本|JP-专线'
     use:
       - OKZ
       - XMR
