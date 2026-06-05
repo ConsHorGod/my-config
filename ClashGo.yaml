@@ -56,7 +56,7 @@ proxy-groups:
       - REJECT
 #-----------------------------------------------------------------------------------------------------------
   - name: 國內直連
-    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png"  #策略組圖標
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CN.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://www.baidu.com  #用于测试的链接
