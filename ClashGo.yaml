@@ -370,7 +370,7 @@ proxy-groups:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
   - name: 迅雷
-    icon: "https://baike.baidu.com/pic/迅雷/33354/1/d4628535e5dde7114164dfafa8efce1b9d166131?fromModule=lemma_top-image&ct=single#aid=1&pic=d4628535e5dde7114164dfafa8efce1b9d166131"
+    icon: "https://zh.wikipedia.org/zh-cn/迅雷#/media/File%3AXUNLEI_LOGO.png"
     hidden: true
     type: select
     url: http://1.1.1.1/generate_204
