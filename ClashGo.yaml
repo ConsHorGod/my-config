@@ -376,6 +376,23 @@ proxy-groups:
     proxies:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
+  - name: 三星
+    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xiaomi.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+      - 香港特區
+      - HK直連
+      - 日本島國
+      - JP直連
+      - 美利堅國
+      - US直連
+      - 中國台灣
+      - TW直連
+#-----------------------------------------------------------------------------------------------------------
   - name: 小紅書
     icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xiaohongshu.png"
     hidden: true
@@ -739,6 +756,13 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/XiaoHongShu/XiaoHongShu.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
+  三星:
+    type: http
+    behavior: classical
+    path: ./ruleset/Samsung.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Samsung/Samsung.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
   Google:
     type: http
     behavior: classical
@@ -847,6 +871,7 @@ rules:
   - RULE-SET,網易,網易,no-resolve  #網易
   - RULE-SET,小米,小米,no-resolve  #小米
   - RULE-SET,小紅書,小紅書,no-resolve  #小紅書
+  - RULE-SET,三星,三星,no-resolve  #小紅書
   - RULE-SET,PROXY,Universe,no-resolve  #我的翻墻網站
   - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
   - RULE-SET,TikTok,TikTok,no-resolve  #TikTok
