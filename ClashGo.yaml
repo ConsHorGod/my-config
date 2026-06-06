@@ -36,7 +36,7 @@ dns:
 proxies:
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️代理組⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 proxy-groups:
-  - name: 
+  - name: FINAL
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
