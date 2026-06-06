@@ -627,7 +627,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  WeChat:
+  微信:
     type: http
     behavior: classical
     path: ./ruleset/WeChat.yaml
@@ -641,63 +641,63 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/QQ/QQ.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  Taobao:
+  淘寶:
     type: http
     behavior: classical
     path: ./ruleset/Taobao.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Taobao/Taobao.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  Tmall:
+  天貓:
     type: http
     behavior: classical
     path: ./ruleset/Tmall.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Tmall/Tmall.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  Alipay:
+  支付寶:
     type: http
     behavior: classical
     path: ./ruleset/Alipay.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Alipay/Alipay.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  JD:
+  京東:
     type: http
     behavior: classical
     path: ./ruleset/JD.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/JD/JD.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  Xianyu:
+  閒魚:
     type: http
     behavior: classical
     path: ./ruleset/Xianyu.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Xianyu/Xianyu.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  Meituan:
+  美團:
     type: http
     behavior: classical
     path: ./ruleset/Meituan.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Meituan/Meituan.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  Baidu:
+  百度:
     type: http
     behavior: classical
     path: ./ruleset/Baidu.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Baidu/Baidu.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  NetEase:
+  網易:
     type: http
     behavior: classical
     path: ./ruleset/NetEase.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/NetEase/NetEase.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  Douyin:
+  抖音:
     type: http
     behavior: classical
     path: ./ruleset/Douyin.yaml
@@ -783,33 +783,29 @@ rules:
   - DOMAIN-KEYWORD,apple,Apple,no-resolve
   - DOMAIN-KEYWORD,icloud,Apple,no-resolve
   - DOMAIN-KEYWORD,itunes,Apple,no-resolve
-  - DOMAIN-KEYWORD,ipod,Apple,no-resolve
-  - DOMAIN-KEYWORD,itouch,Apple,no-resolve
-  - DOMAIN-KEYWORD,ipad,Apple,no-resolve
-  - DOMAIN-KEYWORD,iphone,Apple,no-resolve
   - DOMAIN-KEYWORD,snssdk.com,抖音,no-resolve
   - DOMAIN-KEYWORD,zijieapi,抖音,no-resolve
   - DOMAIN-KEYWORD,douyin,抖音,no-resolve
-  - RULE-SET,Douyin,抖音,no-resolve
+  - RULE-SET,抖音,抖音,no-resolve
   - DOMAIN-KEYWORD,weixin,微信,no-resolve
-  - RULE-SET,WeChat,微信,no-resolve
+  - RULE-SET,微信,微信,no-resolve
   - DOMAIN-KEYWORD,qq.com,QQ,no-resolve
   - RULE-SET,QQ,QQ,no-resolve
   - DOMAIN-KEYWORD,tencent,QQ,no-resolve  #騰訊
   - DOMAIN-KEYWORD,alibaba,淘寶,no-resolve
   - DOMAIN-KEYWORD,taobao,淘寶,no-resolve
-  - RULE-SET,Taobao,淘寶,no-resolve
+  - RULE-SET,淘寶,淘寶,no-resolve
   - DOMAIN-KEYWORD,Tmall,天貓,no-resolve
-  - RULE-SET,Tmall,天貓,no-resolve
+  - RULE-SET,天貓,天貓,no-resolve
   - DOMAIN-KEYWORD,alipay,支付寶,no-resolve
-  - RULE-SET,Alipay,支付寶,no-resolve
+  - RULE-SET,支付寶,支付寶,no-resolve
   - DOMAIN-KEYWORD,jd.com,京東,no-resolve
-  - RULE-SET,JD,京東,no-resolve
-  - RULE-SET,Xianyu,閒魚,no-resolve
+  - RULE-SET,京東,京東,no-resolve
+  - RULE-SET,閒魚,閒魚,no-resolve
   - DOMAIN-KEYWORD,meituan,美團,no-resolve
-  - RULE-SET,Meituan,美團,no-resolve
-  - RULE-SET,Baidu,百度,no-resolve
-  - RULE-SET,NetEase,網易,no-resolve
+  - RULE-SET,美團,美團,no-resolve
+  - RULE-SET,百度,百度,no-resolve
+  - RULE-SET,網易,網易,no-resolve
   - RULE-SET,PROXY,Universe,no-resolve  #我的翻墻網站
   - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
   - RULE-SET,TikTok,TikTok,no-resolve  #TikTok
