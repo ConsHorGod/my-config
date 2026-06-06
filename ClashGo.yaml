@@ -847,6 +847,7 @@ rules:
   - DOMAIN-KEYWORD,apple,Apple,no-resolve  #Apple
   - DOMAIN-KEYWORD,icloud,Apple,no-resolve  #Apple
   - DOMAIN-KEYWORD,itunes,Apple,no-resolve  #Apple
+  - RULE-SET,Apple,Apple,no-resolve  #Apple
   - DOMAIN-KEYWORD,zijieapi,抖音,no-resolve  #字節跳動
   - DOMAIN-KEYWORD,douyin,抖音,no-resolve  #抖音
   - RULE-SET,抖音,抖音,no-resolve  #抖音
