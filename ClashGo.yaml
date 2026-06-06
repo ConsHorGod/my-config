@@ -337,6 +337,15 @@ proxy-groups:
     proxies:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
+  - name: 拼多多
+    icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/pinduoduo.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
   - name: 百度
     icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Baidu.png"
     hidden: true
@@ -657,6 +666,13 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/MeiTuan/MeiTuan.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
+  拼多多:
+    type: http
+    behavior: classical
+    path: ./ruleset/Pinduoduo.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Pinduoduo/Pinduoduo.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
   百度:
     type: http
     behavior: classical
@@ -776,6 +792,7 @@ rules:
   - RULE-SET,京東,京東,no-resolve
   - DOMAIN-KEYWORD,meituan,美團,no-resolve
   - RULE-SET,美團,美團,no-resolve
+  - RULE-SET,拼多多,拼多多,no-resolve
   - RULE-SET,百度,百度,no-resolve
   - RULE-SET,網易,網易,no-resolve
   - RULE-SET,PROXY,Universe,no-resolve  #我的翻墻網站
