@@ -176,7 +176,7 @@ proxy-groups:
       - TW直連
 #-----------------------------------------------------------------------------------------------------------
   - name: Reddit
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Reddit.png"
+    icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/reddit(1).png"
     hidden: true
     type: select
     url: http://1.1.1.1/generate_204
