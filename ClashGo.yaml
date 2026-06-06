@@ -764,7 +764,7 @@ rules:
   - DOMAIN-KEYWORD,weixin,微信,no-resolve
   - RULE-SET,微信,微信,no-resolve
   - DOMAIN-KEYWORD,qq.com,騰訊,no-resolve
-  - RULE-SET,QQ,騰訊,no-resolve
+  - RULE-SET,騰訊,騰訊,no-resolve
   - DOMAIN-KEYWORD,tencent,騰訊,no-resolve  #騰訊
   - DOMAIN-KEYWORD,alibaba,阿里巴巴,no-resolve
   - DOMAIN-KEYWORD,taobao,阿里巴巴,no-resolve
