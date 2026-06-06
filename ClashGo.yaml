@@ -284,6 +284,17 @@ proxy-groups:
     proxies:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
+  - name: 抖音
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    type: select  #手动选择
+    url: http://1.1.1.1/generate_204  #用于测试的链接
+    interval: 300
+    proxies:  #代理選項
+      - DIRECT
+      - 香港特區
+      - HK直連
+#-----------------------------------------------------------------------------------------------------------
   - name: 淘寶
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taobao.png"
     hidden: true
@@ -776,10 +787,10 @@ rules:
   - DOMAIN-KEYWORD,itouch,Apple,no-resolve
   - DOMAIN-KEYWORD,ipad,Apple,no-resolve
   - DOMAIN-KEYWORD,iphone,Apple,no-resolve
-  - DOMAIN-KEYWORD,snssdk.com,Douyin,no-resolve
-  - DOMAIN-KEYWORD,zijieapi,Douyin,no-resolve
-  - DOMAIN-KEYWORD,douyin,Douyin,no-resolve
-  - RULE-SET,Douyin,Douyin,no-resolve
+  - DOMAIN-KEYWORD,snssdk.com,抖音,no-resolve
+  - DOMAIN-KEYWORD,zijieapi,抖音,no-resolve
+  - DOMAIN-KEYWORD,douyin,抖音,no-resolve
+  - RULE-SET,Douyin,抖音,no-resolve
   - DOMAIN-KEYWORD,gomicx.net,CHINA,no-resolve
   - DOMAIN-KEYWORD,dotmu.net,CHINA,no-resolve
   - DOMAIN-KEYWORD,dranime.net,CHINA,no-resolve
