@@ -846,7 +846,7 @@ rules:
   - RULE-SET,百度,百度,no-resolve  #百度
   - RULE-SET,網易,網易,no-resolve  #網易
   - RULE-SET,小米,小米,no-resolve  #小米
-  - RULE-SET,小紅書,小紅書no-resolve  #小紅書
+  - RULE-SET,小紅書,小紅書,no-resolve  #小紅書
   - RULE-SET,PROXY,Universe,no-resolve  #我的翻墻網站
   - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
   - RULE-SET,TikTok,TikTok,no-resolve  #TikTok
