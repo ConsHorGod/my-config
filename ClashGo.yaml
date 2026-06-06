@@ -370,7 +370,7 @@ proxy-groups:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
   - name: 迅雷
-    icon: "https://zh.wikipedia.org/zh-cn/迅雷#/media/File%3AXUNLEI_LOGO.png"
+    icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Xunlei.png"
     hidden: true
     type: select
     url: http://1.1.1.1/generate_204
