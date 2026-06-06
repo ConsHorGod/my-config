@@ -266,6 +266,21 @@ proxy-groups:
       - 香港特區
       - HK直連
 #-----------------------------------------------------------------------------------------------------------
+  - name: GitHub
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    type: select  #自動測速
+    url: http://1.1.1.1/generate_204  #用于测试的链接
+    interval: 300
+    filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港|HK)
+    proxies:  #代理選項
+      - 香港特區
+      - HK直連
+      - 日本島國
+      - JP直連
+      - 中國台灣
+      - TW直連
+#-----------------------------------------------------------------------------------------------------------
   - name: 微信
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/WeChat.png"
     hidden: true
@@ -275,7 +290,7 @@ proxy-groups:
     proxies:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
-  - name: QQ
+  - name: 騰訊
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/QQ.png"
     hidden: true
     type: select
@@ -295,26 +310,8 @@ proxy-groups:
       - 香港特區
       - HK直連
 #-----------------------------------------------------------------------------------------------------------
-  - name: 淘寶
+  - name: 阿里巴巴
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taobao.png"
-    hidden: true
-    type: select
-    url: http://1.1.1.1/generate_204
-    interval: 300
-    proxies:
-      - DIRECT
-#-----------------------------------------------------------------------------------------------------------
-  - name: 天貓
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Tmall.png"
-    hidden: true
-    type: select
-    url: http://1.1.1.1/generate_204
-    interval: 300
-    proxies:
-      - DIRECT
-#-----------------------------------------------------------------------------------------------------------
-  - name: 支付寶
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Alipay.png"
     hidden: true
     type: select
     url: http://1.1.1.1/generate_204
@@ -324,15 +321,6 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: 京東
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/JD.png"
-    hidden: true
-    type: select
-    url: http://1.1.1.1/generate_204
-    interval: 300
-    proxies:
-      - DIRECT
-#-----------------------------------------------------------------------------------------------------------
-  - name: 閒魚
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Xianyu.png"
     hidden: true
     type: select
     url: http://1.1.1.1/generate_204
@@ -634,53 +622,39 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  QQ:
+  騰訊:
     type: http
     behavior: classical
-    path: ./ruleset/QQ.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/QQ/QQ.yaml"
+    path: ./ruleset/Tencent.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Tencent/Tencent_Classical.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  淘寶:
+  阿里巴巴:
     type: http
     behavior: classical
-    path: ./ruleset/Taobao.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Taobao/Taobao.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
-  天貓:
-    type: http
-    behavior: classical
-    path: ./ruleset/Tmall.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Tmall/Tmall.yaml"
+    path: ./ruleset/Alibaba.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Alibaba/Alibaba_Classical.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   支付寶:
     type: http
     behavior: classical
     path: ./ruleset/Alipay.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Alipay/Alipay.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AliPay/AliPay.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   京東:
     type: http
     behavior: classical
     path: ./ruleset/JD.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/JD/JD.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
-  閒魚:
-    type: http
-    behavior: classical
-    path: ./ruleset/Xianyu.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Xianyu/Xianyu.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/JingDong/JingDong.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   美團:
     type: http
     behavior: classical
     path: ./ruleset/Meituan.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Meituan/Meituan.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/MeiTuan/MeiTuan.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   百度:
@@ -701,7 +675,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./ruleset/Douyin.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Douyin/Douyin.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/DouYin/DouYin.yaml"
     interval: 21600
 
 #-----------------------------------------------------------------------------------------------------------
@@ -778,30 +752,28 @@ rule-providers:
 rules:
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
   - DOMAIN-KEYWORD,xmrth,XMRth,no-resolve  #XMRth機場
+  - RULE-SET,github,GitHub,no-resolve  #GitHub
   - RULE-SET,anti-ad,AD-Block,no-resolve  #anti-ad廣告過濾
   - RULE-SET,DIRECT-0,CHINA,no-resolve  #我的直連網站
   - DOMAIN-KEYWORD,apple,Apple,no-resolve
   - DOMAIN-KEYWORD,icloud,Apple,no-resolve
   - DOMAIN-KEYWORD,itunes,Apple,no-resolve
-  - DOMAIN-KEYWORD,snssdk.com,抖音,no-resolve
   - DOMAIN-KEYWORD,zijieapi,抖音,no-resolve
   - DOMAIN-KEYWORD,douyin,抖音,no-resolve
   - RULE-SET,抖音,抖音,no-resolve
   - DOMAIN-KEYWORD,weixin,微信,no-resolve
   - RULE-SET,微信,微信,no-resolve
-  - DOMAIN-KEYWORD,qq.com,QQ,no-resolve
-  - RULE-SET,QQ,QQ,no-resolve
-  - DOMAIN-KEYWORD,tencent,QQ,no-resolve  #騰訊
-  - DOMAIN-KEYWORD,alibaba,淘寶,no-resolve
-  - DOMAIN-KEYWORD,taobao,淘寶,no-resolve
-  - RULE-SET,淘寶,淘寶,no-resolve
-  - DOMAIN-KEYWORD,Tmall,天貓,no-resolve
-  - RULE-SET,天貓,天貓,no-resolve
-  - DOMAIN-KEYWORD,alipay,支付寶,no-resolve
-  - RULE-SET,支付寶,支付寶,no-resolve
+  - DOMAIN-KEYWORD,qq.com,騰訊,no-resolve
+  - RULE-SET,QQ,騰訊,no-resolve
+  - DOMAIN-KEYWORD,tencent,騰訊,no-resolve  #騰訊
+  - DOMAIN-KEYWORD,alibaba,阿里巴巴,no-resolve
+  - DOMAIN-KEYWORD,taobao,阿里巴巴,no-resolve
+  - DOMAIN-KEYWORD,Tmall,阿里巴巴,no-resolve
+  - RULE-SET,阿里巴巴,阿里巴巴,no-resolve
+  - DOMAIN-KEYWORD,alipay,阿里巴巴,no-resolve
+  - RULE-SET,支付寶,阿里巴巴,no-resolve
   - DOMAIN-KEYWORD,jd.com,京東,no-resolve
   - RULE-SET,京東,京東,no-resolve
-  - RULE-SET,閒魚,閒魚,no-resolve
   - DOMAIN-KEYWORD,meituan,美團,no-resolve
   - RULE-SET,美團,美團,no-resolve
   - RULE-SET,百度,百度,no-resolve
