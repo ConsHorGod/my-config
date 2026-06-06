@@ -818,7 +818,7 @@ rules:
   - RULE-SET,Twitch,Twitch,no-resolve
   - RULE-SET,Facebook,Facebook,no-resolve
   - RULE-SET,Copilot,Copilot,no-resolve  #微软AI
-  - RULE-SET,AI,AI,no-resolve  #人工智能
+  #- RULE-SET,AI,AI,no-resolve  #人工智能
   - RULE-SET,Microsoft,Microsoft,no-resolve  #Microsoft
   - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #YouTubeMusic
   - RULE-SET,Global,Universe,no-resolve  #Universe
