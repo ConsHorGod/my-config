@@ -377,7 +377,7 @@ proxy-groups:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
   - name: 三星
-    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xiaomi.png"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/6/61/Samsung_old_logo_before_year_2015.svg"
     hidden: true
     type: select
     url: http://1.1.1.1/generate_204
