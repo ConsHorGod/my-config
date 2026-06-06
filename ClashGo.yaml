@@ -766,6 +766,8 @@ rule-providers:
     interval: 21600
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️分流規則⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rules:
+  - DOMAIN-KEYWORD,dns.alidns.com,阿里巴巴,no-resolve  #阿里雲
+  - DOMAIN-KEYWORD,doh.pub,騰訊,no-resolve  #騰訊雲
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
   - DOMAIN-KEYWORD,xmrth,XMRth,no-resolve  #XMRth機場
   - RULE-SET,GitHub,GitHub,no-resolve  #GitHub
