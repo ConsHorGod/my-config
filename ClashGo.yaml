@@ -111,7 +111,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: Copilot
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Copilot.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #自动测速
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
@@ -257,7 +257,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: Apple
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png"
-    hidden: false
+    hidden: true
     type: select
     url: http://1.1.1.1/generate_204
     interval: 300
@@ -268,7 +268,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: GitHub
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #自動測速
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
@@ -282,7 +282,7 @@ proxy-groups:
       - TW直連
 #-----------------------------------------------------------------------------------------------------------
   - name: 微信
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/WeChat.png"
+    icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/wechat(1).png"
     hidden: true
     type: select
     url: http://1.1.1.1/generate_204
@@ -291,7 +291,7 @@ proxy-groups:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
   - name: 騰訊
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/QQ.png"
+    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/tencent.png"
     hidden: true
     type: select
     url: http://1.1.1.1/generate_204
@@ -301,7 +301,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: 抖音
     icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/tiktok.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
