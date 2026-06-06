@@ -800,6 +800,7 @@ rules:
   - RULE-SET,TikTok,TikTok,no-resolve  #TikTok
   - RULE-SET,Telegram,Telegram,no-resolve  #Telegram
   - DOMAIN-KEYWORD,Redd,Reddit,no-resolve
+  - RULE-SET,Reddit,Reddit,no-resolve
   - RULE-SET,YouTube,YouTube,no-resolve
   - RULE-SET,Google,Google,no-resolve
   - RULE-SET,Twitter,Twitter,no-resolve
