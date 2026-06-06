@@ -303,7 +303,7 @@ proxy-groups:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
   - name: 抖音
-    icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/tiktok.png"  #策略組圖標
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://1.1.1.1/generate_204  #用于测试的链接
