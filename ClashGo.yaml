@@ -54,7 +54,6 @@ proxy-groups:
       - 飛鳥雲
       - CHINA
       - REJECT
-
 #-----------------------------------------------------------------------------------------------------------
   - name: Universe
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"  #策略組圖標
@@ -146,6 +145,22 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: YouTube
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"
+    hidden: false
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - 香港特區
+      - HK直連
+      - 日本島國
+      - JP直連
+      - 美利堅國
+      - US直連
+      - 中國台灣
+      - TW直連
+#-----------------------------------------------------------------------------------------------------------
+  - name: Google
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ Google_search.png"
     hidden: false
     type: select
     url: http://1.1.1.1/generate_204
@@ -269,7 +284,7 @@ proxy-groups:
     proxies:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
-  - name: 淘宝
+  - name: 淘寶
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taobao.png"
     hidden: true
     type: select
@@ -278,7 +293,7 @@ proxy-groups:
     proxies:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
-  - name: 天猫
+  - name: 天貓
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Tmall.png"
     hidden: true
     type: select
@@ -287,7 +302,7 @@ proxy-groups:
     proxies:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
-  - name: 支付宝
+  - name: 支付寶
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Alipay.png"
     hidden: true
     type: select
@@ -296,7 +311,7 @@ proxy-groups:
     proxies:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
-  - name: 京东
+  - name: 京東
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/JD.png"
     hidden: true
     type: select
@@ -305,7 +320,7 @@ proxy-groups:
     proxies:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
-  - name: 闲鱼
+  - name: 閒魚
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Xianyu.png"
     hidden: true
     type: select
@@ -314,7 +329,7 @@ proxy-groups:
     proxies:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
-  - name: 美团
+  - name: 美團
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Meituan.png"
     hidden: true
     type: select
@@ -332,7 +347,7 @@ proxy-groups:
     proxies:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
-  - name: 网易
+  - name: 網易
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/NetEase.png"
     hidden: true
     type: select
@@ -754,13 +769,6 @@ rules:
   - DOMAIN-KEYWORD,xmrth,XMRth,no-resolve  #XMRth機場
   - RULE-SET,anti-ad,AD-Block,no-resolve  #anti-ad廣告過濾
   - RULE-SET,DIRECT-0,China,no-resolve  #我的直連網站
-  - DOMAIN-KEYWORD,snssdk.com,Douyin,no-resolve
-  - DOMAIN-KEYWORD,zijieapi,Douyin,no-resolve
-  - DOMAIN-KEYWORD,douyin,Douyin,no-resolve
-  - RULE-SET,Douyin,Douyin,no-resolve
-  - DOMAIN-KEYWORD,gomicx.net,CHINA,no-resolve
-  - DOMAIN-KEYWORD,dotmu.net,CHINA,no-resolve
-  - DOMAIN-KEYWORD,dranime.net,CHINA,no-resolve
   - DOMAIN-KEYWORD,apple,Apple,no-resolve
   - DOMAIN-KEYWORD,icloud,Apple,no-resolve
   - DOMAIN-KEYWORD,itunes,Apple,no-resolve
@@ -768,25 +776,32 @@ rules:
   - DOMAIN-KEYWORD,itouch,Apple,no-resolve
   - DOMAIN-KEYWORD,ipad,Apple,no-resolve
   - DOMAIN-KEYWORD,iphone,Apple,no-resolve
-  - DOMAIN-KEYWORD,weixin,WeChat,no-resolve
-  - RULE-SET,WeChat,WeChat,no-resolve
+  - DOMAIN-KEYWORD,snssdk.com,Douyin,no-resolve
+  - DOMAIN-KEYWORD,zijieapi,Douyin,no-resolve
+  - DOMAIN-KEYWORD,douyin,Douyin,no-resolve
+  - RULE-SET,Douyin,Douyin,no-resolve
+  - DOMAIN-KEYWORD,gomicx.net,CHINA,no-resolve
+  - DOMAIN-KEYWORD,dotmu.net,CHINA,no-resolve
+  - DOMAIN-KEYWORD,dranime.net,CHINA,no-resolve
+  - DOMAIN-KEYWORD,weixin,微信,no-resolve
+  - RULE-SET,WeChat,微信,no-resolve
   - DOMAIN-KEYWORD,qq.com,QQ,no-resolve
   - RULE-SET,QQ,QQ,no-resolve
   - DOMAIN-KEYWORD,tencent,QQ,no-resolve  #騰訊
-  - DOMAIN-KEYWORD,alibaba,Taobao,no-resolve
-  - DOMAIN-KEYWORD,taobao,Taobao,no-resolve
-  - RULE-SET,Taobao,Taobao,no-resolve
-  - DOMAIN-KEYWORD,tmall,Tmall,no-resolve
-  - RULE-SET,Tmall,Tmall,no-resolve
-  - DOMAIN-KEYWORD,alipay,Alipay,no-resolve
-  - RULE-SET,Alipay,Alipay,no-resolve
-  - DOMAIN-KEYWORD,jd.com,JD,no-resolve
-  - RULE-SET,JD,JD,no-resolve
-  - RULE-SET,Xianyu,Xianyu,no-resolve
-  - DOMAIN-KEYWORD,meituan,Meituan,no-resolve
-  - RULE-SET,Meituan,Meituan,no-resolve
-  - RULE-SET,Baidu,Baidu,no-resolve
-  - RULE-SET,NetEase,NetEase,no-resolve
+  - DOMAIN-KEYWORD,alibaba,淘寶,no-resolve
+  - DOMAIN-KEYWORD,taobao,淘寶,no-resolve
+  - RULE-SET,Taobao,淘寶,no-resolve
+  - DOMAIN-KEYWORD,天貓,Tmall,no-resolve
+  - RULE-SET,Tmall,天貓,no-resolve
+  - DOMAIN-KEYWORD,alipay,支付寶,no-resolve
+  - RULE-SET,Alipay,支付寶,no-resolve
+  - DOMAIN-KEYWORD,jd.com,京東,no-resolve
+  - RULE-SET,JD,京東,no-resolve
+  - RULE-SET,Xianyu,閒魚,no-resolve
+  - DOMAIN-KEYWORD,meituan,美團,no-resolve
+  - RULE-SET,Meituan,美團,no-resolve
+  - RULE-SET,Baidu,百度,no-resolve
+  - RULE-SET,NetEase,網易,no-resolve
   - RULE-SET,PROXY,Universe,no-resolve  #我的翻墻網站
   - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
   - RULE-SET,TikTok,TikTok,no-resolve  #TikTok
