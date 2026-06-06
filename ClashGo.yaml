@@ -109,8 +109,8 @@ proxy-groups:
       - 香港特區
       - HK直連
 #-----------------------------------------------------------------------------------------------------------
-  - name: AI
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"  #策略組圖標
+  - name: Copilot
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Copilot.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #自动测速
     url: http://1.1.1.1/generate_204  #用于测试的链接
