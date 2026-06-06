@@ -799,7 +799,7 @@ rules:
   - DOMAIN-KEYWORD,alibaba,淘寶,no-resolve
   - DOMAIN-KEYWORD,taobao,淘寶,no-resolve
   - RULE-SET,Taobao,淘寶,no-resolve
-  - DOMAIN-KEYWORD,天貓,Tmall,no-resolve
+  - DOMAIN-KEYWORD,Tmall,天貓,no-resolve
   - RULE-SET,Tmall,天貓,no-resolve
   - DOMAIN-KEYWORD,alipay,支付寶,no-resolve
   - RULE-SET,Alipay,支付寶,no-resolve
