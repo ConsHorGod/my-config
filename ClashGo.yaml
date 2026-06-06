@@ -313,6 +313,17 @@ proxy-groups:
       - 香港特區
       - HK直連
 #-----------------------------------------------------------------------------------------------------------
+  - name: 快手
+    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/kuaishou.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    type: select  #手动选择
+    url: http://1.1.1.1/generate_204  #用于测试的链接
+    interval: 300
+    proxies:  #代理選項
+      - DIRECT
+      - 香港特區
+      - HK直連
+#-----------------------------------------------------------------------------------------------------------
   - name: 阿里巴巴
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taobao.png"
     hidden: true
@@ -351,6 +362,15 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: 百度
     icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Baidu.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 迅雷
+    icon: "https://baike.baidu.com/pic/迅雷/33354/1/d4628535e5dde7114164dfafa8efce1b9d166131?fromModule=lemma_top-image&ct=single#aid=1&pic=d4628535e5dde7114164dfafa8efce1b9d166131"
     hidden: true
     type: select
     url: http://1.1.1.1/generate_204
@@ -728,6 +748,13 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Baidu/Baidu.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
+  迅雷:
+    type: http
+    behavior: classical
+    path: ./ruleset/Xunlei.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Xunlei/Xunlei.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
   網易:
     type: http
     behavior: classical
@@ -740,6 +767,13 @@ rule-providers:
     behavior: classical
     path: ./ruleset/Douyin.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/DouYin/DouYin.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
+  快手:
+    type: http
+    behavior: classical
+    path: ./ruleset/Kuaishou.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/KuaiShou/KuaiShou.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   小米:
