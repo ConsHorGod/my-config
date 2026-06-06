@@ -144,6 +144,203 @@ proxy-groups:
       - REJECT
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
+  - name: YouTube
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"
+    hidden: truee
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - 香港特區
+      - HK直連
+      - 日本島國
+      - JP直連
+      - 美利堅國
+      - US直連
+      - 中國台灣
+      - TW直
+#-----------------------------------------------------------------------------------------------------------
+  - name: Reddit
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Reddit.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - 香港特區
+      - HK直連
+      - 日本島國
+      - JP直連
+      - 美利堅國
+      - US直連
+      - 中國台灣
+      - TW直
+#-----------------------------------------------------------------------------------------------------------
+  - name: Twitter
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Twitter.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - 香港特區
+      - HK直連
+      - 日本島國
+      - JP直連
+      - 美利堅國
+      - US直連
+      - 中國台灣
+      - TW直
+#-----------------------------------------------------------------------------------------------------------
+  - name: Instagram
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Instagram.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - 香港特區
+      - HK直連
+      - 日本島國
+      - JP直連
+      - 美利堅國
+      - US直連
+      - 中國台灣
+      - TW直
+#-----------------------------------------------------------------------------------------------------------
+  - name: Twitch
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Twitch.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - 香港特區
+      - HK直連
+      - 日本島國
+      - JP直連
+      - 美利堅國
+      - US直連
+      - 中國台灣
+      - TW直
+#-----------------------------------------------------------------------------------------------------------
+  - name: Facebook
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Facebook.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - 香港特區
+      - HK直連
+      - 日本島國
+      - JP直連
+      - 美利堅國
+      - US直連
+      - 中國台灣
+      - TW直
+#-----------------------------------------------------------------------------------------------------------
+  - name: Apple
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png"
+    hidden: false
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+      - 香港特區
+      - HK直連
+#-----------------------------------------------------------------------------------------------------------
+  - name: 微信
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/WeChat.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: QQ
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/QQ.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 淘宝
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taobao.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 天猫
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Tmall.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 支付宝
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Alipay.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 京东
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/JD.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 闲鱼
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Xianyu.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 美团
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Meituan.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 百度
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Baidu.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 网易
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/NetEase.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
   - name: 香港特區
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
