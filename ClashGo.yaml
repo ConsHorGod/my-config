@@ -671,6 +671,14 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/NetEase/NetEase.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
+  抖音:
+    type: http
+    behavior: classical
+    path: ./ruleset/Douyin.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Douyin/Douyin.yaml"
+    interval: 21600
+
+#-----------------------------------------------------------------------------------------------------------
   Google:
     type: http
     behavior: classical
@@ -746,13 +754,36 @@ rules:
   - DOMAIN-KEYWORD,xmrth,XMRth,no-resolve  #XMRth機場
   - RULE-SET,anti-ad,AD-Block,no-resolve  #anti-ad廣告過濾
   - RULE-SET,DIRECT-0,China,no-resolve  #我的直連網站
+  - DOMAIN-KEYWORD,snssdk.com,Douyin,no-resolve
+  - DOMAIN-KEYWORD,zijieapi,Douyin,no-resolve
+  - DOMAIN-KEYWORD,douyin,Douyin,no-resolve
+  - RULE-SET,Douyin,Douyin,no-resolve
+  - DOMAIN-KEYWORD,gomicx.net,CHINA,no-resolve
+  - DOMAIN-KEYWORD,dotmu.net,CHINA,no-resolve
+  - DOMAIN-KEYWORD,dranime.net,CHINA,no-resolve
+  - DOMAIN-KEYWORD,apple,Apple,no-resolve
+  - DOMAIN-KEYWORD,icloud,Apple,no-resolve
+  - DOMAIN-KEYWORD,itunes,Apple,no-resolve
+  - DOMAIN-KEYWORD,ipod,Apple,no-resolve
+  - DOMAIN-KEYWORD,itouch,Apple,no-resolve
+  - DOMAIN-KEYWORD,ipad,Apple,no-resolve
+  - DOMAIN-KEYWORD,iphone,Apple,no-resolve
+  - DOMAIN-KEYWORD,weixin,WeChat,no-resolve
   - RULE-SET,WeChat,WeChat,no-resolve
+  - DOMAIN-KEYWORD,qq.com,QQ,no-resolve
   - RULE-SET,QQ,QQ,no-resolve
+  - DOMAIN-KEYWORD,tencent,QQ,no-resolve  #騰訊
+  - DOMAIN-KEYWORD,alibaba,Taobao,no-resolve
+  - DOMAIN-KEYWORD,taobao,Taobao,no-resolve
   - RULE-SET,Taobao,Taobao,no-resolve
+  - DOMAIN-KEYWORD,tmall,Tmall,no-resolve
   - RULE-SET,Tmall,Tmall,no-resolve
+  - DOMAIN-KEYWORD,alipay,Alipay,no-resolve
   - RULE-SET,Alipay,Alipay,no-resolve
+  - DOMAIN-KEYWORD,jd.com,JD,no-resolve
   - RULE-SET,JD,JD,no-resolve
   - RULE-SET,Xianyu,Xianyu,no-resolve
+  - DOMAIN-KEYWORD,meituan,Meituan,no-resolve
   - RULE-SET,Meituan,Meituan,no-resolve
   - RULE-SET,Baidu,Baidu,no-resolve
   - RULE-SET,NetEase,NetEase,no-resolve
@@ -767,7 +798,7 @@ rules:
   - RULE-SET,Instagram,Instagram,no-resolve
   - RULE-SET,Twitch,Twitch,no-resolve
   - RULE-SET,Facebook,Facebook,no-resolve
-  - RULE-SET,Copilot,Copilot,no-resolve
+  - RULE-SET,Copilot,Copilot,no-resolve  #微软AI
   - RULE-SET,AI,AI,no-resolve  #人工智能
   - RULE-SET,Microsoft,Microsoft,no-resolve  #Microsoft
   - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #YouTubeMusic
