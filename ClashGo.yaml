@@ -812,6 +812,9 @@ rules:
   - RULE-SET,Microsoft,Microsoft,no-resolve  #Microsoft
   - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #YouTubeMusic
   - RULE-SET,Global,Universe,no-resolve  #Universe
+  - DOMAIN-KEYWORD,.cn,CHINA,no-resolve  #CN直連
+  - DOMAIN-KEYWORD,-cn,CHINA,no-resolve  #CN直連
+  - DOMAIN-KEYWORD,.gov,CHINA,no-resolve  #CN直連
   - RULE-SET,DIRECT-1,CHINA,no-resolve  #中國域名
   - RULE-SET,DIRECT-2,CHINA,no-resolve  #中國自治系統號碼
   - RULE-SET,隐私保护,CHINA,no-resolve  #隱私保護
