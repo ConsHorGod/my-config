@@ -354,6 +354,15 @@ proxy-groups:
     proxies:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
+  - name: 小米
+    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xiaomi.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
   - name: 香港特區
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
@@ -693,7 +702,13 @@ rule-providers:
     path: ./ruleset/Douyin.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/DouYin/DouYin.yaml"
     interval: 21600
-
+#-----------------------------------------------------------------------------------------------------------
+  小米:
+    type: http
+    behavior: classical
+    path: ./ruleset/Xiaomi.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/XiaoMi/XiaoMi.yaml"
+    interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   Google:
     type: http
@@ -797,6 +812,7 @@ rules:
   - RULE-SET,拼多多,拼多多,no-resolve
   - RULE-SET,百度,百度,no-resolve
   - RULE-SET,網易,網易,no-resolve
+  - RULE-SET,小米,小米,no-resolve
   - RULE-SET,PROXY,Universe,no-resolve  #我的翻墻網站
   - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
   - RULE-SET,TikTok,TikTok,no-resolve  #TikTok
