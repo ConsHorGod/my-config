@@ -146,7 +146,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: YouTube
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"
-    hidden: truee
+    hidden: false
     type: select
     url: http://1.1.1.1/generate_204
     interval: 300
