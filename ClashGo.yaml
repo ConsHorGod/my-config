@@ -430,7 +430,7 @@ proxy-groups:
       - XMR
 #-----------------------------------------------------------------------------------------------------------
   - name: 群暉
-    icon: "http://www.w3.org/2000/svg"
+    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Nas.png"
     hidden: true
     type: select
     url: http://1.1.1.1/generate_204
@@ -524,7 +524,7 @@ proxy-groups:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
   - name: 迅雷
-    icon: "https://zh.wikipedia.org/zh-cn/%E8%BF%85%E9%9B%B7#/media/File:XUNLEI_LOGO.png"
+    icon: "https://www.xunlei.com/icons/logo.svg"
     hidden: true
     type: select
     url: http://1.1.1.1/generate_204
