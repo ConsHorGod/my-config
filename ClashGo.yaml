@@ -902,7 +902,7 @@ rule-providers:
 rules:
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
   - RULE-SET,anti-ad,AD-Block,no-resolve  #anti-ad廣告過濾
-#------------------翻牆代理規則------------------
+#------------------翻牆APP代理規則------------------
   - DOMAIN-KEYWORD,xmrth,XMRth,no-resolve  #XMRth機場
   - RULE-SET,PROXY,Universe,no-resolve  #我的翻墻網站
   - RULE-SET,GitHub,GitHub,no-resolve  #GitHub
@@ -924,7 +924,7 @@ rules:
   - RULE-SET,Microsoft,Microsoft,no-resolve  #Microsoft
   - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #YouTubeMusic
   - RULE-SET,Global,Universe,no-resolve  #Universe
-#------------------國內直連規則------------------
+#------------------APP直連規則------------------
   - RULE-SET,DIRECT-0,CN,no-resolve  #我的直連網站
   - DOMAIN-KEYWORD,abchina.com.cn,農業銀行,no-resolve  #農業銀行
   - RULE-SET,農業銀行,農業銀行,no-resolve  #農業銀行
@@ -956,6 +956,11 @@ rules:
   - RULE-SET,小米,小米,no-resolve  #小米
   - RULE-SET,小紅書,小紅書,no-resolve  #小紅書
   - RULE-SET,三星,三星,no-resolve  #小紅書
+#------------------80,443以外端口一律直連------------------
+  - DST-PORT,0-79,CN,no-resolve  #0-79端口
+  - DST-PORT,81-442,CN,no-resolve  #81-442端口
+  - DST-PORT,444-65535,CN,no-resolve  #444-65535端口
+#------------------國內域名、IP直連規則------------------
   - DOMAIN-KEYWORD,.cn,CN,no-resolve  #CN直連
   - DOMAIN-KEYWORD,-cn,CN,no-resolve  #CN直連
   - DOMAIN-KEYWORD,.gov,CN,no-resolve  #CN直連
@@ -963,9 +968,5 @@ rules:
   - RULE-SET,DIRECT-2,CN,no-resolve  #中國自治系統號碼
   - RULE-SET,隐私保护,CN,no-resolve  #隱私保護
   - GEOIP,CN,CN  #中國IP
-#------------------80,443以外端口一律直連------------------
-  - DST-PORT,0-79,CN,no-resolve  #0-79端口
-  - DST-PORT,81-442,CN,no-resolve  #81-442端口
-  - DST-PORT,444-65535,CN,no-resolve  #444-65535端口
 #------------------流量最終出站------------------
   - MATCH,FINAL,dns-failed
