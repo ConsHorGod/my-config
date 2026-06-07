@@ -429,6 +429,15 @@ proxy-groups:
     use:  #代理選項
       - XMR
 #-----------------------------------------------------------------------------------------------------------
+  - name: 群暉
+    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Nas.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
   - name: 抖音
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
@@ -797,6 +806,13 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Samsung/Samsung.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
+  群暉:
+    type: http
+    behavior: classical
+    path: ./ruleset/Samsung.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Synology/Synology.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
   Google:
     type: http
     behavior: classical
@@ -882,6 +898,7 @@ rules:
   - DOMAIN-KEYWORD,icloud,Apple,no-resolve  #Apple
   - DOMAIN-KEYWORD,itunes,Apple,no-resolve  #Apple
   - RULE-SET,Apple,Apple,no-resolve  #Apple
+  - RULE-SET,群暉,群暉no-resolve  #群暉
   - DOMAIN-KEYWORD,zijieapi,抖音,no-resolve  #字節跳動
   - DOMAIN-KEYWORD,douyin,抖音,no-resolve  #抖音
   - RULE-SET,抖音,抖音,no-resolve  #抖音
