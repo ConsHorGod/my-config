@@ -524,7 +524,7 @@ proxy-groups:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
   - name: 迅雷
-    icon: "https://www.xunlei.com/icons/logo.svg"
+    icon: "https://pan.xunlei.com/yc/img/logo.svg"
     hidden: true
     type: select
     url: http://1.1.1.1/generate_204
