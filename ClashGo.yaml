@@ -904,8 +904,8 @@ rules:
   - RULE-SET,anti-ad,AD-Block,no-resolve  #anti-ad廣告過濾
 #------------------翻牆代理規則------------------
   - DOMAIN-KEYWORD,xmrth,XMRth,no-resolve  #XMRth機場
-  - RULE-SET,GitHub,GitHub,no-resolve  #GitHub
   - RULE-SET,PROXY,Universe,no-resolve  #我的翻墻網站
+  - RULE-SET,GitHub,GitHub,no-resolve  #GitHub
   - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
   - RULE-SET,TikTok,TikTok,no-resolve  #TikTok
   - RULE-SET,Telegram,Telegram,no-resolve  #Telegram
