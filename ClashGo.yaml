@@ -900,8 +900,6 @@ rule-providers:
     interval: 21600
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️分流規則⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rules:
-  - DOMAIN-KEYWORD,ads2301,群暉,no-resolve  #奧園
-  - IP-CIDR,192.168.50.3/32,群暉,no-resolve  #NAS
   - DST-PORT,0-79,CN,no-resolve  #0-79端口
   - DST-PORT,81-442,CN,no-resolve  #81-442端口
   - DST-PORT,444-65535,CN,no-resolve  #444-65535端口
