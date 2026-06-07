@@ -900,14 +900,34 @@ rule-providers:
     interval: 21600
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️分流規則⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rules:
-#------------------國內直連規則------------------
-  - DOMAIN-KEYWORD,dns.alidns.com,阿里,no-resolve  #阿里雲服務器
-  - DOMAIN-KEYWORD,doh.pub,騰訊,no-resolve  #騰訊雲服務器
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
+  - RULE-SET,anti-ad,AD-Block,no-resolve  #anti-ad廣告過濾
+#------------------翻牆代理規則------------------
+  - DOMAIN-KEYWORD,xmrth,XMRth,no-resolve  #XMRth機場
+  - RULE-SET,GitHub,GitHub,no-resolve  #GitHub
+  - RULE-SET,PROXY,Universe,no-resolve  #我的翻墻網站
+  - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
+  - RULE-SET,TikTok,TikTok,no-resolve  #TikTok
+  - RULE-SET,Telegram,Telegram,no-resolve  #Telegram
+  - DOMAIN-KEYWORD,Redd,Reddit,no-resolve  #Reddit
+  - RULE-SET,Reddit,Reddit,no-resolve  #Reddit
+  - DOMAIN-KEYWORD,youtube,YouTube,no-resolve  #Reddit
+  - RULE-SET,YouTube,YouTube,no-resolve  #YouTube
+  - DOMAIN-KEYWORD,google,Google,no-resolve  #Reddit
+  - RULE-SET,Google,Google,no-resolve  #Google
+  - RULE-SET,Twitter,Twitter,no-resolve  #Twitter
+  - RULE-SET,Instagram,Instagram,no-resolve  #Instagram
+  - RULE-SET,Twitch,Twitch,no-resolve  #Twitter
+  - RULE-SET,Facebook,Facebook,no-resolve  #Facebook
+  - RULE-SET,Copilot,Copilot,no-resolve  #微软AI
+  - RULE-SET,AI,AI,no-resolve  #人工智能
+  - RULE-SET,Microsoft,Microsoft,no-resolve  #Microsoft
+  - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #YouTubeMusic
+  - RULE-SET,Global,Universe,no-resolve  #Universe
+#------------------國內直連規則------------------
+  - RULE-SET,DIRECT-0,CN,no-resolve  #我的直連網站
   - DOMAIN-KEYWORD,abchina.com.cn,農業銀行,no-resolve  #農業銀行
   - RULE-SET,農業銀行,農業銀行,no-resolve  #農業銀行
-  - RULE-SET,anti-ad,AD-Block,no-resolve  #anti-ad廣告過濾
-  - RULE-SET,DIRECT-0,CN,no-resolve  #我的直連網站
   - DOMAIN-KEYWORD,apple,Apple,no-resolve  #Apple
   - DOMAIN-KEYWORD,icloud,Apple,no-resolve  #Apple
   - DOMAIN-KEYWORD,itunes,Apple,no-resolve  #Apple
@@ -947,26 +967,5 @@ rules:
   - DST-PORT,0-79,CN,no-resolve  #0-79端口
   - DST-PORT,81-442,CN,no-resolve  #81-442端口
   - DST-PORT,444-65535,CN,no-resolve  #444-65535端口
-#------------------翻牆代理規則------------------
-  - DOMAIN-KEYWORD,xmrth,XMRth,no-resolve  #XMRth機場
-  - RULE-SET,GitHub,GitHub,no-resolve  #GitHub
-  - RULE-SET,PROXY,Universe,no-resolve  #我的翻墻網站
-  - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
-  - RULE-SET,TikTok,TikTok,no-resolve  #TikTok
-  - RULE-SET,Telegram,Telegram,no-resolve  #Telegram
-  - DOMAIN-KEYWORD,Redd,Reddit,no-resolve  #Reddit
-  - RULE-SET,Reddit,Reddit,no-resolve  #Reddit
-  - DOMAIN-KEYWORD,youtube,YouTube,no-resolve  #Reddit
-  - RULE-SET,YouTube,YouTube,no-resolve  #YouTube
-  - DOMAIN-KEYWORD,google,Google,no-resolve  #Reddit
-  - RULE-SET,Google,Google,no-resolve  #Google
-  - RULE-SET,Twitter,Twitter,no-resolve  #Twitter
-  - RULE-SET,Instagram,Instagram,no-resolve  #Instagram
-  - RULE-SET,Twitch,Twitch,no-resolve  #Twitter
-  - RULE-SET,Facebook,Facebook,no-resolve  #Facebook
-  - RULE-SET,Copilot,Copilot,no-resolve  #微软AI
-  - RULE-SET,AI,AI,no-resolve  #人工智能
-  - RULE-SET,Microsoft,Microsoft,no-resolve  #Microsoft
-  - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #YouTubeMusic
-  - RULE-SET,Global,Universe,no-resolve  #Universe
+#------------------流量最終出站------------------
   - MATCH,FINAL,dns-failed
