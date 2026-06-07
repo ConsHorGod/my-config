@@ -908,6 +908,7 @@ rules:
   - DOMAIN-KEYWORD,dns.alidns.com,阿里,no-resolve  #阿里雲服務器
   - DOMAIN-KEYWORD,doh.pub,騰訊,no-resolve  #騰訊雲服務器
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
+  - DOMAIN-KEYWORD,abchina.com.cn,農業銀行,no-resolve  #農業銀行
   - RULE-SET,農業銀行,農業銀行,no-resolve  #農業銀行
   - DOMAIN-KEYWORD,xmrth,XMRth,no-resolve  #XMRth機場
   - RULE-SET,GitHub,GitHub,no-resolve  #GitHub
