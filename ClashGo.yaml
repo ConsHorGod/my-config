@@ -560,7 +560,7 @@ proxy-groups:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
   - name: 農業銀行
-    icon: "https://www.abchina.com.cn/zt/images/logo_ue2.png"
+    icon: "https://pic.616pic.com/ys_img/00/06/23/099O8efoiI.jpg"
     hidden: true
     type: select
     url: http://1.1.1.1/generate_204
