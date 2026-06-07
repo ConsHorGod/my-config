@@ -52,7 +52,7 @@ proxy-groups:
       - TW直連
       - 其它節點
       - 飛鳥雲
-      - CHINA
+      - CN
       - REJECT
 #-----------------------------------------------------------------------------------------------------------
   - name: Universe
@@ -284,118 +284,6 @@ proxy-groups:
       - 香港特區
       - HK直連
 #-----------------------------------------------------------------------------------------------------------
-  - name: 微信
-    icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/wechat(1).png"
-    hidden: true
-    type: select
-    url: http://1.1.1.1/generate_204
-    interval: 300
-    proxies:
-      - DIRECT
-#-----------------------------------------------------------------------------------------------------------
-  - name: 騰訊
-    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/tencent.png"
-    hidden: true
-    type: select
-    url: http://1.1.1.1/generate_204
-    interval: 300
-    proxies:
-      - DIRECT
-#-----------------------------------------------------------------------------------------------------------
-  - name: 抖音
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #手动选择
-    url: http://1.1.1.1/generate_204  #用于测试的链接
-    interval: 300
-    proxies:  #代理選項
-      - DIRECT
-      - 香港特區
-      - HK直連
-#-----------------------------------------------------------------------------------------------------------
-  - name: 快手
-    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/kuaishou.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #手动选择
-    url: http://1.1.1.1/generate_204  #用于测试的链接
-    interval: 300
-    proxies:  #代理選項
-      - DIRECT
-      - 香港特區
-      - HK直連
-#-----------------------------------------------------------------------------------------------------------
-  - name: 阿里巴巴
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taobao.png"
-    hidden: true
-    type: select
-    url: http://1.1.1.1/generate_204
-    interval: 300
-    proxies:
-      - DIRECT
-#-----------------------------------------------------------------------------------------------------------
-  - name: 京東
-    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/JD.png"
-    hidden: true
-    type: select
-    url: http://1.1.1.1/generate_204
-    interval: 300
-    proxies:
-      - DIRECT
-#-----------------------------------------------------------------------------------------------------------
-  - name: 美團
-    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/meituan.png"
-    hidden: true
-    type: select
-    url: http://1.1.1.1/generate_204
-    interval: 300
-    proxies:
-      - DIRECT
-#-----------------------------------------------------------------------------------------------------------
-  - name: 拼多多
-    icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/pinduoduo.png"
-    hidden: true
-    type: select
-    url: http://1.1.1.1/generate_204
-    interval: 300
-    proxies:
-      - DIRECT
-#-----------------------------------------------------------------------------------------------------------
-  - name: 百度
-    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Baidu.png"
-    hidden: true
-    type: select
-    url: http://1.1.1.1/generate_204
-    interval: 300
-    proxies:
-      - DIRECT
-#-----------------------------------------------------------------------------------------------------------
-  - name: 迅雷
-    icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Xunlei.png"
-    hidden: true
-    type: select
-    url: http://1.1.1.1/generate_204
-    interval: 300
-    proxies:
-      - DIRECT
-#-----------------------------------------------------------------------------------------------------------
-  - name: 網易
-    icon: "https://www.shouyoujin.com/d/file/titlepic/20191005/fsqyrkia43r.jpg"
-    hidden: true
-    type: select
-    url: http://1.1.1.1/generate_204
-    interval: 300
-    proxies:
-      - DIRECT
-#-----------------------------------------------------------------------------------------------------------
-  - name: 小米
-    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xiaomi.png"
-    hidden: true
-    type: select
-    url: http://1.1.1.1/generate_204
-    interval: 300
-    proxies:
-      - DIRECT
-#-----------------------------------------------------------------------------------------------------------
   - name: 三星
     icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Samsung_old_logo_before_year_2015.svg/1280px-Samsung_old_logo_before_year_2015.svg.png"
     hidden: true
@@ -413,13 +301,14 @@ proxy-groups:
       - 中國台灣
       - TW直連
 #-----------------------------------------------------------------------------------------------------------
-  - name: 小紅書
-    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xiaohongshu.png"
-    hidden: true
-    type: select
-    url: http://1.1.1.1/generate_204
-    interval: 300
-    proxies:
+  - name: AD-Block
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlack.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    type: select  #手动选择
+    url: http://1.1.1.1/generate_204  #用于测试的链接
+    proxies:  #代理選項
+      - REJECT-DROP
+      - REJECT
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
   - name: 香港特區
@@ -540,17 +429,128 @@ proxy-groups:
     use:  #代理選項
       - XMR
 #-----------------------------------------------------------------------------------------------------------
-  - name: AD-Block
-    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlack.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+  - name: 抖音
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://1.1.1.1/generate_204  #用于测试的链接
+    interval: 300
     proxies:  #代理選項
-      - REJECT-DROP
-      - REJECT
+      - DIRECT
+      - 香港特區
+      - HK直連
+#-----------------------------------------------------------------------------------------------------------
+  - name: 快手
+    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/kuaishou.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    type: select  #手动选择
+    url: http://1.1.1.1/generate_204  #用于测试的链接
+    interval: 300
+    proxies:  #代理選項
+      - DIRECT
+      - 香港特區
+      - HK直連
+#-----------------------------------------------------------------------------------------------------------
+  - name: 微信
+    icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/wechat(1).png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
-  - name: CHINA
+  - name: 騰訊
+    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/tencent.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 阿里
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taobao.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 京東
+    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/JD.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 美團
+    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/meituan.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 拼多多
+    icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/pinduoduo.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 百度
+    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Baidu.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 迅雷
+    icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Xunlei.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 網易
+    icon: "https://www.shouyoujin.com/d/file/titlepic/20191005/fsqyrkia43r.jpg"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 小米
+    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xiaomi.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 小紅書
+    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xiaohongshu.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: CN
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CN.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
@@ -618,14 +618,14 @@ rule-providers:
   DIRECT-1:
     type: http
     behavior: classical
-    path: ./ruleset/ChinaMax.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml"
+    path: ./ruleset/CNMax.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/CNMax/CNMax_Classical.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------    
   DIRECT-2:
     type: http
     behavior: classical
-    path: ./ruleset/ASN.China.yaml
+    path: ./ruleset/ASN.CN.yaml
     url: "https://yfamilys.com/rule/ASN-CN.rule"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------    
@@ -706,7 +706,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Tencent/Tencent_Classical.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  阿里巴巴:
+  阿里:
     type: http
     behavior: classical
     path: ./ruleset/Alibaba.yaml
@@ -868,16 +868,16 @@ rule-providers:
     interval: 21600
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️分流規則⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rules:
-  - DST-PORT,0-79,CHINA,no-resolve  #0-79端口
-  - DST-PORT,81-442,CHINA,no-resolve  #81-442端口
-  - DST-PORT,444-65535,CHINA,no-resolve  #444-65535端口
-  - DOMAIN-KEYWORD,dns.alidns.com,阿里巴巴,no-resolve  #阿里雲服務器
+  - DST-PORT,0-79,CN,no-resolve  #0-79端口
+  - DST-PORT,81-442,CN,no-resolve  #81-442端口
+  - DST-PORT,444-65535,CN,no-resolve  #444-65535端口
+  - DOMAIN-KEYWORD,dns.alidns.com,阿里,no-resolve  #阿里雲服務器
   - DOMAIN-KEYWORD,doh.pub,騰訊,no-resolve  #騰訊雲服務器
-  - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
+  - DOMAIN,msmp.abCN.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
   - DOMAIN-KEYWORD,xmrth,XMRth,no-resolve  #XMRth機場
   - RULE-SET,GitHub,GitHub,no-resolve  #GitHub
   - RULE-SET,anti-ad,AD-Block,no-resolve  #anti-ad廣告過濾
-  - RULE-SET,DIRECT-0,CHINA,no-resolve  #我的直連網站
+  - RULE-SET,DIRECT-0,CN,no-resolve  #我的直連網站
   - DOMAIN-KEYWORD,apple,Apple,no-resolve  #Apple
   - DOMAIN-KEYWORD,icloud,Apple,no-resolve  #Apple
   - DOMAIN-KEYWORD,itunes,Apple,no-resolve  #Apple
@@ -892,13 +892,13 @@ rules:
   - DOMAIN-KEYWORD,qq.com,騰訊,no-resolve  #QQ
   - RULE-SET,騰訊,騰訊,no-resolve  #騰訊
   - DOMAIN-KEYWORD,tencent,騰訊,no-resolve  #騰訊
-  - DOMAIN-KEYWORD,alibaba,阿里巴巴,no-resolve  #阿里巴巴
-  - DOMAIN-KEYWORD,taobao,阿里巴巴,no-resolve  #淘寶
-  - DOMAIN-KEYWORD,Tmall,阿里巴巴,no-resolve  #天貓
-  - DOMAIN-KEYWORD,goofish,阿里巴巴,no-resolve  #閒魚
-  - RULE-SET,阿里巴巴,阿里巴巴,no-resolve  #阿里巴巴
-  - DOMAIN-KEYWORD,alipay,阿里巴巴,no-resolve  #支付寶
-  - RULE-SET,支付寶,阿里巴巴,no-resolve  #支付寶
+  - DOMAIN-KEYWORD,alibaba,阿里,no-resolve  #阿里巴巴
+  - DOMAIN-KEYWORD,taobao,阿里,no-resolve  #淘寶
+  - DOMAIN-KEYWORD,Tmall,阿里,no-resolve  #天貓
+  - DOMAIN-KEYWORD,goofish,阿里,no-resolve  #閒魚
+  - RULE-SET,阿里,阿里,no-resolve  #阿里巴巴
+  - DOMAIN-KEYWORD,alipay,阿里,no-resolve  #支付寶
+  - RULE-SET,支付寶,阿里,no-resolve  #支付寶
   - DOMAIN-KEYWORD,jd.com,京東,no-resolve  #京東
   - RULE-SET,京東,京東,no-resolve  #京東
   - DOMAIN-KEYWORD,meituan,美團,no-resolve  #美團
@@ -916,7 +916,9 @@ rules:
   - RULE-SET,Telegram,Telegram,no-resolve  #Telegram
   - DOMAIN-KEYWORD,Redd,Reddit,no-resolve  #Reddit
   - RULE-SET,Reddit,Reddit,no-resolve  #Reddit
+  - DOMAIN-KEYWORD,youtube,YouTube,no-resolve  #Reddit
   - RULE-SET,YouTube,YouTube,no-resolve  #YouTube
+  - DOMAIN-KEYWORD,google,Google,no-resolve  #Reddit
   - RULE-SET,Google,Google,no-resolve  #Google
   - RULE-SET,Twitter,Twitter,no-resolve  #Twitter
   - RULE-SET,Instagram,Instagram,no-resolve  #Instagram
@@ -927,11 +929,11 @@ rules:
   - RULE-SET,Microsoft,Microsoft,no-resolve  #Microsoft
   - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #YouTubeMusic
   - RULE-SET,Global,Universe,no-resolve  #Universe
-  - DOMAIN-KEYWORD,.cn,CHINA,no-resolve  #CN直連
-  - DOMAIN-KEYWORD,-cn,CHINA,no-resolve  #CN直連
-  - DOMAIN-KEYWORD,.gov,CHINA,no-resolve  #CN直連
-  - RULE-SET,DIRECT-1,CHINA,no-resolve  #中國域名
-  - RULE-SET,DIRECT-2,CHINA,no-resolve  #中國自治系統號碼
-  - RULE-SET,隐私保护,CHINA,no-resolve  #隱私保護
-  - GEOIP,CN,CHINA  #中國IP
+  - DOMAIN-KEYWORD,.cn,CN,no-resolve  #CN直連
+  - DOMAIN-KEYWORD,-cn,CN,no-resolve  #CN直連
+  - DOMAIN-KEYWORD,.gov,CN,no-resolve  #CN直連
+  - RULE-SET,DIRECT-1,CN,no-resolve  #中國域名
+  - RULE-SET,DIRECT-2,CN,no-resolve  #中國自治系統號碼
+  - RULE-SET,隐私保护,CN,no-resolve  #隱私保護
+  - GEOIP,CN,CN  #中國IP
   - MATCH,FINAL,dns-failed
