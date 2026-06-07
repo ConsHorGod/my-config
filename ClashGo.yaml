@@ -559,6 +559,15 @@ proxy-groups:
     proxies:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
+  - name: 農業銀行
+    icon: "https://www.abchina.com.cn/zt/images/logo_ue2.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
   - name: CN
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CN.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
@@ -775,7 +784,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./ruleset/Douyin.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/DouYin/DouYin.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ByteDance/ByteDance.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   快手:
@@ -811,6 +820,13 @@ rule-providers:
     behavior: classical
     path: ./ruleset/Samsung.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Synology/Synology.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
+  農業銀行:
+    type: http
+    behavior: classical
+    path: ./ruleset/ABC.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ABC/ABC.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   Google:
@@ -891,7 +907,8 @@ rules:
   - DST-PORT,444-65535,CN,no-resolve  #444-65535端口
   - DOMAIN-KEYWORD,dns.alidns.com,阿里,no-resolve  #阿里雲服務器
   - DOMAIN-KEYWORD,doh.pub,騰訊,no-resolve  #騰訊雲服務器
-  - DOMAIN,msmp.abCN.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
+  - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
+  - RULE-SET,農業銀行,農業銀行,no-resolve  #農業銀行
   - DOMAIN-KEYWORD,xmrth,XMRth,no-resolve  #XMRth機場
   - RULE-SET,GitHub,GitHub,no-resolve  #GitHub
   - RULE-SET,anti-ad,AD-Block,no-resolve  #anti-ad廣告過濾
@@ -901,16 +918,10 @@ rules:
   - DOMAIN-KEYWORD,itunes,Apple,no-resolve  #Apple
   - RULE-SET,Apple,Apple,no-resolve  #Apple
   - RULE-SET,群暉,群暉,no-resolve  #群暉
-  - DOMAIN-KEYWORD,zijieapi,抖音,no-resolve  #字節跳動
-  - DOMAIN-KEYWORD,douyin,抖音,no-resolve  #抖音
-  - RULE-SET,抖音,抖音,no-resolve  #抖音
+  - RULE-SET,字節跳動,抖音,no-resolve  #抖音
   - RULE-SET,快手,快手,no-resolve  #百度
-  - DOMAIN-KEYWORD,weixin,微信,no-resolve  #微信
-  - DOMAIN-KEYWORD,wechat,微信,no-resolve  #微信
   - RULE-SET,微信,微信,no-resolve  #微信
-  - DOMAIN-KEYWORD,qq.com,騰訊,no-resolve  #QQ
   - RULE-SET,騰訊,騰訊,no-resolve  #騰訊
-  - DOMAIN-KEYWORD,tencent,騰訊,no-resolve  #騰訊
   - DOMAIN-KEYWORD,alibaba,阿里,no-resolve  #阿里巴巴
   - DOMAIN-KEYWORD,taobao,阿里,no-resolve  #淘寶
   - DOMAIN-KEYWORD,Tmall,阿里,no-resolve  #天貓
