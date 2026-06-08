@@ -1,4 +1,7 @@
 DOMAIN-KEYWORD,pool.ntp.org //時間同步
+DOMAIN-KEYWORD,apple // Apple
+DOMAIN-KEYWORD,icloud // Apple
+DOMAIN-KEYWORD,itunes // Apple
 DOMAIN-KEYWORD,.cn // 中國域名
 DOMAIN-KEYWORD,-cn // 中國域名
 DOMAIN-KEYWORD,.gov // 政府域名
