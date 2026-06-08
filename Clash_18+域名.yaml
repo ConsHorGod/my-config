@@ -11,6 +11,7 @@ payload:
   - DOMAIN-SUFFIX,adultforce.com # (18+)广告推广平台
   - DOMAIN-SUFFIX,amateur.cash # (18+)广告推广平台
 # > 18+
+  - DOMAIN-KEYWORD,haijiao #(18+)
   - DOMAIN-SUFFIX,onlyfans.com #(18+)
   - DOMAIN-SUFFIX,4tube.com #(18+)
   - DOMAIN-SUFFIX,91.video.ws #(18+)
