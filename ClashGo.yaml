@@ -572,7 +572,7 @@ proxy-groups:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
   - name: 18+
-    icon: "https://www.clipartmax.com/png/middle/205-2059292_school-and-study-18-%E7%A6%81.png"  #策略組圖標
+    icon: "https://img.icons8.com/?size=80&id=eUfvXepuZG4g&format=png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://1.1.1.1/generate_204  #用于测试的链接
@@ -907,7 +907,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./ruleset/18+.yaml
-    url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/Clash_18%2B%E5%9F%9F%E5%90%8D.yaml"
+    url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/Clash_(18%2B).yaml"
     interval: 21600
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️分流規則⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rules:
