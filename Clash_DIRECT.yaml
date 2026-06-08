@@ -1,4 +1,5 @@
 payload:
+  - DOMAIN-KEYWORD,pool.ntp.org  #時間同步
   - DOMAIN-KEYWORD,jlxa.wicp.net  #北村
   - DOMAIN-KEYWORD,ads2301  #奧園
   - DOMAIN-KEYWORD,asus  #華碩
