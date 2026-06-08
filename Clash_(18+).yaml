@@ -6,11 +6,12 @@ payload:
 # - 来源：社区规则整理 / 实测抓包 / 自定义收集
 # - 特征：涵盖常见18+内容相关网站与域名
 # - 用途：本规则集用于防御性安全研究，禁止用于任何非法用途
-# &gt; (18+)广告推广平台
+# - (18+)广告推广平台
 - DOMAIN-KEYWORD,adxxx.biz # (18+)广告推广平台
 - DOMAIN-KEYWORD,adultforce # (18+)广告推广平台
 - DOMAIN-KEYWORD,amateur.cash # (18+)广告推广平台
-# &gt; 18+
+# - 18+域名
+- DOMAIN-KEYWORD,javchat #(18+)
 - DOMAIN-KEYWORD,freejavporn #(18+)
 - DOMAIN-KEYWORD,tnaflix #(18+)
 - DOMAIN-KEYWORD,haijiao #(18+)
