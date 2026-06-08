@@ -177,10 +177,14 @@ proxy-groups:
     interval: 300
     filter: 
     proxies:  #代理選項
-      - 中國台灣
-      - TW直連
+      - 香港特區
+      - HK直連
       - 日本島國
       - JP直連
+      - 美利堅國
+      - US直連
+      - 中國台灣
+      - TW直連
 #-----------------------------------------------------------------------------------------------------------
   - name: Microsoft
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Windows_11.png"  #策略組圖標
