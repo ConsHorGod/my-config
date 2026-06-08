@@ -570,6 +570,22 @@ proxy-groups:
     url: http://www.baidu.com  #用于测试的链接
     proxies:  #代理選項
       - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 18+
+    icon: "https://www.clipartmax.com/png/middle/205-2059292_school-and-study-18-%E7%A6%81.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    type: select  #手动选择
+    url: http://1.1.1.1/generate_204  #用于测试的链接
+    interval: 300
+    proxies:  #代理選項
+      - 香港特區
+      - HK直連
+      - 日本島國
+      - JP直連
+      - 美利堅國
+      - US直連
+      - 中國台灣
+      - TW直連
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️代理集⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 proxy-providers:
   "飛鳥雲":
@@ -886,6 +902,13 @@ rule-providers:
     path: ./ruleset/Clash_PROXY.yaml
     url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Clash_PROXY.yaml"
     interval: 21600
+#-----------------------------------------------------------------------------------------------------------
+  18+:
+    type: http
+    behavior: classical
+    path: ./ruleset/18+.yaml
+    url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/Clash_18%2B%E5%9F%9F%E5%90%8D.yaml"
+    interval: 21600
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️分流規則⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rules:
 #------------------優先規則------------------
@@ -917,6 +940,7 @@ rules:
   - RULE-SET,AI,AI,no-resolve  #人工智能
   - RULE-SET,Microsoft,Microsoft,no-resolve  #Microsoft
   - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #YouTubeMusic
+  - RULE-SET,18+,18+,no-resolve  #Universe
   - RULE-SET,Global,Universe,no-resolve  #Universe
 #------------------國內APP直連規則------------------
   - DOMAIN-KEYWORD,abchina.com.cn,農業銀行,no-resolve  #農業銀行
