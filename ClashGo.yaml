@@ -37,7 +37,7 @@ proxies:
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️代理組⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 proxy-groups:
   - name: FINAL
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png"  #策略組圖標
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://1.1.1.1/generate_204  #用于测试的链接
@@ -56,7 +56,7 @@ proxy-groups:
       - REJECT
 #-----------------------------------------------------------------------------------------------------------
   - name: Universe
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"  #策略組圖標
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://1.1.1.1/generate_204  #用于测试的链接
@@ -72,7 +72,7 @@ proxy-groups:
       - TW直連
 #-----------------------------------------------------------------------------------------------------------
   - name: GitHub
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png"  #策略組圖標
+    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_01.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #自動測速
     url: http://1.1.1.1/generate_204  #用于测试的链接
