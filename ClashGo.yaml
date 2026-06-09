@@ -72,7 +72,7 @@ proxy-groups:
       - TW直連
 #-----------------------------------------------------------------------------------------------------------
   - name: GitHub
-    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_01.png"  #策略組圖標
+    icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_08.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #自動測速
     url: http://1.1.1.1/generate_204  #用于测试的链接
