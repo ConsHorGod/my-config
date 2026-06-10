@@ -474,7 +474,43 @@ proxy-groups:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
   - name: 阿里
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Alibaba.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 淘寶
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taobao.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 支付寶
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taobao.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 天貓
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taobao.png"
+    hidden: true
+    type: select
+    url: http://1.1.1.1/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: 閒魚
+    icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/xianyu"
     hidden: true
     type: select
     url: http://1.1.1.1/generate_204
@@ -949,14 +985,14 @@ rules:
   - RULE-SET,快手,快手,no-resolve  #百度
   - RULE-SET,微信,微信,no-resolve  #微信
   - RULE-SET,騰訊,騰訊,no-resolve  #騰訊
-  - DOMAIN-KEYWORD,alibaba,阿里,no-resolve  #阿里巴巴
-  - DOMAIN-KEYWORD,taobao,阿里,no-resolve  #淘寶
-  - DOMAIN-KEYWORD,Tmall,阿里,no-resolve  #天貓
-  - DOMAIN-KEYWORD,goofish,阿里,no-resolve  #閒魚
-  - DOMAIN-KEYWORD,aliyun,阿里,no-resolve  #阿里雲
-  - RULE-SET,阿里,阿里,no-resolve  #阿里巴巴
-  - DOMAIN-KEYWORD,alipay,阿里,no-resolve  #支付寶
+  - DOMAIN-KEYWORD,taobao,淘寶,no-resolve  #淘寶
+  - DOMAIN-KEYWORD,alipay,支付寶,no-resolve  #支付寶
   - RULE-SET,支付寶,阿里,no-resolve  #支付寶
+  - DOMAIN-KEYWORD,Tmall,天貓,no-resolve  #天貓
+  - DOMAIN-KEYWORD,goofish,閒魚,no-resolve  #閒魚
+  - DOMAIN-KEYWORD,aliyun,阿里,no-resolve  #阿里雲
+  - DOMAIN-KEYWORD,alibaba,阿里,no-resolve  #阿里巴巴
+  - RULE-SET,阿里,阿里,no-resolve  #阿里巴巴
   - DOMAIN-KEYWORD,jd.com,京東,no-resolve  #京東
   - RULE-SET,京東,京東,no-resolve  #京東
   - DOMAIN-KEYWORD,meituan,美團,no-resolve  #美團
