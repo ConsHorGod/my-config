@@ -1004,6 +1004,8 @@ rules:
   - DOMAIN-KEYWORD,coolapk,酷安,no-resolve  #酷安
   - RULE-SET,字節跳動,抖音,no-resolve  #抖音
   - RULE-SET,快手,快手,no-resolve  #百度
+  - DOMAIN-KEYWORD,weixin,微信,no-resolve  #微信
+  - DOMAIN-KEYWORD,wechat,微信,no-resolve  #微信
   - RULE-SET,微信,微信,no-resolve  #微信
   - RULE-SET,騰訊,騰訊,no-resolve  #騰訊
   - DOMAIN-KEYWORD,taobao,淘寶,no-resolve  #淘寶
