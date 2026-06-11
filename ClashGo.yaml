@@ -971,6 +971,9 @@ rules:
   - RULE-SET,anti-ad,AD-Block,no-resolve  #anti-ad廣告過濾
   - DOMAIN-KEYWORD,gdmf.apple.com,iOS更新,no-resolve  #iOS更新
   - DOMAIN-KEYWORD,mesu.apple.com,iOS更新,no-resolve  #iOS更新
+  - DOMAIN-KEYWORD,appldnld.apple.com,iOS更新,no-resolve  #iOS更新
+  - DOMAIN-KEYWORD,gs.apple.com,iOS更新,no-resolve  #iOS更新
+  - DOMAIN-KEYWORD,itunes.apple.com,iOS更新,no-resolve  #iOS更新
   - DOMAIN-KEYWORD,updates.cdn-apple.com,iOS更新,no-resolve  #iOS更新
   - DOMAIN-KEYWORD,apple,Apple,no-resolve  #Apple
   - DOMAIN-KEYWORD,icloud,Apple,no-resolve  #Apple
