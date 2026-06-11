@@ -501,7 +501,7 @@ proxy-groups:
       - DIRECT
 #-----------------------------------------------------------------------------------------------------------
   - name: 支付寶
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taobao.png"
+    icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/alipay.png"
     hidden: true
     type: select
     url: http://www.baidu.com
