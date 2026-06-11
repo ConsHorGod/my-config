@@ -281,12 +281,21 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png"
     hidden: true
     type: select
-    url: http://1.1.1.1/generate_204
+    url: http://www.baidu.com
     interval: 300
     proxies:
       - DIRECT
       - 香港特區
       - HK直連
+#-----------------------------------------------------------------------------------------------------------
+  - name: iOS更新
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    type: select  #手动选择
+    url: http://www.baidu.com  #用于测试的链接
+    proxies:  #代理選項
+      - DIRECT
+      - REJECT
 #-----------------------------------------------------------------------------------------------------------
   - name: 三星
     icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Samsung_old_logo_before_year_2015.svg/1280px-Samsung_old_logo_before_year_2015.svg.png"
@@ -437,7 +446,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
-    url: http://1.1.1.1/generate_204  #用于测试的链接
+    url: http://www.baidu.com  #用于测试的链接
     interval: 300
     proxies:  #代理選項
       - DIRECT
@@ -448,7 +457,7 @@ proxy-groups:
     icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/kuaishou.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
-    url: http://1.1.1.1/generate_204  #用于测试的链接
+    url: http://www.baidu.com  #用于测试的链接
     interval: 300
     proxies:  #代理選項
       - DIRECT
@@ -459,7 +468,7 @@ proxy-groups:
     icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/wechat(1).png"
     hidden: true
     type: select
-    url: http://1.1.1.1/generate_204
+    url: http://www.baidu.com
     interval: 300
     proxies:
       - DIRECT
@@ -468,7 +477,7 @@ proxy-groups:
     icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/tencent.png"
     hidden: true
     type: select
-    url: http://1.1.1.1/generate_204
+    url: http://www.baidu.com
     interval: 300
     proxies:
       - DIRECT
@@ -477,7 +486,7 @@ proxy-groups:
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Alibaba.png"
     hidden: true
     type: select
-    url: http://1.1.1.1/generate_204
+    url: http://www.baidu.com
     interval: 300
     proxies:
       - DIRECT
@@ -486,7 +495,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taobao.png"
     hidden: true
     type: select
-    url: http://1.1.1.1/generate_204
+    url: http://www.baidu.com
     interval: 300
     proxies:
       - DIRECT
@@ -495,7 +504,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taobao.png"
     hidden: true
     type: select
-    url: http://1.1.1.1/generate_204
+    url: http://www.baidu.com
     interval: 300
     proxies:
       - DIRECT
@@ -504,7 +513,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taobao.png"
     hidden: true
     type: select
-    url: http://1.1.1.1/generate_204
+    url: http://www.baidu.com
     interval: 300
     proxies:
       - DIRECT
@@ -513,7 +522,7 @@ proxy-groups:
     icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/xianyu.png"
     hidden: true
     type: select
-    url: http://1.1.1.1/generate_204
+    url: http://www.baidu.com
     interval: 300
     proxies:
       - DIRECT
@@ -522,7 +531,7 @@ proxy-groups:
     icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/JD.png"
     hidden: true
     type: select
-    url: http://1.1.1.1/generate_204
+    url: http://www.baidu.com
     interval: 300
     proxies:
       - DIRECT
@@ -531,7 +540,7 @@ proxy-groups:
     icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/meituan.png"
     hidden: true
     type: select
-    url: http://1.1.1.1/generate_204
+    url: http://www.baidu.com
     interval: 300
     proxies:
       - DIRECT
@@ -540,7 +549,7 @@ proxy-groups:
     icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/pinduoduo.png"
     hidden: true
     type: select
-    url: http://1.1.1.1/generate_204
+    url: http://www.baidu.com
     interval: 300
     proxies:
       - DIRECT
@@ -549,7 +558,7 @@ proxy-groups:
     icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Baidu.png"
     hidden: true
     type: select
-    url: http://1.1.1.1/generate_204
+    url: http://www.baidu.com
     interval: 300
     proxies:
       - DIRECT
@@ -558,7 +567,7 @@ proxy-groups:
     icon: "https://pan.xunlei.com/yc/img/logo.svg"
     hidden: true
     type: select
-    url: http://1.1.1.1/generate_204
+    url: http://www.baidu.com
     interval: 300
     proxies:
       - DIRECT
@@ -567,7 +576,7 @@ proxy-groups:
     icon: "https://www.shouyoujin.com/d/file/titlepic/20191005/fsqyrkia43r.jpg"
     hidden: true
     type: select
-    url: http://1.1.1.1/generate_204
+    url: http://www.baidu.com
     interval: 300
     proxies:
       - DIRECT
@@ -576,7 +585,7 @@ proxy-groups:
     icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xiaomi.png"
     hidden: true
     type: select
-    url: http://1.1.1.1/generate_204
+    url: http://www.baidu.com
     interval: 300
     proxies:
       - DIRECT
@@ -585,7 +594,7 @@ proxy-groups:
     icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xiaohongshu.png"
     hidden: true
     type: select
-    url: http://1.1.1.1/generate_204
+    url: http://www.baidu.com
     interval: 300
     proxies:
       - DIRECT
@@ -594,7 +603,7 @@ proxy-groups:
     icon: "https://pic.616pic.com/ys_img/00/06/23/099O8efoiI.jpg"
     hidden: true
     type: select
-    url: http://1.1.1.1/generate_204
+    url: http://www.baidu.com
     interval: 300
     proxies:
       - DIRECT
@@ -603,7 +612,7 @@ proxy-groups:
     icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/kuancoolapk.png"
     hidden: true
     type: select
-    url: http://1.1.1.1/generate_204
+    url: http://www.baidu.com
     interval: 300
     proxies:
       - DIRECT
@@ -958,6 +967,7 @@ rule-providers:
 rules:
 #------------------優先規則------------------
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
+  - DOMAIN-KEYWORD,updates.cdn-apple.com,iOS更新,no-resolve  #iOS更新
   - RULE-SET,DIRECT-0,CN,no-resolve  #我的直連網站
   - RULE-SET,anti-ad,AD-Block,no-resolve  #anti-ad廣告過濾
   - DOMAIN-KEYWORD,apple,Apple,no-resolve  #Apple
