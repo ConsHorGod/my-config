@@ -5,9 +5,6 @@ DOMAIN-KEYWORD,xunlei // 迅雷
 DOMAIN-KEYWORD,apple // Apple
 DOMAIN-KEYWORD,icloud // Apple
 DOMAIN-KEYWORD,itunes // Apple
-DOMAIN-KEYWORD,.cn // 中國域名
-DOMAIN-KEYWORD,-cn // 中國域名
-DOMAIN-KEYWORD,.gov // 政府域名
 DOMAIN-KEYWORD,jlxa.wicp.net // 北村
 DOMAIN-KEYWORD,ads2301 // 奧園
 DOMAIN-KEYWORD,asus // 華碩
@@ -53,6 +50,9 @@ DOMAIN-KEYWORD,dranime.net // 飄雪
 DOMAIN-KEYWORD,subhd.tv // subhd.tv
 DOMAIN-KEYWORD,zimuku.org // 字幕库
 DOMAIN-KEYWORD,msft // 微軟網絡檢測地址
+DOMAIN-KEYWORD,.cn // 中國域名
+DOMAIN-KEYWORD,-cn // 中國域名
+DOMAIN-KEYWORD,.gov // 政府域名
 IP-CIDR,0.0.0.0/8 // 本機或未知設備
 IP-CIDR,10.0.0.0/8 // 大型企業/校園內網
 IP-CIDR,100.64.0.0/10 // 電信商大局域網
