@@ -42,20 +42,13 @@ proxy-groups:
     type: select  #手动选择
     url: http://1.1.1.1/generate_204  #用于测试的链接
     proxies:  #代理選項
-      - 香港特區
-      - HK直連
-      - 日本島國
-      - JP直連
-      - 美利堅國
-      - US直連
-      - 中國台灣
-      - TW直連
+      - 國際媒體
       - 其它節點
       - 飛鳥雲
       - CN
       - REJECT
 #-----------------------------------------------------------------------------------------------------------
-  - name: Universe
+  - name: 國際媒體
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
@@ -975,7 +968,7 @@ rules:
   - RULE-SET,Apple,Apple,no-resolve  #Apple
 #------------------國外APP代理規則------------------
   - DOMAIN-KEYWORD,xmrth,XMRth,no-resolve  #XMRth機場
-  - RULE-SET,PROXY,Universe,no-resolve  #我的翻墻網站
+  #- RULE-SET,PROXY,國際媒體,no-resolve  #我的翻墻網站
   - RULE-SET,GitHub,GitHub,no-resolve  #GitHub
   - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
   - RULE-SET,TikTok,TikTok,no-resolve  #TikTok
@@ -994,8 +987,8 @@ rules:
   - RULE-SET,AI,AI,no-resolve  #人工智能
   - RULE-SET,Microsoft,Microsoft,no-resolve  #Microsoft
   - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #YouTubeMusic
-  - RULE-SET,18+,18+,no-resolve  #Universe
-  - RULE-SET,Global,Universe,no-resolve  #Universe
+  - RULE-SET,18+,18+,no-resolve  #國際媒體
+  #- RULE-SET,Global,國際媒體,no-resolve  #國際媒體
 #------------------國內APP直連規則------------------
   - DOMAIN-KEYWORD,abchina.com.cn,農業銀行,no-resolve  #農業銀行
   - RULE-SET,農業銀行,農業銀行,no-resolve  #農業銀行
@@ -1030,7 +1023,7 @@ rules:
   - DOMAIN-KEYWORD,.cn,CN,no-resolve  #CN直連
   - DOMAIN-KEYWORD,-cn,CN,no-resolve  #CN直連
   - DOMAIN-KEYWORD,.gov,CN,no-resolve  #CN直連
-#   - RULE-SET,DIRECT-1,CN,no-resolve  #中國域名
+  #- RULE-SET,DIRECT-1,CN,no-resolve  #中國域名
   - RULE-SET,DIRECT-2,CN  #中國自治系統號碼
   - GEOIP,CN,CN  #中國IP
 #------------------流量最終出站------------------
