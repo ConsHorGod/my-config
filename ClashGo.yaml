@@ -691,13 +691,6 @@ rule-providers:
     path: ./ruleset/anti-ad.yaml
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  隐私保护:
-    type: http
-    behavior: classical
-    path: ./ruleset/Privacy_Classical.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Privacy/Privacy_Classical.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
   DIRECT-1:
     type: http
     behavior: classical
@@ -967,8 +960,13 @@ rule-providers:
 rules:
 #------------------優先規則------------------
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
-  - RULE-SET,DIRECT-0,CN,no-resolve  #我的直連網站
   - RULE-SET,anti-ad,AD-Block,no-resolve  #anti-ad廣告過濾
+  - RULE-SET,DIRECT-0,CN,no-resolve  #我的直連網站
+#------------------80,443以外端口一律直連------------------
+  - DST-PORT,0-79,CN,no-resolve  #0-79端口
+  - DST-PORT,81-442,CN,no-resolve  #81-442端口
+  - DST-PORT,444-65535,CN,no-resolve  #444-65535端口
+#------------------ Apple規則------------------
   - DOMAIN-KEYWORD,gdmf.apple.com,iOS更新,no-resolve  #iOS更新
   - DOMAIN-KEYWORD,mesu.apple.com,iOS更新,no-resolve  #iOS更新
   - DOMAIN-KEYWORD,apple,Apple,no-resolve  #Apple
@@ -1028,17 +1026,12 @@ rules:
   - RULE-SET,小紅書,小紅書,no-resolve  #小紅書
   - DOMAIN-KEYWORD,samsung,三星,no-resolve  #三星
   - RULE-SET,三星,三星,no-resolve  #三星
-#------------------80,443以外端口一律直連------------------
-  - DST-PORT,0-79,CN,no-resolve  #0-79端口
-  - DST-PORT,81-442,CN,no-resolve  #81-442端口
-  - DST-PORT,444-65535,CN,no-resolve  #444-65535端口
 #------------------國內域名、IP直連規則------------------
   - DOMAIN-KEYWORD,.cn,CN,no-resolve  #CN直連
   - DOMAIN-KEYWORD,-cn,CN,no-resolve  #CN直連
   - DOMAIN-KEYWORD,.gov,CN,no-resolve  #CN直連
-  - RULE-SET,DIRECT-1,CN,no-resolve  #中國域名
-  - RULE-SET,DIRECT-2,CN,no-resolve  #中國自治系統號碼
-  - RULE-SET,隐私保护,CN,no-resolve  #隱私保護
+#   - RULE-SET,DIRECT-1,CN,no-resolve  #中國域名
+  - RULE-SET,DIRECT-2,CN  #中國自治系統號碼
   - GEOIP,CN,CN  #中國IP
 #------------------流量最終出站------------------
   - MATCH,FINAL,dns-failed
