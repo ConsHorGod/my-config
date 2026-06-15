@@ -20,7 +20,12 @@ DOMAIN-KEYWORD,wechat // 支付寶
 DOMAIN-KEYWORD,qq.com // QQ
 DOMAIN-KEYWORD,tencent // 騰訊
 DOMAIN-KEYWORD,meituan // 美團
+DOMAIN-KEYWORD,maoyan // 美團
+DOMAIN-KEYWORD,dianping // 美團
+DOMAIN-KEYWORD,meituanwaimai // 美團
 DOMAIN-KEYWORD,jd.com // 京東
+DOMAIN-KEYWORD,360buy // 京東
+DOMAIN-KEYWORD,jdcloud // 京東
 DOMAIN-KEYWORD,alibaba // 阿里巴巴
 DOMAIN-KEYWORD,aliyun // 阿里雲
 DOMAIN-KEYWORD,alipay // 支付寶
