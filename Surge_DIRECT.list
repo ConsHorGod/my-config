@@ -57,6 +57,7 @@ DOMAIN-KEYWORD,zimuku.org // 字幕库
 DOMAIN-KEYWORD,msft // 微軟網絡檢測地址
 DOMAIN-KEYWORD,-cn // 中國域名
 DOMAIN-SUFFIX,.cn // 中國域名
+DOMAIN-KEYWORD,.cn // 中國域名
 DOMAIN-SUFFIX,.gov // 政府域名
 IP-CIDR,0.0.0.0/8 // 本機或未知設備
 IP-CIDR,10.0.0.0/8 // 大型企業/校園內網
