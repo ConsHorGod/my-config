@@ -10,6 +10,7 @@ payload:
   - DOMAIN-KEYWORD,dranime.net  #飄雪
   - DOMAIN-KEYWORD,subhd.tv  #subhd.tv
   - DOMAIN-KEYWORD,zimuku.org  #字幕库
+  - DOMAIN-KEYWORD,mini4k  #mini4k.io
   - DOMAIN-KEYWORD,msft  #微軟網絡檢測地址
   - IP-CIDR,0.0.0.0/8  #本機或未知設備
   - IP-CIDR,10.0.0.0/8  #大型企業/校園內網
