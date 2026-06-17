@@ -34,7 +34,7 @@ dns:
     - system
   # 代理域名走公共 DNS
   proxy-server-nameserver:
-   - https://dns.alidns.com/dns-query
+    - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️代理節點⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 proxies:
@@ -1025,7 +1025,7 @@ rules:
   - RULE-SET,三星,三星,no-resolve  #三星
 #------------------國內域名、IP直連規則------------------
   - DOMAIN-SUFFIX,cn,CN,no-resolve  #CN直連
-  - DOMAIN-KEYWORD,.cn,no-resolve  #CN直連
+  - DOMAIN-KEYWORD,.cn,CN,no-resolve  #CN直連
   - DOMAIN-KEYWORD,-cn,CN,no-resolve  #CN直連
   - DOMAIN-SUFFIX,gov,CN,no-resolve  #CN直連
   #- RULE-SET,DIRECT-1,CN,no-resolve  #中國域名
