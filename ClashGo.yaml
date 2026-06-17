@@ -67,6 +67,7 @@ proxy-groups:
       - US直連
       - 中國台灣
       - TW直連
+      - 飛鳥雲
 #-----------------------------------------------------------------------------------------------------------
   - name: GitHub
     icon: "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_08.png"  #策略組圖標
@@ -330,8 +331,8 @@ proxy-groups:
     filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港|HK-专线)
     use:
       - OKZ
-      - XMR
-      - LHY
+      #- XMR
+      #- LHY
 #-----------------------------------------------------------------------------------------------------------
   - name: HK直連
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
@@ -352,8 +353,8 @@ proxy-groups:
     filter: '美国|美國'
     use:
       - OKZ
-      - XMR
-      - LHY
+      #- XMR
+      #- LHY
 #-----------------------------------------------------------------------------------------------------------
   - name: US直連
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"  #策略組圖標
@@ -374,8 +375,8 @@ proxy-groups:
     filter: '日本|JP-专线'
     use:
       - OKZ
-      - XMR
-      - LHY
+      #- XMR
+      #- LHY
 #-----------------------------------------------------------------------------------------------------------
   - name: JP直連
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
@@ -396,8 +397,8 @@ proxy-groups:
     filter: '台灣|台湾|臺灣'
     use:
       - OKZ
-      - XMR
-      - LHY
+      #- XMR
+      #- LHY
 #-----------------------------------------------------------------------------------------------------------
   - name: TW直連
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png"  #策略組圖標
