@@ -948,6 +948,14 @@ rule-providers:
     url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Clash_PROXY.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
+  Steam:
+    type: http
+    behavior: classical
+    path: ./ruleset/Steam.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Steam/Steam.yaml"
+    interval: 21600
+
+#-----------------------------------------------------------------------------------------------------------
   18+:
     type: http
     behavior: classical
@@ -971,6 +979,8 @@ rules:
   - DST-PORT,0-79,CN,no-resolve  #0-79端口
   - DST-PORT,81-442,CN,no-resolve  #81-442端口
   - DST-PORT,444-65535,CN,no-resolve  #444-65535端口
+#------------------遊戲平台------------------
+  - RULE-SET,steam,CN,no-resolve  #Steam遊戲平台
 #------------------國外APP代理規則------------------
   - DOMAIN-KEYWORD,xmrth,XMRth,no-resolve  #XMRth機場
   #- RULE-SET,PROXY,國際媒體,no-resolve  #我的翻墻網站
