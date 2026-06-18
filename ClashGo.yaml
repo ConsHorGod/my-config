@@ -23,19 +23,31 @@ tun:
 dns:
   enable: true
   ipv6: false
-  listen: 23456
+  listen: :23453
   enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16 
+  fake-ip-range: 198.18.0.1/16
   fake-ip-filter-mode: whitelist
   fake-ip-filter:
-    - 'geosite: gfw'
- # 直连域名走系统 DNS
+    - 'geosite:gfw'
+  # 默认直连用佛山电信 DNS
+  default-nameserver:
+    - system
+  # nameserver 专门用于直连域名
   nameserver:
     - system
-  # 代理域名走公共 DNS
+  # 代理域名专用解析器（翻墙流量）
   proxy-server-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
+  # 可选：备用解析器（防止污染或失败时兜底）
+  fallback:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    - tls://dns.google:853
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️代理節點⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 proxies:
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️代理組⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
