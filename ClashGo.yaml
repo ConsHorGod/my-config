@@ -995,7 +995,7 @@ rules:
 #------------------遊戲平台------------------
   - RULE-SET,Steam,Steam,no-resolve  #Steam遊戲平台
 #------------------國外APP代理規則------------------
-  - DOMAIN-KEYWORD,xmrth,XMRth,no-resolve  #XMRth機場
+  - DOMAIN-KEYWORD,xmrth.cloud,XMRth,no-resolve  #XMRth機場
   #- RULE-SET,PROXY,國際媒體,no-resolve  #我的翻墻網站
   - RULE-SET,GitHub,GitHub,no-resolve  #GitHub
   - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
