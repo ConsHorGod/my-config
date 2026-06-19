@@ -103,6 +103,7 @@ proxy-groups:
     url: http://1.1.1.1/generate_204
     interval: 300
     proxies:
+      - LXY香港
       - 香港特區
       - HK直連
       - 日本島國
@@ -119,9 +120,9 @@ proxy-groups:
     url: http://1.1.1.1/generate_204
     interval: 300
     proxies:
+      - LXY香港
       - 香港特區
       - HK直連
-      - LXY香港
       - 日本島國
       - JP直連
       - 美利堅國
