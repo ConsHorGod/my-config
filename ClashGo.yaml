@@ -351,22 +351,12 @@ proxy-groups:
     type: url-test  #自动测速
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
-    filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港|HK-专线)
+    filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港|香港高速|HK-专线)
     use:
       - OKZ
       #- XMR
       - LXY
       #- LHY
-#-----------------------------------------------------------------------------------------------------------
-  - name: LXY香港
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
-    url: http://1.1.1.1/generate_204  #用于测试的链接
-    interval: 300
-    filter: '香港'
-    use:
-      - LXY
 #-----------------------------------------------------------------------------------------------------------
   - name: HK直連
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
