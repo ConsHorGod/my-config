@@ -114,12 +114,18 @@ proxy-groups:
   - name: YouTube
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"
     hidden: false
-    type: url-test
+    type: select
     url: http://1.1.1.1/generate_204
     interval: 300
-    filter: (香港).*(01|02|03|04|06|09)
-    use:  #代理選項
-      - OKZ
+    proxies:
+      - 香港特區
+      - HK直連
+      - 日本島國
+      - JP直連
+      - 美利堅國
+      - US直連
+      - 中國台灣
+      - TW直連
 #-----------------------------------------------------------------------------------------------------------
   - name: Telegram
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png"  #策略組圖標
