@@ -114,7 +114,7 @@ proxy-groups:
   - name: YouTube
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"
     hidden: false
-    type: select
+    type: url-test
     url: http://1.1.1.1/generate_204
     interval: 300
     filter: (香港).*(01|02|03|04|06|09)
