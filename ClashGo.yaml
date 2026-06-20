@@ -159,7 +159,7 @@ proxy-groups:
     type: url-test  #自动测速
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
-    filter: '香港|HK'
+    filter: (?!.*(聯通|移動)).*(香港|HK)
     use:
       - OKZ
       #- XMR(DavidHor)
@@ -220,7 +220,6 @@ proxy-groups:
     type: select  #自動測速
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
-    filter: (?!.*(CU|CM|TEL|聯通|移動|電信)).*(香港|HK)
     proxies:  #代理選項
       - 香港特區
       - HK直連
@@ -358,7 +357,7 @@ proxy-groups:
     type: url-test  #自动测速
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
-    filter: '香港|HK'
+    filter: (?!.*(HK 0|聯通|移動)).*(香港|HK-)
     use:
       - OKZ
       #- XMR(DavidHor)
