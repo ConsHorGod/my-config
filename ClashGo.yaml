@@ -746,12 +746,12 @@ proxy-providers:
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️規則集⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rule-providers:
 #-----------------------------------------------------------------------------------------------------------
-  #anti-ad:
-    #type: http
-    #behavior: domain
-    #url: "https://anti-ad.net/clash.yaml"
-    #path: ./ruleset/anti-ad.yaml
-    #interval: 21600
+  anti-ad:
+    type: http
+    behavior: domain
+    url: "https://anti-ad.net/clash.yaml"
+    path: ./ruleset/anti-ad.yaml
+    interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   DIRECT-1:
     type: http
@@ -1032,7 +1032,7 @@ rules:
   - DOMAIN-KEYWORD,doh.pub,騰訊  #騰訊
   - DOMAIN-KEYWORD,dns.alidns.com,阿里  #阿里巴巴
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
-  #- RULE-SET,anti-ad,AD-Block,no-resolve  #anti-ad廣告過濾
+  - RULE-SET,anti-ad,AD-Block,no-resolve  #anti-ad廣告過濾
   - RULE-SET,DIRECT-0,CN,no-resolve  #我的直連網站
 #------------------ Apple規則------------------
   - DOMAIN-KEYWORD,gdmf.apple.com,iOS更新,no-resolve  #iOS更新
@@ -1102,7 +1102,6 @@ rules:
   - RULE-SET,三星,三星,no-resolve  #三星
 #------------------國內域名、IP直連規則------------------
   - DOMAIN-SUFFIX,cn,CN,no-resolve  #CN直連
-  - DOMAIN-KEYWORD,.cn,CN,no-resolve  #CN直連
   - DOMAIN-KEYWORD,-cn,CN,no-resolve  #CN直連
   - DOMAIN-SUFFIX,gov,CN,no-resolve  #CN直連
   #- RULE-SET,DIRECT-1,CN,no-resolve  #中國域名
