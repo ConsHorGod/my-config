@@ -746,13 +746,12 @@ proxy-providers:
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️規則集⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rule-providers:
 #-----------------------------------------------------------------------------------------------------------
-  anti-ad:
-    type: http
-    behavior: domain
+  #anti-ad:
+    #type: http
+    #behavior: domain
     #url: "https://anti-ad.net/clash.yaml"
-    url: "https://yfamilys.com/rule/AntiAD.rule"
-    path: ./ruleset/anti-ad.yaml
-    interval: 21600
+    #path: ./ruleset/anti-ad.yaml
+    #interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   DIRECT-1:
     type: http
@@ -1033,7 +1032,7 @@ rules:
   - DOMAIN-KEYWORD,doh.pub,騰訊  #騰訊
   - DOMAIN-KEYWORD,dns.alidns.com,阿里  #阿里巴巴
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
-  - RULE-SET,anti-ad,AD-Block,no-resolve  #anti-ad廣告過濾
+  #- RULE-SET,anti-ad,AD-Block,no-resolve  #anti-ad廣告過濾
   - RULE-SET,DIRECT-0,CN,no-resolve  #我的直連網站
 #------------------ Apple規則------------------
   - DOMAIN-KEYWORD,gdmf.apple.com,iOS更新,no-resolve  #iOS更新
@@ -1069,7 +1068,7 @@ rules:
   - RULE-SET,AI,AI,no-resolve  #人工智能
   - RULE-SET,Microsoft,Microsoft,no-resolve  #Microsoft
   - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #YouTubeMusic
-  - RULE-SET,18+,18+,no-resolve  #國際媒體
+  #- RULE-SET,18+,18+,no-resolve  #國際媒體
   #- RULE-SET,Global,國際媒體,no-resolve  #國際媒體
 #------------------國內APP直連規則------------------
   - DOMAIN-KEYWORD,abchina.com.cn,農業銀行,no-resolve  #農業銀行
