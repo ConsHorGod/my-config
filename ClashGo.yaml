@@ -156,7 +156,7 @@ proxy-groups:
   - name: HBOMAX
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #自动测速
+    type: url-test  #自动测速
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
     filter: '香港|HK'
@@ -374,7 +374,7 @@ proxy-groups:
     interval: 300
     filter: '(?!.*(香港)).*(HK)'
     use:  #代理選項
-      - XMR(DavidHor)
+      #- XMR(DavidHor)
       - XMR(ConsHorGod)
 #-----------------------------------------------------------------------------------------------------------
   - name: 美利堅國
@@ -399,7 +399,8 @@ proxy-groups:
     interval: 300
     filter: '(?!.*(美国)).*(US)'
     use:  #代理選項
-      - XMR(DavidHor)
+      #- XMR(DavidHor)
+      - XMR(ConsHorGod)
 #-----------------------------------------------------------------------------------------------------------
   - name: 日本島國
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
@@ -423,7 +424,7 @@ proxy-groups:
     interval: 300
     filter: '(?!.*(日本)).*(JP)'
     use:  #代理選項
-      - XMR(DavidHor)
+      #- XMR(DavidHor)
       - XMR(ConsHorGod)
 #-----------------------------------------------------------------------------------------------------------
   - name: 中國台灣
@@ -448,7 +449,7 @@ proxy-groups:
     interval: 300
     filter: '(?!.*(台湾)).*(TW)'
     use:  #代理選項
-      - XMR(DavidHor)
+      #- XMR(DavidHor)
       - XMR(ConsHorGod)
 #-----------------------------------------------------------------------------------------------------------
   - name: 其它節點
