@@ -1018,7 +1018,20 @@ rule-providers:
     path: ./ruleset/Steam.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Game/Game.yaml"
     interval: 21600
-
+#-----------------------------------------------------------------------------------------------------------
+  PT下载:
+    type: http
+    behavior: classical
+    path: ./ruleset/PrivateTracker_No_Resolve.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/PrivateTracker/PrivateTracker_No_Resolve.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
+  下载軟件:
+    type: http
+    behavior: classical
+    path: ./ruleset/Download_No_Resolve.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Download/Download_No_Resolve.yaml"
+    interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   18+:
     type: http
@@ -1047,6 +1060,9 @@ rules:
   - DST-PORT,444-65535,CN,no-resolve  #444-65535端口
 #------------------遊戲平台------------------
   - RULE-SET,Game,Game,no-resolve  #Steam遊戲平台
+#------------------下載------------------
+  - RULE-SET,下载軟件,CN,no-resolve  #下载軟件
+  - RULE-SET,PT下载,CN,no-resolve  #PT下载
 #------------------國外APP代理規則------------------
   - DOMAIN-KEYWORD,XMRth.cloud,XMRth,no-resolve  #XMRth機場
   #- RULE-SET,PROXY,國際媒體,no-resolve  #我的翻墻網站
