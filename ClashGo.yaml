@@ -714,15 +714,15 @@ proxy-providers:
       url: http://1.1.1.1/generate_204
       interval: 300
 #-----------------------------------------------------------------------------------------------------------
-  "XMR(DavidHor)":
-    type: http
-    path: ./provide/XMR(DavidHor).yml
-    url: https://cf.XMRth.one/s/9dkc7icn1whs-2b9b182e?clash=1
-    interval: 86400
-    health-check:
-      enable: true
-      url: http://1.1.1.1/generate_204
-      interval: 300
+  #"XMR(DavidHor)":
+    #type: http
+    #path: ./provide/XMR(DavidHor).yml
+    #url: https://cf.XMRth.one/s/9dkc7icn1whs-2b9b182e?clash=1
+    #interval: 86400
+    #health-check:
+      #enable: true
+      #url: http://1.1.1.1/generate_204
+      #interval: 300
 #-----------------------------------------------------------------------------------------------------------
   "XMR(ConsHorGod)":
     type: http
