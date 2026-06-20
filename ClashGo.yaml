@@ -749,7 +749,8 @@ rule-providers:
   anti-ad:
     type: http
     behavior: domain
-    url: "https://anti-ad.net/clash.yaml"
+    #url: "https://anti-ad.net/clash.yaml"
+    url: "https://yfamilys.com/rule/AntiAD.rule"
     path: ./ruleset/anti-ad.yaml
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
