@@ -162,7 +162,7 @@ proxy-groups:
     filter: '香港|HK'
     use:
       - OKZ
-      #- XMR
+      #- XMR(DavidHor)
       - LXY
       #- LHY
 #-----------------------------------------------------------------------------------------------------------
@@ -354,7 +354,8 @@ proxy-groups:
     filter: '香港|HK'
     use:
       - OKZ
-      #- XMR
+      #- XMR(DavidHor)
+      - XMR(ConsHorGod)
       - LXY
       #- LHY
 #-----------------------------------------------------------------------------------------------------------
@@ -366,7 +367,8 @@ proxy-groups:
     interval: 300
     filter: '(?!.*(香港)).*(HK)'
     use:  #代理選項
-      - XMR
+      - XMR(DavidHor)
+      - XMR(ConsHorGod)
 #-----------------------------------------------------------------------------------------------------------
   - name: 美利堅國
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"  #策略組圖標
@@ -377,7 +379,8 @@ proxy-groups:
     filter: '美国|美國'
     use:
       - OKZ
-      #- XMR
+      #- XMR(DavidHor)
+      - XMR(ConsHorGod)
       - LXY
       #- LHY
 #-----------------------------------------------------------------------------------------------------------
@@ -389,7 +392,7 @@ proxy-groups:
     interval: 300
     filter: '(?!.*(美国)).*(US)'
     use:  #代理選項
-      - XMR
+      - XMR(DavidHor)
 #-----------------------------------------------------------------------------------------------------------
   - name: 日本島國
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
@@ -400,7 +403,8 @@ proxy-groups:
     filter: '日本|JP-专线'
     use:
       - OKZ
-      #- XMR
+      #- XMR(DavidHor)
+      - XMR(ConsHorGod)
       - LXY
       #- LHY
 #-----------------------------------------------------------------------------------------------------------
@@ -412,7 +416,8 @@ proxy-groups:
     interval: 300
     filter: '(?!.*(日本)).*(JP)'
     use:  #代理選項
-      - XMR
+      - XMR(DavidHor)
+      - XMR(ConsHorGod)
 #-----------------------------------------------------------------------------------------------------------
   - name: 中國台灣
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png"  #策略組圖標
@@ -423,7 +428,8 @@ proxy-groups:
     filter: '台灣|台湾|臺灣'
     use:
       - OKZ
-      #- XMR
+      #- XMR(DavidHor)
+      - XMR(ConsHorGod)
       - LXY
       #- LHY
 #-----------------------------------------------------------------------------------------------------------
@@ -435,7 +441,8 @@ proxy-groups:
     interval: 300
     filter: '(?!.*(台湾)).*(TW)'
     use:  #代理選項
-      - XMR
+      - XMR(DavidHor)
+      - XMR(ConsHorGod)
 #-----------------------------------------------------------------------------------------------------------
   - name: 其它節點
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/AAEX.png  #策略組圖標
@@ -446,7 +453,8 @@ proxy-groups:
     filter: '^(?!.*(官网|失联|发布|流量|剩余|群|套餐|客服|🇺🇸|专线|美國|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|🇭🇰|香港|HK|Hong|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|JP|Japan|🇨🇳|台湾|🇹🇼|TW|🇸🇬|狮|SG|Singapore|🇰🇷|韩国|首尔|KR|Korea)).*$'
     use:
       - OKZ
-      - XMR
+      #- XMR(DavidHor)
+      - XMR(ConsHorGod)
       - LXY
       - LHY
 #-----------------------------------------------------------------------------------------------------------
@@ -466,7 +474,8 @@ proxy-groups:
     url: http://1.1.1.1/generate_204  #用于测试的链接
     interval: 300
     use:  #代理選項
-      - XMR
+      #- XMR(DavidHor)
+      - XMR(ConsHorGod)
 #-----------------------------------------------------------------------------------------------------------
   - name: 抖音
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"  #策略組圖標
@@ -698,10 +707,20 @@ proxy-providers:
       url: http://1.1.1.1/generate_204
       interval: 300
 #-----------------------------------------------------------------------------------------------------------
-  "XMR":
+  "XMR(DavidHor)":
     type: http
-    path: ./provide/XMR.yml
-    url: https://cf.xmrth.one/s/9dkc7icn1whs-2b9b182e?clash=1
+    path: ./provide/XMR(DavidHor).yml
+    url: https://cf.XMRth.one/s/9dkc7icn1whs-2b9b182e?clash=1
+    interval: 86400
+    health-check:
+      enable: true
+      url: http://1.1.1.1/generate_204
+      interval: 300
+#-----------------------------------------------------------------------------------------------------------
+  "XMR(ConsHorGod)":
+    type: http
+    path: ./provide/XMR(ConsHorGod).yml
+    url: https://cf.XMRth.one/s/v5mhl6tjjyie-9ab2ce1a?clash=1&dns=0&ipv6=1
     interval: 86400
     health-check:
       enable: true
@@ -717,7 +736,6 @@ proxy-providers:
       enable: true
       url: http://1.1.1.1/generate_204
       interval: 300
-
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️規則集⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rule-providers:
 #-----------------------------------------------------------------------------------------------------------
@@ -1023,7 +1041,7 @@ rules:
 #------------------遊戲平台------------------
   - RULE-SET,Steam,Steam,no-resolve  #Steam遊戲平台
 #------------------國外APP代理規則------------------
-  - DOMAIN-KEYWORD,xmrth.cloud,XMRth,no-resolve  #XMRth機場
+  - DOMAIN-KEYWORD,XMRth.cloud,XMRth,no-resolve  #XMRth機場
   #- RULE-SET,PROXY,國際媒體,no-resolve  #我的翻墻網站
   - RULE-SET,GitHub,GitHub,no-resolve  #GitHub
   - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
