@@ -166,7 +166,7 @@ proxy-groups:
       - LXY
       #- LHY
 #-----------------------------------------------------------------------------------------------------------
-  - name: Steam
+  - name: Game
     icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/steam(1).png"
     hidden: false
     type: select
@@ -1005,11 +1005,11 @@ rule-providers:
     url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Clash_PROXY.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  Steam:
+  Game:
     type: http
     behavior: classical
     path: ./ruleset/Steam.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Steam/Steam.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Game/Game.yaml"
     interval: 21600
 
 #-----------------------------------------------------------------------------------------------------------
@@ -1039,7 +1039,7 @@ rules:
   - DST-PORT,81-442,CN,no-resolve  #81-442端口
   - DST-PORT,444-65535,CN,no-resolve  #444-65535端口
 #------------------遊戲平台------------------
-  - RULE-SET,Steam,Steam,no-resolve  #Steam遊戲平台
+  - RULE-SET,Game,Game,no-resolve  #Steam遊戲平台
 #------------------國外APP代理規則------------------
   - DOMAIN-KEYWORD,XMRth.cloud,XMRth,no-resolve  #XMRth機場
   #- RULE-SET,PROXY,國際媒體,no-resolve  #我的翻墻網站
