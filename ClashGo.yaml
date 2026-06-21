@@ -746,12 +746,12 @@ proxy-providers:
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️規則集⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rule-providers:
 #-----------------------------------------------------------------------------------------------------------
-  anti-ad:
-    type: http
-    behavior: domain
-    url: "https://anti-ad.net/clash.yaml"
-    path: ./ruleset/anti-ad.yaml
-    interval: 21600
+  #anti-ad:
+    #type: http
+    #behavior: domain
+    #url: "https://anti-ad.net/clash.yaml"
+    #path: ./ruleset/anti-ad.yaml
+    #interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   DIRECT-1:
     type: http
@@ -1045,8 +1045,12 @@ rules:
   - DOMAIN-KEYWORD,doh.pub,騰訊  #騰訊
   - DOMAIN-KEYWORD,dns.alidns.com,阿里  #阿里巴巴
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
-  - RULE-SET,anti-ad,AD-Block,no-resolve  #anti-ad廣告過濾
+  #- RULE-SET,anti-ad,AD-Block,no-resolve  #anti-ad廣告過濾
   - RULE-SET,DIRECT-0,CN,no-resolve  #我的直連網站
+#------------------80,443以外端口一律直連------------------
+  - DST-PORT,0-79,CN,no-resolve  #0-79端口
+  - DST-PORT,81-442,CN,no-resolve  #81-442端口
+  - DST-PORT,444-65535,CN,no-resolve  #444-65535端口
 #------------------ Apple規則------------------
   - DOMAIN-KEYWORD,gdmf.apple.com,iOS更新,no-resolve  #iOS更新
   - DOMAIN-KEYWORD,mesu.apple.com,iOS更新,no-resolve  #iOS更新
@@ -1054,10 +1058,6 @@ rules:
   - DOMAIN-KEYWORD,icloud,Apple,no-resolve  #Apple
   - DOMAIN-KEYWORD,itunes,Apple,no-resolve  #Apple
   - RULE-SET,Apple,Apple,no-resolve  #Apple
-#------------------80,443以外端口一律直連------------------
-  - DST-PORT,0-79,CN,no-resolve  #0-79端口
-  - DST-PORT,81-442,CN,no-resolve  #81-442端口
-  - DST-PORT,444-65535,CN,no-resolve  #444-65535端口
 #------------------遊戲平台------------------
   - RULE-SET,Game,Game,no-resolve  #Steam遊戲平台
 #------------------下載------------------
