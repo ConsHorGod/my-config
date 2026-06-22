@@ -20,6 +20,8 @@ DOMAIN-KEYWORD,weixin // 微信
 DOMAIN-KEYWORD,wechat // 支付寶
 DOMAIN-KEYWORD,qq.com // QQ
 DOMAIN-KEYWORD,tencent // 騰訊
+DOMAIN-KEYWORD,kugou // 酷狗音樂
+DOMAIN-KEYWORD,kuwo // 酷我音樂
 DOMAIN-KEYWORD,meituan // 美團
 DOMAIN-KEYWORD,maoyan // 美團
 DOMAIN-KEYWORD,dianping // 美團
@@ -77,7 +79,6 @@ DOMAIN-KEYWORD,douban // 豆瓣網
 DOMAIN-KEYWORD,msft // 微軟網絡檢測地址
 DOMAIN-KEYWORD,-cn // 中國域名
 DOMAIN-SUFFIX,cn // 中國域名
-DOMAIN-KEYWORD,.cn // 中國域名
 DOMAIN-SUFFIX,gov // 政府域名
 IP-CIDR,192.168.0.0/16 // 局域网私有地址段，常见于家庭路由器
 IP-CIDR,10.0.0.0/8 // 大型企业或校园网络常用的私有地址段
