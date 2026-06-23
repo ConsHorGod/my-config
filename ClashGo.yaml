@@ -1119,7 +1119,6 @@ rules:
 #------------------國內域名、IP直連規則------------------
   - DOMAIN-SUFFIX,cn,CN,no-resolve  #CN直連
   - DOMAIN-KEYWORD,-cn,CN,no-resolve  #CN直連
-  - DOMAIN-SUFFIX,gov,CN,no-resolve  #CN直連
   #- RULE-SET,DIRECT-1,CN,no-resolve  #中國域名
   - RULE-SET,DIRECT-2,CN  #中國自治系統號碼
   - GEOIP,CN,CN  #中國IP
