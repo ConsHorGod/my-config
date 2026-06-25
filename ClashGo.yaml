@@ -1099,7 +1099,7 @@ rules:
   - DOMAIN-KEYWORD,taobao,淘寶,no-resolve  #淘寶
   - DOMAIN-KEYWORD,alipay,支付寶,no-resolve  #支付寶
   - RULE-SET,支付寶,阿里,no-resolve  #支付寶
-  - DOMAIN-KEYWORD,Tmall,天貓,no-resolve  #天貓
+  - DOMAIN-KEYWORD,tmall,天貓,no-resolve  #天貓
   - DOMAIN-KEYWORD,goofish,閒魚,no-resolve  #閒魚
   - DOMAIN-KEYWORD,aliyun,阿里,no-resolve  #阿里雲
   - DOMAIN-KEYWORD,alibaba,阿里,no-resolve  #阿里巴巴
