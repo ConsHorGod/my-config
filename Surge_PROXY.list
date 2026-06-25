@@ -1,5 +1,13 @@
 DOMAIN-KEYWORD,github // GitHub 代码托管平台
 DOMAIN-KEYWORD,redd // Reddit 社交论坛
+DOMAIN-KEYWORD,telegram // Telegram 電報
+DOMAIN-KEYWORD,google // Google 谷歌
+DOMAIN-KEYWORD,youtube // YouTube 影音
+DOMAIN-KEYWORD,instagram // Instagram 照片分享
+DOMAIN-KEYWORD,threads // Threads 社群
+DOMAIN-KEYWORD,twitter // Twitter 推特
+DOMAIN-KEYWORD,twitch // Twitch 直播
+DOMAIN-KEYWORD,facebook // Facebook 臉書
 DOMAIN-KEYWORD,xvideos // XVideos 视频网站 (18+)
 DOMAIN-KEYWORD,phcdn // Pornhub 内容分发域名 (18+)
 DOMAIN-KEYWORD,pornhub // Pornhub 视频网站 (18+)
