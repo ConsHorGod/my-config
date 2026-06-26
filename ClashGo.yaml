@@ -157,7 +157,7 @@ proxy-groups:
     type: select  #手动选择
     url: http://www.baidu.com  #用于测试的链接
     proxies:  #代理選項
-      - Apple
+      - DIRECT
       - REJECT
 #-----------------------------------------------------------------------------------------------------------
   - name: AD-Block
