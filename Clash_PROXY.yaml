@@ -1,34 +1,34 @@
 payload:
- - DOMAIN-KEYWORD,github #代码托管平台
- - DOMAIN-KEYWORD,redd #社交论坛
- - DOMAIN-KEYWORD,telegram #電報
- - DOMAIN-KEYWORD,Copilot #微軟AI
- - DOMAIN-KEYWORD,microsoft #微軟服務
- - DOMAIN-KEYWORD,youtube #油管影音
- - DOMAIN-KEYWORD,google #谷歌
- - DOMAIN-KEYWORD,instagram #照片分享
- - DOMAIN-KEYWORD,threads #社群
- - DOMAIN-KEYWORD,twitter #推特
- - DOMAIN-KEYWORD,twitch #直播
- - DOMAIN-KEYWORD,facebook #臉書
- - DOMAIN-KEYWORD,xvideos #XVideos视频网站 (18+)
- - DOMAIN-KEYWORD,phcdn #Pornhub内容分发域名 (18+)
- - DOMAIN-KEYWORD,pornhub #Pornhub视频网站 (18+)
- - DOMAIN-KEYWORD,xnxx #XNXX 视频网站 (18+)
- - DOMAIN-KEYWORD,youporn #YouPorn视频网站 (18+)
- - DOMAIN-KEYWORD,stripchat #Stripchat视频直播 (18+)
- - DOMAIN-KEYWORD,xhcdn #XHamster内容分发域名 (18+)
- - DOMAIN-KEYWORD,xhamster #XHamster视频网站 (18+)
- - DOMAIN-KEYWORD,tnaflix #TnAflix视频网站 (18+)
- - DOMAIN-KEYWORD,sexvid.porn #SexVid视频网站 (18+)
- - DOMAIN-KEYWORD,tik.porn #Tik.porn视频网站 (18+)
- - DOMAIN-KEYWORD,spankbang #SpankBang视频网站 (18+)
- - DOMAIN-KEYWORD,haijiao #海角社区 (18+)
- - DOMAIN-KEYWORD,btdig #BTDigg种子搜索引擎
- - DOMAIN-KEYWORD,tmdb #TheMovieDB电影数据库
- - DOMAIN-KEYWORD,themoviedb #TheMovieDB电影数据库
- - DOMAIN-KEYWORD,threads #Threads社交平台
- - DOMAIN-KEYWORD,savefrom.net #SaveFrom视频下载网站
- - DOMAIN-KEYWORD,snapvid.net #SnapVid视频下载网站
- - DOMAIN-KEYWORD,metshop #蜜糖商店(电商平台)
+  - DOMAIN-KEYWORD,github #代码托管平台
+  - DOMAIN-KEYWORD,redd #社交论坛
+  - DOMAIN-KEYWORD,telegram #電報
+  - DOMAIN-KEYWORD,Copilot #微軟AI
+  - DOMAIN-KEYWORD,microsoft #微軟服務
+  - DOMAIN-KEYWORD,youtube #油管影音
+  - DOMAIN-KEYWORD,google #谷歌
+  - DOMAIN-KEYWORD,instagram #照片分享
+  - DOMAIN-KEYWORD,threads #社群
+  - DOMAIN-KEYWORD,twitter #推特
+  - DOMAIN-KEYWORD,twitch #直播
+  - DOMAIN-KEYWORD,facebook #臉書
+  - DOMAIN-KEYWORD,xvideos #XVideos视频网站 (18+)
+  - DOMAIN-KEYWORD,phcdn #Pornhub内容分发域名 (18+)
+  - DOMAIN-KEYWORD,pornhub #Pornhub视频网站 (18+)
+  - DOMAIN-KEYWORD,xnxx #XNXX 视频网站 (18+)
+  - DOMAIN-KEYWORD,youporn #YouPorn视频网站 (18+)
+  - DOMAIN-KEYWORD,stripchat #Stripchat视频直播 (18+)
+  - DOMAIN-KEYWORD,xhcdn #XHamster内容分发域名 (18+)
+  - DOMAIN-KEYWORD,xhamster #XHamster视频网站 (18+)
+  - DOMAIN-KEYWORD,tnaflix #TnAflix视频网站 (18+)
+  - DOMAIN-KEYWORD,sexvid.porn #SexVid视频网站 (18+)
+  - DOMAIN-KEYWORD,tik.porn #Tik.porn视频网站 (18+)
+  - DOMAIN-KEYWORD,spankbang #SpankBang视频网站 (18+)
+  - DOMAIN-KEYWORD,haijiao #海角社区 (18+)
+  - DOMAIN-KEYWORD,btdig #BTDigg种子搜索引擎
+  - DOMAIN-KEYWORD,tmdb #TheMovieDB电影数据库
+  - DOMAIN-KEYWORD,themoviedb #TheMovieDB电影数据库
+  - DOMAIN-KEYWORD,threads #Threads社交平台
+  - DOMAIN-KEYWORD,savefrom.net #SaveFrom视频下载网站
+  - DOMAIN-KEYWORD,snapvid.net #SnapVid视频下载网站
+  - DOMAIN-KEYWORD,metshop #蜜糖商店(电商平台)
 
