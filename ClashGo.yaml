@@ -982,8 +982,6 @@ rule-providers:
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️分流規則⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rules:
 #------------------優先規則------------------
-  - DOMAIN-KEYWORD,doh.pub,騰訊  #騰訊
-  - DOMAIN-KEYWORD,dns.alidns.com,阿里  #阿里巴巴
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
   #- RULE-SET,anti-ad,AD-Block,no-resolve  #anti-ad廣告過濾
   - RULE-SET,MY-Rules,CN,no-resolve  #我的直連網站
@@ -994,10 +992,6 @@ rules:
 #------------------ Apple規則------------------
   - DOMAIN-KEYWORD,gdmf.apple.com,iOS更新,no-resolve  #iOS更新
   - DOMAIN-KEYWORD,mesu.apple.com,iOS更新,no-resolve  #iOS更新
-  - DOMAIN-KEYWORD,apple,Apple,no-resolve  #Apple
-  - DOMAIN-KEYWORD,icloud,Apple,no-resolve  #Apple
-  - DOMAIN-KEYWORD,itunes,Apple,no-resolve  #Apple
-  - RULE-SET,Apple,Apple,no-resolve  #Apple
 #------------------遊戲平台------------------
   - RULE-SET,Game,Game,no-resolve  #Steam遊戲平台
 #------------------下載------------------
@@ -1005,63 +999,12 @@ rules:
   - RULE-SET,PT下载,CN,no-resolve  #PT下载
 #------------------國外APP代理規則------------------
   - DOMAIN-KEYWORD,XMRth.cloud,XMRth,no-resolve  #XMRth機場
-  #- RULE-SET,PROXY,國際媒體,no-resolve  #我的翻墻網站
-  - DOMAIN-KEYWORD,gitHub,GitHub,no-resolve  #GitHub
-  - RULE-SET,GitHub,GitHub,no-resolve  #GitHub
+  - RULE-SET,PROXY,國際媒體,no-resolve  #我的翻墻網站
   - DOMAIN-KEYWORD,hbomax,HBOMAX,no-resolve  #HBOMAX
   - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
   - DOMAIN-KEYWORD,tiktok,TikTok,no-resolve  #TikTok
   - RULE-SET,TikTok,TikTok,no-resolve  #TikTok
-  - DOMAIN-KEYWORD,telegram ,Telegram,no-resolve  #Telegram
-  - RULE-SET,Telegram,Telegram,no-resolve  #Telegram
-  - DOMAIN-KEYWORD,redd,Reddit,no-resolve  #Reddit
-  - RULE-SET,Reddit,Reddit,no-resolve  #Reddit
-  - DOMAIN-KEYWORD,microsoft,Microsoft,no-resolve  #Microsoft
-  - RULE-SET,Microsoft,Microsoft,no-resolve  #Microsoft
   - RULE-SET,AI,AI,no-resolve  #人工智能
-  - DOMAIN-KEYWORD,youtube,YouTube,no-resolve  #Reddit
-  - RULE-SET,YouTube,YouTube,no-resolve  #YouTube
-  - DOMAIN-KEYWORD,google,Google,no-resolve  #Google
-  - RULE-SET,Google,Google,no-resolve  #Google
-  - DOMAIN-KEYWORD,twitter,Twitter,no-resolve  #Twitter
-  - RULE-SET,Twitter,Twitter,no-resolve  #Twitter
-  - DOMAIN-KEYWORD,instagram,Instagram,no-resolve  #Instagram
-  - RULE-SET,Instagram,Instagram,no-resolve  #Instagram
-  - DOMAIN-KEYWORD,twitch,Twitch,no-resolve  #Twitch
-  - RULE-SET,Twitch,Twitch,no-resolve  #Twitch
-  - DOMAIN-KEYWORD,facebook,Facebook,no-resolve  #Facebook
-  - RULE-SET,Facebook,Facebook,no-resolve  #Facebook
-  - RULE-SET,YouTubeMusic,中國台灣,no-resolve  #YouTubeMusic
-#------------------國內APP直連規則------------------
-  - RULE-SET,小米,小米,no-resolve  #小米
-  - RULE-SET,百度,百度,no-resolve  #百度
-  - RULE-SET,迅雷,迅雷,no-resolve  #百度
-  - DOMAIN-KEYWORD,abchina.com.cn,農業銀行,no-resolve  #農業銀行
-  - RULE-SET,農業銀行,農業銀行,no-resolve  #農業銀行
-  - RULE-SET,字節跳動,抖音,no-resolve  #抖音
-  - DOMAIN-KEYWORD,weixin,微信,no-resolve  #微信
-  - DOMAIN-KEYWORD,wechat,微信,no-resolve  #微信
-  - RULE-SET,微信,微信,no-resolve  #微信
-  - RULE-SET,騰訊,騰訊,no-resolve  #騰訊
-  - DOMAIN-KEYWORD,taobao,淘寶,no-resolve  #淘寶
-  - DOMAIN-KEYWORD,alipay,支付寶,no-resolve  #支付寶
-  - RULE-SET,支付寶,阿里,no-resolve  #支付寶
-  - DOMAIN-KEYWORD,tmall,天貓,no-resolve  #天貓
-  - DOMAIN-KEYWORD,goofish,閒魚,no-resolve  #閒魚
-  - DOMAIN-KEYWORD,aliyun,阿里,no-resolve  #阿里雲
-  - DOMAIN-KEYWORD,alibaba,阿里,no-resolve  #阿里巴巴
-  - RULE-SET,阿里,阿里,no-resolve  #阿里巴巴
-  - DOMAIN-KEYWORD,jd.com,京東,no-resolve  #京東
-  - RULE-SET,京東,京東,no-resolve  #京東
-  - DOMAIN-KEYWORD,meituan,美團,no-resolve  #美團
-  - RULE-SET,美團,美團,no-resolve  #美團
-  - RULE-SET,快手,快手,no-resolve  #百度
-  - RULE-SET,拼多多,拼多多,no-resolve  #拼多多
-  - RULE-SET,網易,網易,no-resolve  #網易
-  - RULE-SET,小紅書,小紅書,no-resolve  #小紅書
-  - DOMAIN-KEYWORD,samsung,三星,no-resolve  #三星
-  - RULE-SET,三星,三星,no-resolve  #三星
-  - DOMAIN-KEYWORD,coolapk,酷安,no-resolve  #酷安
 #------------------國內域名、IP直連規則------------------
   - DOMAIN-SUFFIX,cn,CN,no-resolve  #CN直連
   - DOMAIN-KEYWORD,-cn,CN,no-resolve  #CN直連
