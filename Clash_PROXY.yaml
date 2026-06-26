@@ -2,7 +2,7 @@ payload:
   - DOMAIN-KEYWORD,github #代码托管平台
   - DOMAIN-KEYWORD,redd #社交论坛
   - DOMAIN-KEYWORD,telegram #電報
-  - DOMAIN-KEYWORD,Copilot #微軟AI
+  - DOMAIN-KEYWORD,copilot #微軟AI
   - DOMAIN-KEYWORD,microsoft #微軟服務
   - DOMAIN-KEYWORD,youtube #油管影音
   - DOMAIN-KEYWORD,google #谷歌
