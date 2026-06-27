@@ -417,7 +417,7 @@ rule-providers:
     url: "https://yfamilys.com/rule/ai.rule"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  MY-Rules:
+  DIRECT:
     type: http
     behavior: classical
     path: ./ruleset/Clash_DIRECT.yaml
@@ -461,7 +461,7 @@ rules:
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
   - DOMAIN-KEYWORD,gdmf.apple.com,iOS更新,no-resolve  #iOS更新
   #- RULE-SET,anti-ad,AD-Block,no-resolve  #anti-ad廣告過濾
-  - RULE-SET,MY-Rules,CN,no-resolve  #我的直連網站
+  - RULE-SET,DIRECT,CN,no-resolve  #我的直連網站
 #------------------遊戲平台------------------
   - RULE-SET,Game,Game,no-resolve  #Steam遊戲平台
 #------------------下載------------------
@@ -476,9 +476,7 @@ rules:
   - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
   - DOMAIN-KEYWORD,tiktok,TikTok,no-resolve  #TikTok
   - RULE-SET,TikTok,TikTok,no-resolve  #TikTok
-#------------------國內域名、IP直連規則------------------
-  - DOMAIN-SUFFIX,cn,CN,no-resolve  #CN直連
-  - DOMAIN-KEYWORD,-cn,CN,no-resolve  #CN直連
+#------------------中國ASN、中國IP直連規則------------------
   - RULE-SET,ASN,CN  #中國自治系統號碼
   - GEOIP,CN,CN  #中國IP
 #------------------流量最終出站------------------
