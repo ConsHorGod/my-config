@@ -400,6 +400,20 @@ rule-providers:
     url: "https://yfamilys.com/rule/ASN-CN.rule"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------    
+  Google:
+    type: http
+    behavior: classical
+    path: ./ruleset/Google.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Google/Google.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------    
+  YouTube:
+    type: http
+    behavior: classical
+    path: ./ruleset/YouTube.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YouTube/YouTube.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------    
   TikTok:
     type: http
     behavior: classical
@@ -490,6 +504,8 @@ rules:
   - RULE-SET,Microsoft,Microsoft,no-resolve  #微軟服務
   - RULE-SET,AI,AI,no-resolve  #人工智能
   - RULE-SET,PROXY,國際媒體,no-resolve  #我的翻墻網站
+  - RULE-SET,YouTube,國際媒體,no-resolve  #油管視頻
+  - RULE-SET,Google,國際媒體,no-resolve  #谷歌搜索
   - RULE-SET,Telegram,Telegram,no-resolve  #電報
   - DOMAIN-KEYWORD,hbomax,HBOMAX,no-resolve  #HBOMAX
   - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
