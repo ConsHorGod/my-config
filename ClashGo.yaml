@@ -487,10 +487,9 @@ rules:
   - RULE-SET,PT下载,CN,no-resolve  #PT下载
 #------------------國外APP代理規則------------------
   - DOMAIN-KEYWORD,XMRth.cloud,XMRth,no-resolve  #XMRth機場
-  - RULE-SET,PROXY,國際媒體,no-resolve  #我的翻墻網站
-  - DOMAIN-KEYWORD,microsoft,Microsoft,no-resolve  #Microsoft
   - RULE-SET,Microsoft,Microsoft,no-resolve  #微軟服務
   - RULE-SET,AI,AI,no-resolve  #人工智能
+  - RULE-SET,PROXY,國際媒體,no-resolve  #我的翻墻網站
   - RULE-SET,Telegram,Telegram,no-resolve  #電報
   - DOMAIN-KEYWORD,hbomax,HBOMAX,no-resolve  #HBOMAX
   - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
