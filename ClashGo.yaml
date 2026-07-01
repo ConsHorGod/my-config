@@ -442,6 +442,13 @@ rule-providers:
     url: "https://yfamilys.com/rule/ai.rule"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
+  Gemini:
+    type: http
+    behavior: classical
+    path: ./ruleset/Gemini.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Gemini/Gemini.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
   Microsoft:
     type: http
     behavior: classical
@@ -503,13 +510,12 @@ rules:
   - DOMAIN-KEYWORD,XMRth.cloud,XMRth,no-resolve  #XMRth機場
   - RULE-SET,Microsoft,Microsoft,no-resolve  #微軟服務
   - RULE-SET,AI,AI,no-resolve  #人工智能
+  - RULE-SET,Gemini,AI,no-resolve  #人工智能
   - RULE-SET,PROXY,國際媒體,no-resolve  #我的翻墻網站
   - RULE-SET,YouTube,國際媒體,no-resolve  #油管視頻
   - RULE-SET,Google,國際媒體,no-resolve  #谷歌搜索
   - RULE-SET,Telegram,Telegram,no-resolve  #電報
-  - DOMAIN-KEYWORD,hbomax,HBOMAX,no-resolve  #HBOMAX
   - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
-  - DOMAIN-KEYWORD,tiktok,TikTok,no-resolve  #TikTok
   - RULE-SET,TikTok,TikTok,no-resolve  #TikTok
 #------------------中國ASN、中國IP直連規則------------------
   - RULE-SET,ASN,CN  #中國自治系統號碼
