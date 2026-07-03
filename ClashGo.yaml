@@ -127,7 +127,7 @@ proxy-groups:
     filter: (?!.*(聯通|移動)).*(香港|HK)
     use:
       - OKZ
-      #- XMR(D)
+      - XMR(D)
       - XMR(C)
       - LXY
       #- LHY
@@ -190,7 +190,7 @@ proxy-groups:
     filter: (?!.*(HK 0|聯通|移動)).*(香港|HK-)
     use:
       - OKZ
-      #- XMR(D)
+      - XMR(D)
       - XMR(C)
       - LXY
       #- LHY
@@ -203,7 +203,7 @@ proxy-groups:
     interval: 300
     filter: '(?!.*(香港)).*(HK)'
     use:  #代理選項
-      #- XMR(D)
+      - XMR(D)
       - XMR(C)
 #-----------------------------------------------------------------------------------------------------------
   - name: 美利堅國
@@ -215,7 +215,7 @@ proxy-groups:
     filter: '美国|美國'
     use:
       - OKZ
-      #- XMR(D)
+      - XMR(D)
       - XMR(C)
       - LXY
       #- LHY
@@ -228,7 +228,7 @@ proxy-groups:
     interval: 300
     filter: '(?!.*(美国)).*(US)'
     use:  #代理選項
-      #- XMR(D)
+      - XMR(D)
       - XMR(C)
 #-----------------------------------------------------------------------------------------------------------
   - name: 日本島國
@@ -240,7 +240,7 @@ proxy-groups:
     filter: '日本|JP-专线'
     use:
       - OKZ
-      #- XMR(D)
+      - XMR(D)
       - XMR(C)
       - LXY
       #- LHY
@@ -253,7 +253,7 @@ proxy-groups:
     interval: 300
     filter: '(?!.*(日本)).*(JP)'
     use:  #代理選項
-      #- XMR(D)
+      - XMR(D)
       - XMR(C)
 #-----------------------------------------------------------------------------------------------------------
   - name: 中國台灣
@@ -265,7 +265,7 @@ proxy-groups:
     filter: '台灣|台湾|臺灣'
     use:
       - OKZ
-      #- XMR(D)
+      - XMR(D)
       - XMR(C)
       - LXY
       #- LHY
@@ -278,7 +278,7 @@ proxy-groups:
     interval: 300
     filter: '(?!.*(台湾)).*(TW)'
     use:  #代理選項
-      #- XMR(D)
+      - XMR(D)
       - XMR(C)
 #-----------------------------------------------------------------------------------------------------------
   - name: 其它節點
@@ -290,7 +290,7 @@ proxy-groups:
     filter: '^(?!.*(官网|失联|发布|流量|剩余|群|套餐|客服|🇺🇸|专线|美國|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|🇭🇰|香港|HK|Hong|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|JP|Japan|🇨🇳|台湾|🇹🇼|TW|🇸🇬|狮|SG|Singapore|🇰🇷|韩国|首尔|KR|Korea)).*$'
     use:
       - OKZ
-      #- XMR(D)
+      - XMR(D)
       - XMR(C)
       - LXY
       #- LHY
@@ -311,7 +311,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 300
     use:  #代理選項
-      #- XMR(D)
+      - XMR(D)
       - XMR(C)
 #-----------------------------------------------------------------------------------------------------------
   - name: CN
@@ -354,15 +354,15 @@ proxy-providers:
       #url: http://www.gstatic.com/generate_204
       #interval: 300
 #-----------------------------------------------------------------------------------------------------------
-  #"XMR(D)":
-    #type: http
-    #path: ./provide/XMR(D).yml
-    #url: https://cf.XMRth.one/s/9dkc7icn1whs-2b9b182e?clash=1
-    #interval: 86400
-    #health-check:
-      #enable: true
-      #url: http://www.gstatic.com/generate_204
-      #interval: 300
+  "XMR(D)":
+    type: http
+    path: ./provide/XMR(D).yml
+    url: https://cf.XMRth.one/s/9dkc7icn1whs-2b9b182e?clash=1
+    interval: 86400
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
 #-----------------------------------------------------------------------------------------------------------
   "XMR(C)":
     type: http
