@@ -492,6 +492,9 @@ rule-providers:
     interval: 21600
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️分流規則⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rules:
+  - DOMAIN-SUFFIX,services.googleapis.cn,國際媒體,no-resolve
+  - DOMAIN-SUFFIX,gvt1.com,國際媒體,no-resolve
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,國際媒體,no-resolve
 #------------------80,443以外端口一律直連------------------
   - DST-PORT,0-79,CN,no-resolve  #0-79端口
   - DST-PORT,81-442,CN,no-resolve  #81-442端口
