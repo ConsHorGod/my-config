@@ -166,10 +166,17 @@ proxy-groups:
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
-    url: http://www.baidu.com  #用于测试的链接
     proxies:  #代理選項
       - DIRECT
       - REJECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: iOS通知推送
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    type: select  #手动选择
+    proxies:  #代理選項
+      - DIRECT
+      - 國際媒體
 #-----------------------------------------------------------------------------------------------------------
   - name: AD-Block
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlack.png"  #策略組圖標
@@ -501,18 +508,10 @@ rules:
   - DOMAIN-SUFFIX,gvt1.com,國際媒體,no-resolve #GooglePlay商店
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,國際媒體,no-resolve #GooglePlay商店
 #------------------優先規則------------------
-  - DOMAIN-SUFFIX,push.apple.com,國際媒體,no-resolve  #iOS推送
-  - DOMAIN-SUFFIX,akadns.net,國際媒體,no-resolve  #iOS推送
-  - DOMAIN-KEYWORD,apple.com.edgekey.net,國際媒體,no-resolve  #iOS推送
-  - IP-CIDR,17.249.0.0/16,國際媒體,no-resolve  #iOS推送
-  - IP-CIDR,17.252.0.0/16,國際媒體,no-resolve  #iOS推送
-  - IP-CIDR,17.57.144.0/22,國際媒體,no-resolve  #iOS推送
-  - IP-CIDR,17.188.128.0/18,國際媒體,no-resolve  #iOS推送
-  - IP-CIDR,17.188.20.0/23,國際媒體,no-resolve  #iOS推送
-  - IP-CIDR6,2620:149:a44::/48,國際媒體,no-resolve  #iOS推送
-  - IP-CIDR6,2403:300:a42::/48,國際媒體,no-resolve  #iOS推送
-  - IP-CIDR6,2403:300:a51::/48,國際媒體,no-resolve  #iOS推送
-  - IP-CIDR6,2a01:b740:a42::/48,國際媒體,no-resolve  #iOS推送
+  - DOMAIN-SUFFIX,push.apple.com,iOS通知推送,no-resolve #iOS通知推送
+  - DOMAIN-SUFFIX,akadns.net,iOS通知推送,no-resolve #iOS通知推送
+  - DOMAIN-KEYWORD,apple.com.edgekey.net,iOS通知推送,no-resolve #iOS通知推送
+  - IP-CIDR,17.0.0.0/8,iOS通知推送,no-resolve #iOS通知推送
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
   - DOMAIN-KEYWORD,gdmf.apple.com,iOS更新,no-resolve  #iOS更新
   #- RULE-SET,anti-ad,AD-Block,no-resolve  #anti-ad廣告過濾
