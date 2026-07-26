@@ -1,4 +1,0 @@
-DOMAIN-SUFFIX,push.apple.com // iOS通知推送
-DOMAIN-SUFFIX,akadns.net // iOS通知推送
-DOMAIN-KEYWORD,apple.com.edgekey.net // iOS通知推送
-IP-CIDR,17.0.0.0/8 // iOS通知推送
