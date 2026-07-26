@@ -1,4 +1,6 @@
 DOMAIN-KEYWORD,pool.ntp.org //時間同步
+DOMAIN-KEYWORD,msft // 微軟網絡檢測地址
+DOMAIN-SUFFIX,time.windows.com // 微軟時間同步
 DOMAIN-KEYWORD,abchina // 農業銀行
 DOMAIN-KEYWORD,nanhaibank // 南海農商行
 DOMAIN-KEYWORD,xunlei // 迅雷
@@ -79,7 +81,6 @@ DOMAIN-KEYWORD,17zuoye // 一起作业
 DOMAIN-KEYWORD,zuoyejingling // 作业精灵
 DOMAIN-KEYWORD,115 // 115網盤
 DOMAIN-KEYWORD,douban // 豆瓣網
-DOMAIN-KEYWORD,msft // 微軟網絡檢測地址
 DOMAIN-KEYWORD,-cn // 中國域名
 DOMAIN-SUFFIX,cn // 中國域名
 IP-CIDR,0.0.0.0/8 // 本機或未知設備
