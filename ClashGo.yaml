@@ -121,11 +121,11 @@ proxy-groups:
   - name: HBOMAX
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
+    type: select  #手动选择
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 300
     filter: (?!.*(聯通|移動)).*(香港|HK)
-    use:
+    proxies:  #代理選項
       #- OKZ
       - XMR(D)
       #- XMR(C)
@@ -506,7 +506,7 @@ rules:
   - RULE-SET,AI,AI,no-resolve  #人工智能
   - RULE-SET,PROXY,國際互聯,no-resolve  #我的翻墻網站
   - RULE-SET,Telegram,Telegram,no-resolve  #電報
-  - RULE-SET,HBOMAX,香港特區,no-resolve  #HBOMAX
+  - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
   - RULE-SET,TikTok,TikTok,no-resolve  #TikTok
 #------------------中國ASN、中國IP直連規則------------------
   - RULE-SET,ASN,CN  #中國自治系統號碼
