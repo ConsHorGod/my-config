@@ -126,7 +126,7 @@ proxy-groups:
     interval: 300
     filter: (?!.*(聯通|移動)).*(香港|HK)
     use:
-      - OKZ
+      #- OKZ
       - XMR(D)
       #- XMR(C)
       - LXY
@@ -196,7 +196,7 @@ proxy-groups:
     interval: 300
     filter: (?!.*(HK 0|聯通|移動)).*(香港|HK-)
     use:
-      - OKZ
+      #- OKZ
       - XMR(D)
       #- XMR(C)
       - LXY
@@ -221,7 +221,7 @@ proxy-groups:
     interval: 300
     filter: '美国|美國'
     use:
-      - OKZ
+      #- OKZ
       - XMR(D)
       #- XMR(C)
       - LXY
@@ -246,7 +246,7 @@ proxy-groups:
     interval: 300
     filter: '日本|JP-专线'
     use:
-      - OKZ
+      #- OKZ
       - XMR(D)
       #- XMR(C)
       - LXY
@@ -271,7 +271,7 @@ proxy-groups:
     interval: 300
     filter: '台灣|台湾|臺灣'
     use:
-      - OKZ
+      #- OKZ
       - XMR(D)
       #- XMR(C)
       - LXY
@@ -296,7 +296,7 @@ proxy-groups:
     interval: 300
     filter: '^(?!.*(官网|失联|发布|流量|剩余|群|套餐|客服|🇺🇸|专线|美國|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|🇭🇰|香港|HK|Hong|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|JP|Japan|🇨🇳|台湾|🇹🇼|TW|🇸🇬|狮|SG|Singapore|🇰🇷|韩国|首尔|KR|Korea)).*$'
     use:
-      - OKZ
+      #- OKZ
       - XMR(D)
       #- XMR(C)
       - LXY
@@ -341,15 +341,15 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 300
 #-----------------------------------------------------------------------------------------------------------
-  "OKZ":
-    type: http
-    path: ./provide/OKZ.yml
-    url: https://s-dywrwizazu.cn-shanghai.fcapp.run/okz/sub?token=2116038c67612b59720bea6872c43c02
-    interval: 86400
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
+  #"OKZ":
+    #type: http
+    #path: ./provide/OKZ.yml
+    #url: https://s-dywrwizazu.cn-shanghai.fcapp.run/okz/sub?token=2116038c67612b59720bea6872c43c02
+    #interval: 86400
+    #health-check:
+      #enable: true
+      #url: http://www.gstatic.com/generate_204
+      #interval: 300
 #-----------------------------------------------------------------------------------------------------------
  # "LHY":
     #type: http
@@ -371,15 +371,15 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 300
 #-----------------------------------------------------------------------------------------------------------
-  "XMR(C)":
-    type: http
-    path: ./provide/XMR(C).yml
-    url: https://cf.XMRth.one/s/v5mhl6tjjyie-9ab2ce1a?clash=1&dns=0&ipv6=1
-    interval: 86400
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
+  #"XMR(C)":
+    #type: http
+    #path: ./provide/XMR(C).yml
+    #url: https://cf.XMRth.one/s/v5mhl6tjjyie-9ab2ce1a?clash=1&dns=0&ipv6=1
+    #interval: 86400
+    #health-check:
+      #enable: true
+      #url: http://www.gstatic.com/generate_204
+      #interval: 300
 #-----------------------------------------------------------------------------------------------------------
   "LXY":
     type: http
