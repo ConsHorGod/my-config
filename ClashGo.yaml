@@ -128,8 +128,8 @@ proxy-groups:
     use:
       - OKZ
       - XMR(D)
-      - XMR(C)
-      #- LXY
+      #- XMR(C)
+      - LXY
       #- LHY
 #-----------------------------------------------------------------------------------------------------------
   - name: Game
@@ -198,8 +198,8 @@ proxy-groups:
     use:
       - OKZ
       - XMR(D)
-      - XMR(C)
-      #- LXY
+      #- XMR(C)
+      - LXY
       #- LHY
 #-----------------------------------------------------------------------------------------------------------
   - name: HK直連
@@ -211,7 +211,7 @@ proxy-groups:
     filter: '(?!.*(香港)).*(HK)'
     use:  #代理選項
       - XMR(D)
-      - XMR(C)
+      #- XMR(C)
 #-----------------------------------------------------------------------------------------------------------
   - name: 美利堅國
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"  #策略組圖標
@@ -223,8 +223,8 @@ proxy-groups:
     use:
       - OKZ
       - XMR(D)
-      - XMR(C)
-      #- LXY
+      #- XMR(C)
+      - LXY
       #- LHY
 #-----------------------------------------------------------------------------------------------------------
   - name: US直連
@@ -236,7 +236,7 @@ proxy-groups:
     filter: '(?!.*(美国)).*(US)'
     use:  #代理選項
       - XMR(D)
-      - XMR(C)
+      #- XMR(C)
 #-----------------------------------------------------------------------------------------------------------
   - name: 日本島國
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
@@ -248,8 +248,8 @@ proxy-groups:
     use:
       - OKZ
       - XMR(D)
-      - XMR(C)
-      #- LXY
+      #- XMR(C)
+      - LXY
       #- LHY
 #-----------------------------------------------------------------------------------------------------------
   - name: JP直連
@@ -261,7 +261,7 @@ proxy-groups:
     filter: '(?!.*(日本)).*(JP)'
     use:  #代理選項
       - XMR(D)
-      - XMR(C)
+      #- XMR(C)
 #-----------------------------------------------------------------------------------------------------------
   - name: 中國台灣
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png"  #策略組圖標
@@ -273,8 +273,8 @@ proxy-groups:
     use:
       - OKZ
       - XMR(D)
-      - XMR(C)
-      #- LXY
+      #- XMR(C)
+      - LXY
       #- LHY
 #-----------------------------------------------------------------------------------------------------------
   - name: TW直連
@@ -286,7 +286,7 @@ proxy-groups:
     filter: '(?!.*(台湾)).*(TW)'
     use:  #代理選項
       - XMR(D)
-      - XMR(C)
+      #- XMR(C)
 #-----------------------------------------------------------------------------------------------------------
   - name: 其它節點
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/AAEX.png  #策略組圖標
@@ -298,8 +298,8 @@ proxy-groups:
     use:
       - OKZ
       - XMR(D)
-      - XMR(C)
-      #- LXY
+      #- XMR(C)
+      - LXY
       #- LHY
 #-----------------------------------------------------------------------------------------------------------
   - name: 飛鳥雲(救急用)
@@ -319,7 +319,7 @@ proxy-groups:
     interval: 300
     use:  #代理選項
       - XMR(D)
-      - XMR(C)
+      #- XMR(C)
 #-----------------------------------------------------------------------------------------------------------
   - name: CN
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CN.png"  #策略組圖標
@@ -407,20 +407,6 @@ rule-providers:
     url: "https://yfamilys.com/rule/ASN-CN.rule"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------    
-  Google:
-    type: http
-    behavior: classical
-    path: ./ruleset/Google.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Google/Google.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------    
-  YouTube:
-    type: http
-    behavior: classical
-    path: ./ruleset/YouTube.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YouTube/YouTube.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------    
   TikTok:
     type: http
     behavior: classical
@@ -447,13 +433,6 @@ rule-providers:
     behavior: classical
     path: ./ruleset/ai.yaml
     url: "https://yfamilys.com/rule/ai.rule"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
-  Gemini:
-    type: http
-    behavior: classical
-    path: ./ruleset/Gemini.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Gemini/Gemini.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   Microsoft:
@@ -525,12 +504,9 @@ rules:
   - DOMAIN-KEYWORD,XMRth.cloud,XMRth,no-resolve  #XMRth機場
   - RULE-SET,Microsoft,Microsoft,no-resolve  #微軟服務
   - RULE-SET,AI,AI,no-resolve  #人工智能
-  - RULE-SET,Gemini,AI,no-resolve  #人工智能
   - RULE-SET,PROXY,國際互聯,no-resolve  #我的翻墻網站
-  - RULE-SET,YouTube,國際互聯,no-resolve  #油管視頻
-  - RULE-SET,Google,國際互聯,no-resolve  #谷歌搜索
   - RULE-SET,Telegram,Telegram,no-resolve  #電報
-  - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
+  - RULE-SET,HBOMAX,香港特區,no-resolve  #HBOMAX
   - RULE-SET,TikTok,TikTok,no-resolve  #TikTok
 #------------------中國ASN、中國IP直連規則------------------
   - RULE-SET,ASN,CN  #中國自治系統號碼
