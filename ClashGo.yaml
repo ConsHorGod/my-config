@@ -60,7 +60,7 @@ proxy-groups:
     proxies:  #代理選項
       - 國際互聯
       - 其它節點
-      - 飛鳥雲(救急用)
+      - FNY(救急用)
       - CN
       - REJECT
 #-----------------------------------------------------------------------------------------------------------
@@ -69,23 +69,23 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 300
     proxies:  #代理選項
-      - 香港特區
+      - XMR香港
+      - LXY香港
       - HK直連
       - 日本島國
       - 美利堅國
       - 中國台灣
-      - 飛鳥雲(救急用)
+      - FNY(救急用)
 #-----------------------------------------------------------------------------------------------------------
   - name: Microsoft
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Windows_11.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #自動測速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 300
     proxies:  #代理選項
-      - 香港特區
+      - XMR香港
+      - LXY香港
       - HK直連
       - CN
 #-----------------------------------------------------------------------------------------------------------
@@ -94,9 +94,9 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #自動測速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 300
     proxies:  #代理選項
-      - 香港特區
+      - XMR香港
+      - LXY香港
       - HK直連
       - 日本島國
       - 中國台灣
@@ -106,7 +106,6 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 300
     proxies:  #代理選項
       - 日本島國
       - 美利堅國
@@ -116,24 +115,20 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 300
     filter: (?!.*(聯通|移動)).*(香港|HK)
     proxies:  #代理選項
-      #- OKZ
-      - XMR(D)
-      #- XMR(C)
-      - LXY
-      #- LHY
+      - XMR香港
+      - LXY香港
 #-----------------------------------------------------------------------------------------------------------
   - name: Game
     icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/steam(1).png"
     hidden: false
     type: select
     url: http://www.gstatic.com/generate_204
-    interval: 300
     proxies:
       - DIRECT
-      - 香港特區
+      - XMR香港
+      - LXY香港
       - HK直連
       - 日本島國
       - 美利堅國
@@ -144,7 +139,6 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 300
     filter: 
     proxies:  #代理選項
       - 中國台灣
@@ -171,13 +165,12 @@ proxy-groups:
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlack.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
     proxies:  #代理選項
       - DIRECT
       - REJECT-DROP
       - REJECT
-#-----------------------------------------------------------------------------------------------------------
-  - name: 香港特區
+ #-----------------------------------------------------------------------------------------------------------
+  - name: XMR香港
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
@@ -185,11 +178,18 @@ proxy-groups:
     interval: 300
     filter: (?!.*(HK 0|聯通|移動)).*(香港|HK-)
     use:
-      #- OKZ
       - XMR(D)
       #- XMR(C)
+ #-----------------------------------------------------------------------------------------------------------
+  - name: LXY香港
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 300
+    filter: (?!.*(HK 0|聯通|移動)).*(香港|HK-)
+    use:
       - LXY
-      #- LHY
 #-----------------------------------------------------------------------------------------------------------
   - name: HK直連
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
@@ -210,11 +210,9 @@ proxy-groups:
     interval: 300
     filter: '美国|美國'
     use:
-      #- OKZ
       - XMR(D)
       #- XMR(C)
       - LXY
-      #- LHY
 #-----------------------------------------------------------------------------------------------------------
   - name: 日本島國
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
@@ -224,11 +222,9 @@ proxy-groups:
     interval: 300
     filter: '日本|JP-专线'
     use:
-      #- OKZ
       - XMR(D)
       #- XMR(C)
       - LXY
-      #- LHY
 #-----------------------------------------------------------------------------------------------------------
   - name: 中國台灣
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png"  #策略組圖標
@@ -238,11 +234,9 @@ proxy-groups:
     interval: 300
     filter: '台灣|台湾|臺灣'
     use:
-      #- OKZ
       - XMR(D)
       #- XMR(C)
       - LXY
-      #- LHY
 #-----------------------------------------------------------------------------------------------------------
   - name: 其它節點
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/AAEX.png  #策略組圖標
@@ -252,30 +246,18 @@ proxy-groups:
     interval: 300
     filter: '^(?!.*(官网|失联|发布|流量|剩余|群|套餐|客服|🇺🇸|专线|美國|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|🇭🇰|香港|HK|Hong|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|JP|Japan|🇨🇳|台湾|🇹🇼|TW|🇸🇬|狮|SG|Singapore|🇰🇷|韩国|首尔|KR|Korea)).*$'
     use:
-      #- OKZ
       - XMR(D)
       #- XMR(C)
       - LXY
-      #- LHY
 #-----------------------------------------------------------------------------------------------------------
-  - name: 飛鳥雲(救急用)
+  - name: FNY(救急用)
     icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 300
     use:  #代理選項
-      - 飛鳥雲
-#-----------------------------------------------------------------------------------------------------------
-  - name: XMRth
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spark.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 300
-    use:  #代理選項
-      - XMR(D)
-      #- XMR(C)
+      - FNY
 #-----------------------------------------------------------------------------------------------------------
   - name: CN
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CN.png"  #策略組圖標
@@ -287,9 +269,9 @@ proxy-groups:
       - DIRECT
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️代理集⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 proxy-providers:
-  "飛鳥雲":
+  "FNY":
     type: http
-    path: ./provide/飛鳥雲.yml
+    path: ./provide/FNY.yml
     url: https://b3.342242.icu/api/v1/client/subscribe?token=0e79462ce42ab0413ed58d454329934e
     interval: 86400
     health-check:
@@ -301,16 +283,6 @@ proxy-providers:
     #type: http
     #path: ./provide/OKZ.yml
     #url: https://s-dywrwizazu.cn-shanghai.fcapp.run/okz/sub?token=2116038c67612b59720bea6872c43c02
-    #interval: 86400
-    #health-check:
-      #enable: true
-      #url: http://www.gstatic.com/generate_204
-      #interval: 300
-#-----------------------------------------------------------------------------------------------------------
- # "LHY":
-    #type: http
-    #path: ./provide/LHY.yml
-    #url: https://lh.adfgawidhioawjd.site/api/v1/client/subscribe?token=600b5f2dbd33f1979d72f9ceffb1084c
     #interval: 86400
     #health-check:
       #enable: true
@@ -457,7 +429,7 @@ rules:
   - RULE-SET,下载軟件,CN,no-resolve  #下载軟件
   - RULE-SET,PT下载,CN,no-resolve  #PT下载
 #------------------國外APP代理規則------------------
-  - DOMAIN-KEYWORD,XMRth.cloud,XMRth,no-resolve  #XMRth機場
+  - DOMAIN-KEYWORD,XMRth.cloud,XMR香港,no-resolve  #XMRth機場
   - RULE-SET,Microsoft,Microsoft,no-resolve  #微軟服務
   - RULE-SET,AI,AI,no-resolve  #人工智能
   - RULE-SET,PROXY,國際互聯,no-resolve  #我的翻墻網站
