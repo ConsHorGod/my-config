@@ -74,11 +74,8 @@ proxy-groups:
       - 香港特區
       - HK直連
       - 日本島國
-      - JP直連
       - 美利堅國
-      - US直連
       - 中國台灣
-      - TW直連
       - 飛鳥雲(救急用)
 #-----------------------------------------------------------------------------------------------------------
   - name: Microsoft
@@ -102,9 +99,7 @@ proxy-groups:
       - 香港特區
       - HK直連
       - 日本島國
-      - JP直連
       - 中國台灣
-      - TW直連
 #-----------------------------------------------------------------------------------------------------------
   - name: TikTok
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"  #策略組圖標
@@ -114,9 +109,7 @@ proxy-groups:
     interval: 300
     proxies:  #代理選項
       - 日本島國
-      - JP直連
       - 美利堅國
-      - US直連
 #-----------------------------------------------------------------------------------------------------------
   - name: HBOMAX
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png"  #策略組圖標
@@ -143,11 +136,8 @@ proxy-groups:
       - 香港特區
       - HK直連
       - 日本島國
-      - JP直連
       - 美利堅國
-      - US直連
       - 中國台灣
-      - TW直連
 #-----------------------------------------------------------------------------------------------------------
   - name: AI
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"  #策略組圖標
@@ -158,9 +148,8 @@ proxy-groups:
     filter: 
     proxies:  #代理選項
       - 中國台灣
-      - TW直連
       - 日本島國
-      - JP直連
+      - 美利堅國
 #-----------------------------------------------------------------------------------------------------------
   - name: iOS更新
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png"  #策略組圖標
@@ -227,17 +216,6 @@ proxy-groups:
       - LXY
       #- LHY
 #-----------------------------------------------------------------------------------------------------------
-  - name: US直連
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 300
-    filter: '(?!.*(美国)).*(US)'
-    use:  #代理選項
-      - XMR(D)
-      #- XMR(C)
-#-----------------------------------------------------------------------------------------------------------
   - name: 日本島國
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
@@ -252,17 +230,6 @@ proxy-groups:
       - LXY
       #- LHY
 #-----------------------------------------------------------------------------------------------------------
-  - name: JP直連
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
-    hidden:  true  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 300
-    filter: '(?!.*(日本)).*(JP)'
-    use:  #代理選項
-      - XMR(D)
-      #- XMR(C)
-#-----------------------------------------------------------------------------------------------------------
   - name: 中國台灣
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
@@ -276,17 +243,6 @@ proxy-groups:
       #- XMR(C)
       - LXY
       #- LHY
-#-----------------------------------------------------------------------------------------------------------
-  - name: TW直連
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 300
-    filter: '(?!.*(台湾)).*(TW)'
-    use:  #代理選項
-      - XMR(D)
-      #- XMR(C)
 #-----------------------------------------------------------------------------------------------------------
   - name: 其它節點
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/AAEX.png  #策略組圖標
