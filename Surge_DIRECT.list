@@ -1,3 +1,5 @@
+DOMAIN-SUFFIX,cn // 中國域名
+DOMAIN-KEYWORD,-cn // 中國域名
 DOMAIN-SUFFIX,pool.ntp.org //時間同步
 DOMAIN-KEYWORD,msft // 微軟網絡檢測地址
 DOMAIN-SUFFIX,time.windows.com // 微軟時間同步
@@ -83,8 +85,6 @@ DOMAIN-KEYWORD,17zuoye // 一起作业
 DOMAIN-KEYWORD,zuoyejingling // 作业精灵
 DOMAIN-KEYWORD,115 // 115網盤
 DOMAIN-KEYWORD,douban // 豆瓣網
-DOMAIN-KEYWORD,-cn // 中國域名
-DOMAIN-SUFFIX,cn // 中國域名
 IP-CIDR,0.0.0.0/8 // 本機或未知設備
 IP-CIDR,10.0.0.0/8 // 大型企業/校園內網
 IP-CIDR,100.64.0.0/10 // 電信商大局域網
