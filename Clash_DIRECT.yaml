@@ -1,7 +1,7 @@
 payload:
   - DOMAIN-SUFFIX,cn  #CN直連
   - DOMAIN-KEYWORD,-cn  #CN直連
-  - DOMAIN-KEYWORD,pool.ntp.org #時間同步
+  - DOMAIN-SUFFIX,pool.ntp.org #時間同步
   - DOMAIN-KEYWORD,msft #微軟網絡檢測地址
   - DOMAIN-SUFFIX,time.windows.com  #微軟時間同步
   - DOMAIN-KEYWORD,abchina #農業銀行
@@ -11,20 +11,21 @@ payload:
   - DOMAIN-KEYWORD,icloud #Apple
   - DOMAIN-KEYWORD,itunes #Apple
   - DOMAIN-KEYWORD,appstore #Apple
-  - DOMAIN-KEYWORD,jlxa.wicp.net #北村
-  - DOMAIN-KEYWORD,ads2301 #奧園
+  - DOMAIN-SUFFIX,jlxa.wicp.net #北村
+  - DOMAIN-SUFFIX,ads2301.asuscomm.com #奧園
   - DOMAIN-KEYWORD,asus #華碩
   - DOMAIN-KEYWORD,synology #群暉
   - DOMAIN-KEYWORD,amap.com #高德地圖
   - DOMAIN-KEYWORD,baidu #百度
   - DOMAIN-KEYWORD,amemv #字節跳動
   - DOMAIN-KEYWORD,bytecdn #字節跳動
-  - DOMAIN-KEYWORD,snssdk #字節跳動
+  - DOMAIN-SUFFIX,snssdk.com #字節跳動
   - DOMAIN-KEYWORD,zijieapi #字節跳動
   - DOMAIN-KEYWORD,douyin #抖音
   - DOMAIN-KEYWORD,weixin #微信
-  - DOMAIN-KEYWORD,wechat #支付寶
-  - DOMAIN-KEYWORD,qq.com #QQ
+  - DOMAIN-SUFFIX,mmbiz.qpic.cn #微信公众号
+  - DOMAIN-KEYWORD,wechat #微信
+  - DOMAIN-SUFFIX,qq.com #QQ
   - DOMAIN-KEYWORD,tencent #騰訊
   - DOMAIN-KEYWORD,kugou #酷狗音樂
   - DOMAIN-KEYWORD,kuwo #酷我音樂
