@@ -1,5 +1,7 @@
 payload:
   - DOMAIN-KEYWORD,github #代码托管平台
+  - DOMAIN-KEYWORD,youtube #油管视频
+  - DOMAIN-KEYWORD,google #谷歌搜索
   - DOMAIN-KEYWORD,redd #社交论坛
   - DOMAIN-KEYWORD,telegram #電報
   - DOMAIN-KEYWORD,instagram #照片分享
