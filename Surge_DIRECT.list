@@ -1,4 +1,4 @@
-DOMAIN-KEYWORD,pool.ntp.org //時間同步
+DOMAIN-SUFFIX,pool.ntp.org //時間同步
 DOMAIN-KEYWORD,msft // 微軟網絡檢測地址
 DOMAIN-SUFFIX,time.windows.com // 微軟時間同步
 DOMAIN-KEYWORD,abchina // 農業銀行
@@ -9,8 +9,8 @@ DOMAIN-KEYWORD,apple // Apple
 DOMAIN-KEYWORD,icloud // Apple
 DOMAIN-KEYWORD,itunes // Apple
 DOMAIN-KEYWORD,appstore // Apple
-DOMAIN-KEYWORD,jlxa.wicp.net // 北村
-DOMAIN-KEYWORD,ads2301 // 奧園
+DOMAIN-SUFFIX,jlxa.wicp.net // 北村
+DOMAIN-SUFFIX,ads2301.asuscomm.com // 奧園
 DOMAIN-KEYWORD,asus // 華碩
 DOMAIN-KEYWORD,synology // 群暉
 DOMAIN-KEYWORD,amap.com // 高德地圖
@@ -23,8 +23,9 @@ DOMAIN-SUFFIX,snssdk.com // 字節跳動
 DOMAIN-KEYWORD,zijieapi // 字節跳動
 DOMAIN-KEYWORD,douyin // 抖音
 DOMAIN-KEYWORD,weixin // 微信
+DOMAIN-SUFFIX,mmbiz.qpic.cn // 微信公众号
 DOMAIN-KEYWORD,wechat // 支付寶
-DOMAIN-KEYWORD,qq.com // QQ
+DOMAIN-SUFFIX,qq.com // QQ
 DOMAIN-KEYWORD,tencent // 騰訊
 DOMAIN-KEYWORD,kugou // 酷狗音樂
 DOMAIN-KEYWORD,kuwo // 酷我音樂
@@ -33,7 +34,7 @@ DOMAIN-KEYWORD,maoyan // 美團
 DOMAIN-KEYWORD,dianping // 美團
 DOMAIN-KEYWORD,meituanwaimai // 美團
 DOMAIN-KEYWORD,eleme // 饿了么
-DOMAIN-KEYWORD,jd.com // 京東
+DOMAIN-SUFFIX,jd.com // 京東
 DOMAIN-KEYWORD,360buy // 京東
 DOMAIN-KEYWORD,jdcloud // 京東
 DOMAIN-KEYWORD,alibaba // 阿里巴巴
