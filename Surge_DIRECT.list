@@ -19,7 +19,7 @@ DOMAIN-KEYWORD,baidu // 百度
 DOMAIN-KEYWORD,douyin // 字節跳動
 DOMAIN-KEYWORD,amemv // 字節跳動
 DOMAIN-KEYWORD,bytecdn // 字節跳動
-DOMAIN-KEYWORD,snssdk // 字節跳動
+DOMAIN-SUFFIX,snssdk.com // 字節跳動
 DOMAIN-KEYWORD,zijieapi // 字節跳動
 DOMAIN-KEYWORD,douyin // 抖音
 DOMAIN-KEYWORD,weixin // 微信
