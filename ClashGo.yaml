@@ -146,7 +146,7 @@ proxy-groups:
       - 美利堅國
 #-----------------------------------------------------------------------------------------------------------
   - name: iOS更新
-    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png"  #策略組圖標
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Puzzle.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     proxies:  #代理選項
@@ -154,7 +154,7 @@ proxy-groups:
       - REJECT
 #-----------------------------------------------------------------------------------------------------------
   - name: iOS推送
-    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png"  #策略組圖標
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     proxies:  #代理選項
