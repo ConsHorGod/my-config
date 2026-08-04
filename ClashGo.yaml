@@ -25,60 +25,33 @@ dns:
   ipv6: false
   listen: :23453
   enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
+  fake-ip-range: 198.18.0.1/16 
   fake-ip-filter-mode: whitelist
   fake-ip-filter:
-    - 'geosite:gfw'
-  # 默认直连用佛山电信 DNS
-  default-nameserver:
-    - system
-  # nameserver 专门用于直连域名
+    - 'geosite: gfw'
   nameserver:
-    - system
-  # 代理域名专用解析器（翻墙流量）
-  proxy-server-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-  # 可选：备用解析器（防止污染或失败时兜底）
-  fallback:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-    - tls://dns.google:853
-  fallback-filter:
-    geoip: true
-    ipcidr:
-      - 240.0.0.0/4
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️代理節點⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 proxies:
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️代理組⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 proxy-groups:
-  - name: FINAL
-    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #手动选择
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
-    proxies:  #代理選項
-      - 國際互聯
-      - 其它節點
-      - FNY(救急用)
-      - CN
-      - REJECT
-#-----------------------------------------------------------------------------------------------------------
   - name: 國際互聯
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     proxies:  #代理選項
+      - 香港特區
       - XMR香港
       - LXY香港
-      - HK直連
       - 日本島國
       - 美利堅國
       - 中國台灣
+      - 其它節點
       - FNY(救急用)
 #-----------------------------------------------------------------------------------------------------------
-  - name: Microsoft
+  - name: 微軟服務
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Windows_11.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #自動測速
@@ -86,10 +59,9 @@ proxy-groups:
     proxies:  #代理選項
       - XMR香港
       - LXY香港
-      - HK直連
       - CN
 #-----------------------------------------------------------------------------------------------------------
-  - name: Telegram
+  - name: 飛機電報
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #自動測速
@@ -97,30 +69,31 @@ proxy-groups:
     proxies:  #代理選項
       - XMR香港
       - LXY香港
-      - HK直連
       - 日本島國
       - 中國台灣
 #-----------------------------------------------------------------------------------------------------------
-  - name: TikTok
+  - name: 國際抖音
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     proxies:  #代理選項
-      - 日本島國
       - 美利堅國
+      - 日本島國
 #-----------------------------------------------------------------------------------------------------------
-  - name: HBOMAX
+  - name: 黃暴嘔爆
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #手动选择
+    type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    filter: (?!.*(聯通|移動)).*(香港|HK)
-    proxies:  #代理選項
-      - XMR香港
-      - LXY香港
+    interval: 300
+    filter: (?!.*(HK 0|聯通|移動)).*(香港|HK-)
+    use:
+      - XMR(D)
+      #- XMR(C)
+      - LXY
 #-----------------------------------------------------------------------------------------------------------
-  - name: Game
+  - name: 遊戲平台
     icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/steam(1).png"
     hidden: false
     type: select
@@ -129,12 +102,11 @@ proxy-groups:
       - DIRECT
       - XMR香港
       - LXY香港
-      - HK直連
       - 日本島國
       - 美利堅國
       - 中國台灣
 #-----------------------------------------------------------------------------------------------------------
-  - name: AI
+  - name: 人工智能
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #自动测速
@@ -161,7 +133,7 @@ proxy-groups:
       - DIRECT
       - 國際互聯
 #-----------------------------------------------------------------------------------------------------------
-  - name: AD-Block
+  - name: 廣告過濾
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlack.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
@@ -169,6 +141,18 @@ proxy-groups:
       - DIRECT
       - REJECT-DROP
       - REJECT
+ #-----------------------------------------------------------------------------------------------------------
+  - name: 香港特區
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 300
+    filter: (?!.*(HK 0|聯通|移動)).*(香港|HK-)
+    use:
+      - XMR(D)
+      #- XMR(C)
+      - LXY
  #-----------------------------------------------------------------------------------------------------------
   - name: XMR香港
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
@@ -190,17 +174,6 @@ proxy-groups:
     filter: (?!.*(HK 0|聯通|移動)).*(香港|HK-)
     use:
       - LXY
-#-----------------------------------------------------------------------------------------------------------
-  - name: HK直連
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 300
-    filter: '(?!.*(香港)).*(HK)'
-    use:  #代理選項
-      - XMR(D)
-      #- XMR(C)
 #-----------------------------------------------------------------------------------------------------------
   - name: 美利堅國
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"  #策略組圖標
@@ -424,20 +397,20 @@ rules:
   #- RULE-SET,anti-ad,AD-Block,no-resolve  #anti-ad廣告過濾
   - RULE-SET,DIRECT,CN,no-resolve  #我的直連網站
 #------------------遊戲平台------------------
-  - RULE-SET,Game,Game,no-resolve  #Steam遊戲平台
+  - RULE-SET,Game,遊戲平台,no-resolve  #Steam遊戲平台
 #------------------下載------------------
   - RULE-SET,下载軟件,CN,no-resolve  #下载軟件
   - RULE-SET,PT下载,CN,no-resolve  #PT下载
 #------------------國外APP代理規則------------------
   - DOMAIN-KEYWORD,XMRth.cloud,XMR香港,no-resolve  #XMRth機場
-  - RULE-SET,Microsoft,Microsoft,no-resolve  #微軟服務
-  - RULE-SET,AI,AI,no-resolve  #人工智能
+  - RULE-SET,Microsoft,微軟服務,no-resolve  #微軟服務
+  - RULE-SET,AI,人工智能,no-resolve  #人工智能
   - RULE-SET,PROXY,國際互聯,no-resolve  #我的翻墻網站
-  - RULE-SET,Telegram,Telegram,no-resolve  #電報
-  - RULE-SET,HBOMAX,HBOMAX,no-resolve  #HBOMAX
-  - RULE-SET,TikTok,TikTok,no-resolve  #TikTok
+  - RULE-SET,Telegram,飛機電報,no-resolve  #電報
+  - RULE-SET,HBOMAX,黃暴嘔爆,no-resolve  #HBOMAX
+  - RULE-SET,TikTok,國際抖音,no-resolve  #TikTok
 #------------------中國ASN、中國IP直連規則------------------
   - RULE-SET,ASN,CN  #中國自治系統號碼
   - GEOIP,CN,CN  #中國IP
 #------------------流量最終出站------------------
-  - MATCH,FINAL,dns-failed
+  - MATCH,國際互聯,dns-failed
