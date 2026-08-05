@@ -50,11 +50,11 @@ proxy-groups:
       - FNY(救急用)
  #-----------------------------------------------------------------------------------------------------------
   - name: 國際媒體
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #手动选择
+    type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    proxies:  #代理選項
+    use:  #代理選項
       - XMR(D)
       #- XMR(C)
       - LXY
