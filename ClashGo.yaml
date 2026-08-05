@@ -323,8 +323,8 @@ rule-providers:
 #-----------------------------------------------------------------------------------------------------------
   PROXY:
     type: http
-    behavior: classical
-    path: ./ruleset/Download_No_Resolve.yaml
+    behavior: domain
+    path: ./ruleset/proxy.yaml
     url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt"
     interval: 21600
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️分流規則⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
