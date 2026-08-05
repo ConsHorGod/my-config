@@ -1,6 +1,7 @@
 DOMAIN-SUFFIX,cn // 中國域名
 DOMAIN-KEYWORD,-cn // 中國域名
 DOMAIN-SUFFIX,pool.ntp.org //時間同步
+DOMAIN,ntp.nasa.gov // 美國太空總署時間服務器
 DOMAIN-KEYWORD,msft // 微軟網絡檢測地址
 DOMAIN-SUFFIX,time.windows.com // 微軟時間同步
 DOMAIN-KEYWORD,abchina // 農業銀行
