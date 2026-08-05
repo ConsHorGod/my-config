@@ -48,6 +48,7 @@ proxy-groups:
       - 中國台灣
       - 其它節點
       - FNY(救急用)
+      - DIRECT
  #-----------------------------------------------------------------------------------------------------------
   - name: 國際媒體
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png"  #策略組圖標
