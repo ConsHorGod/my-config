@@ -11,6 +11,7 @@ DOMAIN-KEYWORD,apple // Apple
 DOMAIN-KEYWORD,icloud // Apple
 DOMAIN-KEYWORD,itunes // Apple
 DOMAIN-KEYWORD,appstore // Apple
+DOMAIN-KEYWORD,ssl.mzstatic.com // Apple静态资源
 DOMAIN-SUFFIX,jlxa.wicp.net // 北村
 DOMAIN-SUFFIX,ads2301.asuscomm.com // 奧園
 DOMAIN-KEYWORD,asus // 華碩
@@ -84,8 +85,8 @@ DOMAIN-KEYWORD,xueersi // 学而思
 DOMAIN-KEYWORD,kuaidui // 快对作业
 DOMAIN-KEYWORD,17zuoye // 一起作业
 DOMAIN-KEYWORD,zuoyejingling // 作业精灵
-DOMAIN-KEYWORD,115 // 115網盤
-DOMAIN-KEYWORD,douban // 豆瓣網
+DOMAIN-KEYWORD,115.com // 115網盤
+DOMAIN-KEYWORD,douban.com // 豆瓣網
 IP-CIDR,0.0.0.0/8 // 本機或未知設備
 IP-CIDR,10.0.0.0/8 // 大型企業/校園內網
 IP-CIDR,100.64.0.0/10 // 電信商大局域網
