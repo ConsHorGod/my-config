@@ -11,7 +11,7 @@ DOMAIN-KEYWORD,apple // Apple
 DOMAIN-KEYWORD,icloud // Apple
 DOMAIN-KEYWORD,itunes // Apple
 DOMAIN-KEYWORD,appstore // Apple
-DOMAIN-KEYWORD,ssl.mzstatic.com // Apple静态资源
+DOMAIN-SUFFIX,mzstatic.com // Apple靜態資源
 DOMAIN-SUFFIX,jlxa.wicp.net // 北村
 DOMAIN-SUFFIX,ads2301.asuscomm.com // 奧園
 DOMAIN-KEYWORD,asus // 華碩
@@ -22,6 +22,7 @@ DOMAIN-KEYWORD,baidu // 百度
 DOMAIN-KEYWORD,douyin // 字節跳動
 DOMAIN-KEYWORD,amemv // 字節跳動
 DOMAIN-KEYWORD,bytecdn // 字節跳動
+DOMAIN-SUFFIX,bytednsdoc.com // 字節跳動靜態資源
 DOMAIN-SUFFIX,snssdk.com // 字節跳動
 DOMAIN-KEYWORD,zijieapi // 字節跳動
 DOMAIN-KEYWORD,douyin // 抖音
