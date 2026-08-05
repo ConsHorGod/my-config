@@ -352,7 +352,6 @@ rules:
   - RULE-SET,下载軟件,DIRECT,no-resolve  #下载軟件
   - RULE-SET,PT下载,DIRECT,no-resolve  #PT下载
 #------------------國外APP代理規則------------------
-  - DOMAIN-KEYWORD,XMRth.cloud,XMR香港,no-resolve  #XMRth機場
   - RULE-SET,Microsoft,微軟服務,no-resolve  #微軟服務
   - RULE-SET,AI,人工智能,no-resolve  #人工智能
   - RULE-SET,My_PROXY,國際媒體,no-resolve  #我的翻墻網站
