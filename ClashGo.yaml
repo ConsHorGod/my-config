@@ -52,7 +52,6 @@ proxy-groups:
   - name: 國際媒體
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     proxies:  #代理選項
@@ -97,8 +96,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     proxies:
       - DIRECT
-      - XMR香港
-      - LXY香港
+      - 國際媒體
       - 日本島國
       - 美利堅國
       - 中國台灣
@@ -128,7 +126,7 @@ proxy-groups:
     type: select  #手动选择
     proxies:  #代理選項
       - DIRECT
-      - 國際互聯
+      - 國際媒體
 #-----------------------------------------------------------------------------------------------------------
   - name: 廣告過濾
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlack.png"  #策略組圖標
@@ -336,9 +334,9 @@ rules:
   - DST-PORT,81-442,DIRECT,no-resolve  #81-442端口
   - DST-PORT,444-65535,DIRECT,no-resolve  #444-65535端口
 #------------------GooglePlay商店------------------
-  - DOMAIN-SUFFIX,services.googleapis.DIRECT,國際互聯,no-resolve #GooglePlay商店
-  - DOMAIN-SUFFIX,gvt1.com,國際互聯,no-resolve #GooglePlay商店
-  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,國際互聯,no-resolve #GooglePlay商店
+  - DOMAIN-SUFFIX,services.googleapis.DIRECT,國際媒體,no-resolve #GooglePlay商店
+  - DOMAIN-SUFFIX,gvt1.com,國際媒體,no-resolve #GooglePlay商店
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,國際媒體,no-resolve #GooglePlay商店
 #------------------優先規則------------------
   - DOMAIN-SUFFIX,push.apple.com,iOS推送,no-resolve #iOS推送
   - DOMAIN-SUFFIX,akadns.net,iOS推送,no-resolve #iOS推送
@@ -357,7 +355,7 @@ rules:
   - DOMAIN-KEYWORD,XMRth.cloud,XMR香港,no-resolve  #XMRth機場
   - RULE-SET,Microsoft,微軟服務,no-resolve  #微軟服務
   - RULE-SET,AI,人工智能,no-resolve  #人工智能
-  - RULE-SET,My_PROXY,國際互聯,no-resolve  #我的翻墻網站
+  - RULE-SET,My_PROXY,國際媒體,no-resolve  #我的翻墻網站
   - RULE-SET,HBOMAX,黃暴嘔爆,no-resolve  #HBOMAX
   - RULE-SET,TikTok,國際抖音,no-resolve  #TikTok
   - RULE-SET,PROXY,國際媒體,no-resolve  #我的翻墻網站
