@@ -1,4 +1,4 @@
-subscribe: https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/ClashGo.yaml
+.subscribe: https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/ClashGo.yaml
 mixed-port: 7890  #混合端口
 allow-lan: true  #允許局域網
 mode: Rule  #運行模式
@@ -48,7 +48,7 @@ proxy-groups:
       - 中國台灣
       - 其它節點
       - FNY(救急用)
-      - DIRECT
+      - 國內直連
  #-----------------------------------------------------------------------------------------------------------
   - name: 國際媒體
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png"  #策略組圖標
@@ -67,7 +67,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     proxies:  #代理選項
       - 國際媒體
-      - DIRECT
+      - 國內直連
 #-----------------------------------------------------------------------------------------------------------
   - name: 國際抖音
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"  #策略組圖標
@@ -96,7 +96,7 @@ proxy-groups:
     type: select
     url: http://www.gstatic.com/generate_204
     proxies:
-      - DIRECT
+      - 國內直連
       - 國際媒體
       - 日本島國
       - 美利堅國
@@ -118,7 +118,7 @@ proxy-groups:
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     proxies:  #代理選項
-      - DIRECT
+      - 國內直連
       - REJECT
 #-----------------------------------------------------------------------------------------------------------
   - name: iOS推送
@@ -126,7 +126,7 @@ proxy-groups:
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     proxies:  #代理選項
-      - DIRECT
+      - 國內直連
       - 國際媒體
 #-----------------------------------------------------------------------------------------------------------
   #- name: 廣告過濾
@@ -134,7 +134,7 @@ proxy-groups:
     #hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     #type: select  #手动选择
     #proxies:  #代理選項
-      #- DIRECT
+      #- 國內直連
       #- REJECT-DROP
       #- REJECT
 #-----------------------------------------------------------------------------------------------------------
@@ -194,6 +194,13 @@ proxy-groups:
     interval: 300
     use:  #代理選項
       - FNY
+#-----------------------------------------------------------------------------------------------------------
+  - name: 國內直連
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CN.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    type: select  #自動測速
+    proxies:  #代理選項
+      - DIRECT
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️代理集⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 proxy-providers:
   "FNY":
@@ -331,11 +338,11 @@ rule-providers:
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️分流規則⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rules:
 #------------------80,443以外端口一律直連------------------
-  - DST-PORT,0-79,DIRECT,no-resolve  #0-79端口
-  - DST-PORT,81-442,DIRECT,no-resolve  #81-442端口
-  - DST-PORT,444-65535,DIRECT,no-resolve  #444-65535端口
+  - DST-PORT,0-79,國內直連,no-resolve  #0-79端口
+  - DST-PORT,81-442,國內直連,no-resolve  #81-442端口
+  - DST-PORT,444-65535,國內直連,no-resolve  #444-65535端口
 #------------------GooglePlay商店------------------
-  - DOMAIN-SUFFIX,services.googleapis.DIRECT,國際媒體,no-resolve #GooglePlay商店
+  - DOMAIN-SUFFIX,services.googleapis.國內直連,國際媒體,no-resolve #GooglePlay商店
   - DOMAIN-SUFFIX,gvt1.com,國際媒體,no-resolve #GooglePlay商店
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,國際媒體,no-resolve #GooglePlay商店
 #------------------優先規則------------------
@@ -346,12 +353,12 @@ rules:
   - DOMAIN,msmp.abchina.com.cn,REJECT,no-resolve  #排除中國農業銀行檢測
   - DOMAIN-KEYWORD,gdmf.apple.com,iOS更新,no-resolve  #iOS更新
   #- RULE-SET,anti-ad,AD-Block,no-resolve  #anti-ad廣告過濾
-  - RULE-SET,My_DIRECT,DIRECT,no-resolve  #我的直連網站
+  - RULE-SET,My_DIRECT,國內直連,no-resolve  #我的直連網站
 #------------------遊戲平台------------------
   - RULE-SET,Game,遊戲平台,no-resolve  #Steam遊戲平台
 #------------------下載------------------
-  - RULE-SET,下载軟件,DIRECT,no-resolve  #下载軟件
-  - RULE-SET,PT下载,DIRECT,no-resolve  #PT下载
+  - RULE-SET,下载軟件,國內直連,no-resolve  #下载軟件
+  - RULE-SET,PT下载,國內直連,no-resolve  #PT下载
 #------------------國外APP代理規則------------------
   - RULE-SET,Microsoft,微軟服務,no-resolve  #微軟服務
   - RULE-SET,AI,人工智能,no-resolve  #人工智能
@@ -360,7 +367,7 @@ rules:
   - RULE-SET,TikTok,國際抖音,no-resolve  #TikTok
   - RULE-SET,PROXY,國際媒體,no-resolve  #我的翻墻網站
 #------------------中國ASN、中國IP直連規則------------------
-  - RULE-SET,ASN,DIRECT  #中國自治系統號碼
-  - GEOIP,CN,DIRECT  #中國IP
+  - RULE-SET,ASN,國內直連  #中國自治系統號碼
+  - GEOIP,CN,國內直連  #中國IP
 #------------------流量最終出站------------------
   - MATCH,國際互聯,dns-failed
