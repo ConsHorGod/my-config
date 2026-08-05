@@ -3,8 +3,8 @@ HOST-KEYWORD,-cn
 HOST-SUFFIX,pool.ntp.org
 HOST-KEYWORD,msft
 HOST-SUFFIX,time.windows.com
-HOST-KEYWORD,abchina
-HOST-KEYWORD,nanhaibank
+HOST-SUFFIX,abchina.com
+HOST-SUFFIX,nanhaibank.com
 HOST-KEYWORD,xunlei
 HOST-KEYWORD,siri
 HOST-KEYWORD,apple
@@ -15,9 +15,9 @@ HOST-SUFFIX,jlxa.wicp.net
 HOST-SUFFIX,ads2301.asuscomm.com
 HOST-KEYWORD,asus
 HOST-KEYWORD,synology
-HOST-KEYWORD,amap.com
+HOST-SUFFIX,amap.com
 HOST-KEYWORD,autonavi.com
-HOST-KEYWORD,baidu
+HOST-SUFFIX,baidu.com
 HOST-KEYWORD,douyin
 HOST-KEYWORD,amemv
 HOST-KEYWORD,bytecdn
