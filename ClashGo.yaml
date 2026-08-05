@@ -55,6 +55,7 @@ proxy-groups:
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
+    filter: '香港'
     use:  #代理選項
       - XMR(D)
       #- XMR(C)
