@@ -128,14 +128,14 @@ proxy-groups:
       - DIRECT
       - 國際媒體
 #-----------------------------------------------------------------------------------------------------------
-  - name: 廣告過濾
-    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlack.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #手动选择
-    proxies:  #代理選項
-      - DIRECT
-      - REJECT-DROP
-      - REJECT
+  #- name: 廣告過濾
+    #icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlack.png"  #策略組圖標
+    #hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    #type: select  #手动选择
+    #proxies:  #代理選項
+      #- DIRECT
+      #- REJECT-DROP
+      #- REJECT
 #-----------------------------------------------------------------------------------------------------------
   - name: 美利堅國
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"  #策略組圖標
