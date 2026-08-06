@@ -338,6 +338,8 @@ rule-providers:
     interval: 21600
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️分流規則⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rules:
+  - DOMAIN-SUFFIX,dns.alidns.com,DIRECT,no-resolve #阿里巴巴加密DNS服務器
+  - DOMAIN-SUFFIX,doh.pub,DIRECT,no-resolve #騰訊雲加密DNS服務器
 #------------------80,443以外端口一律直連------------------
   - DST-PORT,0-79,國內直連,no-resolve  #0-79端口
   - DST-PORT,81-442,國內直連,no-resolve  #81-442端口
