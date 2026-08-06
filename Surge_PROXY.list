@@ -4,7 +4,8 @@ DOMAIN-KEYWORD,github // 全球開發者平台
 DOMAIN-KEYWORD,haijiao // 海角社区(18+)
 DOMAIN-KEYWORD,btdig // 种子搜索引擎
 DOMAIN-KEYWORD,tmdb // 电影数据库
-DOMAIN-KEYWORD,themoviedb // 电影数据库
-DOMAIN-KEYWORD,savefrom.net // 视频下载网站
-DOMAIN-KEYWORD,snapvid.net // 视频下载网站
+DOMAIN-SUFFIX,themoviedb.com // 电影数据库
+DOMAIN-SUFFIX,savefrom.net // 视频下载网站
+DOMAIN-SUFFIX,snapvid.net // 视频下载网站
+DOMAIN-SUFFIX,dlpanda.com // 视频下载网站
 DOMAIN-KEYWORD,metshop // 蜜糖商店(电商平台)
