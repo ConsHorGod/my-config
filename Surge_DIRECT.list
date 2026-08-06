@@ -4,13 +4,12 @@ DOMAIN-SUFFIX,pool.ntp.org //時間同步
 DOMAIN,ntp.nasa.gov // 美國太空總署時間服務器
 DOMAIN-KEYWORD,msft // 微軟網絡檢測地址
 DOMAIN-SUFFIX,time.windows.com // 微軟時間同步
-DOMAIN-KEYWORD,abchina // 農業銀行
 DOMAIN-KEYWORD,nanhaibank // 南海農商行
 DOMAIN-KEYWORD,xunlei // 迅雷
 DOMAIN-KEYWORD,siri // Apple
-DOMAIN-KEYWORD,apple // Apple
-DOMAIN-KEYWORD,icloud // Apple
-DOMAIN-KEYWORD,itunes // Apple
+DOMAIN-SUFFIX,apple.com // Apple
+DOMAIN-SUFFIX,icloud.com // Apple
+DOMAIN-SUFFIX,itunes.com // Apple
 DOMAIN-KEYWORD,appstore // Apple
 DOMAIN-SUFFIX,mzstatic.com // Apple靜態資源
 DOMAIN-SUFFIX,jlxa.wicp.net // 北村
