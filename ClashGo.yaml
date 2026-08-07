@@ -43,9 +43,6 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     proxies:  #代理選項
       - 國際媒體
-      - 日本島國
-      - 美利堅國
-      - 中國台灣
       - 其它節點
       - FNY(救急用)
       - 國內直連
@@ -114,9 +111,6 @@ proxy-groups:
     proxies:
       - 國內直連
       - 國際媒體
-      - 日本島國
-      - 美利堅國
-      - 中國台灣
 #-----------------------------------------------------------------------------------------------------------
   - name: iOS更新
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Puzzle.png"  #策略組圖標
