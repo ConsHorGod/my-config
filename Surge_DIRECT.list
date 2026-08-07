@@ -25,13 +25,4 @@ DOMAIN-SUFFIX,subhd.tv // subhd.tv
 DOMAIN-SUFFIX,zimuku.org // 字幕库
 DOMAIN-SUFFIX,mini4k.io // mini4k.io
 DOMAIN-SUFFIX,115.com // 115網盤
-IP-CIDR,10.0.0.0/8 // 企业/校园内网
-IP-CIDR,100.64.0.0/10 // 电信商大局域网(CGNAT)
-IP-CIDR,127.0.0.0/8 // 系统自己连自己
-IP-CIDR,169.254.0.0/16 // 未连接路由器时的临时地址
-IP-CIDR,172.16.0.0/12 // 企业内网
-IP-CIDR,192.168.0.0/16 // 家庭一般路由器内网
-IP-CIDR,198.18.0.0/15 // Surge Fake-IP虚拟地址池
-IP-CIDR6,fc00::/7 // IPv6内网地址
-IP-CIDR6,fe80::/10 // IPv6区域网络设备互认
-IP-CIDR6,ff00::/8 // IPv6广播/组播流量
+
