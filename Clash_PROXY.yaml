@@ -1,4 +1,6 @@
 payload:
+  - DOMAIN-SUFFIX,liangxin1.xyz #良心云机场
+  - DOMAIN-SUFFIX,xmrthnode.com #XMRth机场
   - DOMAIN-KEYWORD,github #代码托管平台
   - DOMAIN-KEYWORD,haijiao #海角社区 (18+)
   - DOMAIN-KEYWORD,btdig #BTDigg种子搜索引擎
