@@ -71,13 +71,28 @@ proxy-groups:
       - 國內直連
 #-----------------------------------------------------------------------------------------------------------
   - name: 國際抖音
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"  #策略組圖標
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_1.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #手动选择
+    type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
-    proxies:  #代理選項
-      - 日本島國
-      - 美利堅國
+    interval: 300
+    filter: '日本|JP-专线'
+    use:
+      - XMR(D)
+      #- XMR(C)
+      - LXY
+#-----------------------------------------------------------------------------------------------------------
+  - name: 人工智能
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bot.png"  #策略組圖標
+    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    type: url-test  #自动测速
+    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 300
+    filter: '台灣|台湾|臺灣'
+    use:
+      - XMR(D)
+      #- XMR(C)
+      - LXY
 #-----------------------------------------------------------------------------------------------------------
   - name: 黃暴嘔爆
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png"  #策略組圖標
@@ -102,17 +117,6 @@ proxy-groups:
       - 日本島國
       - 美利堅國
       - 中國台灣
-#-----------------------------------------------------------------------------------------------------------
-  - name: 人工智能
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
-    filter: 
-    proxies:  #代理選項
-      - 中國台灣
-      - 日本島國
-      - 美利堅國
 #-----------------------------------------------------------------------------------------------------------
   - name: iOS更新
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Puzzle.png"  #策略組圖標
@@ -139,49 +143,13 @@ proxy-groups:
       #- REJECT-DROP
       #- REJECT
 #-----------------------------------------------------------------------------------------------------------
-  - name: 美利堅國
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 300
-    filter: '美国|美國'
-    use:
-      - XMR(D)
-      #- XMR(C)
-      - LXY
-#-----------------------------------------------------------------------------------------------------------
-  - name: 日本島國
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 300
-    filter: '日本|JP-专线'
-    use:
-      - XMR(D)
-      #- XMR(C)
-      - LXY
-#-----------------------------------------------------------------------------------------------------------
-  - name: 中國台灣
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 300
-    filter: '台灣|台湾|臺灣'
-    use:
-      - XMR(D)
-      #- XMR(C)
-      - LXY
-#-----------------------------------------------------------------------------------------------------------
   - name: 其它節點
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/AAEX.png  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 300
-    filter: '^(?!.*(官网|失联|发布|流量|剩余|群|套餐|客服|🇺🇸|专线|美國|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|🇭🇰|香港|HK|Hong|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|JP|Japan|🇨🇳|台湾|🇹🇼|TW|🇸🇬|狮|SG|Singapore|🇰🇷|韩国|首尔|KR|Korea)).*$'
+    filter: '^(?!.*(US 0|JP 0|TW 0|过期|客户端|推荐|官网|失联|发布|流量|剩余|群|套餐|客服|费利蒙|硅谷|拉斯维加斯|洛杉矶|RU|圣何塞|圣克拉拉|西雅图|芝加哥|🇭🇰|香港|HK|Hong|川日|东京|大阪|泉日|埼玉|Japan|🇨🇳|🇹🇼|狮|Singapore|🇰🇷|韩国|首尔|KR|Korea)).*$'
     use:
       - XMR(D)
       #- XMR(C)
@@ -365,9 +333,10 @@ rules:
 #------------------國外APP代理規則------------------
   - RULE-SET,Microsoft,微軟服務,no-resolve  #微軟服務
   - RULE-SET,AI,人工智能,no-resolve  #人工智能
+  - RULE-SET,TikTok,國際抖音,no-resolve  #TikTok
   - RULE-SET,My_PROXY,國際媒體,no-resolve  #我的翻墻網站
   - RULE-SET,HBOMAX,黃暴嘔爆,no-resolve  #HBOMAX
-  - RULE-SET,TikTok,國際抖音,no-resolve  #TikTok
+  - RULE-SET,Telegram,國際媒體,no-resolve  #TikTok
   - RULE-SET,PROXY,國際媒體,no-resolve  #我的翻墻網站
 #------------------中國ASN、中國IP直連規則------------------
   - RULE-SET,ASN,國內直連  #中國自治系統號碼
