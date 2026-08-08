@@ -1,4 +1,4 @@
-host,identity.apple.com,iOS推送
+1host,identity.apple.com,iOS推送
 host-suffix,akadns.net,iOS推送
 host-suffix,push.apple.com,iOS推送
 host-keyword,apple.com.edgekey.net,iOS推送
