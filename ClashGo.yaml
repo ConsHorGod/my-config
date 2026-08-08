@@ -327,7 +327,8 @@ rules:
   - RULE-SET,Telegram,國際媒體,no-resolve  #TikTok
   - RULE-SET,PROXY,國際媒體,no-resolve  #我的翻墻網站
 #------------------中國ASN、中國IP直連規則------------------
-  - RULE-SET,ASN,國內直連  #中國自治系統號碼
+  - GEOIP,PRIVATE,國內直連  #中國IP
   - GEOIP,CN,國內直連  #中國IP
+  - RULE-SET,ASN,國內直連  #中國自治系統號碼
 #------------------流量最終出站------------------
   - MATCH,國際互聯,dns-failed
