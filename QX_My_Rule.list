@@ -12,5 +12,4 @@ host,mesu.apple.com,iOS更新
 host,updates-http.cdn-apple.com,iOS更新
 host-suffix,quantumult.app,direct
 host,rdtds.net,reject
-host-suffix,cn,direct
 host-suffix,XMRth.one,proxy
