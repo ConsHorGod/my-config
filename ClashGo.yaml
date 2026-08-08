@@ -5,6 +5,9 @@ mode: Rule  #運行模式
 log-level: info  #日誌
 external-controller: 127.0.0.1:60000  #外部控制地址與端口
 block-quic:  true
+geodata-mode: false
+geox-url:
+  mmdb: "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country-only-cn-private.mmdb"
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️虛擬網卡設置⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 tun:
   enable: false  #true开 #false默认关
