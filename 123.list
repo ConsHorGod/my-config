@@ -1,8 +1,0 @@
-DOMAIN,msmp.abchina.com.cn,REJECT-DROP,pre-matching // 排除農業銀行
-DOMAIN,rdtds.net,REJECT-DROP,pre-matching // Reddit廣告跟蹤
-DOMAIN-SUFFIX,push.apple.com,iOS推送,no-resolve // iOS推送
-DOMAIN-SUFFIX,akadns.net,iOS推送,no-resolve // iOS推送
-DOMAIN-KEYWORD,apple.com.edgekey.net,iOS推送,no-resolve // iOS推送
-IP-CIDR,17.0.0.0/8,iOS推送,no-resolve // iOS推送
-DOMAIN,gdmf.apple.com,iOS更新,no-resolve // iOS更新、屏蔽
-DOMAIN,mesu.apple.com,iOS更新,no-resolve // iOS更新、屏蔽
