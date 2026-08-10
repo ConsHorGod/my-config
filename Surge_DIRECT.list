@@ -14,7 +14,6 @@ DOMAIN-SUFFIX,mzstatic.com // Apple靜態資源
 DOMAIN-SUFFIX,snssdk.com // 字節跳動
 DOMAIN-SUFFIX,qq.com // 騰訊
 DOMAIN-SUFFIX,jd.com // 京東
-DOMAIN-KEYWORD,jddebug // 京東
 DOMAIN-KEYWORD,taobao // 淘寶
 DOMAIN-KEYWORD,tmall // 天貓
 DOMAIN-KEYWORD,alibaba // 阿里巴巴
