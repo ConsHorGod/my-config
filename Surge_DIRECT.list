@@ -11,8 +11,8 @@ DOMAIN-SUFFIX,icloud.com // Apple
 DOMAIN-SUFFIX,itunes.com // Apple
 DOMAIN-KEYWORD,appstore // Apple
 DOMAIN-SUFFIX,mzstatic.com // Apple靜態資源
-DOMAIN-SUFFIX,qq.com // 騰訊
 DOMAIN-SUFFIX,snssdk.com // 字節跳動
+DOMAIN-SUFFIX,qq.com // 騰訊
 DOMAIN-SUFFIX,jd.com // 京東
 DOMAIN-KEYWORD,jddebug // 京東
 DOMAIN-KEYWORD,taobao // 淘寶
