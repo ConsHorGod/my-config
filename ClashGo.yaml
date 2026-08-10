@@ -340,6 +340,7 @@ rules:
   - RULE-SET,ASN,國內直連  #中國自治系統號碼
   - RULE-SET,ChinaIPs,國內直連  #中國IP
 #------------------國外APP代理規則------------------
+  - RULE-SET,Microsoft,微軟服務  #微軟服務
   - RULE-SET,AI,人工智能  #人工智能
   - RULE-SET,TikTok,國際抖音  #TikTok
   - RULE-SET,My_PROXY,國際媒體  #我的翻墻網站
