@@ -347,5 +347,8 @@ rules:
   - RULE-SET,HBOMAX,黃暴嘔爆  #HBOMAX
   - RULE-SET,Telegram,國際媒體  #TikTok
   - RULE-SET,PROXY,國際媒體  #我的翻墻網站
+  - DST-PORT,1-79,DIRECT
+  - DST-PORT,81-442,DIRECT
+  - DST-PORT,444-65535,DIRECT
 #------------------流量最終出站------------------
   - MATCH,國際互聯,dns-failed
