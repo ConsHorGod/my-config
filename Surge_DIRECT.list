@@ -5,14 +5,6 @@ DOMAIN-SUFFIX,pool.ntp.org //時間同步
 DOMAIN,ntp.nasa.gov // 美國太空總署時間服務器
 DOMAIN-KEYWORD,msft // 微軟網絡檢測地址
 DOMAIN-SUFFIX,time.windows.com // 微軟時間同步
-DOMAIN-KEYWORD,siri // Apple
-DOMAIN-SUFFIX,apple.com // Apple核心服務
-DOMAIN-SUFFIX,apple-dns.net // Apple DNS
-DOMAIN-SUFFIX,icloud.com // iCloud雲服務
-DOMAIN-SUFFIX,icloud-content.com // iCloud資源CDN
-DOMAIN-SUFFIX,mzstatic.com // 蘋果媒體CDN
-DOMAIN-SUFFIX,shazam.com // Shazam識曲
-DOMAIN-SUFFIX,mzstatic.com // Apple靜態資源
 DOMAIN-SUFFIX,nanhaibank.com // 南海農村商業銀行
 DOMAIN-SUFFIX,douyin.com // 抖音主業、直播、商城
 DOMAIN-SUFFIX,douyinvod.com // 抖音影片CDN
