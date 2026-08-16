@@ -58,7 +58,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 300
     filter: '香港'
-    use:  #代理選項
+    proxies:  #代理選項
       - XMR(D)
       #- XMR(C)
       - LXY
@@ -79,7 +79,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 300
     filter: '日本|JP-专线'
-    use:
+    proxies:
       - XMR(D)
       #- XMR(C)
       - LXY
@@ -91,7 +91,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 300
     filter: '台灣|台湾|臺灣'
-    use:
+    proxies:
       - XMR(D)
       #- XMR(C)
       - LXY
@@ -103,7 +103,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 300
     filter: '香港'
-    use:
+    proxies:
       - XMR(D)
       #- XMR(C)
       - LXY
