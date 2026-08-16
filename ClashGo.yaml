@@ -42,8 +42,9 @@ proxy-groups:
   - name: 國際互聯
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #手动选择
+    type: fallback  #手动选择
     url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 300
     proxies:  #代理選項
       - 國際媒體
       - 其它節點
@@ -53,8 +54,9 @@ proxy-groups:
   - name: 國際媒體
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
+    type: fallback  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
+    interval: 300
     filter: '香港'
     use:  #代理選項
       - XMR(D)
@@ -64,7 +66,7 @@ proxy-groups:
   - name: 微軟服務
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Windows_11.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #自動測速
+    type: fallback  #自動測速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     proxies:  #代理選項
       - 國際媒體
@@ -73,7 +75,7 @@ proxy-groups:
   - name: 國際抖音
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_1.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
+    type: fallback  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 300
     filter: '日本|JP-专线'
@@ -85,7 +87,7 @@ proxy-groups:
   - name: 人工智能
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bot.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
+    type: fallback  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 300
     filter: '台灣|台湾|臺灣'
@@ -97,7 +99,7 @@ proxy-groups:
   - name: 黃暴嘔爆
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
+    type: fallback  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 300
     filter: '香港'
@@ -126,10 +128,11 @@ proxy-groups:
   - name: iOS推送
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #手动选择
+    type: fallback  #手动选择
+    interval: 300
     proxies:  #代理選項
-      - 國內直連
       - 國際媒體
+      - 國內直連
 #-----------------------------------------------------------------------------------------------------------
   #- name: 廣告過濾
     #icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlack.png"  #策略組圖標
