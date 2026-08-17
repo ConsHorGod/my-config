@@ -99,11 +99,10 @@ proxy-groups:
     type: fallback  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 300
-    filter: '香港'
     proxies:
-      - XMR(D)
+      - XMR(D)香港
       #- XMR(C)
-      - LXY
+      - LXY香港
 #-----------------------------------------------------------------------------------------------------------
   - name: 遊戲平台
     icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/steam(1).png"
