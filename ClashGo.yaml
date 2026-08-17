@@ -204,6 +204,8 @@ proxy-groups:
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CN.png"  #策略組圖標
     hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #自動測速
+    url: http://mirrors.aliyun.com/generate_204
+    interval: 300
     proxies:  #代理選項
       - DIRECT
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️代理集⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
