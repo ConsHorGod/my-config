@@ -21,7 +21,7 @@ DOMAIN-SUFFIX,tencent.com // 騰訊主站
 DOMAIN-SUFFIX,wechat.com // 微信海外
 DOMAIN-SUFFIX,tencent-cloud.net // 騰訊雲CDN
 DOMAIN-SUFFIX,qqmail.com // QQ郵箱
-DOMAIN-SUFFIX,shturl.cc/qqAUSf // 騰訊視頻
+DOMAIN-SUFFIX,shturl.cc // 騰訊視頻
 DOMAIN-SUFFIX,jd.com // 京東商城主業務
 DOMAIN-SUFFIX,360buyimg.com // 商品圖片CDN
 DOMAIN-SUFFIX,jdpay.com // 京東支付
