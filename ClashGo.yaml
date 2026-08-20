@@ -258,19 +258,19 @@ rule-providers:
     path: ./ruleset/AWAvenue-Ads.yaml
     url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash-Classical.yaml"
     interval: 21600
-#-----------------------------------------------------------------------------------------------------------    
-  ASN:
+#-----------------------------------------------------------------------------------------------------------
+  ChinaMax:
     type: http
     behavior: classical
-    path: ./ruleset/ASN.CN.yaml
-    url: "https://yfamilys.com/rule/ASN-CN.rule"
+    path: ./ruleset/ChinaMax.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml"
     interval: 21600
-#-----------------------------------------------------------------------------------------------------------    
-  ChinaIPs:
+#-----------------------------------------------------------------------------------------------------------
+  Apple:
     type: http
     behavior: classical
-    path: ./ruleset/ChinaIPs.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaIPs/ChinaIPs_Classical.yaml"
+    path: ./ruleset/Apple.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple_Classical.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------    
   Lan:
@@ -352,9 +352,9 @@ rule-providers:
 #-----------------------------------------------------------------------------------------------------------
   PROXY:
     type: http
-    behavior: domain
+    behavior: classical
     path: ./ruleset/proxy.yaml
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Proxy/Proxy_Classical.yaml"
     interval: 21600
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️分流規則⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rules:
@@ -374,14 +374,14 @@ rules:
   - DOMAIN,updates-http.cdn-apple.com,iOS更新,no-resolve #iOS更新、屏蔽
   - RULE-SET,AWAvenue-Ads,REJECT-DROP  #秋風去廣告
   - RULE-SET,My_DIRECT,國內直連,no-resolve  #我的直連網站
+  - RULE-SET,Apple,國內直連,no-resolve  #Apple
 #------------------遊戲平台------------------
   - RULE-SET,Game,遊戲平台,no-resolve  #Steam遊戲平台
 #------------------下載------------------
   - RULE-SET,下载軟件,國內直連,no-resolve  #下载軟件
   - RULE-SET,PT下载,國內直連,no-resolve  #PT下载
-#------------------中國ASN、中國IP直連規則------------------
-  - RULE-SET,ASN,國內直連  #中國自治系統號碼
-  - RULE-SET,ChinaIPs,國內直連  #中國IP
+#------------------中國域名、ASN、IP直連規則------------------
+  - RULE-SET,ChinaMax,國內直連,no-resolve  #中國自治系統號碼
 #------------------國外APP代理規則------------------
   - RULE-SET,Microsoft,微軟服務,no-resolve  #微軟服務
   - RULE-SET,AI,人工智能,no-resolve  #人工智能
