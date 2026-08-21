@@ -121,15 +121,6 @@ proxy-groups:
       - 國內直連
       - REJECT
 #-----------------------------------------------------------------------------------------------------------
-  - name: iOS推送
-    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: fallback  #手动选择
-    interval: 300
-    proxies:  #代理選項
-      - 國際媒體
-      - 國內直連
-#-----------------------------------------------------------------------------------------------------------
   #- name: 廣告過濾
     #icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlack.png"  #策略組圖標
     #hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
@@ -365,10 +356,6 @@ rules:
   - DOMAIN-SUFFIX,gvt1.com,國際媒體,no-resolve #GooglePlay商店
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,國際媒體,no-resolve #GooglePlay商店
 #------------------優先規則------------------
-  - DOMAIN-SUFFIX,push.apple.com,iOS推送,no-resolve #iOS推送
-  - DOMAIN-SUFFIX,akadns.net,iOS推送,no-resolve #iOS推送
-  - DOMAIN-KEYWORD,apple.com.edgekey.net,iOS推送,no-resolve #iOS推送
-  - IP-CIDR,17.0.0.0/8,iOS推送,no-resolve #iOS推送
   - DOMAIN,gdmf.apple.com,iOS更新,no-resolve #iOS更新/屏蔽
   - DOMAIN,mesu.apple.com,iOS更新,no-resolve #iOS更新/屏蔽
   - DOMAIN,updates-http.cdn-apple.com,iOS更新,no-resolve #iOS更新、屏蔽
