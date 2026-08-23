@@ -1,1 +1,1 @@
-DOMAIN,msmp.abchina.com.cn,REJECT-DROP,pre-matching // 排除農業銀行
+DOMAIN,msmp.abchina.com.cn // 排除農業銀行
