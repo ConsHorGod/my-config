@@ -7,7 +7,7 @@ host-keyword,tmdb,國際互聯 // 电影数据库
 host-suffix,themoviedb.org,國際互聯 // 电影数据库
 host-suffix,savefrom.net,國際互聯 // 视频下载网站
 host,tt.sf-converter.com,XMR日本 // savefrom-TikTok視頻下載
-host-suffix,snapvid.net,XMR日本 // 视频下载网站
-host-suffix,tokcdn.com,國際互聯 // SnapVid-TikTok視頻下載
+host-suffix,snapvid.net,國際互聯 // 视频下载网站
+host-suffix,tokcdn.com,XMR日本 // SnapVid-TikTok視頻下載
 host-suffix,dlpanda.com,國際互聯 // 视频下载网站
 host-keyword,metshop,國際互聯 // 蜜糖商店(电商平台)
