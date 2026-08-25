@@ -1,3 +1,4 @@
 DOMAIN,msmp.abchina.com.cn // 排除農業銀行
 DOMAIN-SUFFIX,px.effirst.com // 岳鹰监控
 DOMAIN,stun.services.mozilla.com // 未知域名
+DOMAIN,odm.app-ads-services.com // Google廣告
