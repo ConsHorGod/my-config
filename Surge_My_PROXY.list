@@ -1,7 +1,6 @@
 DOMAIN-SUFFIX,liangxin1.xyz // 良心云机场
 DOMAIN-SUFFIX,xmrthnode.com // XMRth机场
 DOMAIN-KEYWORD,github // 全球開發者平台
-DOMAIN-KEYWORD,haijiao // 海角社区(18+)
 DOMAIN-KEYWORD,btdig // 种子搜索引擎
 DOMAIN-KEYWORD,tmdb // 电影数据库
 DOMAIN-SUFFIX,themoviedb.org // 电影数据库
@@ -11,3 +10,5 @@ DOMAIN-SUFFIX,snapvid.net // 视频下载网站
 DOMAIN-SUFFIX,tokcdn.com // SnapVid-TikTok視頻下載
 DOMAIN-SUFFIX,dlpanda.com // 视频下载网站
 DOMAIN-KEYWORD,metshop // 蜜糖商店(电商平台)
+DOMAIN-KEYWORD,haijiao // 海角社区18+
+DOMAIN-SUFFIX,dsd.com // 懂色帝18+
