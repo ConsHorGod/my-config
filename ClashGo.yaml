@@ -39,7 +39,7 @@ dns:
 proxies:
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️代理組⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 proxy-groups:
-  - name: 國際互聯
+  - name: 全球互聯
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png"  #策略組圖標
     hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
@@ -113,7 +113,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: XMR(D)香港
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 300
@@ -123,7 +123,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: XMR(D)日本
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 300
@@ -133,7 +133,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: LXY香港
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 300
@@ -143,7 +143,7 @@ proxy-groups:
 #-----------------------------------------------------------------------------------------------------------
   - name: FNY(救急用)
     icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: url-test  #自动测速
     url: http://www.gstatic.com/generate_204  #用于测试的链接
     interval: 300
@@ -214,6 +214,13 @@ rule-providers:
     behavior: classical
     path: ./ruleset/ChinaMax.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml"
+    interval: 21600
+#-----------------------------------------------------------------------------------------------------------
+  ASN-CN:
+    type: http
+    behavior: classical
+    path: ./ruleset/ASN-CN.yaml
+    url: "https://yfamilys.com/rule/ASN-CN.rule"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   Apple:
@@ -308,36 +315,29 @@ rule-providers:
     interval: 21600
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️分流規則⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rules:
-  - RULE-SET,Lan,國內直連,no-resolve  #本地局域網
   - DOMAIN,msmp.abchina.com.cn,REJECT-DROP  #排除中國農業銀行檢測
-#------------------GooglePlay商店------------------
   - DOMAIN-SUFFIX,services.googleapis.cn,國際媒體,no-resolve #GooglePlay商店
   - DOMAIN-SUFFIX,gvt1.com,國際媒體,no-resolve #GooglePlay商店
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,國際媒體,no-resolve #GooglePlay商店
-#------------------優先規則------------------
   - DOMAIN,gdmf.apple.com,iOS更新,no-resolve #iOS更新/屏蔽
   - DOMAIN,mesu.apple.com,iOS更新,no-resolve #iOS更新/屏蔽
   - DOMAIN,updates-http.cdn-apple.com,iOS更新,no-resolve #iOS更新、屏蔽
   - RULE-SET,AWAvenue-Ads,REJECT-DROP  #秋風去廣告
-  - RULE-SET,My_DIRECT,國內直連,no-resolve  #我的直連網站
   - RULE-SET,Apple,國內直連,no-resolve  #Apple
-#------------------遊戲平台------------------
   - RULE-SET,Game,遊戲平台,no-resolve  #Steam遊戲平台
-#------------------下載------------------
   - RULE-SET,下载軟件,國內直連,no-resolve  #下载軟件
   - RULE-SET,PT下载,國內直連,no-resolve  #PT下载
-#------------------中國域名、ASN、IP直連規則------------------
-  - RULE-SET,ChinaMax,國內直連,no-resolve  #中國自治系統號碼
-#------------------國外APP代理規則------------------
   - RULE-SET,Microsoft,微軟服務,no-resolve  #微軟服務
   - RULE-SET,AI,XMR(D)日本,no-resolve  #人工智能
   - RULE-SET,TikTok,XMR(D)日本,no-resolve  #TikTok
   - RULE-SET,My_PROXY,國際媒體,no-resolve  #我的翻墻網站
   - RULE-SET,HBOMAX,黃暴嘔爆,no-resolve  #HBOMAX
   - RULE-SET,PROXY,國際媒體,no-resolve  #我的翻墻網站
-#------------------非80,443端口直連------------------
   - DST-PORT,1-79,DIRECT
   - DST-PORT,81-442,DIRECT
   - DST-PORT,444-65535,DIRECT
-#------------------流量最終出站------------------
-  - MATCH,國際互聯,dns-failed
+  - RULE-SET,My_DIRECT,國內直連,no-resolve  #我的直連網站
+  - RULE-SET,ChinaMax,國內直連,no-resolve  #中國域名、IP
+  - RULE-SET,ASN-CN,國內直連  #中國自治系統號碼
+  - RULE-SET,Lan,國內直連,no-resolve  #本地局域網
+  - MATCH,全球互聯,dns-failed
