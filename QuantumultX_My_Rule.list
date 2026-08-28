@@ -33,6 +33,7 @@ host-suffix,jddj.com,direct // 京東到家
 host-suffix,jd.hk,direct // 京東國際
 host-suffix,jddebug.com,direct // 京東
 host-suffix,meituan.com,direct // 美團主業、外賣
+host-suffix,meituan.net,direct // 美團主業、外賣
 host-suffix,dianping.com,direct // 大眾點評
 host-suffix,sankuai.com,direct // 美團後臺接口
 host-suffix,maoyan.com,direct // 貓眼電影
