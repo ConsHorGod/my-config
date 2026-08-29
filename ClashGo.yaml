@@ -335,6 +335,6 @@ rules:
   - RULE-SET,HBOMAX,黃暴嘔爆,no-resolve  #HBOMAX
   - RULE-SET,PROXY,國際媒體,no-resolve  #我的翻墻網站
   - RULE-SET,My_DIRECT,國內直連,no-resolve  #我的直連網站
-  - GEOIP,CN,DIRECT
+  - GEOIP,CN,國內直連
   - RULE-SET,ASN-CN,國內直連  #中國自治系統號碼
   - MATCH,全球互聯,dns-failed
