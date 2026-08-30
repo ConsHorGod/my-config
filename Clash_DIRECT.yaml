@@ -13,7 +13,7 @@ payload:
   - DOMAIN-SUFFIX,apple.com #Apple
   - DOMAIN-SUFFIX,icloud.com #Apple
   - DOMAIN-SUFFIX,mzstatic.com #Apple
-  - DOMAIN-SUFFIX,apple-cloudkit.com # Apple
+  - DOMAIN-SUFFIX,apple-cloudkit.com #Apple
   - DOMAIN-SUFFIX,cdn-apple.com #Apple
   - DOMAIN-SUFFIX,gomicx.net #粵漫社
   - DOMAIN-SUFFIX,dotmu.net #飄雪
@@ -24,3 +24,37 @@ payload:
   - DOMAIN-SUFFIX,zimuku.org #字幕库
   - DOMAIN-SUFFIX,mini4k.io #mini4k.io
   - DOMAIN-SUFFIX,cmpassport.com #中国移动的官方服务
+  - DOMAIN-SUFFIX,qbittorrent.org #qBittorrent 官方网站
+  - DOMAIN-KEYWORD,aria2 #aria2 下载器
+  - DOMAIN-KEYWORD,thunder #迅雷相关域名
+  - DOMAIN-KEYWORD,xlliveud #迅雷相关服务
+  - DOMAIN-KEYWORD,xunlei #迅雷相关域名
+  - DOMAIN-KEYWORD,yunpan #网盘相关域名
+  - PROCESS-NAME,BitComet #比特彗星
+  - PROCESS-NAME,BitComet.exe #比特彗星
+  - PROCESS-NAME,BitComet_x64.exe #比特彗星 64 位
+  - PROCESS-NAME,DownloadService #下载服务
+  - PROCESS-NAME,DownloadService.exe #下载服务
+  - PROCESS-NAME,Folx #Folx 下载器
+  - PROCESS-NAME,Folx.exe #Folx 下载器
+  - PROCESS-NAME,NetTransport #Net Transport 下载器
+  - PROCESS-NAME,NetTransport.exe #Net Transport 下载器
+  - PROCESS-NAME,Thunder #迅雷
+  - PROCESS-NAME,Thunder.exe #迅雷
+  - PROCESS-NAME,Transmission #Transmission 下载器
+  - PROCESS-NAME,Transmission.exe #Transmission 下载器
+  - PROCESS-NAME,WebTorrent #WebTorrent
+  - PROCESS-NAME,WebTorrent.exe #WebTorrent
+  - PROCESS-NAME,WebTorrentHelper #WebTorrent 辅助进程
+  - PROCESS-NAME,WebTorrentHelper.exe #WebTorrent 辅助进程
+  - PROCESS-NAME,Weiyun #腾讯微云
+  - PROCESS-NAME,Weiyun.exe #腾讯微云
+  - PROCESS-NAME,aria2c #aria2 核心程序
+  - PROCESS-NAME,aria2c.exe #aria2 核心程序
+  - PROCESS-NAME,baidunetdisk.exe #百度网盘
+  - PROCESS-NAME,fdm #Free Download Manager
+  - PROCESS-NAME,fdm.exe #Free Download Manager
+  - PROCESS-NAME,qbittorrent #qBittorrent
+  - PROCESS-NAME,qbittorrent.exe #qBittorrent
+  - PROCESS-NAME,uTorrent #uTorrent
+  - PROCESS-NAME,uTorrent.exe #uTorrent
