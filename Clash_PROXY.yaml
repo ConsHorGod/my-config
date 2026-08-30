@@ -2,6 +2,9 @@ payload:
   - DOMAIN-SUFFIX,liangxin1.xyz #良心云机场
   - DOMAIN-SUFFIX,xmrthnode.com #XMRth机场
   - DOMAIN-KEYWORD,github #代码托管平台
+  - DOMAIN-SUFFIX,services.googleapis.cn #GooglePlay商店
+  - DOMAIN-SUFFIX,gvt1.com #GooglePlay商店
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com #GooglePlay商店
   - DOMAIN-KEYWORD,haijiao #海角社区 (18+)
   - DOMAIN-KEYWORD,btdig #BTDigg种子搜索引擎
   - DOMAIN-KEYWORD,tmdb #TheMovieDB电影数据库
@@ -10,4 +13,5 @@ payload:
   - DOMAIN-SUFFIX,snapvid.net #视频下载网站
   - DOMAIN-SUFFIX,dlpander.com #视频下载网站
   - DOMAIN-KEYWORD,metshop #蜜糖商店(电商平台)
+
 
