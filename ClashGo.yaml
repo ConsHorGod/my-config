@@ -313,24 +313,29 @@ rule-providers:
     path: ./ruleset/proxy.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Proxy/Proxy_Classical.yaml"
     interval: 21600
+#-----------------------------------------------------------------------------------------------------------
+  My_REJECT:
+    type: http
+    behavior: classical
+    path: ./ruleset/My_REJECT.yaml
+    url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Clash_REJECT.yaml"
+    interval: 21600
+
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️分流規則⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rules:
   - RULE-SET,Lan,國內直連,no-resolve  #本地局域網
-  - DOMAIN,msmp.abchina.com.cn,REJECT-DROP  #排除中國農業銀行檢測
   - DOMAIN,gdmf.apple.com,iOS更新,no-resolve #iOS更新/屏蔽
   - DOMAIN,mesu.apple.com,iOS更新,no-resolve #iOS更新/屏蔽
   - DOMAIN,updates-http.cdn-apple.com,iOS更新,no-resolve #iOS更新、屏蔽
+  - DOMAIN,My_REJECT,REJECT-DROP  #我的攔截名單
   - RULE-SET,AWAvenue-Ads,REJECT-DROP  #秋風去廣告
   - RULE-SET,My_DIRECT,國內直連,no-resolve  #我的直連網站
   - RULE-SET,ChinaMax,國內直連,no-resolve  #中國域名、IP
   - RULE-SET,Game,遊戲平台,no-resolve  #Steam遊戲平台
-  - RULE-SET,下载軟件,國內直連,no-resolve  #下载軟件
-  - RULE-SET,PT下载,國內直連,no-resolve  #PT下载
   - RULE-SET,Microsoft,微軟服務,no-resolve  #微軟服務
   - RULE-SET,AI,XMR(D)日本,no-resolve  #人工智能
   - RULE-SET,TikTok,XMR(D)日本,no-resolve  #TikTok
   - RULE-SET,My_PROXY,國際媒體,no-resolve  #我的翻墻網站
   - RULE-SET,HBOMAX,黃暴嘔爆,no-resolve  #HBOMAX
   - RULE-SET,PROXY,國際媒體,no-resolve  #我的翻墻網站
-
   - MATCH,全球互聯,dns-failed
