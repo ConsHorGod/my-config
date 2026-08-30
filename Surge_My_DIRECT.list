@@ -1,3 +1,4 @@
+DEST-PORT,123 // 123端口
 DOMAIN-SUFFIX,quantumult.app // QuantumultX收据订阅购买验证
 DOMAIN-SUFFIX,cn // 中國域名
 DOMAIN-KEYWORD,-cn // 中國域名
@@ -8,6 +9,11 @@ DOMAIN-KEYWORD,msft // 微軟網絡檢測地址
 DOMAIN-SUFFIX,time.windows.com // 微軟時間同步
 DOMAIN,jlxa.wicp.net // 北村
 DOMAIN,ads2301.asuscomm.com // 奥园
+DOMAIN-SUFFIX,apple.com // Apple
+DOMAIN-SUFFIX,icloud.com // Apple
+DOMAIN-SUFFIX,mzstatic.com // Apple
+DOMAIN-SUFFIX,apple-cloudkit.com // Apple
+DOMAIN-SUFFIX,cdn-apple.com // Apple
 DOMAIN-SUFFIX,gomicx.net // 粵漫社
 DOMAIN-SUFFIX,dotmu.net // 飄雪
 DOMAIN-SUFFIX,dranime.net // 飄雪
@@ -17,4 +23,3 @@ DOMAIN-SUFFIX,subhd.tv // subhd.tv
 DOMAIN-SUFFIX,zimuku.org // 字幕库
 DOMAIN-SUFFIX,mini4k.io // mini4k.io
 DOMAIN-SUFFIX,cmpassport.com // 中国移动的官方服务
-DEST-PORT,123 // 123端口
