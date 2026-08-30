@@ -292,9 +292,18 @@ rule-providers:
     path: ./ruleset/proxy.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Proxy/Proxy_Classical.yaml"
     interval: 21600
+#-----------------------------------------------------------------------------------------------------------
+  iOS_UPDATE:
+    type: http
+    behavior: classical
+    path: ./ruleset/iOS_UPDATE.yaml
+    url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Clash_iOS_UPDATE.yaml"
+    interval: 21600
+
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️分流規則⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rules:
   - RULE-SET,Lan,國內直連,no-resolve  #本地局域網
+  - RULE-SET,iOS_UPDATE,iOS更新,no-resolve  #本地局域網
   - RULE-SET,My_REJECT,REJECT-DROP  #我的攔截名單
   - RULE-SET,AWAvenue-Ads,REJECT-DROP  #秋風去廣告
   - RULE-SET,My_DIRECT,國內直連,no-resolve  #我的直連網站
