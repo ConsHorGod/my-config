@@ -13,6 +13,7 @@ payload:
   - DOMAIN-KEYWORD,apple #Apple
   - DOMAIN-KEYWORD,icloud #Apple
   - DOMAIN-KEYWORD,mzstatic.com #Apple
+  - DOMAIN-KEYWORD,ampaeservices.com #Apple
   - DOMAIN-SUFFIX,gomicx.net #粵漫社
   - DOMAIN-SUFFIX,dotmu.net #飄雪
   - DOMAIN-SUFFIX,dranime.net #飄雪
