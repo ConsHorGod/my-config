@@ -1,5 +1,9 @@
 host-suffix,quantumult.app,direct // QuantumultX收据订阅购买验证
 host,msmp.abchina.com.cn,reject // 排除農業銀行
+host-suffix,px.effirst.com,reject // 岳鹰监控
+host,stun.services.mozilla.com,reject // 未知域名
+host-suffix,app-ads-services.com,reject // Google廣告
+host-suffix,tanx.com,reject // 阿里巴巴广告平台
 host-suffix,cn,direct // 中國域名
 host-keyword,-cn,direct // 中國域名
 host-keyword,cn-,direct // 中國域名
