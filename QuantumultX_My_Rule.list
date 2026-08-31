@@ -9,6 +9,11 @@ host-keyword,msft,direct // 微軟網絡檢測地址
 host-suffix,time.windows.com,direct // 微軟時間同步
 host,jlxa.wicp.net,direct // 北村
 host,ads2301.asuscomm.com,direct // 奥园
+host-keyword,apple,direct // Apple
+host-keyword,icloud,direct // Apple
+host-keyword,mzstatic.com,direct // Apple
+host-keyword,ampaeservices.com,direct // Apple
+host-keyword,snssdk.com,direct // 抖音
 host-suffix,gomicx.net,direct // 粵漫社
 host-suffix,dotmu.net,direct // 飄雪
 host-suffix,dranime.net,direct // 飄雪
