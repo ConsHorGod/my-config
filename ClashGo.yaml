@@ -163,7 +163,7 @@ proxy-providers:
   "FNY":
     type: http
     path: ./provide/FNY.yml
-    url: https://b3.342242.icu/api/v1/client/subscribe?token=0e79462ce42ab0413ed58d454329934e
+    url: https://388583885.459245.xyz/api/v1/client/subscribe?token=0e79462ce42ab0413ed58d454329934e
     interval: 86400
     health-check:
       enable: true
@@ -173,7 +173,7 @@ proxy-providers:
   "XMR(D)":
     type: http
     path: ./provide/XMR(D).yml
-    url: https://cdn2.xmrth.one/s/9dkc7icn1whs-834d5113?clash=1
+    url: https://cdn2.xmrth.one/s/9dkc7icn1whs-dd913f47?clash=1
     interval: 86400
     health-check:
       enable: true
