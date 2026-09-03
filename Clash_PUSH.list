@@ -1,3 +1,4 @@
+payload:
   - DOMAIN-SUFFIX,push.apple.com // 系統通知
   - DOMAIN-SUFFIX,akadns.net // 系統通知
   - DOMAIN-KEYWORD,apple.com.edgekey.net // 系統通知
