@@ -91,13 +91,21 @@ proxy-groups:
       - 國內直連
       - 國際媒體
 #-----------------------------------------------------------------------------------------------------------
-  - name: iOS更新
+  - name: iOS系統更新
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Puzzle.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
     type: select  #手动选择
     proxies:  #代理選項
       - 國內直連
       - REJECT
+#-----------------------------------------------------------------------------------------------------------
+  - name: iOS通知推送
+    icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png"  #策略組圖標
+    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
+    type: select  #手动选择
+    proxies:  #代理選項
+      - 國內直連
+      - 全球互聯
 #-----------------------------------------------------------------------------------------------------------
   - name: 其它節點
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/AAEX.png  #策略組圖標
@@ -299,11 +307,18 @@ rule-providers:
     path: ./ruleset/iOS_UPDATE.yaml
     url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Clash_iOS_UPDATE.yaml"
     interval: 21600
-
+#-----------------------------------------------------------------------------------------------------------
+  iOS_PUSH:
+    type: http
+    behavior: classical
+    path: ./ruleset/iOS_PUSH.yaml
+    url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Clash_PUSH.yaml"
+    interval: 21600
 #⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️分流規則⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 rules:
   - RULE-SET,Lan,國內直連,no-resolve  #本地局域網
-  - RULE-SET,iOS_UPDATE,iOS更新,no-resolve  #本地局域網
+  - RULE-SET,iOS_PUSH,iOS通知推送,no-resolve  #iOS系統推送
+  - RULE-SET,iOS_UPDATE,iOS系統更新,no-resolve  #iOS系統更新
   - RULE-SET,My_REJECT,REJECT-DROP  #我的攔截名單
   - RULE-SET,AWAvenue-Ads,REJECT-DROP  #秋風去廣告
   - RULE-SET,My_DIRECT,國內直連,no-resolve  #我的直連網站
