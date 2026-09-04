@@ -105,7 +105,7 @@ proxy-groups:
     type: select  #手动选择
     proxies:  #代理選項
       - 國內直連
-      - 全球互聯
+      - 國際媒體
 #-----------------------------------------------------------------------------------------------------------
   - name: 其它節點
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/AAEX.png  #策略組圖標
