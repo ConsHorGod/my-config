@@ -231,11 +231,11 @@ rule-providers:
     url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Clash_REJECT.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
-  AWAvenue-Ads:
+  anti-AD:
     type: http
     behavior: classical
-    path: ./ruleset/AWAvenue-Ads.yaml
-    url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash-Classical.yaml"
+    path: ./ruleset/anti-AD.yaml
+    url: "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml"
     interval: 21600
 #-----------------------------------------------------------------------------------------------------------
   ChinaMax:
@@ -320,7 +320,7 @@ rules:
   - RULE-SET,iOS_PUSH,iOS通知推送,no-resolve  #iOS系統推送
   - RULE-SET,iOS_UPDATE,iOS系統更新,no-resolve  #iOS系統更新
   - RULE-SET,My_REJECT,REJECT-DROP  #我的攔截名單
-  - RULE-SET,AWAvenue-Ads,REJECT-DROP  #秋風去廣告
+  - RULE-SET,anti-AD,REJECT-DROP  #秋風去廣告
   - RULE-SET,My_DIRECT,國內直連,no-resolve  #我的直連網站
   - RULE-SET,ChinaMax,國內直連,no-resolve  #中國域名、IP
   - RULE-SET,Game,遊戲平台,no-resolve  #Steam遊戲平台
