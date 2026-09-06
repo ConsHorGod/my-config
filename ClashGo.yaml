@@ -288,6 +288,6 @@ rules:
   - RULE-SET,ChinaMax_Domain,國內直連
   - RULE-SET,lan_domain,DIRECT,no-resolve
   - RULE-SET,lan_ip,DIRECT,no-resolve
-  - RULE-SET,ASN-CN,國內直連
   - GEOIP,CN,國內直連
+  - RULE-SET,ASN-CN,國內直連
   - MATCH,全球互聯,dns-failed
