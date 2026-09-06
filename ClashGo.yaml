@@ -1,174 +1,343 @@
 .subscribe: https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/ClashGo.yaml
-mixed-port: 7890  #混合端口
-allow-lan: true  #允許局域網
-mode: Rule  #運行模式
-log-level: info  #日誌
-external-controller: 127.0.0.1:60000  #外部控制地址與端口
-block-quic:  true
+mixed-port: 7890
+allow-lan: true
+mode: Rule
+log-level: info
+bind-address: "*"
+external-controller: 127.0.0.1:60000
+unified-delay: true
+tcp-concurrent: true
+find-process-mode: strict
+block-quic: true
 geodata-mode: false
 geox-url:
   mmdb: "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country-only-cn-private.mmdb"
-#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️虛擬網卡設置⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+#>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
+#>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
+profile:
+  store-selected: true
+  store-fake-ip: true
+#>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
+#>>>>>>>>>>>>>>>>>>>>>隧道<<<<<<<<<<<<<<<<<<<<
 tun:
-  enable: false  #true开 #false默认关
-  device: mixed  #system（稳）、gvisor（安全）、mixed（自动切换，兼容最好）
+  enable: true
+  device: mixed
   stack: gvisor
-  dns-hijack:  #劫持所有发往53端口的DNS请求，让Clash自己的DNS模块接管解析。这两行缺一不可
-    - any:53  #UDP53端口
-    - tcp://any:53  #TCP53端口
-  udp-timeout: 300  #UDP连接闲置300秒后自动关闭，防内存泄漏，不动它。
-  auto-route: true  #自动添加路由表，让TUN虚拟网卡接管所有流量。必须true。
-  strict-route: true  #严格路由，防止流量回流、死循环。推荐true，除非遇到特殊兼容问题。
-  auto-redirect: false  #TCP重定向开关。TUN模式下一般false，让TUN统一接管，不用iptables再劫持一次。
-  auto-detect-interface: true  #自动检测物理网卡(WAN口)，让路由规则生效。建议true。
-  exclude-package:  #安卓专属，排除特定App不走TUN。路由器上用不到，这一行可以删掉或注释。
-#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️DNS设置⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+  udp-timeout: 300
+  auto-route: true
+  strict-route: true
+  auto-redirect: false
+  auto-detect-interface: true
+#>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
+#>>>>>>>>>>>>>>>>>>>>>DNS模塊<<<<<<<<<<<<<<<<<<<<
 dns:
   enable: true
   ipv6: false
   listen: :23453
   enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16 
-  fake-ip-filter-mode: whitelist
-  fake-ip-filter:
-    - 'geosite: gfw'
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter: []
+  use-hosts: true
+  use-system-hosts: true
+  cache-algorithm: arc
   nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️代理節點⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+  nameserver-policy:
+    "dns.alidns.com":
+      - 223.5.5.5
+    "doh.pub":
+      - 119.29.29.29
+    "*.lan":
+      - system
+    "*.local":
+      - system
+    "routerlogin.net":
+      - system
+    "*.asuscomm.com":
+      - system
+    "*.wicp.net":
+      - system
+    "*.apple.com":
+      - system
+    "*.apple.com.cn":
+      - system
+    "*.icloud.com":
+      - system
+    "*.icloud.com.cn":
+      - system
+    "*.apps.apple.com":
+      - system
+    "*.appleid.apple.com":
+      - system
+    "*.cdn-apple.com":
+      - system
+    "*.mzstatic.com":
+      - system
+    "*.push.apple.com":
+      - system
+    "*.apple-cloudkit.com":
+      - system
+    "*.alibaba.com":
+      - 223.5.5.5
+    "*.taobao.com":
+      - 223.5.5.5
+    "*.tmall.com":
+      - 223.5.5.5
+    "*.goofish.com":
+      - 223.5.5.5
+    "*.alipay.com":
+      - 223.5.5.5
+    "*.alicdn.com":
+      - 223.5.5.5
+    "*.tbcdn.cn":
+      - 223.5.5.5
+    "*.taobaocdn.com":
+      - 223.5.5.5
+    "*.aliimg.com":
+      - 223.5.5.5
+    "*.qq.com":
+      - 119.29.29.29
+    "*.qqmail.com":
+      - 119.29.29.29
+    "*.wechat.com":
+      - 119.29.29.29
+    "*.tenpay.com":
+      - 119.29.29.29
+    "*.mmbiz.qpic.cn":
+      - 119.29.29.29
+    "*.mmbizurl.cn":
+      - 119.29.29.29
+    "*.qpic.cn":
+      - 119.29.29.29
+    "*.jd.com":
+      - 119.29.29.29
+    "*.jdmall.com":
+      - 119.29.29.29
+    "*.jdpay.com":
+      - 119.29.29.29
+    "*.360buyimg.com":
+      - 119.29.29.29
+    "*.jdcloud.com":
+      - 119.29.29.29
+    "*.jingdong.com":
+      - 119.29.29.29
+    "*.jdjr.com":
+      - 119.29.29.29
+    "*.douyin.com":
+      - system
+    "*.douyincdn.com":
+      - system
+    "*.douyinpic.com":
+      - system
+    "*.douyinstatic.com":
+      - system
+    "*.douyinvod.com":
+      - system
+    "*.amemv.com":
+      - system
+    "*.snssdk.com":
+      - system
+    "*.pstatp.com":
+      - system
+    "*.byteimg.com":
+      - system
+    "*.bytetos.com":
+      - system
+    "*.kuaishou.com":
+      - system
+    "*.gifshow.com":
+      - system
+    "*.yximgs.com":
+      - system
+    "*.kwai.com":
+      - system
+    "*.xiaohongshu.com":
+      - system
+    "*.xhslink.com":
+      - system
+    "*.xhslink.cn":
+      - system
+    "*.meituan.com":
+      - 119.29.29.29
+    "*.meituan.net":
+      - 119.29.29.29
+    "*.meituanpay.com":
+      - 119.29.29.29
+    "*.meituanwaimai.com":
+      - 119.29.29.29
+    "*.dianping.com":
+      - 119.29.29.29
+    "*.ele.me":
+      - 223.5.5.5
+    "*.elmapp.com":
+      - 223.5.5.5
+    "*.eleimg.com":
+      - 223.5.5.5
+    "*.elmcdn.com":
+      - 223.5.5.5
+    "*.icbc.com.cn":
+      - system
+    "*.abchina.com":
+      - system
+    "*.boc.cn":
+      - system
+    "*.ccb.com":
+      - system
+    "*.bankcomm.com":
+      - system
+    "*.nanhaibank.com":
+      - system
+    "*.ecny.icbc.com":
+      - system
+    "*.ecny.abchina.com":
+      - system
+    "*.ecny.boc.cn":
+      - system
+    "*.ecny.ccb.com":
+      - system
+    "*.ecny.nanhaibank.com":
+      - system
+    "*.unionpay.com":
+      - system
+    "*.chinapay.com":
+      - system
+    "*.95516.com":
+      - system
+    "*.unionpayintl.com":
+      - system
+    "*.unionpaysecure.com":
+      - system
+    "*.online.unionpay.com":
+      - system
+    "*.cn":
+      - system
+#>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
+#>>>>>>>>>>>>>>>>>>>>>代理節點<<<<<<<<<<<<<<<<<<<<
 proxies:
-#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️代理組⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+#>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
+#>>>>>>>>>>>>>>>>>>>>>策略組<<<<<<<<<<<<<<<<<<<<
 proxy-groups:
-  - name: 全球互聯
-    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #手动选择
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
+  - name: 全球互联
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png"
+    hidden: false
+    type: select
+    url: http://www.gstatic.com/generate_204
     interval: 300
-    proxies:  #代理選項
-      - 國際媒體
-      - 其它節點
+    proxies:
+      - 国际媒体
+      - 其它节点
       - FNY(救急用)
-      - 國內直連
- #-----------------------------------------------------------------------------------------------------------
-  - name: 國際媒體
-    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
-    interval: 300
-    proxies:  #代理選項
-      - XMR(D)香港
-      #- XMR(C)
-      - LXY香港
-#-----------------------------------------------------------------------------------------------------------
-  - name: 微軟服務
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Windows_11.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #自動測速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
-    proxies:  #代理選項
-      - 國際媒體
-      - 國內直連
-#-----------------------------------------------------------------------------------------------------------
-  - name: 黃暴嘔爆
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
+      - 国内直连
+  - name: 国际媒体
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png"
+    hidden: false
+    type: select
+    url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
       - XMR(D)香港
-      #- XMR(C)
       - LXY香港
-#-----------------------------------------------------------------------------------------------------------
-  - name: 遊戲平台
+  - name: 微软服务
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Windows_11.png"
+    hidden: false
+    type: select
+    url: http://www.gstatic.com/generate_204
+    proxies:
+      - 国际媒体
+      - 国内直连
+  - name: 黄暴呕爆
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png"
+    hidden: false
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - XMR(D)香港
+      - LXY香港
+  - name: 游戏平台
     icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/steam(1).png"
     hidden: false
     type: select
     url: http://www.gstatic.com/generate_204
     proxies:
-      - 國內直連
-      - 國際媒體
-#-----------------------------------------------------------------------------------------------------------
-  - name: iOS系統更新
-    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Puzzle.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #手动选择
-    proxies:  #代理選項
-      - 國內直連
+      - 国内直连
+      - 国际媒体
+  - name: iOS系统更新
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Puzzle.png"
+    hidden: false
+    type: select
+    proxies:
+      - 国内直连
       - REJECT
-#-----------------------------------------------------------------------------------------------------------
   - name: iOS通知推送
-    icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #手动选择
-    proxies:  #代理選項
-      - 國內直連
-      - 國際媒體
-#-----------------------------------------------------------------------------------------------------------
-  - name: 其它節點
-    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/AAEX.png  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png"
+    hidden: false
+    type: select
+    proxies:
+      - 国内直连
+      - 国际媒体
+  - name: 其它节点
+    icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/AAEX.png"
+    hidden: false
+    type: select
+    url: http://www.gstatic.com/generate_204
     interval: 300
     filter: '^(?!.*(US 0|JP 0|TW 0|过期|客户端|推荐|官网|失联|发布|流量|剩余|群|套餐|客服|费利蒙|硅谷|拉斯维加斯|洛杉矶|RU|圣何塞|圣克拉拉|西雅图|芝加哥|🇭🇰|香港|HK|Hong|川日|东京|大阪|泉日|埼玉|Japan|🇨🇳|🇹🇼|狮|Singapore|🇰🇷|韩国|首尔|KR|Korea)).*$'
     use:
       - XMR(D)
-      #- XMR(C)
       - LXY
-#-----------------------------------------------------------------------------------------------------------
   - name: XMR(D)香港
-    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png"
+    hidden: false
+    type: url-test
+    url: http://www.gstatic.com/generate_204
     interval: 300
     filter: '香港'
-    use:  #代理選項
+    use:
       - XMR(D)
-#-----------------------------------------------------------------------------------------------------------
   - name: XMR(D)日本
-    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png"
+    hidden: false
+    type: url-test
+    url: http://www.gstatic.com/generate_204
     interval: 300
     filter: '日本'
-    use:  #代理選項
+    use:
       - XMR(D)
-#-----------------------------------------------------------------------------------------------------------
   - name: LXY香港
-    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png"
+    hidden: false
+    type: url-test
+    url: http://www.gstatic.com/generate_204
     interval: 300
     filter: '香港'
-    use:  #代理選項
+    use:
       - LXY
-#-----------------------------------------------------------------------------------------------------------
   - name: FNY(救急用)
-    icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"  #策略組圖標
-    hidden: false  #隱藏代理組，“true=執行”，“false=禁用”
-    type: url-test  #自动测速
-    url: http://www.gstatic.com/generate_204  #用于测试的链接
+    icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"
+    hidden: false
+    type: url-test
+    url: http://www.gstatic.com/generate_204
     interval: 300
-    use:  #代理選項
+    use:
       - FNY
-#-----------------------------------------------------------------------------------------------------------
-  - name: 國內直連
-    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CN.png"  #策略組圖標
-    hidden: true  #隱藏代理組，“true=執行”，“false=禁用”
-    type: select  #自動測速
+  - name: 国内直连
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CN.png"
+    hidden: true
+    type: select
     url: http://mirrors.aliyun.com/generate_204
     interval: 300
-    proxies:  #代理選項
+    proxies:
       - DIRECT
-#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️代理集⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+#>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
+#>>>>>>>>>>>>>>>>>>>>>機場訂閱<<<<<<<<<<<<<<<<<<<<
 proxy-providers:
-  "FNY":
+  FNY:
     type: http
     path: ./provide/FNY.yml
     url: https://388583885.459245.xyz/api/v1/client/subscribe?token=0e79462ce42ab0413ed58d454329934e
@@ -177,8 +346,7 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-#-----------------------------------------------------------------------------------------------------------
-  "XMR(D)":
+  XMR(D):
     type: http
     path: ./provide/XMR(D).yml
     url: https://cdn2.xmrth.one/s/9dkc7icn1whs-dd913f47?clash=1
@@ -187,18 +355,7 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-#-----------------------------------------------------------------------------------------------------------
-  #"XMR(C)":
-    #type: http
-    #path: ./provide/XMR(C).yml
-    #url: https://cf.XMRth.one/s/v5mhl6tjjyie-9ab2ce1a?clash=1&dns=0&ipv6=1
-    #interval: 86400
-    #health-check:
-      #enable: true
-      #url: http://www.gstatic.com/generate_204
-      #interval: 300
-#-----------------------------------------------------------------------------------------------------------
-  "LXY":
+  LXY:
     type: http
     path: ./provide/LXY.yml
     url: https://liangxin.xyz/api/v1/liangxin?OwO=548c8c140641cb099ddce75922e0ba6d
@@ -207,127 +364,98 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
-#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️規則集⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
-rule-providers:
-#-----------------------------------------------------------------------------------------------------------
-  My_DIRECT:
+#>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
+#>>>>>>>>>>>>>>>>>>>>>規則模板<<<<<<<<<<<<<<<<<<<<
+rule-anchor:
+  classical: &classical
     type: http
+    interval: 21600
     behavior: classical
+    format: yaml
+  domain: &domain
+    type: http
+    interval: 21600
+    behavior: domain
+    format: mrs
+  ipcidr: &ipcidr
+    type: http
+    interval: 21600
+    behavior: ipcidr
+    format: mrs
+#>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
+#>>>>>>>>>>>>>>>>>>>>>規則集<<<<<<<<<<<<<<<<<<<<
+rule-providers:
+  My_DIRECT:
+    <<: *classical
     path: ./ruleset/Clash_DIRECT.yaml
     url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Clash_DIRECT.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
   My_PROXY:
-    type: http
-    behavior: classical
+    <<: *classical
     path: ./ruleset/Clash_PROXY.yaml
     url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Clash_PROXY.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
   My_REJECT:
-    type: http
-    behavior: classical
+    <<: *classical
     path: ./ruleset/My_REJECT.yaml
     url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Clash_REJECT.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
   anti-ad:
-    type: http
-    behavior: classical
-    path: ./ruleset/anti-ad.mrs
+    <<: *domain
     url: "https://raw.githubusercontent.com/privacy-protection-tools/anti-ad.github.io/master/docs/mihomo.mrs"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
-  ChinaMax:
-    type: http
-    behavior: classical
-    path: ./ruleset/ChinaMax.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------    
-  Lan:
-    type: http
-    behavior: classical
-    path: ./ruleset/Lan.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------    
+  ChinaMax_Domain:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"
+  ChinaMax_IP:
+    <<: *ipcidr
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs"
+  lan_ip:
+    <<: *ipcidr
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.mrs"
+  lan_domain:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"
+  telegram:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"
+  telegram_ip:
+    <<: *ipcidr
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"
   TikTok:
-    type: http
-    behavior: classical
-    path: ./ruleset/TikTok_No_Resolve.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TikTok/TikTok.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
-  Telegram:
-    type: http
-    behavior: classical
-    path: ./ruleset/Telegram.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Telegram/Telegram.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs"
   HBOMAX:
-    type: http
-    behavior: classical
-    path: ./ruleset/HBO.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/HBO/HBO.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/max.mrs"
   AI:
-    type: http
-    behavior: classical
-    path: ./ruleset/ai.yaml
-    url: "https://yfamilys.com/rule/ai.rule"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs"
   Microsoft:
-    type: http
-    behavior: classical
-    path: ./ruleset/Microsoft.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml"
-    interval: 21600    
-#-----------------------------------------------------------------------------------------------------------
-  Game:
-    type: http
-    behavior: classical
-    path: ./ruleset/Steam.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Game/Game.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
-  PROXY:
-    type: http
-    behavior: classical
-    path: ./ruleset/proxy.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Proxy/Proxy_Classical.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs"
+  Steam:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam.mrs"
   iOS_UPDATE:
-    type: http
-    behavior: classical
-    path: ./ruleset/iOS_UPDATE.yaml
+    <<: *classical
     url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Clash_iOS_UPDATE.yaml"
-    interval: 21600
-#-----------------------------------------------------------------------------------------------------------
   iOS_PUSH:
-    type: http
-    behavior: classical
+    <<: *classical
     path: ./ruleset/iOS_PUSH.yaml
     url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Clash_PUSH.yaml"
-    interval: 21600
-#⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️分流規則⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+#>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
+#>>>>>>>>>>>>>>>>>>>>>分流規則<<<<<<<<<<<<<<<<<<<<
 rules:
-  - RULE-SET,Lan,國內直連,no-resolve  #本地局域網
-  - RULE-SET,iOS_PUSH,iOS通知推送,no-resolve  #iOS系統推送
-  - RULE-SET,iOS_UPDATE,iOS系統更新,no-resolve  #iOS系統更新
-  - RULE-SET,My_REJECT,REJECT-DROP  #我的攔截名單
-  - RULE-SET,anti-ad,REJECT-DROP  #秋風去廣告
-  - RULE-SET,My_DIRECT,國內直連,no-resolve  #我的直連網站
-  - RULE-SET,ChinaMax,國內直連,no-resolve  #中國域名、IP
-  - RULE-SET,Game,遊戲平台,no-resolve  #Steam遊戲平台
-  - RULE-SET,Microsoft,微軟服務,no-resolve  #微軟服務
-  - RULE-SET,AI,XMR(D)日本,no-resolve  #人工智能
-  - RULE-SET,TikTok,XMR(D)日本,no-resolve  #TikTok
-  - RULE-SET,My_PROXY,國際媒體,no-resolve  #我的翻墻網站
-  - RULE-SET,HBOMAX,黃暴嘔爆,no-resolve  #HBOMAX
-  - RULE-SET,PROXY,國際媒體,no-resolve  #我的翻墻網站
-  - MATCH,全球互聯,dns-failed
+  - RULE-SET,lan_domain,DIRECT,no-resolve
+  - RULE-SET,lan_ip,DIRECT,no-resolve
+  - RULE-SET,iOS_PUSH,iOS通知推送,no-resolve
+  - RULE-SET,iOS_UPDATE,iOS系统更新,no-resolve
+  - RULE-SET,My_REJECT,REJECT-DROP,no-resolve
+  - RULE-SET,anti-ad,REJECT-DROP,no-resolve
+  - RULE-SET,My_DIRECT,国内直连,no-resolve
+  - RULE-SET,ChinaMax_Domain,国内直连,no-resolve
+  - RULE-SET,ChinaMax_IP,国内直连,no-resolve
+  - RULE-SET,Steam,游戏平台,no-resolve
+  - RULE-SET,Microsoft,微软服务,no-resolve
+  - RULE-SET,AI,XMR(D)日本,no-resolve
+  - RULE-SET,TikTok,XMR(D)日本,no-resolve
+  - RULE-SET,My_PROXY,国际媒体,no-resolve
+  - RULE-SET,HBOMAX,黄暴呕爆,no-resolve
+  - MATCH,全球互联,dns-failed  - MATCH,全球互聯,dns-failed
