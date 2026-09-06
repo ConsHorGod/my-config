@@ -268,15 +268,19 @@ rule-providers:
   iOS_UPDATE:
     <<: *classical
     url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/Clash_iOS_UPDATE.yaml"
-  iOS_PUSH:
-    <<: *classical
-    url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/Clash_PUSH.yaml"
 #>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
 #>>>>>>>>>>>>>>>>>>>>>分流規則<<<<<<<<<<<<<<<<<<<<
 rules:
-  - GEOIP,PRIVATE,國內直連,no-resolve
-  - RULE-SET,iOS_PUSH,iOS系統通知,no-resolve
+  - DOMAIN-SUFFIX,push.apple.com #系統通知
+  - DOMAIN-SUFFIX,akadns.net #系統通知
+  - DOMAIN-KEYWORD,apple.com.edgekey.net #系統通知
+  - IP-CIDR,17.0.0.0/8 #系統通知
+  - IP-CIDR6,2403:300:a42::/48 #系統通知
+  - IP-CIDR6,2403:300:a51::/48 #系統通知
+  - IP-CIDR6,2620:149:a44::/48 #系統通知
+  - IP-CIDR6,2a01:b740:a42::/48 #系統通知
   - RULE-SET,iOS_UPDATE,iOS系統更新,no-resolve
+  - GEOIP,PRIVATE,國內直連,no-resolve
   - RULE-SET,My_REJECT,REJECT-DROP,no-resolve
   - RULE-SET,anti-ad,REJECT-DROP,no-resolve
   - RULE-SET,Steam,遊戲平台,no-resolve
