@@ -105,7 +105,7 @@ proxy-groups:
     proxies:
       - 國內直連
       - REJECT
-  - name: iOS通知推送
+  - name: iOS系統通知
     icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png"
     hidden: false
     type: select
@@ -274,8 +274,8 @@ rule-providers:
 #>>>>>>>>>>>>>>>>>>>>>分流規則<<<<<<<<<<<<<<<<<<<<
 rules:
   - GEOIP,PRIVATE,國內直連,no-resolve
-  - RULE-SET,iOS_PUSH,iOS通知推送
-  - RULE-SET,iOS_UPDATE,iOS系統更新
+  - RULE-SET,iOS_PUSH,iOS系統通知,no-resolve
+  - RULE-SET,iOS_UPDATE,iOS系統更新,no-resolve
   - RULE-SET,My_REJECT,REJECT-DROP,no-resolve
   - RULE-SET,anti-ad,REJECT-DROP,no-resolve
   - RULE-SET,Steam,遊戲平台,no-resolve
@@ -284,8 +284,8 @@ rules:
   - RULE-SET,TikTok,XMR(D)日本,no-resolve
   - RULE-SET,My_PROXY,國際媒體,no-resolve
   - RULE-SET,HBOMAX,黃暴嘔爆,no-resolve
-  - RULE-SET,My_DIRECT,國內直連
-  - RULE-SET,ChinaMax_Domain,國內直連
+  - RULE-SET,My_DIRECT,國內直連,no-resolve
+  - RULE-SET,ChinaMax_Domain,國內直連,no-resolve
   - RULE-SET,lan_domain,DIRECT,no-resolve
   - RULE-SET,lan_ip,DIRECT,no-resolve
   - GEOIP,CN,國內直連
