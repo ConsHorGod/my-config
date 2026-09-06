@@ -216,6 +216,9 @@ rule-anchor:
 #>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
 #>>>>>>>>>>>>>>>>>>>>>規則集<<<<<<<<<<<<<<<<<<<<
 rule-providers:
+  ASN-CN:
+    <<: *classical
+    url: "https://yfamilys.com/rule/ASN-CN.rule"
   My_DIRECT:
     <<: *classical
     path: ./ruleset/Clash_DIRECT.yaml
@@ -281,8 +284,9 @@ rules:
   - RULE-SET,My_REJECT,REJECT-DROP,no-resolve
   - RULE-SET,anti-ad,REJECT-DROP,no-resolve
   - RULE-SET,My_DIRECT,国内直连,no-resolve
+  - RULE-SET,ASN-CN,国内直连,no-resolve
+  - GEOIP,CN,国内直连,no-resolve
   - RULE-SET,ChinaMax_Domain,国内直连,no-resolve
-  - RULE-SET,ChinaMax_IP,国内直连,no-resolve
   - RULE-SET,Steam,游戏平台,no-resolve
   - RULE-SET,Microsoft,微软服务,no-resolve
   - RULE-SET,AI,XMR(D)日本,no-resolve
