@@ -149,7 +149,7 @@ proxy-groups:
     interval: 300
     filter: '香港'
     use:
-      - LXY
+      - "LXY"
   - name: FNY(救急用)
     icon: "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Rookie.png"
     hidden: false
