@@ -1,4 +1,4 @@
-.subscribe: https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/ClashGo.yaml
+subscribe: https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/ClashGo.yaml
 mixed-port: 7890
 allow-lan: true
 mode: Rule
@@ -32,7 +32,7 @@ tun:
   auto-redirect: false
   auto-detect-interface: true
 #>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
-#>>>>>>>>>>>>>>>>>>>>>DNS模塊<<<<<<<<<<<<<<<<<<<<
+#>>>>>>>>>>>>>>>>>>>>>DNS模組<<<<<<<<<<<<<<<<<<<<
 dns:
   enable: true
   ipv6: false
@@ -53,18 +53,18 @@ proxies:
 #>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
 #>>>>>>>>>>>>>>>>>>>>>策略組<<<<<<<<<<<<<<<<<<<<
 proxy-groups:
-  - name: 全球互联
+  - name: 全球互聯
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png"
     hidden: false
     type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 国际媒体
-      - 其它节点
+      - 國際媒體
+      - 其它節點
       - FNY(救急用)
-      - 国内直连
-  - name: 国际媒体
+      - 國內直連
+  - name: 國際媒體
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png"
     hidden: false
     type: select
@@ -73,15 +73,15 @@ proxy-groups:
     proxies:
       - XMR(D)香港
       - LXY香港
-  - name: 微软服务
+  - name: 微軟服務
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Windows_11.png"
     hidden: false
     type: select
     url: http://www.gstatic.com/generate_204
     proxies:
-      - 国际媒体
-      - 国内直连
-  - name: 黄暴呕爆
+      - 國際媒體
+      - 國內直連
+  - name: 黃暴嘔爆
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png"
     hidden: false
     type: select
@@ -90,29 +90,29 @@ proxy-groups:
     proxies:
       - XMR(D)香港
       - LXY香港
-  - name: 游戏平台
+  - name: 遊戲平台
     icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/steam(1).png"
     hidden: false
     type: select
     url: http://www.gstatic.com/generate_204
     proxies:
-      - 国内直连
-      - 国际媒体
-  - name: iOS系统更新
+      - 國內直連
+      - 國際媒體
+  - name: iOS系統更新
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Puzzle.png"
     hidden: false
     type: select
     proxies:
-      - 国内直连
+      - 國內直連
       - REJECT
   - name: iOS通知推送
     icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png"
     hidden: false
     type: select
     proxies:
-      - 国内直连
-      - 国际媒体
-  - name: 其它节点
+      - 國內直連
+      - 國際媒體
+  - name: 其它節點
     icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/AAEX.png"
     hidden: false
     type: select
@@ -157,7 +157,7 @@ proxy-groups:
     interval: 300
     use:
       - FNY
-  - name: 国内直连
+  - name: 國內直連
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CN.png"
     hidden: true
     type: select
@@ -221,15 +221,12 @@ rule-providers:
     url: "https://yfamilys.com/rule/ASN-CN.rule"
   My_DIRECT:
     <<: *classical
-    path: ./ruleset/Clash_DIRECT.yaml
     url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Clash_DIRECT.yaml"
   My_PROXY:
     <<: *classical
-    path: ./ruleset/Clash_PROXY.yaml
     url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Clash_PROXY.yaml"
   My_REJECT:
     <<: *classical
-    path: ./ruleset/My_REJECT.yaml
     url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Clash_REJECT.yaml"
   anti-ad:
     <<: *domain
@@ -272,25 +269,25 @@ rule-providers:
     url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Clash_iOS_UPDATE.yaml"
   iOS_PUSH:
     <<: *classical
-    path: ./ruleset/iOS_PUSH.yaml
     url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Clash_PUSH.yaml"
 #>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
 #>>>>>>>>>>>>>>>>>>>>>分流規則<<<<<<<<<<<<<<<<<<<<
 rules:
   - RULE-SET,lan_domain,DIRECT,no-resolve
   - RULE-SET,lan_ip,DIRECT,no-resolve
+  - GEOIP,PRIVATE,國內直連,no-resolve
   - RULE-SET,iOS_PUSH,iOS通知推送,no-resolve
-  - RULE-SET,iOS_UPDATE,iOS系统更新,no-resolve
+  - RULE-SET,iOS_UPDATE,iOS系統更新,no-resolve
   - RULE-SET,My_REJECT,REJECT-DROP,no-resolve
   - RULE-SET,anti-ad,REJECT-DROP,no-resolve
-  - RULE-SET,My_DIRECT,国内直连,no-resolve
-  - RULE-SET,ASN-CN,国内直连,no-resolve
-  - GEOIP,CN,国内直连,no-resolve
-  - RULE-SET,ChinaMax_Domain,国内直连,no-resolve
-  - RULE-SET,Steam,游戏平台,no-resolve
-  - RULE-SET,Microsoft,微软服务,no-resolve
+  - RULE-SET,My_DIRECT,國內直連,no-resolve
+  - RULE-SET,ASN-CN,國內直連,no-resolve
+  - GEOIP,CN,國內直連,no-resolve
+  - RULE-SET,ChinaMax_Domain,國內直連,no-resolve
+  - RULE-SET,Steam,遊戲平台,no-resolve
+  - RULE-SET,Microsoft,微軟服務,no-resolve
   - RULE-SET,AI,XMR(D)日本,no-resolve
   - RULE-SET,TikTok,XMR(D)日本,no-resolve
-  - RULE-SET,My_PROXY,国际媒体,no-resolve
-  - RULE-SET,HBOMAX,黄暴呕爆,no-resolve
-  - MATCH,全球互联,dns-failed  - MATCH,全球互聯,dns-failed
+  - RULE-SET,My_PROXY,國際媒體,no-resolve
+  - RULE-SET,HBOMAX,黃暴嘔爆,no-resolve
+  - MATCH,全球互聯,dns-failed
