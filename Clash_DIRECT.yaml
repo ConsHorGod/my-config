@@ -1,8 +1,5 @@
 payload:
   - DOMAIN-SUFFIX,quantumult.app #QuantumultX收据订阅购买验证
-  - DOMAIN-SUFFIX,cn #中國域名
-  - DOMAIN-KEYWORD,-cn #中國域名
-  - DOMAIN-KEYWORD,cn- #中國域名
   - DOMAIN-SUFFIX,pool.ntp.org #時間同步
   - DOMAIN,ntp.nasa.gov #美國太空總署時間服務器
   - DOMAIN-SUFFIX,msftconnecttest.com #微軟網絡檢測地址
