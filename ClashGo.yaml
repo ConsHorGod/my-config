@@ -280,6 +280,7 @@ rules:
   - IP-CIDR6,2620:149:a44::/48,iOS系統通知,no-resolve #系統通知
   - IP-CIDR6,2a01:b740:a42::/48,iOS系統通知,no-resolve #系統通知
   - RULE-SET,iOS_UPDATE,iOS系統更新,no-resolve
+  - DST-PORT,123 #123端口
   - DOMAIN-KEYWORD,github,國際媒體,no-resolve #開發者平台
   - GEOIP,PRIVATE,國內直連,no-resolve
   - RULE-SET,My_REJECT,REJECT-DROP,no-resolve
