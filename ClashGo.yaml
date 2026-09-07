@@ -271,14 +271,14 @@ rule-providers:
 #>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
 #>>>>>>>>>>>>>>>>>>>>>分流規則<<<<<<<<<<<<<<<<<<<<
 rules:
-  - DOMAIN-SUFFIX,push.apple.com #系統通知
-  - DOMAIN-SUFFIX,akadns.net #系統通知
-  - DOMAIN-KEYWORD,apple.com.edgekey.net #系統通知
-  - IP-CIDR,17.0.0.0/8 #系統通知
-  - IP-CIDR6,2403:300:a42::/48 #系統通知
-  - IP-CIDR6,2403:300:a51::/48 #系統通知
-  - IP-CIDR6,2620:149:a44::/48 #系統通知
-  - IP-CIDR6,2a01:b740:a42::/48 #系統通知
+  - DOMAIN-SUFFIX,push.apple.com,iOS系統通知,no-resolve #系統通知
+  - DOMAIN-SUFFIX,akadns.net,iOS系統通知,no-resolve #系統通知
+  - DOMAIN-KEYWORD,apple.com.edgekey.net,iOS系統通知,no-resolve #系統通知
+  - IP-CIDR,17.0.0.0/8,iOS系統通知,no-resolve #系統通知
+  - IP-CIDR6,2403:300:a42::/48,iOS系統通知,no-resolve #系統通知
+  - IP-CIDR6,2403:300:a51::/48,iOS系統通知,no-resolve #系統通知
+  - IP-CIDR6,2620:149:a44::/48,iOS系統通知,no-resolve #系統通知
+  - IP-CIDR6,2a01:b740:a42::/48,iOS系統通知,no-resolve #系統通知
   - RULE-SET,iOS_UPDATE,iOS系統更新,no-resolve
   - GEOIP,PRIVATE,國內直連,no-resolve
   - RULE-SET,My_REJECT,REJECT-DROP,no-resolve
