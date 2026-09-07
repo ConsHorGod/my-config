@@ -279,7 +279,9 @@ rules:
   - IP-CIDR6,2403:300:a51::/48,iOS系統通知,no-resolve #系統通知
   - IP-CIDR6,2620:149:a44::/48,iOS系統通知,no-resolve #系統通知
   - IP-CIDR6,2a01:b740:a42::/48,iOS系統通知,no-resolve #系統通知
-  - RULE-SET,iOS_UPDATE,iOS系統更新,no-resolve
+  - DOMAIN,gdmf.apple.com,iOS系統更新,no-resolve #iOS更新/屏蔽
+  - DOMAIN,mesu.apple.com,iOS系統更新,no-resolve #iOS更新/屏蔽
+  - DOMAIN,updates-http.cdn-apple.com,iOS系統更新,no-resolve #iOS更新、屏蔽
   - DST-PORT,123 #123端口
   - DOMAIN-SUFFIX,cn #中國域名
   - DOMAIN-KEYWORD,-cn #中國域名
