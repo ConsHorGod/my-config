@@ -268,6 +268,8 @@ rule-providers:
 #>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
 #>>>>>>>>>>>>>>>>>>>>>分流規則<<<<<<<<<<<<<<<<<<<<
 rules:
+  - RULE-SET,lan_domain,DIRECT,no-resolve
+  - RULE-SET,lan_ip,DIRECT,no-resolve
   - DOMAIN-SUFFIX,push.apple.com,iOS系統通知,no-resolve #系統通知
   - DOMAIN-SUFFIX,akadns.net,iOS系統通知,no-resolve #系統通知
   - DOMAIN-KEYWORD,apple.com.edgekey.net,iOS系統通知,no-resolve #系統通知
@@ -287,16 +289,13 @@ rules:
   - DOMAIN-SUFFIX,cn,國內直連,no-resolve #中國域名
   - DOMAIN-KEYWORD,-cn,國內直連,no-resolve #中國域名
   - DOMAIN-KEYWORD,cn-,國內直連,no-resolve #中國域名
+  - RULE-SET,My_DIRECT,國內直連,no-resolve
+  - RULE-SET,ChinaMax_Domain,國內直連,no-resolve
+  - GEOIP,CN,國內直連,no-resolve
   - RULE-SET,Steam,遊戲平台,no-resolve
   - RULE-SET,Microsoft,微軟服務,no-resolve
   - RULE-SET,AI,XMR(D)日本,no-resolve
   - RULE-SET,TikTok,XMR(D)日本,no-resolve
   - RULE-SET,My_PROXY,國際媒體,no-resolve
   - RULE-SET,HBOMAX,黃暴嘔爆,no-resolve
-  - RULE-SET,My_DIRECT,國內直連,no-resolve
-  - RULE-SET,ChinaMax_Domain,國內直連,no-resolve
-  - RULE-SET,lan_domain,DIRECT,no-resolve
-  - RULE-SET,lan_ip,DIRECT,no-resolve
-  - GEOIP,CN,國內直連
-  - RULE-SET,ASN-CN,國內直連
   - MATCH,全球互聯,dns-failed
