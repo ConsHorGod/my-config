@@ -1,6 +1,5 @@
-payload:
-  - DOMAIN,msmp.abchina.com.cn #排除農業銀行
-  - DOMAIN-SUFFIX,px.effirst.com #岳鹰监控
-  - DOMAIN,stun.services.mozilla.com #未知域名
-  - DOMAIN-SUFFIX,app-ads-services.com #Google廣告
-  - DOMAIN-SUFFIX,tanx.com #阿里巴巴
+- DOMAIN,msmp.abchina.com.cn
+- DOMAIN-SUFFIX,px.effirst.com
+- DOMAIN,stun.services.mozilla.com
+- DOMAIN-SUFFIX,app-ads-services.com
+- DOMAIN-SUFFIX,tanx.com
