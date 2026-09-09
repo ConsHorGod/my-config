@@ -217,9 +217,6 @@ rule-anchor:
 #>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
 #>>>>>>>>>>>>>>>>>>>>>規則集<<<<<<<<<<<<<<<<<<<<
 rule-providers:
-  ASN-CN:
-    <<: *classical
-    url: "https://yfamilys.com/rule/ASN-CN.rule"
   My_DIRECT:
     <<: *classical
     url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Clash_DIRECT.yaml"
@@ -235,9 +232,6 @@ rule-providers:
   ChinaMax_Domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/ConsHorGod/Clash_mrs/main/ruleset/ChinaMax_Domain.mrs"
-  ChinaMax_IP:
-    <<: *ipcidr
-    url: "https://raw.githubusercontent.com/ConsHorGod/Clash_mrs//main/ruleset/ChinaMax_IP.mrs"
   lan_ip:
     <<: *ipcidr
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.mrs"
@@ -282,13 +276,10 @@ rules:
   - DOMAIN,mesu.apple.com,iOS系統更新,no-resolve #iOS更新/屏蔽
   - DOMAIN,updates-http.cdn-apple.com,iOS系統更新,no-resolve #iOS更新、屏蔽
   - DST-PORT,123,國內直連,no-resolve #123端口
-  - DOMAIN-KEYWORD,github,國際媒體,no-resolve #開發者平台
-  - GEOIP,PRIVATE,國內直連,no-resolve
   - RULE-SET,My_REJECT,REJECT-DROP,no-resolve
   - RULE-SET,anti-ad,REJECT-DROP,no-resolve
   - RULE-SET,My_DIRECT,國內直連,no-resolve
   - RULE-SET,ChinaMax_Domain,國內直連,no-resolve
-  - RULE-SET,ChinaMax_IP,國內直連,no-resolve
   - GEOIP,CN,國內直連,no-resolve
   - RULE-SET,Steam,遊戲平台,no-resolve
   - RULE-SET,Microsoft,微軟服務,no-resolve
