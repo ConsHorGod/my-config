@@ -23,3 +23,4 @@ payload:
   - DOMAIN-SUFFIX,zimuku.org #字幕库
   - DOMAIN-SUFFIX,mini4k.io #mini4k.io
   - DOMAIN-SUFFIX,cmpassport.com #中国移动的官方服务
+  - DOMAIN-SUFFIX,xlppc.svc
