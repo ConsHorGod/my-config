@@ -1,22 +1,21 @@
-payload:
-  - DOMAIN-SUFFIX,quantumult.app #QuantumultX收据订阅购买验证
-  - DOMAIN-SUFFIX,pool.ntp.org #時間同步
-  - DOMAIN,ntp.nasa.gov #美國太空總署時間服務器
-  - DOMAIN-SUFFIX,msftconnecttest.com #微軟網絡檢測地址
-  - DOMAIN-SUFFIX,msftncsi.com #微軟網絡檢測地址
-  - DOMAIN-SUFFIX,time.windows.com #微軟時間同步
-  - DOMAIN,jlxa.wicp.net #北村
-  - DOMAIN,ads2301.asuscomm.com #奥园
-  - DOMAIN-SUFFIX,apple.com #Apple
-  - DOMAIN-SUFFIX,icloud.com #Apple
-  - DOMAIN-SUFFIX,mzstatic.com #Apple
-  - DOMAIN-SUFFIX,ampaeservices.com #Apple
-  - DOMAIN-SUFFIX,gomicx.net #粵漫社
-  - DOMAIN-SUFFIX,dotmu.net #飄雪
-  - DOMAIN-SUFFIX,dranime.net #飄雪
-  - DOMAIN-SUFFIX,canton8.com #蓝调粤语
-  - DOMAIN-SUFFIX,meijumi.net #美劇迷
-  - DOMAIN-SUFFIX,subhd.tv #subhd.tv
-  - DOMAIN-SUFFIX,zimuku.org #字幕库
-  - DOMAIN-SUFFIX,mini4k.io #mini4k.io
-  - DOMAIN-SUFFIX,cmpassport.com #中国移动的官方服务
+- DOMAIN-SUFFIX,quantumult.app
+- DOMAIN-SUFFIX,pool.ntp.org
+- DOMAIN,ntp.nasa.gov
+- DOMAIN-SUFFIX,msftconnecttest.com
+- DOMAIN-SUFFIX,msftncsi.com
+- DOMAIN-SUFFIX,time.windows.com
+- DOMAIN,jlxa.wicp.net
+- DOMAIN,ads2301.asuscomm.com
+- DOMAIN-SUFFIX,apple.com
+- DOMAIN-SUFFIX,icloud.com
+- DOMAIN-SUFFIX,mzstatic.com
+- DOMAIN-SUFFIX,ampaeservices.com
+- DOMAIN-SUFFIX,gomicx.net
+- DOMAIN-SUFFIX,dotmu.net
+- DOMAIN-SUFFIX,dranime.net
+- DOMAIN-SUFFIX,canton8.com
+- DOMAIN-SUFFIX,meijumi.net
+- DOMAIN-SUFFIX,subhd.tv
+- DOMAIN-SUFFIX,zimuku.org
+- DOMAIN-SUFFIX,mini4k.io
+- DOMAIN-SUFFIX,cmpassport.com
