@@ -105,7 +105,7 @@ proxy-groups:
     type: select
     proxies:
       - 國內直連
-      - REJECT
+      - REJECT-DROP
   - name: iOS系統通知
     icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png"
     hidden: false
