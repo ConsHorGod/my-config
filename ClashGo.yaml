@@ -229,6 +229,9 @@ rule-providers:
   anti-ad:
     <<: *domain
     url: "https://raw.githubusercontent.com/privacy-protection-tools/anti-ad.github.io/master/docs/mihomo.mrs"
+  ASN-CN:
+    <<: *classical
+    url: "https://yfamilys.com/rule/ASN-CN.rule"
   ChinaMax_Domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/ConsHorGod/Clash_mrs/main/ruleset/ChinaMax_Domain.mrs"
@@ -278,13 +281,14 @@ rules:
   - DST-PORT,123,國內直連,no-resolve #123端口
   - RULE-SET,My_REJECT,REJECT-DROP,no-resolve
   - RULE-SET,anti-ad,REJECT-DROP,no-resolve
-  - GEOIP,CN,國內直連,no-resolve
-  - RULE-SET,My_DIRECT,國內直連,no-resolve
-  - RULE-SET,ChinaMax_Domain,國內直連,no-resolve
   - RULE-SET,Steam,遊戲平台,no-resolve
   - RULE-SET,My_PROXY,國際媒體,no-resolve
   - RULE-SET,Microsoft,微軟服務,no-resolve
   - RULE-SET,AI,XMR(D)日本,no-resolve
   - RULE-SET,TikTok,XMR(D)日本,no-resolve
   - RULE-SET,HBOMAX,黃暴嘔爆,no-resolve
+  - RULE-SET,My_DIRECT,國內直連,no-resolve
+  - RULE-SET,ASN-CN,國內直連,no-resolve
+  - RULE-SET,ChinaMax_Domain,國內直連,no-resolve
+  - GEOIP,CN,國內直連,no-resolve
   - MATCH,全球互聯,dns-failed
