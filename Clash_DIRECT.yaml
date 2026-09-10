@@ -9,7 +9,9 @@ payload:
   - DOMAIN-SUFFIX,msftncsi.com #微軟網絡檢測地址
   - DOMAIN-SUFFIX,time.windows.com #微軟時間同步
   - DOMAIN,jlxa.wicp.net #北村
-  - DOMAIN,ads2301.asuscomm.com #奥园
+  - DOMAIN-KEYWORD,3322 #3322DDNS
+  - DOMAIN-SUFFIX,dsmynas.com #群晖域名
+  - DOMAIN-SUFFIX,asuscomm.com #路由器
   - DOMAIN-SUFFIX,apple.com #Apple
   - DOMAIN-SUFFIX,icloud.com #Apple
   - DOMAIN-SUFFIX,mzstatic.com #Apple
