@@ -1,4 +1,5 @@
 payload:
+  - DST-PORT,123,國內直連,no-resolve #123端口
   - DOMAIN-SUFFIX,cn #中國域名
   - DOMAIN-KEYWORD,-cn #中國域名
   - DOMAIN-KEYWORD,cn- #中國域名
