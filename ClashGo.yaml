@@ -158,14 +158,6 @@ proxy-groups:
     interval: 300
     use:
       - FNY
-  - name: DIRECT
-    icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CN.png"
-    hidden: true
-    type: select
-    url: http://mirrors.aliyun.com/generate_204
-    interval: 300
-    proxies:
-      - DIRECT
 #>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
 #>>>>>>>>>>>>>>>>>>>>>機場訂閱<<<<<<<<<<<<<<<<<<<<
 proxy-providers:
@@ -217,6 +209,9 @@ rule-anchor:
 #>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
 #>>>>>>>>>>>>>>>>>>>>>規則集<<<<<<<<<<<<<<<<<<<<
 rule-providers:
+  Lan:
+    <<: *classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Lan/Lan_No_Resolve.yaml"
   My_DIRECT:
     <<: *classical
     url: "https://raw.githubusercontent.com/ConsHorGod/my-config/refs/heads/配置文件/Clash_DIRECT.yaml"
@@ -244,21 +239,12 @@ rule-providers:
   Proxy_Domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/ConsHorGod/Clash_mrs/main/ruleset/Proxy_Domain.mrs"
-  Lan:
+  Telegram:
     <<: *classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Lan/Lan_No_Resolve.yaml"
-  telegram:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"
-  telegram_ip:
-    <<: *ipcidr
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Telegram/Telegram.yaml"
   TikTok:
     <<: *domain
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs"
-  HBOMAX:
-    <<: *classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/HBO/HBO.yaml"
   AI:
     <<: *domain
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs"
@@ -281,6 +267,7 @@ rules:
   - RULE-SET,Microsoft,微軟服務,no-resolve
   - RULE-SET,AI,XMR(D)日本,no-resolve
   - RULE-SET,TikTok,XMR(D)日本,no-resolve
+  - RULE-SET,Telegram,國際媒體,no-resolve
   - RULE-SET,HBOMAX,黃暴嘔爆,no-resolve
   - RULE-SET,Proxy_Domain,國際媒體,no-resolve
   - RULE-SET,My_DIRECT,DIRECT,no-resolve
