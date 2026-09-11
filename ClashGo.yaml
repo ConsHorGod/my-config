@@ -64,7 +64,7 @@ proxy-groups:
       - 國際媒體
       - 其它節點
       - FNY(救急用)
-      - 國內直連
+      - DIRECT
   - name: 國際媒體
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png"
     hidden: false
@@ -81,7 +81,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     proxies:
       - 國際媒體
-      - 國內直連
+      - DIRECT
   - name: 黃暴嘔爆
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png"
     hidden: false
@@ -97,21 +97,21 @@ proxy-groups:
     type: select
     url: http://www.gstatic.com/generate_204
     proxies:
-      - 國內直連
+      - DIRECT
       - 國際媒體
   - name: iOS系統更新
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Puzzle.png"
     hidden: false
     type: select
     proxies:
-      - 國內直連
+      - DIRECT
       - REJECT-DROP
   - name: iOS系統通知
     icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png"
     hidden: false
     type: select
     proxies:
-      - 國內直連
+      - DIRECT
       - 國際媒體
   - name: 其它節點
     icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/AAEX.png"
@@ -158,7 +158,7 @@ proxy-groups:
     interval: 300
     use:
       - FNY
-  - name: 國內直連
+  - name: DIRECT
     icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CN.png"
     hidden: true
     type: select
@@ -244,12 +244,9 @@ rule-providers:
   Proxy_Domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/ConsHorGod/Clash_mrs/main/ruleset/Proxy_Domain.mrs"
-  lan_ip:
-    <<: *ipcidr
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.mrs"
-  lan_domain:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"
+  Lan:
+    <<: *classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Lan/Lan_No_Resolve.yaml"
   telegram:
     <<: *domain
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"
@@ -274,8 +271,7 @@ rule-providers:
 #>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
 #>>>>>>>>>>>>>>>>>>>>>分流規則<<<<<<<<<<<<<<<<<<<<
 rules:
-  - RULE-SET,lan_domain,DIRECT,no-resolve
-  - RULE-SET,lan_ip,DIRECT,no-resolve
+  - RULE-SET,Lan,DIRECT,no-resolve
   - RULE-SET,Clash_iOS_PUSH,iOS系統通知,no-resolve
   - RULE-SET,Clash_iOS_UPDATE,iOS系統更新,no-resolve
   - RULE-SET,My_REJECT,REJECT-DROP,no-resolve
@@ -287,8 +283,8 @@ rules:
   - RULE-SET,TikTok,XMR(D)日本,no-resolve
   - RULE-SET,HBOMAX,黃暴嘔爆,no-resolve
   - RULE-SET,Proxy_Domain,國際媒體,no-resolve
-  - RULE-SET,My_DIRECT,國內直連,no-resolve
-  - RULE-SET,ASN-CN,國內直連,no-resolve
-  - RULE-SET,ChinaMax_Domain,國內直連,no-resolve
-  - GEOIP,CN,國內直連,no-resolve
+  - RULE-SET,My_DIRECT,DIRECT,no-resolve
+  - RULE-SET,ASN-CN,DIRECT,no-resolve
+  - RULE-SET,ChinaMax_Domain,DIRECT,no-resolve
+  - GEOIP,CN,DIRECT,no-resolve
   - MATCH,全球互聯,dns-failed
