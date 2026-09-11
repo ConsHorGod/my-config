@@ -77,23 +77,6 @@ proxy-groups:
     proxies:
       - XMR(D)香港
       - LXY香港
-  - name: 微軟服務
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Windows_11.png"
-    hidden: false
-    type: select
-    url: http://www.gstatic.com/generate_204
-    proxies:
-      - 國際媒體
-      - DIRECT
-  - name: 黃暴嘔爆
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_Max.png"
-    hidden: false
-    type: select
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    proxies:
-      - XMR(D)香港
-      - LXY香港
   - name: 遊戲平台
     icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/steam(1).png"
     hidden: false
