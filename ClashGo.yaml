@@ -239,18 +239,12 @@ rule-providers:
   Proxy_Domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/ConsHorGod/Clash_mrs/main/ruleset/Proxy_Domain.mrs"
-  Telegram:
-    <<: *classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Telegram/Telegram.yaml"
   TikTok:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs"
+    <<: *classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TikTok/TikTok_No_Resolve.yaml"
   AI:
     <<: *domain
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs"
-  Microsoft:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs"
   Steam:
     <<: *domain
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam.mrs"
@@ -264,11 +258,8 @@ rules:
   - RULE-SET,anti-ad,REJECT-DROP,no-resolve
   - RULE-SET,Steam,遊戲平台,no-resolve
   - RULE-SET,My_PROXY,國際媒體,no-resolve
-  - RULE-SET,Microsoft,微軟服務,no-resolve
   - RULE-SET,AI,XMR(D)日本,no-resolve
   - RULE-SET,TikTok,XMR(D)日本,no-resolve
-  - RULE-SET,Telegram,國際媒體,no-resolve
-  - RULE-SET,HBOMAX,黃暴嘔爆,no-resolve
   - RULE-SET,Proxy_Domain,國際媒體,no-resolve
   - RULE-SET,My_DIRECT,DIRECT,no-resolve
   - RULE-SET,ASN-CN,DIRECT,no-resolve
