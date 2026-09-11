@@ -37,7 +37,7 @@ tun:
 #>>>>>>>>>>>>>>>>>>>>>DNS模組<<<<<<<<<<<<<<<<<<<<
 dns:
   enable: true
-  ipv6: false
+  ipv6: true
   listen: :23453
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
