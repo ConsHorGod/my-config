@@ -1,5 +1,5 @@
 payload:
-  - DST-PORT,123,國內直連,no-resolve #123端口
+  - DST-PORT,123 #123端口
   - DOMAIN-SUFFIX,cn #中國域名
   - DOMAIN-KEYWORD,-cn #中國域名
   - DOMAIN-KEYWORD,cn- #中國域名
@@ -24,6 +24,5 @@ payload:
   - DOMAIN-SUFFIX,meijumi.net #美劇迷
   - DOMAIN-SUFFIX,subhd.tv #subhd.tv
   - DOMAIN-SUFFIX,zimuku.org #字幕库
-  - DOMAIN-SUFFIX,mini4k.io #mini4k.io
   - DOMAIN-SUFFIX,cmpassport.com #中国移动的官方服务
   - DOMAIN-SUFFIX,xlppc.svc
