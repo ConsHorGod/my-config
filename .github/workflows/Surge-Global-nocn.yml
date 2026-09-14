@@ -1,0 +1,420 @@
+name: blackmatrix7 Global_NoCN
+
+on:
+  schedule:
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3
+
+      - name: Download source rules
+        run: |
+          mkdir -p ruleset
+
+          curl -fL \
+            "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Global/Global_All.list" \
+            -o /tmp/Global_All.list
+
+          curl -fL \
+            "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/China/China_Domain.list" \
+            -o /tmp/China_Domain.list
+
+          curl -fL \
+            "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/China/China.list" \
+            -o /tmp/China.list
+
+          test -s /tmp/Global_All.list
+          test -s /tmp/China_Domain.list
+          test -s /tmp/China.list
+
+      - name: Filter China rules
+        run: |
+          python3 <<'PY'
+          import ipaddress
+          from pathlib import Path
+
+          GLOBAL = Path("/tmp/Global_All.list")
+          CHINA_DOMAIN = Path("/tmp/China_Domain.list")
+          CHINA_RULE = Path("/tmp/China.list")
+
+          OUTPUT_ALL = Path("ruleset/Global_NoCN.list")
+          OUTPUT_DOMAIN = Path("ruleset/Global_NoCN_Domain.list")
+
+          def clean_line(line):
+              return line.strip()
+
+          # ---------------------------------------------------------
+          # 读取中国域名
+          # ---------------------------------------------------------
+
+          china_domains = set()
+
+          with CHINA_DOMAIN.open("r", encoding="utf-8", errors="ignore") as f:
+              for raw in f:
+                  line = clean_line(raw)
+
+                  if not line:
+                      continue
+
+                  if line.startswith("#"):
+                      continue
+
+                  # China_Domain.list 通常为：
+                  # DOMAIN-SUFFIX,example.com
+                  # DOMAIN,example.com
+                  # DOMAIN-KEYWORD,example
+                  parts = line.split(",", 1)
+
+                  if len(parts) != 2:
+                      continue
+
+                  rule_type, value = parts[0].strip(), parts[1].strip()
+
+                  if rule_type in ("DOMAIN", "DOMAIN-SUFFIX"):
+                      value = value.lower().strip(".")
+
+                      if value:
+                          china_domains.add(value)
+
+          # ---------------------------------------------------------
+          # 判断域名是否属于中国域名集合
+          #
+          # example.com
+          # sub.example.com
+          #
+          # 如果 example.com 是中国域名，则全部视为 CN。
+          # ---------------------------------------------------------
+
+          def is_china_domain(domain):
+              domain = domain.lower().strip().rstrip(".")
+
+              if not domain:
+                  return False
+
+              if domain in china_domains:
+                  return True
+
+              # 从右向左检查父域
+              labels = domain.split(".")
+
+              for i in range(1, len(labels)):
+                  parent = ".".join(labels[i:])
+
+                  if parent in china_domains:
+                      return True
+
+              return False
+
+          # ---------------------------------------------------------
+          # 读取中国 IP 网络
+          # ---------------------------------------------------------
+
+          china_networks = []
+
+          with CHINA_RULE.open("r", encoding="utf-8", errors="ignore") as f:
+              for raw in f:
+                  line = clean_line(raw)
+
+                  if not line or line.startswith("#"):
+                      continue
+
+                  parts = line.split(",")
+
+                  if len(parts) < 2:
+                      continue
+
+                  rule_type = parts[0].strip().upper()
+                  value = parts[1].strip()
+
+                  if rule_type not in ("IP-CIDR", "IP-CIDR6"):
+                      continue
+
+                  # 去掉 Surge 的 no-resolve
+                  value = value.split(",")[0].strip()
+
+                  try:
+                      china_networks.append(
+                          ipaddress.ip_network(value, strict=False)
+                      )
+                  except ValueError:
+                      pass
+
+          def is_china_ip(cidr):
+              try:
+                  network = ipaddress.ip_network(cidr, strict=False)
+              except ValueError:
+                  return False
+
+              # 只要 Global 中的整个 CIDR 位于中国 CIDR 内，
+              # 才删除，避免误删跨国/大型网络。
+              for cn_net in china_networks:
+                  if network.subnet_of(cn_net):
+                      return True
+
+              return False
+
+          # ---------------------------------------------------------
+          # 处理 Global_All.list
+          # ---------------------------------------------------------
+
+          kept = []
+          removed_domain = []
+          removed_ip = []
+          removed_domain_suffix = []
+
+          with GLOBAL.open("r", encoding="utf-8", errors="ignore") as f:
+              for raw in f:
+                  line = raw.rstrip("\n")
+
+                  stripped = line.strip()
+
+                  # 保留空行
+                  if not stripped:
+                      kept.append(line)
+                      continue
+
+                  # 保留注释
+                  if stripped.startswith("#"):
+                      kept.append(line)
+                      continue
+
+                  parts = stripped.split(",")
+
+                  if len(parts) < 2:
+                      kept.append(line)
+                      continue
+
+                  rule_type = parts[0].strip().upper()
+                  value = parts[1].strip()
+
+                  # -------------------------------------------------
+                  # DOMAIN
+                  # -------------------------------------------------
+
+                  if rule_type == "DOMAIN":
+                      if is_china_domain(value):
+                          removed_domain.append(line)
+                          continue
+
+                      kept.append(line)
+                      continue
+
+                  # -------------------------------------------------
+                  # DOMAIN-SUFFIX
+                  # -------------------------------------------------
+
+                  if rule_type == "DOMAIN-SUFFIX":
+                      if is_china_domain(value):
+                          removed_domain_suffix.append(line)
+                          continue
+
+                      kept.append(line)
+                      continue
+
+                  # -------------------------------------------------
+                  # IP-CIDR / IP-CIDR6
+                  # -------------------------------------------------
+
+                  if rule_type in ("IP-CIDR", "IP-CIDR6"):
+                      cidr = value.split(",")[0].strip()
+
+                      if is_china_ip(cidr):
+                          removed_ip.append(line)
+                          continue
+
+                      kept.append(line)
+                      continue
+
+                  # -------------------------------------------------
+                  # DOMAIN-KEYWORD
+                  #
+                  # 故意不删除。
+                  #
+                  # 因为 keyword 可能同时匹配中国和非中国服务，
+                  # 自动删除容易误伤。
+                  # -------------------------------------------------
+
+                  kept.append(line)
+
+          # ---------------------------------------------------------
+          # 写完整 Surge RULE-SET
+          # ---------------------------------------------------------
+
+          OUTPUT_ALL.parent.mkdir(parents=True, exist_ok=True)
+
+          with OUTPUT_ALL.open("w", encoding="utf-8", newline="\n") as f:
+              f.write("# Global_NoCN\n")
+              f.write("# Generated automatically from BlackMatrix7 Global_All.list\n")
+              f.write("# China domains/IPs removed automatically\n")
+              f.write("# DOMAIN-KEYWORD rules are intentionally preserved\n")
+              f.write("\n")
+
+              for line in kept:
+                  f.write(line + "\n")
+
+          # ---------------------------------------------------------
+          # 生成纯域名版本
+          # ---------------------------------------------------------
+
+          domain_rules = []
+
+          for line in kept:
+              stripped = line.strip()
+
+              if not stripped or stripped.startswith("#"):
+                  continue
+
+              rule_type = stripped.split(",", 1)[0].strip().upper()
+
+              if rule_type in (
+                  "DOMAIN",
+                  "DOMAIN-SUFFIX",
+                  "DOMAIN-KEYWORD",
+              ):
+                  domain_rules.append(stripped)
+
+          with OUTPUT_DOMAIN.open("w", encoding="utf-8", newline="\n") as f:
+              f.write("# Global_NoCN_Domain\n")
+              f.write("# Generated automatically from BlackMatrix7 Global_All.list\n")
+              f.write("# China domains removed automatically\n")
+              f.write("\n")
+
+              for line in domain_rules:
+                  f.write(line + "\n")
+
+          # ---------------------------------------------------------
+          # 输出统计
+          # ---------------------------------------------------------
+
+          original_rules = 0
+
+          with GLOBAL.open("r", encoding="utf-8", errors="ignore") as f:
+              for raw in f:
+                  stripped = raw.strip()
+
+                  if stripped and not stripped.startswith("#"):
+                      original_rules += 1
+
+          final_rules = 0
+
+          for line in kept:
+              stripped = line.strip()
+
+              if stripped and not stripped.startswith("#"):
+                  final_rules += 1
+
+          print("========================================")
+          print("Global_NoCN generation completed")
+          print("========================================")
+          print(f"Original rules       : {original_rules}")
+          print(f"Removed DOMAIN       : {len(removed_domain)}")
+          print(f"Removed DOMAIN-SUFFIX: {len(removed_domain_suffix)}")
+          print(f"Removed IP rules     : {len(removed_ip)}")
+          print(f"Final rules          : {final_rules}")
+          print(f"Removed total        : {original_rules - final_rules}")
+          print(f"China IP networks    : {len(china_networks)}")
+          print(f"China domains        : {len(china_domains)}")
+          print("========================================")
+
+          print("\nRemoved IP rules:")
+          for x in removed_ip:
+              print("  " + x)
+
+          print("\nRemoved domain rules:")
+          for x in removed_domain:
+              print("  " + x)
+
+          print("\nRemoved domain-suffix rules:")
+          for x in removed_domain_suffix:
+              print("  " + x)
+          PY
+
+      - name: Validate generated rules
+        run: |
+          test -s ruleset/Global_NoCN.list
+          test -s ruleset/Global_NoCN_Domain.list
+
+          echo "Global_NoCN:"
+          wc -l ruleset/Global_NoCN.list
+
+          echo "Global_NoCN_Domain:"
+          wc -l ruleset/Global_NoCN_Domain.list
+
+          echo "Checking invalid lines..."
+
+          python3 <<'PY'
+          from pathlib import Path
+
+          allowed = {
+              "DOMAIN",
+              "DOMAIN-SUFFIX",
+              "DOMAIN-KEYWORD",
+              "IP-CIDR",
+              "IP-CIDR6",
+              "USER-AGENT",
+              "URL-REGEX",
+              "PROCESS-NAME",
+              "PROCESS-PATH",
+              "DEST-PORT",
+              "SRC-IP",
+              "SRC-PORT",
+              "IN-PORT",
+              "PROTOCOL",
+              "AND",
+              "OR",
+              "NOT",
+          }
+
+          errors = []
+
+          with open("ruleset/Global_NoCN.list", encoding="utf-8") as f:
+              for n, raw in enumerate(f, 1):
+                  line = raw.strip()
+
+                  if not line or line.startswith("#"):
+                      continue
+
+                  rule_type = line.split(",", 1)[0].strip().upper()
+
+                  if rule_type not in allowed:
+                      errors.append((n, line))
+
+          if errors:
+              print("Invalid rule types found:")
+              for n, line in errors[:100]:
+                  print(f"{n}: {line}")
+
+              raise SystemExit(1)
+
+          print("Rule validation passed.")
+          PY
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add ruleset/Global_NoCN.list
+          git add ruleset/Global_NoCN_Domain.list
+
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+
+          git commit -m "Update Global_NoCN rules"
+          git push
