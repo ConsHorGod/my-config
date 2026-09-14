@@ -219,9 +219,6 @@ rule-providers:
   ChinaMax_Domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/ConsHorGod/Clash_mrs/main/ruleset/ChinaMax_Domain.mrs"
-  Global_IP:
-    <<: *ipcidr
-    url: "https://raw.githubusercontent.com/ConsHorGod/Clash_mrs/main/ruleset/Global_IP.mrs"
   Global_Domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/ConsHorGod/Clash_mrs/main/ruleset/Global_Domain.mrs"
@@ -251,5 +248,4 @@ rules:
   - RULE-SET,AI,XMR(D)日本,no-resolve
   - RULE-SET,TikTok,XMR(D)日本,no-resolve
   - RULE-SET,Global_Domain,國際媒體,no-resolve
-  - RULE-SET,Global_IP,國際媒體,no-resolve
   - MATCH,全球互聯,dns-failed
