@@ -219,9 +219,12 @@ rule-providers:
   ChinaMax_Domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/ConsHorGod/Clash_mrs/main/ruleset/ChinaMax_Domain.mrs"
-  Proxy_Domain:
+  Global_IP:
+    <<: *ipcidr
+    url: "https://raw.githubusercontent.com/ConsHorGod/Clash_mrs/main/ruleset/Global_IP.mrs"
+  Global_Domain:
     <<: *domain
-    url: "https://raw.githubusercontent.com/ConsHorGod/Clash_mrs/main/ruleset/Proxy_Domain.mrs"
+    url: "https://raw.githubusercontent.com/ConsHorGod/Clash_mrs/main/ruleset/Global_Domain.mrs"
   TikTok:
     <<: *classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TikTok/TikTok_No_Resolve.yaml"
@@ -243,7 +246,8 @@ rules:
   - RULE-SET,My_PROXY,國際媒體,no-resolve
   - RULE-SET,AI,XMR(D)日本,no-resolve
   - RULE-SET,TikTok,XMR(D)日本,no-resolve
-  - RULE-SET,Proxy_Domain,國際媒體,no-resolve
+  - RULE-SET,Global_Domain,國際媒體,no-resolve
+  - RULE-SET,Global_IP,國際媒體,no-resolve
   - RULE-SET,My_DIRECT,DIRECT,no-resolve
   - RULE-SET,ASN-CN,DIRECT,no-resolve
   - RULE-SET,ChinaMax_Domain,DIRECT,no-resolve
