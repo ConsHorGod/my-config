@@ -249,7 +249,7 @@ rules:
   - RULE-SET,AI,XMR(D)日本,no-resolve
   - RULE-SET,TikTok,XMR(D)日本,no-resolve
   - RULE-SET,Global_Domain,國際媒體,no-resolve
-  - RULE-SET,Global_IP,國際媒體,no-resolve
   - GEOIP,CN,DIRECT,no-resolve
+  - RULE-SET,Global_IP,國際媒體,no-resolve
   - RULE-SET,ASN-CN,DIRECT,no-resolve
   - MATCH,全球互聯,dns-failed
