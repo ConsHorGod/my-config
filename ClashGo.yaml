@@ -221,7 +221,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/ConsHorGod/Clash_mrs/main/ruleset/ChinaMax_Domain.mrs"
   Global_Domain:
     <<: *domain
-    url: "https://raw.githubusercontent.com/ConsHorGod/Clash_mrs/main/ruleset/Global_Classical_Domain.mrs"
+    url: "https://raw.githubusercontent.com/ConsHorGod/Clash_mrs/main/ruleset/Global_Domain.mrs"
   Global_IP:
     <<: *ipcidr
     url: "https://raw.githubusercontent.com/ConsHorGod/Clash_mrs/main/ruleset/Global_Classical_IP.mrs"
