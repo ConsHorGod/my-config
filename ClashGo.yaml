@@ -225,9 +225,6 @@ rule-providers:
   Global_IP:
     <<: *ipcidr
     url: "https://raw.githubusercontent.com/ConsHorGod/Clash_mrs/main/ruleset/Global_Classical_IP.mrs"
-  Adult_Domain:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/ConsHorGod/Clash_mrs/main/ruleset/AdultBlock.mrs"
   TikTok:
     <<: *classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TikTok/TikTok_No_Resolve.yaml"
@@ -254,6 +251,5 @@ rules:
   - RULE-SET,Global_Domain,國際媒體,no-resolve
   - GEOIP,CN,DIRECT,no-resolve
   - RULE-SET,Global_IP,國際媒體,no-resolve
-  - RULE-SET,Adult_Domain,國際媒體,no-resolve
   - RULE-SET,ASN-CN,DIRECT,no-resolve
   - MATCH,全球互聯,dns-failed
