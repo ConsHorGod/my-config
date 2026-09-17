@@ -1,4 +1,0 @@
-payload:
-  - DOMAIN,gdmf.apple.com #iOS更新/屏蔽
-  - DOMAIN,mesu.apple.com #iOS更新/屏蔽
-  - DOMAIN,updates-http.cdn-apple.com #iOS更新、屏蔽
