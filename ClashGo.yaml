@@ -219,6 +219,9 @@ rule-providers:
   ChinaMax_Domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/ConsHorGod/MY_RULE/main/ruleset/ChinaMax_Domain.mrs"
+  ChinaMax_IP:
+    <<: *ipcidr
+    url: "https://raw.githubusercontent.com/ConsHorGod/MY_RULE/main/ruleset/ChinaMax_IP.mrs"
   Global_Domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/ConsHorGod/MY_RULE/main/ruleset/Global_Domain.mrs"
