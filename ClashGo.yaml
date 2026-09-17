@@ -244,6 +244,7 @@ rules:
   - RULE-SET,anti-ad,REJECT-DROP,no-resolve
   - RULE-SET,My_DIRECT,DIRECT,no-resolve
   - RULE-SET,China_ASN,DIRECT,no-resolve
+  - GEOIP,CN,DIRECT,no-resolve
   - RULE-SET,ChinaMax_Domain,DIRECT,no-resolve
   - RULE-SET,Steam,遊戲平台,no-resolve
   - RULE-SET,My_PROXY,國際媒體,no-resolve
