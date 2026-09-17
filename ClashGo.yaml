@@ -215,7 +215,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/privacy-protection-tools/anti-ad.github.io/master/docs/mihomo.mrs"
   ASN-CN:
     <<: *classical
-    url: "https://yfamilys.com/rule/ASN-CN.rule"
+    url: "https://raw.githubusercontent.com/ConsHorGod/Clash_mrs/main/ruleset/China_ASN.yaml"
   ChinaMax_Domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/ConsHorGod/Clash_mrs/main/ruleset/ChinaMax_Domain.mrs"
