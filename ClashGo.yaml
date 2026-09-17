@@ -240,6 +240,7 @@ rule-providers:
 #>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<
 #>>>>>>>>>>>>>>>>>>>>>分流規則<<<<<<<<<<<<<<<<<<<<
 rules:
+  - DOMAIN-KEYWORD,github
   - GEOIP,PRIVATE,DIRECT,no-resolve
   - RULE-SET,Clash_iOS_PUSH,iOS系統通知,no-resolve
   - RULE-SET,Clash_iOS_UPDATE,iOS系統更新,no-resolve
